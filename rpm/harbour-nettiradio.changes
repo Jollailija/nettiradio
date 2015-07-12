@@ -1,0 +1,40 @@
+# Add new changelog entries following the format below.
+# Add newest entries to the top of the list.
+# Separate entries from eachother with a blank line.
+
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+
+* Sat Jul 11 2015 jollailija jollailija@gmail.com 1.0.0-1
+-first Harbour release
+-adjusted ListView height to avoid text rendering over the panel
+
+* Sat Jul 11 2015 jollailija jollailija@gmail.com 0.3-1
+-pause & play in app with icon buttons!
+-removed PushUpMenu
+-fixed long station names not showing in the cover correctly
+-re-added Classic, Radio Musa and Radio Sandels which now work thanks to magic
+-added "Tilapäiset" stations
+-messed with section names
+-fixed "Iskelmä"'s and "Iskelmä Aikakone"'s mixed links
+
+* Fri Jul 10 2015 jollailija jollailija@gmail.com 0.2-2
+-button size now changes depending on channel name's length
+-attempted to fix PushUpMenu's graphical glitch
+-moved station name in cover
+-new icon (made by Moth)
+
+* Thu Jul 9 2015 jollailija jollailija@gmail.com 0.2-1
+-new icon (made by Moth)
+-updated About -page
+-cleaned the code (a bit) for source release (soonTM)
+-removed Classic, Radio Dei and Spirit FM because Audio doesn't support their formats
+-messed with ListView anchors and re-added DockedPanel, this time it shows what station you are listening to and pauses by clicking the button
+-removed pause from PullDownMenu, moved play to PullUpMenu
+-cover actions for pause & play, you can see what station you are listening to
+-app is now in Finnish
+-added lots of more stations
+-added Help page
+
+* Tue Jul 7 2015 jollailija jollailija@gmail.com 0.1-1
+-first version & release
