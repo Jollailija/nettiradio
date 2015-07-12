@@ -98,183 +98,183 @@ ApplicationWindow
                 ListElement {
                     source: "http://188.117.44.132:8000/stream.m3u"
                     title: "Bassoradio"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://stream.radioclassic.fi:8000/rh256"
                     title: "Classic"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
                     title: "Iskelmä"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4659/43660_iskelma_aikakone.mp3"
                     title: "Iskelmä Aikakone"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.80596-icelive0.cdn.qbrick.com/9168/80596_loop.mp3"
                     title: "Loop"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.41168-icelive0.cdn.qbrick.com/5050/41168_radionova1.mp3"
                     title: "Nova"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.80596-icelive0.cdn.qbrick.com/10544/80596_RadioAalto.mp3"
                     title: "Radio Aalto"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4916/43660_radio_city.mp3"
                     title: "Radio City"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://adwzg4.tdf-cdn.com/9201/nrj_113217.mp3"
                     title: "Radio Nostalgia"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://adwzg4.tdf-cdn.com/8945/nrj_179479.mp3"
                     title: "Radio NRJ"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.80596-icelive0.cdn.qbrick.com/10545/80596_RadioRock.mp3"
                     title: "Radio Rock"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.80596-icelive0.cdn.qbrick.com/10555/80596_RadioSuomipop.mp3"
                     title: "Radio Suomipop"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4914/43660_thevoice.mp3"
                     title: "The Voice"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4657/43660_thevoice_fresh.mp3"
                     title: "The Voice Herättäjät"
-                    section: "Valtakunnalliset" //National
+                    section: "Valtakunnalliset"
                 }
                 ListElement {
                     source: "http://nettiradio.auranaallot.fi/stream"
                     title: "Auran Aallot"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://st.downtime.fi/fun.mp3.m3u"
                     title: "FUN Tampere"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://icelive0.80596-icelive0.cdn.qbrick.com/10547/80596_GrooveFM.mp3"
                     title: "Groove FM"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://media.innoventum.fi:8000/radiorex.m3u"
                     title: "Iskelmä Rex"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://radio.6net.fi:8000/jarviradio.m3u"
                     title: "Järviradio"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://icelive0.80596-icelive0.cdn.qbrick.com/10162/80596_MetroHelsinki.mp3"
                     title: "Metro Helsinki"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://stream2.sbs.fi/play.mp3"
                     title: "Play"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://media2.innoventum.fi:8000/radiocityjoensuu.m3u"
                     title: "Radio City Joensuu"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
 
                 ListElement {
                     source: "http://213.186.227.18:8000/eazy.mp3.m3u"
                     title: "Radio Eazy 101"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://radio.radiohelsinki.fi/rh256"
                     title: "Radio Helsinki"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/9883/43660_RadioJyvaskyla.mp3"
                     title: "Radio Jyväskylä"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://radio.6net.fi:8000/radiokajaus.m3u"
                     title: "Radio Kajaus"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://153.1.15.26:8080/moreeni.mp3"
                     title: "Radio Moreeni"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://suomiradio.pro:8040/rh256"
                     title: "Radio Musa"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4918/43660_radio_pooki.mp3"
                     title: "Radio Pooki"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://213.186.227.18:8000/radiopori.mp3.m3u"
                     title: "Radio Pori"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://radioaktiivinen.lappia.fi:8000/play.mp3.m3u"
                     title: "Radio Pro"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://213.141.104.154:8000/stream/1/"
                     title: "Radio Ramona"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://suomiradio.pro:8080/rh256/"
                     title: "Radio Sandels"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://st.downtime.fi/sun.mp3.m3u"
                     title: "Radio SUN"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://stream.anviawebcasting.com:8000/radiovaasa.m3u"
                     title: "Radio Vaasa"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://st.downtime.fi/sunclassics.mp3.m3u"
                     title: "SUN Classics"
-                    section: "Paikalliset" //Local radio stations
+                    section: "Paikalliset"
                 }
                 ListElement {
                     source: "http://adwzg4.tdf-cdn.com/9199/nrj_112804.mp3"
