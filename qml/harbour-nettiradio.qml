@@ -59,6 +59,10 @@ ApplicationWindow
         id: website
         text: "http://www.iskelma.fi/"
     }
+    function open() {
+        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(website.text)}, 3000)
+                 }
+    RemorsePopup {id: remorse}
 
     initialPage: Component { Page {
             id: mainPage
@@ -81,7 +85,8 @@ ApplicationWindow
                         Button {
                             id: listeningTo
                             text: radioStation.text
-                            onClicked: Qt.openUrlExternally(website)
+                            RemorsePopup {id: remorse}
+                            onClicked: open()
                         }
 
                         IconButton {
