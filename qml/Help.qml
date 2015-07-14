@@ -56,7 +56,7 @@ Page {
                 readOnly: true
                 text: "Valitse haluamasi radioasema listalta. Aseman vaihdossa on muuteman sekunnin mittainen verkkopuskuroinnin viive.
 
-Tällä hetkellä kuunneltavan radioaseman nimi näkyy näytön alaosassa.
+Tällä hetkellä kuunneltavan radioaseman nimi näkyy näytön alaosassa. Painamalla sitä saat kyseisen radioaseman nettisivun aukeamaan selaimessa.
 
 Voit käynnistää tai pysäyttää toiston alaosan nappuloilla ja kannen pikavalinnoilla."
                 /*text: "Choose any radio station by clicking it's name on the list. Name of the currently playing radio station is displayed in the panel at the bottom.

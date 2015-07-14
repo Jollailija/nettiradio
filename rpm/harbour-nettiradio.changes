@@ -5,6 +5,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Jul 14 2015 jollailija jollailija@gmail.com 0.4-1
+-same as Hrbour version 1.0.1-1
+
+* Tue Jul 14 2015 jollailija jollailija@gmail.com 1.0.1-1
+-clicking on the station name button now opens that station's website in browser
+-updated Help page
+
 * Sun Jul 12 2015 jollailija jollailija@gmail.com 0.3-2
 -same as Harbour version 1.0.0-1
 
