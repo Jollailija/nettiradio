@@ -45,6 +45,7 @@ ApplicationWindow
         property string radioStation: "Iskelmä"
         property string musicSource: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
         property string website: "http://www.iskelma.fi/"
+        property int sleepTime: -1
     }
     function open() {
         remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
@@ -52,7 +53,73 @@ ApplicationWindow
 
     function pauseStream() {playMusic.pause(); playMusic.playing = false}
     function playStream() {playMusic.play(); playMusic.playing = true}
+
+    function stopStream() {playMusic.stop(); playMusic.playing = false; lib.sleepTime = -1}
+
     RemorsePopup {id: remorse}
+
+    Timer {
+        id: sleepTimer
+        interval: 60000
+        repeat: false
+        onTriggered: (lib.sleepTime == 0) ? stopStream() : lib.sleepTime = (lib.sleepTime - 1)
+        running: lib.sleepTime >= 0
+    }
+
+    Component {
+        id: sleepTimerPage
+        Page {
+
+            SilicaFlickable {
+                anchors.fill: parent
+                contentHeight: column.height + Theme.paddingLarge
+
+                VerticalScrollDecorator {}
+                Column {
+                    id: column
+                    spacing: Theme.paddingLarge
+                    width: parent.width
+                    anchors.horizontalCenter: parent
+                    PageHeader { title: "Uniajastimen asetus" }
+                    Label {
+                        text: ((lib.sleepTime > 0) ? ("Jäljellä oleva aika: "  + lib.sleepTime + ". Vaihda aika") : "Valitse aika")
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        color: Theme.highlightColor
+                        font.family: Theme.fontFamilyHeading
+                    }
+                    Slider {
+                        id: timerSlider
+                        value: 60
+                        minimumValue: 1
+                        maximumValue: 120
+                        stepSize: 1
+                        width: parent.width
+                        handleVisible: true
+                        valueText: value //(value >= 0) ? value : "0"
+                        label: "minuuttia"
+                    }
+
+                    Row {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        spacing: Theme.paddingLarge
+
+                        Button {
+                                anchors.horizontalCenter: parent
+                                text: "Aseta"
+                                onPressed: lib.sleepTime = timerSlider.value
+                            }
+                        Button {
+                                anchors.horizontalCenter: parent
+                                text: "Pysäytä"
+                                onPressed: lib.sleepTime = -1
+                            }
+                    }
+
+                }
+            }
+        }
+
+    }
 
     initialPage: Component { Page {
             id: mainPage
@@ -154,6 +221,12 @@ ApplicationWindow
                     section: "Valtakunnalliset"
                 }
                 ListElement {
+                    source: "http://isojako.radiodei.fi:8000/yleisohjelma"
+                    title: "Radio Dei"
+                    site: "http://www.radiodei.fi/"
+                    section: "Valtakunnalliset"
+                }
+                ListElement {
                     source: "http://adwzg4.tdf-cdn.com/9201/nrj_113217.mp3"
                     title: "Radio Nostalgia"
                     site: "http://www.radionostalgia.fi/"
@@ -237,7 +310,6 @@ ApplicationWindow
                     site: "http://www.radiorex.fi/radio-city-joensuu/"
                     section: "Paikalliset"
                 }
-
                 ListElement {
                     source: "http://213.186.227.18:8000/eazy.mp3.m3u"
                     title: "Radio Eazy 101"
@@ -449,6 +521,10 @@ ApplicationWindow
                         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
                     }
                     MenuItem {
+                        text: qsTr("Uniajastin") //Sleep timer
+                        onClicked: pageStack.push(sleepTimerPage)
+                    }
+                    MenuItem {
                         text: qsTr("Käyttöohje") //Help
                         onClicked: pageStack.push(Qt.resolvedUrl("Help.qml"))
                     }
@@ -492,7 +568,7 @@ ApplicationWindow
              }
             TextArea {
                 y: parent.height * 0.5
-                text: lib.radioStation
+                text: (lib.sleepTime > 0) ? ("Sammuu " + lib.sleepTime + " minuutissa.") : lib.radioStation
                 width: parent.width
                 x: 25
                 readOnly: true
@@ -503,12 +579,12 @@ ApplicationWindow
                 id: coverAction
 
                 CoverAction {
-                    iconSource: playMusic.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
-                    onTriggered: playMusic.playing ? pauseStream() : playStream()
+                    iconSource: lib.sleepTime == -1 ? (playMusic.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play") : "image://theme/icon-cover-cancel"
+                    onTriggered: lib.sleepTime == -1 ? (playMusic.playing ? pauseStream() : playStream()) : lib.sleepTime = -1
                 }
                 /*CoverAction {
-                    iconSource: "image://theme/icon-cover-next"
-                    onTriggered: do stuff? work in progress :)
+                    iconSource: "image://theme/icon-cover-cancel"
+                    onTriggered: do more stuff
                 }*/
             }
         }

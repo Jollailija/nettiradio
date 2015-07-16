@@ -58,7 +58,9 @@ Page {
 
 Tällä hetkellä kuunneltavan radioaseman nimi näkyy näytön alaosassa. Painamalla sitä saat kyseisen radioaseman nettisivun aukeamaan selaimessa.
 
-Voit käynnistää tai pysäyttää toiston alaosan nappuloilla ja kannen pikavalinnoilla."
+Voit käynnistää tai pysäyttää toiston alaosan nappuloilla ja kannen pikavalinalla
+
+Uniajastin sammuttaa toiston asettamasi minuuttimäärän jälkeen. Sammutusaika valitaan Uniajastin-sivun liukuvalitsimella. Ajastin käynnistetään ja pysäytetään sivulta löytyvillä nappuloilla. Jäljellä oleva aika näkyy kannessa ja ajastimen voi pysäyttää kannen pikavalinnalla."
                 /*text: "Choose any radio station by clicking it's name on the list. Name of the currently playing radio station is displayed in the panel at the bottom.
 While inside the app, you can play & pause by using the icon buttons in the panel. You can also use the cover actions for pausing and resuming."*/
                 font.pixelSize: Theme.fontSizeMedium

@@ -8,8 +8,13 @@
 * Thu Jul 16 2015 jollailija jollailija@gmail.com 1.0.2
 -now using a "real" boolean: playMusic.playing
 -single cover action for both play and pause
+-added sleep timer
+-cover shows how much time is left in sleep timer
+-you can cancel sleep timer with cover action
 -all text boxes removed, now using lib (Item) with property strings
 -added code for some haptic feedback for ListItem and (Icon)Button presses (not active because not allowed in Harbour)
+-new stations: Radio Dei
+
 
 * Tue Jul 14 2015 jollailija jollailija@gmail.com 0.4-1
 -same as Harbour version 1.0.1-1
