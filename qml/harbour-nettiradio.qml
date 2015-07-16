@@ -37,6 +37,7 @@ ApplicationWindow
             id: playMusic
             source: musicSource.text
             autoPlay: true
+            property bool playing: true
             }
     Text {
         //This is my way to do stuff :P Also, commenting out the y value is great for testing
@@ -51,17 +52,15 @@ ApplicationWindow
     }
     Text {
         y: 9001
-        id: playing
-        text: "1"
-    }
-    Text {
-        y: 9001
         id: website
         text: "http://www.iskelma.fi/"
     }
     function open() {
         remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(website.text)}, 3000)
                  }
+
+    function pauseStream() {playMusic.pause(); playMusic.playing = false}
+    function playStream() {playMusic.play(); playMusic.playing = true}
     RemorsePopup {id: remorse}
 
     initialPage: Component { Page {
@@ -92,16 +91,14 @@ ApplicationWindow
                         IconButton {
                             id: pause
                             icon.source: "image://theme/icon-l-pause"
-                            onClicked: {playing.text = "0"
-                                playMusic.pause()}
-                            enabled: playing.text == "1"
+                            onClicked: pauseStream()
+                            enabled: playMusic.playing
                         }
                         IconButton {
                             id: play
                             icon.source: "image://theme/icon-l-play"
-                            onClicked: {playing.text = "1"
-                                playMusic.play()}
-                            enabled: playing.text == "0"
+                            onClicked: playStream()
+                            enabled: !playMusic.playing
                         }
                     }
                 }
@@ -475,7 +472,7 @@ ApplicationWindow
                     onClicked: {musicSource.text = (Qt.resolvedUrl(source))
                         playMusic.source = musicSource.text
                         radioStation.text = title
-                        playing.text = 1
+                        playStream()
                         website.text = (Qt.resolvedUrl(site))
                     }
                 }
@@ -506,15 +503,13 @@ ApplicationWindow
                 id: coverAction
 
                 CoverAction {
-                    iconSource: "image://theme/icon-cover-pause"
-                    onTriggered: {playMusic.pause()
-                        playing.text = "0"}
+                    iconSource: playMusic.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+                    onTriggered: playMusic.playing ? pauseStream() : playStream()
                 }
-
                 CoverAction {
-                    iconSource: "image://theme/icon-cover-play"
+                    iconSource: "image://theme/icon-cover-next"
                     onTriggered: {playMusic.play()
-                        playing.text = "1"}
+                        playMusic.playing = true}
                 }
             }
         }
