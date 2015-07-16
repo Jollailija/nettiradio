@@ -14,7 +14,7 @@
 -all text boxes removed, now using lib (Item) with property strings
 -added code for some haptic feedback for ListItem and (Icon)Button presses (not active because not allowed in Harbour)
 -new station: Radio Dei
-
+-updated Help -page
 
 * Tue Jul 14 2015 jollailija jollailija@gmail.com 0.4-1
 -same as Harbour version 1.0.1-1
