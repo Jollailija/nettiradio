@@ -29,6 +29,7 @@
 
 import QtQuick 2.1
 import QtMultimedia 5.0
+//import QtFeedback 5.0
 import Sailfish.Silica 1.0
 
 ApplicationWindow
@@ -56,6 +57,15 @@ ApplicationWindow
     initialPage: Component { Page {
             id: mainPage
 
+            /*ThemeEffect {
+                id: listPress
+                effect: ThemeEffect.PressWeak
+            }
+            ThemeEffect {
+                id: buttonPress
+                effect: ThemeEffect.Press
+            }*/
+
             DockedPanel {
                     id: panel
 
@@ -75,19 +85,19 @@ ApplicationWindow
                             id: listeningTo
                             text: lib.radioStation
                             RemorsePopup {id: remorse}
-                            onClicked: open()
+                            onClicked: open()//{open(); buttonPress.play()}
                         }
 
                         IconButton {
                             id: pause
                             icon.source: "image://theme/icon-l-pause"
-                            onClicked: pauseStream()
+                            onClicked: pauseStream//{pauseStream(); buttonPress.play()}
                             enabled: playMusic.playing
                         }
                         IconButton {
                             id: play
                             icon.source: "image://theme/icon-l-play"
-                            onClicked: playStream()
+                            onClicked: playStream//{playStream(); buttonPress.play()}
                             enabled: !playMusic.playing
                         }
                     }
@@ -461,6 +471,7 @@ ApplicationWindow
                     }
                     onClicked: {lib.musicSource = (Qt.resolvedUrl(source))
                         lib.radioStation = title
+                        //listPress.play()
                         playStream()
                         lib.website = (Qt.resolvedUrl(site))
                     }
