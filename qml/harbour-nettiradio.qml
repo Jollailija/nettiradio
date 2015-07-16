@@ -91,13 +91,13 @@ ApplicationWindow
                         IconButton {
                             id: pause
                             icon.source: "image://theme/icon-l-pause"
-                            onClicked: pauseStream//{pauseStream(); buttonPress.play()}
+                            onClicked: pauseStream()//{pauseStream(); buttonPress.play()}
                             enabled: playMusic.playing
                         }
                         IconButton {
                             id: play
                             icon.source: "image://theme/icon-l-play"
-                            onClicked: playStream//{playStream(); buttonPress.play()}
+                            onClicked: playStream()//{playStream(); buttonPress.play()}
                             enabled: !playMusic.playing
                         }
                     }
