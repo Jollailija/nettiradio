@@ -35,28 +35,18 @@ ApplicationWindow
 {
     Audio {
             id: playMusic
-            source: musicSource.text
+            source: lib.musicSource
             autoPlay: true
             property bool playing: true
             }
-    Text {
-        //This is my way to do stuff :P Also, commenting out the y value is great for testing
-        y: 9001
-        id: musicSource
-        text: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
-    }
-    Text {
-        y: 9001
-        id: radioStation
-        text: "Iskelmä"
-    }
-    Text {
-        y: 9001
-        id: website
-        text: "http://www.iskelma.fi/"
+    Item {
+        id: lib
+        property string radioStation: "Iskelmä"
+        property string musicSource: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
+        property string website: "http://www.iskelma.fi/"
     }
     function open() {
-        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(website.text)}, 3000)
+        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
                  }
 
     function pauseStream() {playMusic.pause(); playMusic.playing = false}
@@ -83,7 +73,7 @@ ApplicationWindow
 
                         Button {
                             id: listeningTo
-                            text: radioStation.text
+                            text: lib.radioStation
                             RemorsePopup {id: remorse}
                             onClicked: open()
                         }
@@ -469,11 +459,10 @@ ApplicationWindow
                         anchors.verticalCenter: parent.verticalCenter
                         x: Theme.paddingLarge
                     }
-                    onClicked: {musicSource.text = (Qt.resolvedUrl(source))
-                        playMusic.source = musicSource.text
-                        radioStation.text = title
+                    onClicked: {lib.musicSource = (Qt.resolvedUrl(source))
+                        lib.radioStation = title
                         playStream()
-                        website.text = (Qt.resolvedUrl(site))
+                        lib.website = (Qt.resolvedUrl(site))
                     }
                 }
 
@@ -492,7 +481,7 @@ ApplicationWindow
              }
             TextArea {
                 y: parent.height * 0.5
-                text: radioStation.text
+                text: lib.radioStation
                 width: parent.width
                 x: 25
                 readOnly: true
@@ -506,11 +495,10 @@ ApplicationWindow
                     iconSource: playMusic.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
                     onTriggered: playMusic.playing ? pauseStream() : playStream()
                 }
-                CoverAction {
+                /*CoverAction {
                     iconSource: "image://theme/icon-cover-next"
-                    onTriggered: {playMusic.play()
-                        playMusic.playing = true}
-                }
+                    onTriggered: do stuff? work in progress :)
+                }*/
             }
         }
     }
