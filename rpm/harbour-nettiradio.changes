@@ -5,7 +5,7 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Thu Jul 16 2015 jollailija jollailija@gmail.com 1.0.2
+* Thu Jul 16 2015 jollailija jollailija@gmail.com 1.0.2-1
 -now using a "real" boolean: playMusic.playing
 -single cover action for both play and pause
 -added sleep timer
