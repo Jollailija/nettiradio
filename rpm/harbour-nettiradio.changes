@@ -13,7 +13,7 @@
 -you can cancel sleep timer with cover action
 -all text boxes removed, now using lib (Item) with property strings
 -added code for some haptic feedback for ListItem and (Icon)Button presses (not active because not allowed in Harbour)
--new stations: Radio Dei
+-new station: Radio Dei
 
 
 * Tue Jul 14 2015 jollailija jollailija@gmail.com 0.4-1

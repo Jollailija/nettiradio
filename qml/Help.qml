@@ -36,18 +36,15 @@ Page {
     property var textAlignment: TextInput.AlignLeft
     SilicaFlickable {
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: header.height + text.height + Theme.paddingLarge
         contentWidth: parent.width
-        Column {
-            id: column
 
-            width: page.width
-            spacing: Theme.paddingMedium
             PageHeader {
                 id: header
                 title: "Käyttöohje" //"How to use"
             }
             TextArea {
+                id: text
                 anchors {
                     top: header.bottom
                     left: parent.left
@@ -66,6 +63,5 @@ While inside the app, you can play & pause by using the icon buttons in the pane
                 font.pixelSize: Theme.fontSizeMedium
                 horizontalAlignment: textAlignment
             }
-        }
     }
 }
