@@ -18,6 +18,9 @@ Helppokäyttöinen sovellus suomalaisten nettiradioiden kuunteluun. Valmis heti 
 Uusimmat sovellusversiot saatavilla OpenReposista
 https://openrepos.net/content/jollailija/finnish-net-radio-client-beta
 
+Projektin kotisivut:
+http://jollailija.github.io/nettiradio
+
 Suunnitellut ominaisuudet:  
 -Parempi käyttöliittymä  
 -Englanninkielinen käännös  
