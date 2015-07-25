@@ -30,13 +30,12 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 
-
 Page {
     id: page
     property var textAlignment: TextInput.AlignLeft
     SilicaFlickable {
         anchors.fill: parent
-        contentHeight: header.height + text.height + links.height
+        contentHeight: header.height + text.height + links.height + flattr.height + Theme.paddingLarge
         contentWidth: parent.width
         VerticalScrollDecorator {}
 
@@ -84,6 +83,13 @@ I'd like to thank Dax for helping me out with the code and Moth for the awesome 
                     text: "OpenRepos"
                     onClicked: Qt.openUrlExternally("https://openrepos.net/content/jollailija/finnish-net-radio-client-beta/")
                 }
+            }
+            Button {
+                anchors.top: links.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                id: flattr
+                text: "Lahjoita Flattrin kautta"
+                onClicked: Qt.openUrlExternally("https://flattr.com/thing/4382591/Jollailijanettiradio-on-github")
             }
     }
 }

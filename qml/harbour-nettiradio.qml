@@ -558,7 +558,7 @@ ApplicationWindow
     }
     cover: Component {
         CoverBackground {
-            property var textAlignment: TextInput.AlignCenter
+            property var textAlignment: TextInput.AlignHCenter
 
             Image {
                id: logo
@@ -570,7 +570,7 @@ ApplicationWindow
                 y: parent.height * 0.5
                 text: (lib.sleepTime > 0) ? ("Sammuu " + lib.sleepTime + " minuutissa.") : lib.radioStation
                 width: parent.width
-                x: 25
+                //x: 25
                 readOnly: true
                 horizontalAlignment: textAlignment
             }
