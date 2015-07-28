@@ -70,6 +70,8 @@ ApplicationWindow
         id: sleepTimerPage
         Page {
 
+            allowedOrientations: Orientation.Portrait // Added this just to check code commit in github
+
             SilicaFlickable {
                 anchors.fill: parent
                 contentHeight: column.height + Theme.paddingLarge
@@ -140,33 +142,33 @@ ApplicationWindow
                     dock: Dock.Bottom
                     open: true
 
-                    Row {
-                        anchors.centerIn: parent
-                        id: iconButtons
-                        spacing: Theme.paddingLarge
+                Row {
+                    anchors.centerIn: parent
+                    id: iconButtons
+                    spacing: Theme.paddingLarge
 
 
-                        Button {
-                            id: listeningTo
-                            text: lib.radioStation
-                            RemorsePopup {id: remorse}
-                            onClicked: open()//{open(); buttonPress.play()}
-                        }
+                    Button {
+                        id: listeningTo
+                        text: lib.radioStation
+                        RemorsePopup {id: remorse}
+                        onClicked: open()//{open(); buttonPress.play()}
+                    }
 
-                        IconButton {
-                            id: pause
-                            icon.source: "image://theme/icon-l-pause"
-                            onClicked: pauseStream()//{pauseStream(); buttonPress.play()}
-                            enabled: playMusic.playing
-                        }
-                        IconButton {
-                            id: play
-                            icon.source: "image://theme/icon-l-play"
-                            onClicked: playStream()//{playStream(); buttonPress.play()}
-                            enabled: !playMusic.playing
-                        }
+                    IconButton {
+                        id: pause
+                        icon.source: "image://theme/icon-l-pause"
+                        onClicked: pauseStream()//{pauseStream(); buttonPress.play()}
+                        enabled: playMusic.playing
+                    }
+                    IconButton {
+                        id: play
+                        icon.source: "image://theme/icon-l-play"
+                        onClicked: playStream()//{playStream(); buttonPress.play()}
+                        enabled: !playMusic.playing
                     }
                 }
+            }
 
             ListModel {
                 id: stationsList
