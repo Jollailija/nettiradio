@@ -104,21 +104,19 @@ ApplicationWindow
                         spacing: Theme.paddingLarge
 
                         Button {
-                                anchors.horizontalCenter: parent
-                                text: "Aseta"
-                                onPressed: lib.sleepTime = timerSlider.value
-                            }
+                            anchors.horizontalCenter: parent
+                            text: "Aseta"
+                            onPressed: lib.sleepTime = timerSlider.value
+                        }
                         Button {
-                                anchors.horizontalCenter: parent
-                                text: "Pysäytä"
-                                onPressed: lib.sleepTime = -1
-                            }
+                            anchors.horizontalCenter: parent
+                            text: "Pysäytä"
+                            onPressed: lib.sleepTime = -1
+                        }
                     }
-
                 }
             }
         }
-
     }
 
     initialPage: Component { Page {
@@ -552,7 +550,6 @@ ApplicationWindow
                         lib.website = (Qt.resolvedUrl(site))
                     }
                 }
-
             }
         }
     }
