@@ -70,6 +70,8 @@ ApplicationWindow
         id: sleepTimerPage
         Page {
 
+            allowedOrientations: Orientation.All
+
             SilicaFlickable {
                 anchors.fill: parent
                 contentHeight: column.height + Theme.paddingLarge
@@ -123,6 +125,8 @@ ApplicationWindow
 
     initialPage: Component { Page {
             id: mainPage
+
+            allowedOrientations: Orientation.All
 
             /*ThemeEffect {
                 id: listPress
@@ -512,7 +516,7 @@ ApplicationWindow
                     right: parent.right
                     //bottom: panel.top
                 }
-                height: parent.height * 0.75
+                height: mainPage.isPortrait ? (parent.height * 0.75) : (parent.height * 0.55)
 
                 model: stationsList
                 PullDownMenu {

@@ -34,6 +34,7 @@ import Sailfish.Silica 1.0
 Page {
     id: page
     property var textAlignment: TextInput.AlignLeft
+    allowedOrientations: Orientation.All
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: header.height + text.height + Theme.paddingLarge

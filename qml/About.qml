@@ -33,9 +33,10 @@ import Sailfish.Silica 1.0
 Page {
     id: page
     property var textAlignment: TextInput.AlignLeft
+    allowedOrientations: Orientation.All
     SilicaFlickable {
         anchors.fill: parent
-        contentHeight: header.height + text.height + links.height + flattr.height + Theme.paddingLarge
+        contentHeight: header.height + version.height + text.height + links.height + flattr.height + Theme.paddingLarge
         contentWidth: parent.width
         VerticalScrollDecorator {}
 
@@ -43,11 +44,18 @@ Page {
                 id: header
                 title: "Tietoa sovelluksesta" //About
             }
+            Button {
+                id: version
+                anchors.top: header.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "Versio " + "1.0.4" + "-" + "1" //I don't know how to automate this just yet...
+                onClicked: Qt.openUrlExternally("http://pastebin.com/zyamYb19")
+            }
 
             TextArea {
                 id: text
                 anchors {
-                    top: header.bottom
+                    top: version.bottom
                     left: parent.left
                     right: parent.right
                 }

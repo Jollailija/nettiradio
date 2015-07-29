@@ -5,6 +5,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Wed Jul 29 2015 jollailija jollailija@gmail.com 1.0.4-1
+-added version number to About-page, clicking it will open changelog at PasteBin
+-allowed all orientations, started work on the Tablet version
+
 * Sat Jul 25 2015 jollailija jollailija@gmail.com 1.0.3-1
 -fixed text in cover not centering correctly
 -added Flattr link to about page
