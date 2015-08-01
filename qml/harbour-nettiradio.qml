@@ -505,6 +505,24 @@ ApplicationWindow
                     title: "Radio Rapu"
                     site: "http://www.radiorapu.com/"
                     section: "Tilapäiset"
+                }                
+                ListElement {
+                    source: "http://stream.iradio.fi:8000/klasu-med.mp3"
+                    title: "Klasu"
+                    site: "http://www.rondoclassic.fi/klasu"
+                    section: "Rondo Classic"
+                }
+                ListElement {
+                    source: "http://stream.iradio.fi:8000/klasupro-med.mp3"
+                    title: "Klasu Pro"
+                    site: "http://www.rondoclassic.fi/klasu-pro"
+                    section: "Rondo Classic"
+                }
+                ListElement {
+                    source: "http://stream.iradio.fi:8000/viva-lo.mp3"
+                    title: "Viva Classica"
+                    site: "http://www.rondoclassic.fi/radio/viva"
+                    section: "Rondo Classic"
                 }
             }
             SilicaListView {

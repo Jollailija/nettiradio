@@ -5,6 +5,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat Aug 1 2015 jollailija jollailija@gmail.com 1.0.4-2
+-added three radio stations: Klasu, Klasu Pro and Viva Classica
+
 * Wed Jul 29 2015 jollailija jollailija@gmail.com 1.0.4-1
 -added version number to About-page, clicking it will open changelog at PasteBin
 -allowed all orientations, started work on the Tablet version
