@@ -4,19 +4,21 @@
 
 # * date Author's Name <author's email> version-release
 # - Summary of changes
+* Thu Aug 6 2015 jollailija <jollailija@gmail.com> 1.0.5-1
+-tablet support
 
-* Sat Aug 1 2015 jollailija jollailija@gmail.com 1.0.4-2
+* Sat Aug 1 2015 jollailija <jollailija@gmail.com> 1.0.4-2
 -added three radio stations: Klasu, Klasu Pro and Viva Classica
 
-* Wed Jul 29 2015 jollailija jollailija@gmail.com 1.0.4-1
+* Wed Jul 29 2015 jollailija <jollailija@gmail.com> 1.0.4-1
 -added version number to About-page, clicking it will open changelog at PasteBin
 -allowed all orientations, started work on the Tablet version
 
-* Sat Jul 25 2015 jollailija jollailija@gmail.com 1.0.3-1
+* Sat Jul 25 2015 jollailija <jollailija@gmail.com> 1.0.3-1
 -fixed text in cover not centering correctly
 -added Flattr link to about page
 
-* Thu Jul 16 2015 jollailija jollailija@gmail.com 1.0.2-1
+* Thu Jul 16 2015 jollailija <jollailija@gmail.com> 1.0.2-1
 -now using a "real" boolean: playMusic.playing
 -single cover action for both play and pause
 -added sleep timer
@@ -27,22 +29,22 @@
 -new station: Radio Dei
 -updated Help -page
 
-* Tue Jul 14 2015 jollailija jollailija@gmail.com 0.4-1
+* Tue Jul 14 2015 jollailija <jollailija@gmail.com> 0.4-1
 -same as Harbour version 1.0.1-1
 
-* Tue Jul 14 2015 jollailija jollailija@gmail.com 1.0.1-1
+* Tue Jul 14 2015 jollailija <jollailija@gmail.com> 1.0.1-1
 -clicking on the station name button now opens that station's website in browser
 -updated Help page
 
-* Sun Jul 12 2015 jollailija jollailija@gmail.com 0.3-2
+* Sun Jul 12 2015 jollailija <jollailija@gmail.com> 0.3-2
 -same as Harbour version 1.0.0-1
 
-* Sat Jul 11 2015 jollailija jollailija@gmail.com 1.0.0-1
+* Sat Jul 11 2015 jollailija <jollailija@gmail.com> 1.0.0-1
 -first Harbour release
 -adjusted ListView height to avoid text rendering over the panel
 -updated About and Help pages
 
-* Sat Jul 11 2015 jollailija jollailija@gmail.com 0.3-1
+* Sat Jul 11 2015 jollailija <jollailija@gmail.com> 0.3-1
 -pause & play in app with icon buttons!
 -removed PushUpMenu
 -fixed long station names not showing in the cover correctly
@@ -51,13 +53,13 @@
 -messed with section names
 -fixed "Iskelmä"'s and "Iskelmä Aikakone"'s mixed links
 
-* Fri Jul 10 2015 jollailija jollailija@gmail.com 0.2-2
+* Fri Jul 10 2015 jollailija <jollailija@gmail.com> 0.2-2
 -button size now changes depending on channel name's length
 -attempted to fix PushUpMenu's graphical glitch
 -moved station name in cover
 -new icon (made by Moth)
 
-* Thu Jul 9 2015 jollailija jollailija@gmail.com 0.2-1
+* Thu Jul 9 2015 jollailija <jollailija@gmail.com> 0.2-1
 -new icon (made by Moth)
 -updated About -page
 -cleaned the code (a bit) for source release (soonTM)
@@ -69,5 +71,5 @@
 -added lots of more stations
 -added Help page
 
-* Tue Jul 7 2015 jollailija jollailija@gmail.com 0.1-1
+* Tue Jul 7 2015 jollailija <jollailija@gmail.com> 0.1-1
 -first version & release

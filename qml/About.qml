@@ -48,8 +48,8 @@ Page {
                 id: version
                 anchors.top: header.bottom
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: "Versio " + "1.0.4" + "-" + "2" //I don't know how to automate this just yet...
-                onClicked: Qt.openUrlExternally("http://pastebin.com/Jhk8QhKg")
+                text: "Versio " + "1.0.5" + "-" + "1" //I don't know how to automate this just yet...
+                onClicked: Qt.openUrlExternally("http://pastebin.com/xnbaRhZV")
             }
 
             TextArea {

@@ -13,8 +13,8 @@ Name:       harbour-nettiradio
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Suomalaisten nettiradioiden kuuntelusovellus
-Version:    1.0.4
-Release:    2
+Version:    1.0.5
+Release:    1
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://example.org/
