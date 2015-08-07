@@ -532,9 +532,9 @@ ApplicationWindow
                     top: parent.top
                     left: parent.left
                     right: parent.right
-                    //bottom: panel.top
+                    bottom: panel.top
+                    bottomMargin: Theme.paddingLarge * 3
                 }
-                height: mainPage.isPortrait ? (parent.height * 0.75) : (parent.height * 0.55)
 
                 model: stationsList
                 PullDownMenu {
@@ -549,6 +549,10 @@ ApplicationWindow
                     MenuItem {
                         text: qsTr("Käyttöohje") //Help
                         onClicked: pageStack.push(Qt.resolvedUrl("Help.qml"))
+                    }
+                    MenuItem {
+                        text: qsTr("landscape") //About
+                        onClicked: (allowedOrientations= Orientation.Landscape)
                     }
                 }
                 header: PageHeader { title: "Kaupalliset radioasemat" } //Radio stations
