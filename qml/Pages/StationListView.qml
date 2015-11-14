@@ -31,49 +31,43 @@ import QtQuick 2.1
 import Sailfish.Silica 1.0
 import "StationLists"
 
-Page {
-    id: mainPage
+SilicaListView {
+    id: listView
+    VerticalScrollDecorator {}
 
-    allowedOrientations: _defaultPageOrientations
+    anchors.fill: parent
+    clip: true
 
+    model: StationsModel {}
 
+    PulleyMenu {}
 
-    /*ThemeEffect {
-        id: listPress
-        effect: ThemeEffect.PressWeak
-    }
-    ThemeEffect {
-        id: buttonPress
-        effect: ThemeEffect.Press
-    }*/
-
-    PlayerPanel {id: panel}
-
-    Loader {
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-            bottomMargin: panel.visibleSize
-        }
-        sourceComponent: lib.activeView
-                       ? listViewComponent
-                       : gridViewComponent
-
-        Component {
-            id: listViewComponent
-            StationListView {}
-        }
-
-        Component {
-            id: gridViewComponent
-            StationGridView {}
+    header: PageHeader { title: "Radioasemat" } //Radio stations
+    section {
+        property: 'section'
+        delegate: SectionHeader {
+            text: section
         }
     }
-
-
-
-
+    delegate: BackgroundItem {
+        width: listView.width
+        Label {
+            text: model.title
+            font.pixelSize: Screen.sizeCategory >= Screen.Medium
+                            ? Theme.FontSizeExtraHuge
+                            : Theme.FontSizeExtraLarge
+            color: highlighted
+                   ? Theme.highlightColor
+                   : Theme.primaryColor
+            anchors.verticalCenter: parent.verticalCenter
+            x: Theme.paddingLarge
+        }
+        onClicked: {lib.musicSource = (Qt.resolvedUrl(source))
+            lib.radioStation = title
+            //listPress.play()
+            playStream()
+            lib.website = (Qt.resolvedUrl(site))
+        }
+    }
 
 }

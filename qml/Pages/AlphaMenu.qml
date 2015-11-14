@@ -1,3 +1,5 @@
+// AlphaMenu by r0kk3rz https://github.com/r0kk3rz/sailfish-alphabet-sort
+
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 

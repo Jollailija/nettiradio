@@ -29,51 +29,30 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import "StationLists"
 
-Page {
-    id: mainPage
-
-    allowedOrientations: _defaultPageOrientations
-
-
-
-    /*ThemeEffect {
-        id: listPress
-        effect: ThemeEffect.PressWeak
+PullDownMenu {
+    MenuItem {
+        text: qsTr("Vaihda näkymää") // Change list model
+        onClicked: lib.activeView
+                   ? lib.activeView = false
+                   : lib.activeView = true
     }
-    ThemeEffect {
-        id: buttonPress
-        effect: ThemeEffect.Press
-    }*/
-
-    PlayerPanel {id: panel}
-
-    Loader {
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-            bottomMargin: panel.visibleSize
-        }
-        sourceComponent: lib.activeView
-                       ? listViewComponent
-                       : gridViewComponent
-
-        Component {
-            id: listViewComponent
-            StationListView {}
-        }
-
-        Component {
-            id: gridViewComponent
-            StationGridView {}
-        }
+    MenuItem {
+        text: mainPage.allowedOrientations === Orientation.All
+              ? qsTr("Lukitse suunta") // Lock orientation
+              : qsTr("Vapauta suunta") // Unlock orientation
+        onClicked: mainPage.allowedOrientations === Orientation.All
+                   ? allowedOrientations = mainPage.orientation
+                   : allowedOrientations = Orientation.All
     }
-
-
-
-
-
+    MenuItem {
+        text: lib.sleepTime >= 0
+              ? qsTr("Uniajastin, jäljellä ") + lib.sleepTime + "min" //Sleep timer
+              : qsTr("Uniajastin") //Sleep timer
+        onClicked: pageStack.push(sleepTimerPage)
+    }
+    MenuItem {
+        text: qsTr("Käyttöohje ja tietoa sovelluksesta") //Help
+        onClicked: pageStack.push(Qt.resolvedUrl("Help.qml"))
+    }
 }

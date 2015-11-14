@@ -48,6 +48,7 @@ ApplicationWindow
         property string website: "http://www.iskelma.fi/"
         property int sleepTime: -1
         property bool playing: false
+        property bool activeView: false
     }
 
     allowedOrientations: Orientation.All

@@ -40,7 +40,9 @@ OTHER_FILES += qml/harbour-nettiradio.qml \
     qml/Pages/AlphaMenu.qml \
     qml/Pages/AlphaMenuGroupView.qml \
     qml/Pages/ContactNameGroup.qml \
-    qml/Pages/ListPage.qml
+    qml/Pages/StationListView.qml \
+    qml/Pages/PulleyMenu.qml \
+    qml/Pages/StationGridView.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
