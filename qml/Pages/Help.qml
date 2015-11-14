@@ -30,39 +30,44 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 
-
 Page {
     id: page
     property var textAlignment: TextInput.AlignLeft
-    allowedOrientations: Orientation.All
     SilicaFlickable {
         anchors.fill: parent
+        clip: true
         contentHeight: header.height + text.height + Theme.paddingLarge
         contentWidth: parent.width
 
-            PageHeader {
-                id: header
-                title: "Käyttöohje" //"How to use"
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Tietoa sovelluksesta") //About
+                onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
             }
-            TextArea {
-                id: text
-                anchors {
-                    top: header.bottom
-                    left: parent.left
-                    right: parent.right
-                }
-                readOnly: true
-                text: "Valitse haluamasi radioasema listalta. Aseman vaihdossa on muuteman sekunnin mittainen verkkopuskuroinnin viive.
+        }
+        PageHeader {
+            id: header
+            title: "Käyttöohje" //"How to use"
+        }
+        TextArea {
+            id: text
+            anchors {
+                top: header.bottom
+                left: parent.left
+                right: parent.right
+            }
+            readOnly: true
+            text: "Valitse haluamasi radioasema listalta. Aseman vaihdossa on muuteman sekunnin mittainen verkkopuskuroinnin viive.
 
 Tällä hetkellä kuunneltavan radioaseman nimi näkyy näytön alaosassa. Painamalla sitä saat kyseisen radioaseman nettisivun aukeamaan selaimessa.
 
 Voit käynnistää tai pysäyttää toiston alaosan nappuloilla ja kannen pikavalinalla
 
 Uniajastin sammuttaa toiston asettamasi minuuttimäärän jälkeen. Sammutusaika valitaan Uniajastin-sivun liukuvalitsimella. Ajastin käynnistetään ja pysäytetään sivulta löytyvillä nappuloilla. Jäljellä oleva aika näkyy kannessa ja ajastimen voi pysäyttää kannen pikavalinnalla."
-                /*text: "Choose any radio station by clicking it's name on the list. Name of the currently playing radio station is displayed in the panel at the bottom.
+            /*text: "Choose any radio station by clicking it's name on the list. Name of the currently playing radio station is displayed in the panel at the bottom.
 While inside the app, you can play & pause by using the icon buttons in the panel. You can also use the cover actions for pausing and resuming."*/
-                font.pixelSize: Theme.fontSizeMedium
-                horizontalAlignment: textAlignment
-            }
+            font.pixelSize: Theme.fontSizeMedium
+            horizontalAlignment: textAlignment
+        }
     }
 }

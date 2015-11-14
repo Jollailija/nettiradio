@@ -28,59 +28,55 @@
 */
 
 import QtQuick 2.1
-import QtMultimedia 5.0
-//import QtFeedback 5.0
 import Sailfish.Silica 1.0
-import "Pages"
 
-ApplicationWindow
-{
-    Audio {
-        id: playMusic
-        source: lib.musicSource
-        autoPlay: false
-        // property bool playing: true
+Page {
+
+    SilicaFlickable {
+        anchors.fill: parent
+        contentHeight: column.height + Theme.paddingLarge
+
+        VerticalScrollDecorator {}
+        Column {
+            id: column
+            spacing: Theme.paddingLarge
+            width: parent.width
+            anchors.horizontalCenter: parent
+            PageHeader { title: "Uniajastimen asetus" }
+            Label {
+                text: ((lib.sleepTime > 0) ? ("Jäljellä oleva aika: "  + lib.sleepTime + ". Vaihda aika") : "Valitse aika")
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: Theme.highlightColor
+                font.family: Theme.fontFamilyHeading
+            }
+            Slider {
+                id: timerSlider
+                value: 60
+                minimumValue: 1
+                maximumValue: 120
+                stepSize: 1
+                width: parent.width
+                handleVisible: true
+                valueText: value //(value >= 0) ? value : "0"
+                label: "minuuttia"
+            }
+
+            Row {
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: Theme.paddingLarge
+
+                Button {
+                    anchors.horizontalCenter: parent
+                    text: "Aseta"
+                    onPressed: lib.sleepTime = timerSlider.value
+                }
+                Button {
+                    anchors.horizontalCenter: parent
+                    text: "Pysäytä"
+                    onPressed: lib.sleepTime = -1
+                }
+            }
+
+        }
     }
-    Item {
-        id: lib
-        property string radioStation: "Iskelmä"
-        property string musicSource: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
-        property string website: "http://www.iskelma.fi/"
-        property int sleepTime: -1
-        property bool playing: false
-    }
-
-    allowedOrientations: Orientation.All
-    _defaultPageOrientations: Orientation.All
-
-    RemorsePopup {id: remorse}
-
-    function openWebsite() {
-        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
-    }
-
-    function pauseStream() {playMusic.pause(); lib.playing = false}
-    function playStream() {playMusic.play(); lib.playing = true}
-    function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1}
-
-    //RemorsePopup {id: remorse}
-
-    Timer {
-        id: sleepTimer
-        interval: 60000
-        repeat: false
-        onTriggered: (lib.sleepTime == 0) ? stopStream() : lib.sleepTime = (lib.sleepTime - 1)
-        running: lib.sleepTime >= 0
-    }
-
-
-
-    SleepTimerPage {
-        id: sleepTimerPage
-    }
-
-    initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
-
-    cover: Qt.resolvedUrl("Pages/CoverPage.qml")
-
 }

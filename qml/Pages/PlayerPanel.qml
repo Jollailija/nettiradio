@@ -28,59 +28,41 @@
 */
 
 import QtQuick 2.1
-import QtMultimedia 5.0
-//import QtFeedback 5.0
 import Sailfish.Silica 1.0
-import "Pages"
+import QtMultimedia 5.0
 
-ApplicationWindow
-{
-    Audio {
-        id: playMusic
-        source: lib.musicSource
-        autoPlay: false
-        // property bool playing: true
+DockedPanel {
+    width: parent.width
+    height: Theme.itemSizeExtraLarge + Theme.paddingLarge
+
+    dock: Dock.Bottom
+    open: true
+
+    Row {
+        anchors.centerIn: parent
+        id: iconButtons
+        spacing: Theme.paddingLarge
+
+
+        Button {
+            id: listeningTo
+            text: lib.radioStation
+            RemorsePopup {id: remorse}
+            onClicked: openWebsite()//{open(); buttonPress.play()}
+        }
+
+        IconButton {
+            id: pause
+            icon.source: "image://theme/icon-l-pause"
+            onClicked: pauseStream()//{pauseStream(); buttonPress.play()}
+            enabled: lib.playing
+        }
+        IconButton {
+            id: play
+            icon.source: "image://theme/icon-l-play"
+            onClicked: playStream()//{playStream(); buttonPress.play()}
+            enabled: !lib.playing
+        }
     }
-    Item {
-        id: lib
-        property string radioStation: "Iskelmä"
-        property string musicSource: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
-        property string website: "http://www.iskelma.fi/"
-        property int sleepTime: -1
-        property bool playing: false
-    }
-
-    allowedOrientations: Orientation.All
-    _defaultPageOrientations: Orientation.All
-
-    RemorsePopup {id: remorse}
-
-    function openWebsite() {
-        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
-    }
-
-    function pauseStream() {playMusic.pause(); lib.playing = false}
-    function playStream() {playMusic.play(); lib.playing = true}
-    function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1}
-
-    //RemorsePopup {id: remorse}
-
-    Timer {
-        id: sleepTimer
-        interval: 60000
-        repeat: false
-        onTriggered: (lib.sleepTime == 0) ? stopStream() : lib.sleepTime = (lib.sleepTime - 1)
-        running: lib.sleepTime >= 0
-    }
-
-
-
-    SleepTimerPage {
-        id: sleepTimerPage
-    }
-
-    initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
-
-    cover: Qt.resolvedUrl("Pages/CoverPage.qml")
-
 }
+

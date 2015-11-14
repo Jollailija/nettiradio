@@ -23,7 +23,20 @@ OTHER_FILES += qml/harbour-nettiradio.qml \
     rpm/harbour-nettiradio.changes \
     qml/About.qml \
     qml/Help.qml \
-    qml/harbour-nettiradio.png
+    qml/harbour-nettiradio.png \
+    qml/PlayerPanel.qml \
+    qml/SleepTimerPage.qml \
+    qml/MainPage.qml \
+    qml/CoverPage.qml \
+    qml/StationLists/StationsModel.qml \
+    qml/Pages/About.qml \
+    qml/Pages/CoverPage.qml \
+    qml/Pages/Help.qml \
+    qml/Pages/MainPage.qml \
+    qml/Pages/PlayerPanel.qml \
+    qml/Pages/SleepTimerPage.qml \
+    qml/Pages/StationLists/StationsModel.qml \
+    qml/Pages/harbour-nettiradio.png
 
 # to disable building translations every time, comment out the
 # following CONFIG line

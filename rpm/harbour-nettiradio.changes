@@ -4,6 +4,15 @@
 
 # * date Author's Name <author's email> version-release
 # - Summary of changes
+
+* Fri Nov 13 2015  jollailija <jollailija@gmail.com> 1.1.0-1
+-massive refactoring
+-station list now in .txt file, includes editing instructions
+-todo:
+    english translation
+    more refactoring
+    updated station list
+
 * Thu Aug 6 2015 jollailija <jollailija@gmail.com> 1.0.5-1
 -tablet support
 
