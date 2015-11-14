@@ -7,6 +7,9 @@ Easy-to-use application for listening to over 70 Finnish net radio stations. Rea
 Newest build versions available at OpenRepos
 https://openrepos.net/content/jollailija/finnish-net-radio-client-beta
 
+Changelog:  
+https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes
+
 Planned features:  
 -Better UI (kinda achieved in 1.1.0)    
 -English translation  
@@ -18,6 +21,9 @@ Helppokäyttöinen sovellus suomalaisten nettiradioiden kuunteluun. Valmis heti 
 
 Uusimmat sovellusversiot saatavilla OpenReposista
 https://openrepos.net/content/jollailija/finnish-net-radio-client-beta  
+
+Changelog:  
+https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes
   
 Suunnitellut ominaisuudet:  
 -Parempi käyttöliittymä (aika lailla julkaisussa 1.1.0)  
