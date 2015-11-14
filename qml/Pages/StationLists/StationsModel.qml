@@ -48,6 +48,7 @@ Jos asennat sovelluksen uudelleen tai päivität sen, menetät kaikki muutokset.
 
 ListModel {
 
+
     ListElement {
         source: "http://188.117.44.132:8000/stream.m3u"
         title: "Bassoradio"

@@ -64,6 +64,10 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: qsTr("moi") //Help
+                onClicked: pageStack.push(Qt.resolvedUrl("ListPage.qml"))
+            }
+            MenuItem {
                 text: mainPage.allowedOrientations === Orientation.All
                       ? qsTr("Lukitse suunta") // Lock orientation
                       : qsTr("Vapauta suunta") // Unlock orientation

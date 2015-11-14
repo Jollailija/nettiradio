@@ -36,7 +36,11 @@ OTHER_FILES += qml/harbour-nettiradio.qml \
     qml/Pages/PlayerPanel.qml \
     qml/Pages/SleepTimerPage.qml \
     qml/Pages/StationLists/StationsModel.qml \
-    qml/Pages/harbour-nettiradio.png
+    qml/Pages/harbour-nettiradio.png \
+    qml/Pages/AlphaMenu.qml \
+    qml/Pages/AlphaMenuGroupView.qml \
+    qml/Pages/ContactNameGroup.qml \
+    qml/Pages/ListPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
