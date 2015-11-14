@@ -66,7 +66,7 @@ Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämäs
 
 Lähdekoodi on saatavilla BSD-lisenssillä GitHubista ja sovelluksen uusimmat versiot löytyvät OpenRepos:ista (linkit alla).
 
-Kiitos Daxille avusta koodin kanssa sekä Mothille hienosta ikonista.
+Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä sekä Mothille hienosta ikonista.
 
 Thanks for all the help Dax and Moth!"
             /*text: "This app was made by jollailija for all Finnish net radio listeners to enjoy.

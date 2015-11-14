@@ -52,8 +52,8 @@ CoverBackground {
         id: coverAction
 
         CoverAction {
-            iconSource: lib.sleepTime == -1 ? (lib.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play") : "image://theme/icon-cover-cancel"
-            onTriggered: lib.sleepTime == -1 ? (lib.playing ? pauseStream() : playStream()) : lib.sleepTime = -1
+            iconSource: lib.sleepTime === -1 ? (lib.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play") : "image://theme/icon-cover-cancel"
+            onTriggered: lib.sleepTime === -1 ? (lib.playing ? pauseStream() : playStream()) : lib.sleepTime = -1
         }
         /*CoverAction {
             iconSource: "image://theme/icon-cover-cancel"

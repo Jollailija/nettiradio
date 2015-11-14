@@ -47,3 +47,8 @@ OTHER_FILES += qml/harbour-nettiradio.qml \
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
+
+appicons.path = /usr/share/icons/hicolor/
+appicons.files = appicons/*
+
+INSTALLS += appicons

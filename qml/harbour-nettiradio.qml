@@ -39,49 +39,58 @@ ApplicationWindow
         id: playMusic
         source: lib.musicSource
         autoPlay: false
-        // property bool playing: true
-    }
-    Item {
-        id: lib
-        property string radioStation: "Iskelmä"
-        property string musicSource: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
-        property string website: "http://www.iskelma.fi/"
-        property int sleepTime: -1
-        property bool playing: false
-        property bool activeView: false
+        onError: resurrector.start()
     }
 
-    allowedOrientations: Orientation.All
-    _defaultPageOrientations: Orientation.All
-
-    RemorsePopup {id: remorse}
-
-    function openWebsite() {
-        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
-    }
-
-    function pauseStream() {playMusic.pause(); lib.playing = false}
-    function playStream() {playMusic.play(); lib.playing = true}
-    function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1}
-
-    //RemorsePopup {id: remorse}
+    // Dunno what I did but seems to work
 
     Timer {
-        id: sleepTimer
-        interval: 60000
-        repeat: false
-        onTriggered: (lib.sleepTime == 0) ? stopStream() : lib.sleepTime = (lib.sleepTime - 1)
-        running: lib.sleepTime >= 0
+        id: resurrector
+        interval: 1000
+        repeat: true
+        onTriggered: console.warn(" Not OK! "), console.warn(playMusic.errorString), playStream()
     }
 
+        Item {
+            id: lib
+            property string radioStation: "Valitse asema"
+            property string musicSource: ""
+            property string website: "https://github.com/jollailija/nettiradio"
+            property int sleepTime: -1
+            property bool playing: false
+            property bool stopped: true
+            property bool activeView: true
+        }
+
+        allowedOrientations: Orientation.All
+        _defaultPageOrientations: Orientation.All
+
+        RemorsePopup {id: remorse}
+
+        function openWebsite() {
+            remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
+        }
+
+        function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
+        function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
+        function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1; lib.stopped = true; resurrector.stop()}
+
+        Timer {
+            id: sleepTimer
+            interval: 60000
+            repeat: false
+            onTriggered: (lib.sleepTime == 0) ? stopStream() : lib.sleepTime = (lib.sleepTime - 1)
+            running: lib.sleepTime >= 0
+        }
 
 
-    SleepTimerPage {
-        id: sleepTimerPage
+
+        SleepTimerPage {
+            id: sleepTimerPage
+        }
+
+        initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
+
+        cover: Qt.resolvedUrl("Pages/CoverPage.qml")
+
     }
-
-    initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
-
-    cover: Qt.resolvedUrl("Pages/CoverPage.qml")
-
-}

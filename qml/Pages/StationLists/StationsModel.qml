@@ -48,6 +48,7 @@ Jos asennat sovelluksen uudelleen tai päivität sen, menetät kaikki muutokset.
 
 ListModel {
 
+    // Viimeksi päivitetty/Last updated: Saturday 14.11.2015 by jollailija.
 
     ListElement {
         source: "http://188.117.44.132:8000/stream.m3u"
@@ -62,13 +63,13 @@ ListModel {
         section: "Valtakunnalliset"
     }
     ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4912/43660_iskelma.mp3"
-        title: "Iskelmä"
+        source: "http://stream2.sbs.fi/isk-hki.mp3"
+        title: "Iskelmä (Helsinki)"
         site: "http://www.iskelma.fi/"
         section: "Valtakunnalliset"
     }
     ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4659/43660_iskelma_aikakone.mp3"
+        source: "http://stream2.sbs.fi/isk-aika.mp3"
         title: "Iskelmä Aikakone"
         site: "http://www.iskelma.fi/"
         section: "Valtakunnalliset"
@@ -92,8 +93,8 @@ ListModel {
         section: "Valtakunnalliset"
     }
     ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4916/43660_radio_city.mp3"
-        title: "Radio City"
+        source: "http://stream2.sbs.fi/rc-hki.mp3"
+        title: "Radio City (Helsinki)"
         site: "http://www.radiocity.fi/"
         section: "Valtakunnalliset"
     }
@@ -122,23 +123,24 @@ ListModel {
         section: "Valtakunnalliset"
     }
     ListElement {
+        source: "http://audio.raa.fi:8000/radiosputnik.m3u"
+        title: "Radio Sputnik"
+        site: "http://www.radiosuomipop.fi/"
+        section: "Valtakunnalliset"
+    }
+    ListElement {
         source: "http://icelive0.80596-icelive0.cdn.qbrick.com/10555/80596_RadioSuomipop.mp3"
         title: "Radio Suomipop"
         site: "http://www.radiosuomipop.fi/"
         section: "Valtakunnalliset"
     }
     ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4914/43660_thevoice.mp3"
+        source: "http://stream2.sbs.fi/voice.mp3"
         title: "The Voice"
         site: "http://www.voice.fi/"
         section: "Valtakunnalliset"
     }
-    ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4657/43660_thevoice_fresh.mp3"
-        title: "The Voice Herättäjät"
-        site: "http://www.voice.fi/"
-        section: "Valtakunnalliset"
-    }
+    // Section change
     ListElement {
         source: "http://nettiradio.auranaallot.fi/stream"
         title: "Auran Aallot"
@@ -182,25 +184,13 @@ ListModel {
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://media2.innoventum.fi:8000/radiocityjoensuu.m3u"
-        title: "Radio City Joensuu"
-        site: "http://www.radiorex.fi/radio-city-joensuu/"
-        section: "Paikalliset"
-    }
-    ListElement {
-        source: "http://213.186.227.18:8000/eazy.mp3.m3u"
-        title: "Radio Eazy 101"
-        site: "http://www.eazy101.fi/"
-        section: "Paikalliset"
-    }
-    ListElement {
         source: "http://radio.radiohelsinki.fi/rh256"
         title: "Radio Helsinki"
         site: "http://www.radiohelsinki.fi/"
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/9883/43660_RadioJyvaskyla.mp3"
+        source: "http://stream2.sbs.fi/radiojkl.mp3"
         title: "Radio Jyväskylä"
         site: "http://www.radiojyvaskyla.fi/"
         section: "Paikalliset"
@@ -209,6 +199,12 @@ ListModel {
         source: "http://radio.6net.fi:8000/radiokajaus.m3u"
         title: "Radio Kajaus"
         site: "http://www.radiokajaus.fi/"
+        section: "Paikalliset"
+    }
+    ListElement {
+        source: "http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kompassi.m3u"
+        title: "Radio Kompassi"
+        site: "http://www.radiokompassi.fi/"
         section: "Paikalliset"
     }
     ListElement {
@@ -224,19 +220,19 @@ ListModel {
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://icelive0.43660-icelive0.cdn.qbrick.com/4918/43660_radio_pooki.mp3"
+        source: "http://stream2.sbs.fi/pooki.mp3"
         title: "Radio Pooki"
         site: "http://www.radiopooki.fi/"
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://213.186.227.18:8000/radiopori.mp3.m3u"
+        source: "http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u"
         title: "Radio Pori"
         site: "http://www.radiopori.fi/"
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://radioaktiivinen.lappia.fi:8000/play.mp3.m3u"
+        source: "http://192.194.89.110:8000/play.mp3.m3u"
         title: "Radio Pro"
         site: "http://www.radiopro.fi/"
         section: "Paikalliset"
@@ -266,11 +262,116 @@ ListModel {
         section: "Paikalliset"
     }
     ListElement {
+        source: "http://cast.radiovoima.fi:8000/voima.mp3.m3u"
+        title: "Radio Voima"
+        site: "http://www.spiritfm.fi/"
+        section: "Paikalliset"
+    }
+    ListElement {
+        source: "http://audio.raa.fi:8000/hifi.m3u"
+        title: "Spirit FM"
+        site: "http://www.radiovoima.fi/"
+        section: "Paikalliset"
+    }
+    ListElement {
         source: "http://st.downtime.fi/sunclassics.mp3.m3u"
         title: "SUN Classics"
         site: "http://www.sunclassics.fi/"
         section: "Paikalliset"
     }
+
+    // Section change
+
+    ListElement {
+        source: "http://media2.innoventum.fi:8000/radiocityjoensuu.m3u"
+        title: "Joensuu"
+        site: "http://www.radiorex.fi/radio-city-joensuu/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/rc-jkl.mp3"
+        title: "Jyväskylä"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/rc-kvl.mp3"
+        title: "Kouvola"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/rc-lpr.mp3"
+        title: "Lappeenranta"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/rc-oul.mp3"
+        title: "Oulu"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/rc-tre.mp3"
+        title: "Tampere"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/rc-tku.mp3"
+        title: "Turku"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+
+    // Section change
+
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/helsinki.m3u"
+        title: "Helsinki"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/tornio.m3u"
+        title: "Kemi"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/kruunupyy.m3u"
+        title: "Kruunupyy"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/kristiinankaupunki.m3u"
+        title: "Kristiinankaupunki"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/oulu.m3u"
+        title: "Oulu"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/lapua.m3u"
+        title: "Pohjanmaa"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+    ListElement {
+        source: "http://isojako.radiodei.fi:8000/turkueurajoki.m3u"
+        title: "Turku"
+        site: "http://www.radiodei.fi/"
+        section: "Paikalliset - Radio Dei"
+    }
+
+    // Section changes
+
     ListElement {
         source: "http://adwzg4.tdf-cdn.com/9199/nrj_112804.mp3"
         title: "NRJ Suomihitit"
@@ -349,36 +450,36 @@ ListModel {
         site: "http://www.nrj.fi/"
         section: "NRJ-kanavat"
     }
+
+    // Section changes
+
     ListElement {
         source: "http://s3.radioboss.fm:8301/live.m3u"
-        title: "MyStation"
+        title: "Leijonaradio"
         site: "http://www.mystation.fi/"
-        section: "Tilapäiset"
+        section: "Tilapäiset ja sekalaiset"
     }
     ListElement {
         source: "http://suomiradio.pro:8000/hr256"
         title: "Pispalan Radio 995"
         site: "http://www.pispalanradio.fi/"
-        section: "Tilapäiset"
-    }
-    ListElement {
-        source: "http://stream.klf.fi:8000/stream.m3u"
-        title: "Radio KLF"
-        site: "http://www.klf.fi/"
-        section: "Tilapäiset"
+        section: "Tilapäiset ja sekalaiset"
     }
     ListElement {
         source: "http://46.163.245.15:8000/radio.m3u"
         title: "Radio Patmos"
         site: "http://www.patmos.fi/"
-        section: "Tilapäiset"
+        section: "Tilapäiset ja sekalaiset"
     }
     ListElement {
         source: "http://streaming.shoutcast.com/RadioRapu"
         title: "Radio Rapu"
         site: "http://www.radiorapu.com/"
-        section: "Tilapäiset"
+        section: "Tilapäiset ja sekalaiset"
     }
+
+    // Section changes
+
     ListElement {
         source: "http://stream.iradio.fi:8000/klasu-med.mp3"
         title: "Klasu"
