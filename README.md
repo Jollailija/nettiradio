@@ -8,7 +8,7 @@ Newest build versions available at OpenRepos
 https://openrepos.net/content/jollailija/finnish-net-radio-client-beta
 
 Planned features:  
--Better UI  
+-Better UI (kinda achieved in 1.1.0)    
 -English translation  
 -Search function  
 -Editable station database
@@ -20,7 +20,7 @@ Uusimmat sovellusversiot saatavilla OpenReposista
 https://openrepos.net/content/jollailija/finnish-net-radio-client-beta  
   
 Suunnitellut ominaisuudet:  
--Parempi käyttöliittymä  
+-Parempi käyttöliittymä (aika lailla julkaisussa 1.1.0)  
 -Englanninkielinen käännös  
 -Hakutoiminto  
 -Muokattavissa oleva asematietokanta
