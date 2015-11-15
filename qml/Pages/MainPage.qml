@@ -58,8 +58,8 @@ Page {
             bottomMargin: panel.visibleSize
         }
         sourceComponent: lib.activeView
-                       ? listViewComponent
-                       : gridViewComponent
+                         ? listViewComponent
+                         : gridViewComponent
 
         Component {
             id: listViewComponent

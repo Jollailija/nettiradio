@@ -70,37 +70,37 @@ ApplicationWindow
         running: lib.sleepTime >= 0
     }
 
-        Item {
-            id: lib
-            property string radioStation: "Valitse asema"
-            property string musicSource: ""
-            property string website: "https://github.com/jollailija/nettiradio"
-            property int sleepTime: -1
-            property bool playing: false
-            property bool stopped: true
-            property bool activeView: true
-        }
-
-        allowedOrientations: Orientation.All
-        _defaultPageOrientations: Orientation.All
-
-        RemorsePopup {id: remorse}
-
-        function openWebsite() {
-            remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
-        }
-
-        function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
-        function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
-        function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1; lib.stopped = true; resurrector.stop()}
-
-
-        SleepTimerPage {
-            id: sleepTimerPage
-        }
-
-        initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
-
-        cover: Qt.resolvedUrl("Pages/CoverPage.qml")
-
+    Item {
+        id: lib
+        property string radioStation: "Valitse asema"
+        property string musicSource: ""
+        property string website: "https://github.com/jollailija/nettiradio"
+        property int sleepTime: -1
+        property bool playing: false
+        property bool stopped: true
+        property bool activeView: true
     }
+
+    allowedOrientations: Orientation.All
+    _defaultPageOrientations: Orientation.All
+
+    RemorsePopup {id: remorse}
+
+    function openWebsite() {
+        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
+    }
+
+    function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
+    function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
+    function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1; lib.stopped = true; resurrector.stop()}
+
+
+    SleepTimerPage {
+        id: sleepTimerPage
+    }
+
+    initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
+
+    cover: Qt.resolvedUrl("Pages/CoverPage.qml")
+
+}
