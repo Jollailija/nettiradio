@@ -5,6 +5,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Nov 15 2015 jollailija <jollailija@gmail.com> 1.1.1-1
+-fixed resurrector being left on forever
+-added a timer to keep things alive while streaming
+-usability fixes
+-better UI for big screens
+-rearranged station list
+
 * Sat Nov 14 2015 jollailija <jollailija@gmail.com> 1.1.0-1
 -massive refactoring
 -updated station list

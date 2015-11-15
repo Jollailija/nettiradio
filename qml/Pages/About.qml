@@ -48,7 +48,7 @@ Page {
             id: version
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "Versio " + "1.1.0" + "-" + "1" //I don't know how to automate this just yet...
+            text: "Versio " + "1.1.1" + "-" + "1" //I don't know how to automate this just yet...
             onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
         }
 
@@ -66,13 +66,15 @@ Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämäs
 
 Lähdekoodi on saatavilla BSD-lisenssillä GitHubista ja sovelluksen uusimmat versiot löytyvät OpenRepos:ista (linkit alla).
 
-Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä sekä Mothille hienosta ikonista.
+Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.
 
-Thanks for all the help Dax and Moth!"
+Thanks for all the support guys!"
             /*text: "This app was made by jollailija for all Finnish net radio listeners to enjoy.
 
 I'd like to thank Dax for helping me out with the code and Moth for the awesome icon."*/
-            font.pixelSize: Theme.fontSizeMedium
+            font.pixelSize: Screen.sizeCategory > Screen.Medium
+                            ? Theme.fontSizeExtraLarge
+                            : Theme.fontSizeMedium
             horizontalAlignment: textAlignment
         }
 

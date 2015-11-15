@@ -67,7 +67,7 @@ SilicaFlickable {
                 spacing: 20
 
                 Label {
-                    text: length
+                    text: "   "
                     height: Theme.itemSizeHuge
                     font.pixelSize: Theme.fontSizeExtraLarge
                     color: Theme.secondaryColor

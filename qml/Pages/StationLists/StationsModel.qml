@@ -48,7 +48,7 @@ Jos asennat sovelluksen uudelleen tai päivität sen, menetät kaikki muutokset.
 
 ListModel {
 
-    // Viimeksi päivitetty/Last updated: Saturday 14.11.2015 by jollailija.
+    // Viimeksi päivitetty/Last updated: Sunday 15.11.2015 by jollailija.
 
     ListElement {
         source: "http://188.117.44.132:8000/stream.m3u"
@@ -184,18 +184,6 @@ ListModel {
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://radio.radiohelsinki.fi/rh256"
-        title: "Radio Helsinki"
-        site: "http://www.radiohelsinki.fi/"
-        section: "Paikalliset"
-    }
-    ListElement {
-        source: "http://stream2.sbs.fi/radiojkl.mp3"
-        title: "Radio Jyväskylä"
-        site: "http://www.radiojyvaskyla.fi/"
-        section: "Paikalliset"
-    }
-    ListElement {
         source: "http://radio.6net.fi:8000/radiokajaus.m3u"
         title: "Radio Kajaus"
         site: "http://www.radiokajaus.fi/"
@@ -226,12 +214,6 @@ ListModel {
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u"
-        title: "Radio Pori"
-        site: "http://www.radiopori.fi/"
-        section: "Paikalliset"
-    }
-    ListElement {
         source: "http://192.194.89.110:8000/play.mp3.m3u"
         title: "Radio Pro"
         site: "http://www.radiopro.fi/"
@@ -256,12 +238,6 @@ ListModel {
         section: "Paikalliset"
     }
     ListElement {
-        source: "http://stream.anviawebcasting.com:8000/radiovaasa.m3u"
-        title: "Radio Vaasa"
-        site: "http://www.radiovaasa.fi/"
-        section: "Paikalliset"
-    }
-    ListElement {
         source: "http://cast.radiovoima.fi:8000/voima.mp3.m3u"
         title: "Radio Voima"
         site: "http://www.spiritfm.fi/"
@@ -280,47 +256,80 @@ ListModel {
         section: "Paikalliset"
     }
 
+    // Section changes
+
+    ListElement {
+        source: "http://radio.radiohelsinki.fi/rh256"
+        title: "Helsinki"
+        site: "http://www.radiohelsinki.fi/"
+        section: "Paikalliset - Radio 'Kaupunki'"
+    }
+    ListElement {
+        source: "http://stream2.sbs.fi/radiojkl.mp3"
+        title: "Jyväskylä"
+        site: "http://www.radiojyvaskyla.fi/"
+        section: "Paikalliset - Radio 'Kaupunki'"
+    }
+    ListElement {
+        source: "http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u"
+        title: "Pori"
+        site: "http://www.radiopori.fi/"
+        section: "Paikalliset - Radio 'Kaupunki'"
+    }
+    ListElement {
+        source: "http://stream.anviawebcasting.com:8000/radiovaasa.m3u"
+        title: "Vaasa"
+        site: "http://www.radiovaasa.fi/"
+        section: "Paikalliset - Radio 'Kaupunki'"
+    }
+
     // Section change
 
     ListElement {
+        source: "http://stream2.sbs.fi/rc-hki.mp3"
+        title: "Helsinki - Radio City"
+        site: "http://www.radiocity.fi/"
+        section: "Paikalliset - Radio City"
+    }
+    ListElement {
         source: "http://media2.innoventum.fi:8000/radiocityjoensuu.m3u"
-        title: "Joensuu"
+        title: "Joensuu - Radio City"
         site: "http://www.radiorex.fi/radio-city-joensuu/"
         section: "Paikalliset - Radio City"
     }
     ListElement {
         source: "http://stream2.sbs.fi/rc-jkl.mp3"
-        title: "Jyväskylä"
+        title: "Jyväskylä - Radio City"
         site: "http://www.radiocity.fi/"
         section: "Paikalliset - Radio City"
     }
     ListElement {
         source: "http://stream2.sbs.fi/rc-kvl.mp3"
-        title: "Kouvola"
+        title: "Kouvola - Radio City"
         site: "http://www.radiocity.fi/"
         section: "Paikalliset - Radio City"
     }
     ListElement {
         source: "http://stream2.sbs.fi/rc-lpr.mp3"
-        title: "Lappeenranta"
+        title: "Lappeenranta - Radio City"
         site: "http://www.radiocity.fi/"
         section: "Paikalliset - Radio City"
     }
     ListElement {
         source: "http://stream2.sbs.fi/rc-oul.mp3"
-        title: "Oulu"
+        title: "Oulu - Radio City"
         site: "http://www.radiocity.fi/"
         section: "Paikalliset - Radio City"
     }
     ListElement {
         source: "http://stream2.sbs.fi/rc-tre.mp3"
-        title: "Tampere"
+        title: "Tampere - Radio City"
         site: "http://www.radiocity.fi/"
         section: "Paikalliset - Radio City"
     }
     ListElement {
         source: "http://stream2.sbs.fi/rc-tku.mp3"
-        title: "Turku"
+        title: "Turku - Radio City"
         site: "http://www.radiocity.fi/"
         section: "Paikalliset - Radio City"
     }
@@ -329,43 +338,43 @@ ListModel {
 
     ListElement {
         source: "http://isojako.radiodei.fi:8000/helsinki.m3u"
-        title: "Helsinki"
+        title: "Helsinki - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }
     ListElement {
         source: "http://isojako.radiodei.fi:8000/tornio.m3u"
-        title: "Kemi"
+        title: "Kemi - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }
     ListElement {
         source: "http://isojako.radiodei.fi:8000/kruunupyy.m3u"
-        title: "Kruunupyy"
+        title: "Kruunupyy - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }
     ListElement {
         source: "http://isojako.radiodei.fi:8000/kristiinankaupunki.m3u"
-        title: "Kristiinankaupunki"
+        title: "Kristiinankaupunki - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }
     ListElement {
         source: "http://isojako.radiodei.fi:8000/oulu.m3u"
-        title: "Oulu"
+        title: "Oulu - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }
     ListElement {
         source: "http://isojako.radiodei.fi:8000/lapua.m3u"
-        title: "Pohjanmaa"
+        title: "Pohjanmaa - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }
     ListElement {
         source: "http://isojako.radiodei.fi:8000/turkueurajoki.m3u"
-        title: "Turku"
+        title: "Turku - Radio Dei"
         site: "http://www.radiodei.fi/"
         section: "Paikalliset - Radio Dei"
     }

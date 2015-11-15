@@ -42,20 +42,23 @@ SilicaListView {
 
     PulleyMenu {}
 
-    header: PageHeader { title: "Radioasemat" } //Radio stations
+    header: PageHeader {title: "Radioasemat" } //Radio stations
     section {
         property: 'section'
         delegate: SectionHeader {
             text: section
+            font.pixelSize: Screen.sizeCategory > Screen.Medium
+                            ? Theme.fontSizeExtraLarge
+                            : Theme.fontSizeSmall
         }
     }
     delegate: BackgroundItem {
         width: listView.width
         Label {
             text: model.title
-            font.pixelSize: Screen.sizeCategory >= Screen.Medium
-                            ? Theme.FontSizeExtraHuge
-                            : Theme.FontSizeExtraLarge
+            font.pixelSize: Screen.sizeCategory > Screen.Medium
+                            ? Theme.fontSizeHuge
+                            : Theme.fontSizeMedium
             color: highlighted
                    ? Theme.highlightColor
                    : Theme.primaryColor

@@ -38,6 +38,13 @@ DockedPanel {
     dock: Dock.Bottom
     open: true
 
+    /*PushUpMenu {
+        MenuItem {
+            text: qsTr("Lopeta toisto")
+            onClicked: stopStream()
+        }
+    }*/
+
     Row {
         anchors.centerIn: parent
         id: iconButtons

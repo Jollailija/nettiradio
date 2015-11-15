@@ -39,7 +39,8 @@ ApplicationWindow
         id: playMusic
         source: lib.musicSource
         autoPlay: false
-        onError: resurrector.start()
+        onError: resurrector.start(), console.warn(" Error! Start resurrector! ")
+        onPlaying: resurrector.stop, console.warn(" OK! Stop resurrector! ")
     }
 
     // Dunno what I did but seems to work
@@ -49,6 +50,24 @@ ApplicationWindow
         interval: 1000
         repeat: true
         onTriggered: console.warn(" Not OK! "), console.warn(playMusic.errorString), playStream()
+    }
+
+    Timer {
+        id: keepAliveHelper
+        interval: 2500
+        repeat: true
+        onTriggered: playStream()
+        running: lib.playing
+    }
+
+    Timer {
+        id: sleepTimer
+        interval: 60000
+        repeat: false
+        onTriggered: (lib.sleepTime === 0)
+                     ? (stopStream(), console.warn(" Sleeptimer at 0, shutting stream down "))
+                     : lib.sleepTime = (lib.sleepTime - 1)
+        running: lib.sleepTime >= 0
     }
 
         Item {
@@ -74,15 +93,6 @@ ApplicationWindow
         function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
         function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
         function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1; lib.stopped = true; resurrector.stop()}
-
-        Timer {
-            id: sleepTimer
-            interval: 60000
-            repeat: false
-            onTriggered: (lib.sleepTime == 0) ? stopStream() : lib.sleepTime = (lib.sleepTime - 1)
-            running: lib.sleepTime >= 0
-        }
-
 
 
         SleepTimerPage {
