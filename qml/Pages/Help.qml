@@ -39,6 +39,8 @@ Page {
         contentHeight: header.height + text.height + Theme.paddingLarge
         contentWidth: parent.width
 
+        VerticalScrollDecorator {}
+
         PullDownMenu {
             MenuItem {
                 text: qsTr("Tietoa sovelluksesta") //About
