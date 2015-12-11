@@ -5,6 +5,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Fri Dec 11 2015 jollailija <jollailija@gmail.com> 1.2.0-1
+-switch to xml list model hosted online
+
 * Sun Nov 15 2015 jollailija <jollailija@gmail.com> 1.1.1-1
 -fixed resurrector being left on forever
 -added a timer to keep things alive while streaming

@@ -79,6 +79,7 @@ ApplicationWindow
         property bool playing: false
         property bool stopped: true
         property bool activeView: true
+        property bool localSource: true // false for releases
     }
 
     allowedOrientations: Orientation.All

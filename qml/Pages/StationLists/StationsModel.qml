@@ -29,78 +29,18 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
+import QtQuick.XmlListModel 2.0
 
-Page {
-    id: page
-    property var textAlignment: TextInput.AlignLeft
-    SilicaFlickable {
-        anchors.fill: parent
-        clip: true
-        contentHeight: header.height + version.height + text.height + links.height + flattr.height + Theme.paddingLarge * 4
-        contentWidth: parent.width
-        VerticalScrollDecorator {}
+// Okay, this is my plan: I either use a local copy or the newest version fetched from the internetz.
 
-        PageHeader {
-            id: header
-            title: "Tietoa sovelluksesta" //About
-        }
-        Button {
-            id: version
-            anchors.top: header.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: "Versio " + "1.1.1" + "-" + "1" //I don't know how to automate this just yet...
-            onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
-        }
-
-        TextArea {
-            id: text
-            anchors {
-                top: version.bottom
-                left: parent.left
-                right: parent.right
-            }
-            readOnly: true
-            text: "Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä jollailija.
-Nettiradioiden streamitiedot ovat peräisin lähteestä www.mediamonitori.fi/index.php/nettiradiot
-Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämässä formaatissa.
-
-Lähdekoodi on saatavilla BSD-lisenssillä GitHubista ja sovelluksen uusimmat versiot löytyvät OpenRepos:ista (linkit alla).
-
-Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.
-
-Thanks for all the support guys!"
-            /*text: "This app was made by jollailija for all Finnish net radio listeners to enjoy.
-
-I'd like to thank Dax for helping me out with the code and Moth for the awesome icon."*/
-            font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeExtraLarge
-                            : Theme.fontSizeMedium
-            horizontalAlignment: textAlignment
-        }
-
-        Row {
-            id: links
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: text.bottom
-            spacing: Theme.paddingLarge
-
-
-            Button {
-                text: "GitHub"
-                onClicked: Qt.openUrlExternally("https://github.com/jollailija/nettiradio/")
-            }
-            Button {
-                text: "OpenRepos"
-                onClicked: Qt.openUrlExternally("https://openrepos.net/content/jollailija/finnish-net-radio-client-beta/")
-            }
-        }
-        Button {
-            anchors.top: links.bottom
-            anchors.topMargin: Theme.paddingLarge * 1.5
-            anchors.horizontalCenter: parent.horizontalCenter
-            id: flattr
-            text: "Lahjoita Flattrin kautta"
-            onClicked: Qt.openUrlExternally("https://flattr.com/thing/4382591/Jollailijanettiradio-on-github")
-        }
-    }
+XmlListModel {
+    id: feedModel
+    source: lib.localSource
+            ? "/xml/asemat.xml" // Why doesn't this work :(
+            : "http://jollailija.github.io/nettiradio/feed.xml"
+    query: "/rss/channel1/item"
+    XmlRole { name: "source"; query: "source/string()" }
+    XmlRole { name: "title"; query: "title/string()" }
+    XmlRole { name: "site"; query: "site/string()" }
+    XmlRole { name: "section"; query: "section/string()" }
 }
