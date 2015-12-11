@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    ...
+    <channel>
+        <item>
+            <title>Iskelmä (Helsinki)</title>
+            <source>http://stream2.sbs.fi/isk-hki.mp3</source>
+			<site>http://www.iskelma.fi/</site>
+			<section>Valtakunnalliset</section>
+        </item>
+        <item>
+            <title>Iskelmä Aikakone</title>
+            <source>http://stream2.sbs.fi/isk-aika.mp3</source>
+			<site>http://www.iskelma.fi/</site>
+			<section>Valtakunnalliset</section>
+        </item>
+    </channel>
+</rss>
