@@ -35,7 +35,6 @@ OTHER_FILES += qml/harbour-nettiradio.qml \
     qml/Pages/MainPage.qml \
     qml/Pages/PlayerPanel.qml \
     qml/Pages/SleepTimerPage.qml \
-    qml/Pages/StationLists/StationsModel.qml \
     qml/Pages/harbour-nettiradio.png \
     qml/Pages/AlphaMenu.qml \
     qml/Pages/AlphaMenuGroupView.qml \
@@ -52,3 +51,7 @@ appicons.path = /usr/share/icons/hicolor/
 appicons.files = appicons/*
 
 INSTALLS += appicons
+
+DISTFILES += \
+    qml/Pages/StationLists/Asemat.xml \
+    qml/Pages/StationLists/StationsModel.qml
