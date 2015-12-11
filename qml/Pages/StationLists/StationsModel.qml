@@ -34,13 +34,13 @@ import QtQuick.XmlListModel 2.0
 // Okay, this is my plan: I either use a local copy or the newest version fetched from the internetz.
 
 XmlListModel {
-    id: feedModel
     source: lib.localSource
-            ? "/xml/asemat.xml" // Why doesn't this work :(
+            ? Qt.resolvedUrl("xml/asemat.xml")
             : "http://jollailija.github.io/nettiradio/feed.xml"
     query: "/rss/channel1/item"
     XmlRole { name: "source"; query: "source/string()" }
     XmlRole { name: "title"; query: "title/string()" }
     XmlRole { name: "site"; query: "site/string()" }
     XmlRole { name: "section"; query: "section/string()" }
+    Component.onCompleted: console.warn(source.toString())
 }

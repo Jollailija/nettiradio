@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel1>
     <item>
@@ -15,13 +14,13 @@
     </item>
     <item>
         <source>http://stream2.sbs.fi/isk-hki.mp3</source>
-        <title>Iskelm‰ (Helsinki)</title>
+        <title>Iskelm√§ (Helsinki)</title>
         <site>http://www.iskelma.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
         <source>http://stream2.sbs.fi/isk-aika.mp3</source>
-        <title>Iskelm‰ Aikakone</title>
+        <title>Iskelm√§ Aikakone</title>
         <site>http://www.iskelma.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
@@ -37,7 +36,7 @@
         <site>http://www.radionova.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
-    <item>
+	<item>
         <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10544/80596_RadioAalto.mp3</source>
         <title>Radio Aalto</title>
         <site>http://www.radioaalto.fi/</site>
@@ -111,13 +110,13 @@
     </item>
     <item>
         <source>http://media.innoventum.fi:8000/radiorex.m3u</source>
-        <title>Iskelm‰ Rex</title>
+        <title>Iskelm√§ Rex</title>
         <site>http://www.radiorex.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
         <source>http://radio.6net.fi:8000/jarviradio.m3u</source>
-        <title>J‰rviradio</title>
+        <title>J√§rviradio</title>
         <site>http://www.jarviradio.fi/</site>
         <section>Paikalliset</section>
     </item>
@@ -213,7 +212,7 @@
     </item>
     <item>
         <source>http://stream2.sbs.fi/radiojkl.mp3</source>
-        <title>Jyv‰skyl‰</title>
+        <title>Jyv√§skyl√§</title>
         <site>http://www.radiojyvaskyla.fi/</site>
         <section>Paikalliset - Radio 'Kaupunki'</section>
     </item>
@@ -243,7 +242,7 @@
     </item>
     <item>
         <source>http://stream2.sbs.fi/rc-jkl.mp3</source>
-        <title>Jyv‰skyl‰ - Radio City</title>
+        <title>Jyv√§skyl√§ Radio City</title>
         <site>http://www.radiocity.fi/</site>
         <section>Paikalliset - Radio City</section>
     </item>
@@ -401,25 +400,25 @@
         <source>http://s3.radioboss.fm:8301/live.m3u</source>
         <title>Leijonaradio</title>
         <site>http://www.mystation.fi/</site>
-        <section>Tilap‰iset ja sekalaiset</section>
+        <section>Tilap√§iset ja sekalaiset</section>
     </item>
     <item>
         <source>http://suomiradio.pro:8000/hr256</source>
         <title>Pispalan Radio 995</title>
         <site>http://www.pispalanradio.fi/</site>
-        <section>Tilap‰iset ja sekalaiset</section>
+        <section>Tilap√§iset ja sekalaiset</section>
     </item>
     <item>
         <source>http://46.163.245.15:8000/radio.m3u</source>
         <title>Radio Patmos</title>
         <site>http://www.patmos.fi/</site>
-        <section>Tilap‰iset ja sekalaiset</section>
+        <section>Tilap√§iset ja sekalaiset</section>
     </item>
     <item>
         <source>http://streaming.shoutcast.com/RadioRapu</source>
         <title>Radio Rapu</title>
         <site>http://www.radiorapu.com/</site>
-        <section>Tilap‰iset ja sekalaiset</section>
+        <section>Tilap√§iset ja sekalaiset</section>
     </item>
     <item>
         <source>http://stream.iradio.fi:8000/klasu-med.mp3</source>

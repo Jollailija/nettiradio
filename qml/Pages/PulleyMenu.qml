@@ -33,9 +33,10 @@ import Sailfish.Silica 1.0
 PullDownMenu {
     MenuItem {
         text: qsTr("Vaihda näkymää") // Change list model
-        onClicked: lib.activeView
+        onClicked: {lib.stationCount = listView.count;
+                    lib.activeView
                    ? lib.activeView = false
-                   : lib.activeView = true
+                   : lib.activeView = true}
     }
     MenuItem {
         text: mainPage.allowedOrientations === Orientation.All
@@ -49,7 +50,7 @@ PullDownMenu {
         text: lib.sleepTime >= 0
               ? qsTr("Uniajastin, jäljellä ") + lib.sleepTime + "min" //Sleep timer
               : qsTr("Uniajastin") //Sleep timer
-        onClicked: pageStack.push(sleepTimerPage)
+        onClicked: pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
     }
     MenuItem {
         text: qsTr("Käyttöohje ja tietoa sovelluksesta") //Help

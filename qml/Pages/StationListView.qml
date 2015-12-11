@@ -42,6 +42,17 @@ SilicaListView {
 
     PulleyMenu {}
 
+    ViewPlaceholder {
+        enabled: listView.count === 0
+        text: "Ladataan asemalistaa..."
+        hintText: "Paina tästä, jos haluat käyttää paikallista kopioa."
+    }
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {lib.localSource = true; console.warn("using local list")}
+        enabled: listView.count === 0
+    }
+
     header: PageHeader {title: "Radioasemat" } //Radio stations
     section {
         property: 'section'

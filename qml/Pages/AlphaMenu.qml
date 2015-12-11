@@ -8,6 +8,7 @@ Column {
     property Component listDelegate: listDelegate
     property ListModel dataSource: data
 
+
     width: parent.width
     id: contentColumn
 

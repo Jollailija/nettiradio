@@ -48,13 +48,13 @@ ApplicationWindow
     Timer {
         id: resurrector
         interval: 1000
-        repeat: true
+        repeat: false
         onTriggered: console.warn(" Not OK! "), console.warn(playMusic.errorString), playStream()
     }
 
     Timer {
         id: keepAliveHelper
-        interval: 2500
+        interval: 5000
         repeat: true
         onTriggered: playStream()
         running: lib.playing
@@ -65,7 +65,7 @@ ApplicationWindow
         interval: 60000
         repeat: false
         onTriggered: (lib.sleepTime === 0)
-                     ? (stopStream(), console.warn(" Sleeptimer at 0, shutting stream down "))
+                     ? (stopStream(),  lib.sleepTime = -1, console.warn(" Sleeptimer at 0, shutting stream down "))
                      : lib.sleepTime = (lib.sleepTime - 1)
         running: lib.sleepTime >= 0
     }
@@ -79,7 +79,8 @@ ApplicationWindow
         property bool playing: false
         property bool stopped: true
         property bool activeView: true
-        property bool localSource: true // false for releases
+        property bool localSource: false // false for releases
+        property int stationCount: 1
     }
 
     allowedOrientations: Orientation.All
@@ -93,12 +94,7 @@ ApplicationWindow
 
     function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
     function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
-    function stopStream() {playMusic.stop(); lib.playing = false; lib.sleepTime = -1; lib.stopped = true; resurrector.stop()}
-
-
-    SleepTimerPage {
-        id: sleepTimerPage
-    }
+    function stopStream() {playMusic.stop(); lib.playing = false; lib.stopped = true; resurrector.stop()}
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
 

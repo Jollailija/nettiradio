@@ -33,14 +33,28 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "StationLists"
 
-SilicaFlickable {
+SilicaFlickable {   
 
-    StationsModel {
-        id: stationList
-        property string filterProperty: 'title'
-    }
     anchors.fill: parent
     clip: true
+
+    StationsModel {id:stationsModel}
+
+    ListModel {
+        id: qmlListModel
+        property string filterProperty: 'title'
+    }
+
+    Component.onCompleted: {console.log(lib.stationCount);fillList()}
+
+    function fillList() {
+        var i = 0
+        for (var r = 0; r < lib.stationCount; r++) {
+            qmlListModel.append({"title": stationsModel.get(i).title})
+            i ++
+            console.log(i)
+        }
+    }
 
     //width: parent ? parent.width : Screen.width
     //height: parent ? parent.height : Screen.height
@@ -53,7 +67,7 @@ SilicaFlickable {
     AlphaMenu {
 
         id: alphaMenu
-        dataSource: stationList
+        dataSource: qmlListModel
         listDelegate:  BackgroundItem {
             width: parent.width
             onClicked: {lib.musicSource = (Qt.resolvedUrl(source))

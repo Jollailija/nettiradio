@@ -69,9 +69,6 @@ Lähdekoodi on saatavilla BSD-lisenssillä GitHubista ja sovelluksen uusimmat ve
 Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.
 
 Thanks for all the support guys!"
-            /*text: "This app was made by jollailija for all Finnish net radio listeners to enjoy.
-
-I'd like to thank Dax for helping me out with the code and Moth for the awesome icon."*/
             font.pixelSize: Screen.sizeCategory > Screen.Medium
                             ? Theme.fontSizeExtraLarge
                             : Theme.fontSizeMedium

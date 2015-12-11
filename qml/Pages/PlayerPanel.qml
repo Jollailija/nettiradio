@@ -53,7 +53,7 @@ DockedPanel {
 
         Button {
             id: listeningTo
-            text: lib.radioStation
+            text: lib.radioStation.slice(0,23)
             RemorsePopup {id: remorse}
             onClicked: openWebsite()//{open(); buttonPress.play()}
         }

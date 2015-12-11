@@ -41,7 +41,7 @@ Page {
             id: column
             spacing: Theme.paddingLarge
             width: parent.width
-            anchors.horizontalCenter: parent
+            anchors.horizontalCenter: parent.horizontalCenter
             PageHeader { title: "Uniajastimen asetus" }
             Label {
                 text: ((lib.sleepTime > 0) ? ("Jäljellä oleva aika: "  + lib.sleepTime + ". Vaihda aika") : "Valitse aika")
@@ -66,12 +66,12 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Button {
-                    anchors.horizontalCenter: parent
+                    //anchors.horizontalCenter: parent
                     text: "Aseta"
                     onPressed: lib.sleepTime = timerSlider.value
                 }
                 Button {
-                    anchors.horizontalCenter: parent
+                    //anchors.horizontalCenter: parent
                     text: "Pysäytä"
                     onPressed: lib.sleepTime = -1
                 }
