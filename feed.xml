@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel1>
     <item>
@@ -37,7 +36,7 @@
         <site>http://www.radionova.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
-    <item>
+	<item>
         <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10544/80596_RadioAalto.mp3</source>
         <title>Radio Aalto</title>
         <site>http://www.radioaalto.fi/</site>
@@ -243,7 +242,7 @@
     </item>
     <item>
         <source>http://stream2.sbs.fi/rc-jkl.mp3</source>
-        <title>Jyväskylä - Radio City</title>
+        <title>Jyväskylä Radio City</title>
         <site>http://www.radiocity.fi/</site>
         <section>Paikalliset - Radio City</section>
     </item>
@@ -440,5 +439,4 @@
         <section>Rondo Classic</section>
     </item>
 </channel1>
-
 </rss>
