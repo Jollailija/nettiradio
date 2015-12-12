@@ -32,6 +32,7 @@ import QtMultimedia 5.0
 //import QtFeedback 5.0
 import Sailfish.Silica 1.0
 import "Pages"
+import "Pages/StationLists"
 
 ApplicationWindow
 {
@@ -69,7 +70,6 @@ ApplicationWindow
                      : lib.sleepTime = (lib.sleepTime - 1)
         running: lib.sleepTime >= 0
     }
-
     Item {
         id: lib
         property string radioStation: "Valitse asema"
@@ -81,6 +81,25 @@ ApplicationWindow
         property bool activeView: true
         property bool localSource: false // false for releases
         property int stationCount: 1
+    }
+
+    Component{QmlListModel{id:qmlListModel}}
+    Component{StationsModel{id:stationsModel}}
+
+    function fillList() {
+        var i = 0
+        for (var r = 0; r < 10; r++) {
+            qmlListModel.append({"title": stationsModel.get(i).title})
+            i ++
+            console.log(i)
+        }
+    }
+
+    Timer {
+        interval: 5000
+        repeat: false
+        onTriggered: {fillList(); console.log("fill")}
+        running: true
     }
 
     allowedOrientations: Orientation.All
@@ -99,5 +118,6 @@ ApplicationWindow
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
 
     cover: Qt.resolvedUrl("Pages/CoverPage.qml")
+
 
 }

@@ -55,4 +55,5 @@ INSTALLS += appicons
 DISTFILES += \
     qml/Pages/StationLists/Asemat.xml \
     qml/Pages/StationLists/StationsModel.qml \
-    qml/Pages/StationLists/xml/asemat.xml
+    qml/Pages/StationLists/xml/asemat.xml \
+    qml/Pages/StationLists/QmlListModel.qml

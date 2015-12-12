@@ -36,8 +36,6 @@ Page {
 
     allowedOrientations: _defaultPageOrientations
 
-
-
     /*ThemeEffect {
         id: listPress
         effect: ThemeEffect.PressWeak

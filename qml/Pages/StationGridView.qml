@@ -38,23 +38,16 @@ SilicaFlickable {
     anchors.fill: parent
     clip: true
 
-    StationsModel {id:stationsModel}
+    //StationsModel {id:stationsModel}
 
-    ListModel {
+    QmlListModel {
         id: qmlListModel
         property string filterProperty: 'title'
     }
 
-    Component.onCompleted: {console.log(lib.stationCount);fillList()}
+    //Component.onCompleted: qmlListModel.append({"title": stationsModel.get(3).title})//{console.log(lib.stationCount);fillList()}
 
-    function fillList() {
-        var i = 0
-        for (var r = 0; r < lib.stationCount; r++) {
-            qmlListModel.append({"title": stationsModel.get(i).title})
-            i ++
-            console.log(i)
-        }
-    }
+
 
     //width: parent ? parent.width : Screen.width
     //height: parent ? parent.height : Screen.height

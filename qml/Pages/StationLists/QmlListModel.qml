@@ -29,23 +29,6 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import QtQuick.XmlListModel 2.0
 
-// Okay, this is my plan: I either use a local copy or the newest version fetched from the internetz.
-
-XmlListModel {
-    id: stationsModel
-    source: lib.localSource
-            ? Qt.resolvedUrl("xml/asemat.xml")
-            : "http://jollailija.github.io/nettiradio/feed.xml"
-    query: "/rss/channel1/item"
-    XmlRole { name: "source"; query: "source/string()" }
-    XmlRole { name: "title"; query: "title/string()" }
-    XmlRole { name: "site"; query: "site/string()" }
-    XmlRole { name: "section"; query: "section/string()" }
-    Component.onCompleted: {
-        console.log("onCompleted")
-        console.log(source.toString())
-        console.log(stationsModel.count)
-    }
+ListModel {
 }

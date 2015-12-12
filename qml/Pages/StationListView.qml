@@ -38,7 +38,7 @@ SilicaListView {
     anchors.fill: parent
     clip: true
 
-    model: StationsModel {}
+    model: StationsModel {id: stationsModel}
 
     PulleyMenu {}
 
@@ -49,7 +49,7 @@ SilicaListView {
     }
     MouseArea {
         anchors.fill: parent
-        onClicked: {lib.localSource = true; console.warn("using local list")}
+        onClicked: {lib.localSource = true; console.warn("using local list"); stationsModel.reload()}
         enabled: listView.count === 0
     }
 
