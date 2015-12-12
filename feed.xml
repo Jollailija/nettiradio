@@ -26,6 +26,18 @@
 -->
     <channel1>
     <item>
+        <source>http://str2.zenonmedia.com:8011/Jouluradio</source>
+        <title>Jouluradio</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://stream2.bauermedia.fi/isk-joulu.mp3</source>
+        <title>Iskelmä Joulu</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
         <source>http://188.117.44.132:8000/stream.m3u</source>
         <title>Bassoradio</title>
         <site>http://www.basso.fi/radio</site>
@@ -462,6 +474,12 @@
         <title>Viva Classica</title>
         <site>http://www.rondoclassic.fi/radio/viva</site>
         <section>Rondo Classic</section>
+    </item>
+    <item>
+        <source>yleuni-f.akamaihd.net/i/yleliveradiohd_18@113895/master.m3u8</source>
+        <title>Testi</title>
+        <site>yle.fi</site>
+        <section>Testi</section>
     </item>
 </channel1>
 </rss>
