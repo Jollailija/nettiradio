@@ -34,41 +34,35 @@ import QtMultimedia 5.0
 DockedPanel {
     width: parent.width
     height: Theme.itemSizeExtraLarge + Theme.paddingLarge
-
     dock: Dock.Bottom
     open: true
-
-    /*PushUpMenu {
-        MenuItem {
-            text: qsTr("Lopeta toisto")
-            onClicked: stopStream()
-        }
-    }*/
-
     Row {
         anchors.centerIn: parent
         id: iconButtons
         spacing: Theme.paddingLarge
-
-
         Button {
             id: listeningTo
-            text: lib.radioStation.slice(0,23)
+            text: Screen.sizeCategory > Screen.Medium
+                  ? lib.radioStation
+                  : lib.radioStation.slice(0,23)
             RemorsePopup {id: remorse}
             onClicked: openWebsite()//{open(); buttonPress.play()}
         }
-
         IconButton {
             id: pause
-            icon.source: "image://theme/icon-l-pause"
-            onClicked: pauseStream()//{pauseStream(); buttonPress.play()}
-            enabled: lib.playing
+            icon.source: "icon-l-stop.png"
+            onClicked: stopStream()
+            enabled: !lib.stopped
         }
         IconButton {
             id: play
-            icon.source: "image://theme/icon-l-play"
-            onClicked: playStream()//{playStream(); buttonPress.play()}
-            enabled: !lib.playing
+            icon.source: lib.playing
+                        ? "image://theme/icon-l-pause"
+                        : "image://theme/icon-l-play"
+            onClicked: lib.playing
+                       ? pauseStream()
+                       : playStream()
+            //enabled: !lib.playing
         }
     }
 }

@@ -43,9 +43,5 @@ XmlListModel {
     XmlRole { name: "title"; query: "title/string()" }
     XmlRole { name: "site"; query: "site/string()" }
     XmlRole { name: "section"; query: "section/string()" }
-    Component.onCompleted: {
-        console.log("onCompleted")
-        console.log(source.toString())
-        console.log(stationsModel.count)
-    }
+    Component.onCompleted: console.log(source.toString())
 }

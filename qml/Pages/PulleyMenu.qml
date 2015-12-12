@@ -33,10 +33,9 @@ import Sailfish.Silica 1.0
 PullDownMenu {
     MenuItem {
         text: qsTr("Vaihda näkymää") // Change list model
-        onClicked: {lib.stationCount = listView.count;
-                    lib.activeView
-                   ? lib.activeView = false
-                   : lib.activeView = true}
+        onClicked: {lib.activeView
+                    ? (lib.stationCount=stationsModel.count, fillList(), lib.activeView = false)
+                    : (lib.stationCount=stationsModel.count, fillList(), lib.activeView = true)}
     }
     MenuItem {
         text: mainPage.allowedOrientations === Orientation.All

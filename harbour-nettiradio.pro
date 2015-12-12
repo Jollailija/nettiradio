@@ -12,48 +12,38 @@
 # The name of your application
 TARGET = harbour-nettiradio
 
-CONFIG += sailfishapp
+TEMPLATE = aux
 
-SOURCES += src/harbour-nettiradio.cpp
+#CONFIG += sailfishapp
 
-OTHER_FILES += qml/harbour-nettiradio.qml \
-    rpm/harbour-nettiradio.yaml \
+#SOURCES += src/harbour-nettiradio.cpp
+
+qml.files = qml/*
+
+qml.path = /usr/share/harbour-nettiradio/qml
+
+desktop.files = harbour-nettiradio.desktop
+desktop.path = /usr/share/applications
+
+OTHER_FILES += \
+    qml/* \
+    qml/Pages/* \
+    qml/Pages/StationLists/* \
+    qml/Pages/StationLists/Asemat.xml \
     harbour-nettiradio.desktop \
     rpm/harbour-nettiradio.spec \
-    rpm/harbour-nettiradio.changes \
-    qml/About.qml \
-    qml/Help.qml \
-    qml/harbour-nettiradio.png \
-    qml/PlayerPanel.qml \
-    qml/SleepTimerPage.qml \
-    qml/MainPage.qml \
-    qml/CoverPage.qml \
-    qml/StationLists/StationsModel.qml \
-    qml/Pages/About.qml \
-    qml/Pages/CoverPage.qml \
-    qml/Pages/Help.qml \
-    qml/Pages/MainPage.qml \
-    qml/Pages/PlayerPanel.qml \
-    qml/Pages/SleepTimerPage.qml \
-    qml/Pages/harbour-nettiradio.png \
-    qml/Pages/AlphaMenu.qml \
-    qml/Pages/AlphaMenuGroupView.qml \
-    qml/Pages/ContactNameGroup.qml \
-    qml/Pages/StationListView.qml \
-    qml/Pages/PulleyMenu.qml \
-    qml/Pages/StationGridView.qml
+    rpm/harbour-nettiradio.changes
 
 # to disable building translations every time, comment out the
 # following CONFIG line
-CONFIG += sailfishapp_i18n
+#CONFIG += sailfishapp_i18n
 
 appicons.path = /usr/share/icons/hicolor/
 appicons.files = appicons/*
 
-INSTALLS += appicons
+INSTALLS += appicons qml desktop
 
 DISTFILES += \
     qml/Pages/StationLists/Asemat.xml \
     qml/Pages/StationLists/StationsModel.qml \
-    qml/Pages/StationLists/xml/asemat.xml \
-    qml/Pages/StationLists/QmlListModel.qml
+    qml/Pages/StationLists/xml/asemat.xml

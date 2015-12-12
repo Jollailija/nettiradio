@@ -76,7 +76,14 @@ Page {
                     onPressed: lib.sleepTime = -1
                 }
             }
-
+            TextSwitch {
+                id: palautumismoodi
+                text: "Palautumismoodi"
+                enabled: !lib.keepAliveMode
+                description: "Tuhlaa hieman virtaa, mutta selviytyy paremmin katkoista. Poista käytöstä käynnistämällä sovellus uudelleen."
+                checked: lib.keepAliveMode
+                onCheckedChanged: {lib.keepAliveMode = true, console.log("Kytkin " + lib.keepAliveMode)}
+            }
         }
     }
 }

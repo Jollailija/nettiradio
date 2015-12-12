@@ -33,7 +33,6 @@ import "StationLists"
 
 Page {
     id: mainPage
-
     allowedOrientations: _defaultPageOrientations
 
     /*ThemeEffect {
@@ -69,9 +68,4 @@ Page {
             StationGridView {}
         }
     }
-
-
-
-
-
 }

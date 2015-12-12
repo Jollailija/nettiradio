@@ -5,10 +5,17 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Fri Dec 11 2015 jollailija <jollailija@gmail.com> 1.2.0-1
--switch to xml list model hosted online
--power saving
+* Sat Dec 12 2015 jollailija <jollailija@gmail.com> 1.2.0-1
+-switch to xml list model (hosted online)
+-function to convert XmlListModel into qml ListModel
+-power saving tweaks to some timers
+-keepAliveHelper now only runs during sleep timer and keepAliveMode
+-keepAliveMode can be turned on at sleep timer page
 -fixed too long station names in panel
+-tweaked Tablet font size
+-added stop button
+-made files to be accepted by RMP validator (= add %defattr(644,root,root,755) to spec)
+-noarch packaging
 
 * Sun Nov 15 2015 jollailija <jollailija@gmail.com> 1.1.1-1
 -fixed resurrector being left on forever

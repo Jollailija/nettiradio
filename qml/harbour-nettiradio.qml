@@ -43,24 +43,22 @@ ApplicationWindow
         onError: resurrector.start(), console.warn(" Error! Start resurrector! ")
         onPlaying: resurrector.stop, console.warn(" OK! Stop resurrector! ")
     }
-
     // Dunno what I did but seems to work
-
     Timer {
         id: resurrector
         interval: 1000
-        repeat: false
+        repeat: true
         onTriggered: console.warn(" Not OK! "), console.warn(playMusic.errorString), playStream()
     }
-
     Timer {
         id: keepAliveHelper
         interval: 5000
         repeat: true
-        onTriggered: playStream()
-        running: lib.playing
+        onTriggered: {playStream(); console.log(lib.keepAliveMode)}
+        running: lib.keepAliveMode
+                 ? lib.playing
+                 : lib.sleepTime >= 0 && lib.playing // This should save some CPU while sleepTimer is off
     }
-
     Timer {
         id: sleepTimer
         interval: 60000
@@ -80,44 +78,34 @@ ApplicationWindow
         property bool stopped: true
         property bool activeView: true
         property bool localSource: false // false for releases
-        property int stationCount: 1
+        property int stationCount: 5
+        property bool keepAliveMode: false
     }
 
-    Component{QmlListModel{id:qmlListModel}}
-    Component{StationsModel{id:stationsModel}}
+    ListModel{id:qmlListModel;property string filterProperty: 'title'}
+    StationsModel{id:stationsModel}
+
 
     function fillList() {
-        var i = 0
-        for (var r = 0; r < 10; r++) {
-            qmlListModel.append({"title": stationsModel.get(i).title})
+        qmlListModel.clear() // This way the list will be up to date and not multiply
+        for (var r = 0; r < lib.stationCount; r++) {
+            qmlListModel.append({"title": stationsModel.get(i).title, "source": stationsModel.get(i).source, "site": stationsModel.get(i).site, "section": stationsModel.get(i).section})
             i ++
-            console.log(i)
+            //console.log(i)
         }
-    }
-
-    Timer {
-        interval: 5000
-        repeat: false
-        onTriggered: {fillList(); console.log("fill")}
-        running: true
     }
 
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
 
-    RemorsePopup {id: remorse}
+    RemorsePopup {id: remorse; anchors.top: parent.top}
 
-    function openWebsite() {
-        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
-    }
+    function openWebsite() {remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)}
 
     function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
     function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
     function stopStream() {playMusic.stop(); lib.playing = false; lib.stopped = true; resurrector.stop()}
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
-
     cover: Qt.resolvedUrl("Pages/CoverPage.qml")
-
-
 }

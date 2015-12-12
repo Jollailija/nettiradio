@@ -40,10 +40,10 @@ SilicaFlickable {
 
     //StationsModel {id:stationsModel}
 
-    QmlListModel {
+    /*QmlListModel {
         id: qmlListModel
         property string filterProperty: 'title'
-    }
+    }*/
 
     //Component.onCompleted: qmlListModel.append({"title": stationsModel.get(3).title})//{console.log(lib.stationCount);fillList()}
 

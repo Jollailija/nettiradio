@@ -59,7 +59,7 @@ SilicaListView {
         delegate: SectionHeader {
             text: section
             font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeExtraLarge
+                            ? Theme.fontSizeLarge
                             : Theme.fontSizeSmall
         }
     }
@@ -68,7 +68,7 @@ SilicaListView {
         Label {
             text: model.title
             font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeHuge
+                            ? Theme.fontSizeExtraLarge
                             : Theme.fontSizeMedium
             color: highlighted
                    ? Theme.highlightColor
