@@ -23,11 +23,56 @@
   ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
+  Jouluradio, Julradion, Kauneimmat joululaulut, Lasten jouluradio, Klassinen joulu, Rouhea joulu, Xmas ja Jõuluraadio -nettiradoiden steam-osoitteet ovat lähteestä http://www.jouluradio.fi/#kanavat
 -->
     <channel1>
     <item>
         <source>http://str2.zenonmedia.com:8011/Jouluradio</source>
         <title>Jouluradio</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8013/Julradio</source>
+        <title>Julradion</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8014/Kauneimmat</source>
+        <title>Kauneimmat joululaulut</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8016/Pikku</source>
+        <title>Lasten jouluradio</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8015/Klassinenjoulu</source>
+        <title>Klassinen joulu</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8017/Rouhea_Joulu</source>
+        <title>Rouhea joulu</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8012/Jouradio</source>
+        <title>Xmas</title>
+        <site>http://www.jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+    <item>
+        <source>http://str2.zenonmedia.com:8018/Virojoulu</source>
+        <title>Jõuluraadio</title>
         <site>http://www.jouluradio.fi/</site>
         <section>Jouluradiot</section>
     </item>
