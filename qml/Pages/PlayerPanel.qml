@@ -44,7 +44,9 @@ DockedPanel {
             id: listeningTo
             text: Screen.sizeCategory > Screen.Medium
                   ? lib.radioStation
-                  : lib.radioStation.slice(0,23)
+                  : mainPage.isPortrait
+                    ? lib.radioStation.slice(0,23)
+                    : lib.radioStation
             RemorsePopup {id: remorse}
             onClicked: openWebsite()//{open(); buttonPress.play()}
         }
@@ -57,8 +59,8 @@ DockedPanel {
         IconButton {
             id: play
             icon.source: lib.playing
-                        ? "image://theme/icon-l-pause"
-                        : "image://theme/icon-l-play"
+                         ? "image://theme/icon-l-pause"
+                         : "image://theme/icon-l-play"
             onClicked: lib.playing
                        ? pauseStream()
                        : playStream()

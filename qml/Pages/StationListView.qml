@@ -30,6 +30,7 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 import "StationLists"
+import "functions.js" as TheFunctions // :)
 
 SilicaListView {
     id: listView
@@ -38,7 +39,7 @@ SilicaListView {
     anchors.fill: parent
     clip: true
 
-    model: StationsModel {id: stationsModel}
+    model: stationsModel
 
     PulleyMenu {}
 
@@ -59,8 +60,8 @@ SilicaListView {
         delegate: SectionHeader {
             text: section
             font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeLarge
-                            : Theme.fontSizeSmall
+                            ? Theme.fontSizeMedium * lib.fontSize
+                            : Theme.fontSizeSmall * lib.fontSize
         }
     }
     delegate: BackgroundItem {
@@ -68,19 +69,18 @@ SilicaListView {
         Label {
             text: model.title
             font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeExtraLarge
-                            : Theme.fontSizeMedium
+                            ? Theme.fontSizeExtraLarge * lib.fontSize
+                            : Theme.fontSizeMedium * lib.fontSize
             color: highlighted
                    ? Theme.highlightColor
                    : Theme.primaryColor
             anchors.verticalCenter: parent.verticalCenter
             x: Theme.paddingLarge
         }
-        onClicked: {lib.musicSource = (Qt.resolvedUrl(source))
-            lib.radioStation = title
+        onClicked: {
+            TheFunctions.chooseStation(stationsModel, index)
             //listPress.play()
             playStream()
-            lib.website = (Qt.resolvedUrl(site))
         }
     }
 

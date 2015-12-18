@@ -31,23 +31,30 @@ import QtQuick 2.1
 import QtMultimedia 5.0
 //import QtFeedback 5.0
 import Sailfish.Silica 1.0
+import QtQuick.LocalStorage 2.0
 import "Pages"
 import "Pages/StationLists"
+import "Pages/storage.js" as Storage
+import "Pages/functions.js" as TheFunctions // :)
 
 ApplicationWindow
 {
     Audio {
         id: playMusic
         source: lib.musicSource
-        autoPlay: false
+        volume: lib.volume
+        autoPlay: true
         onError: resurrector.start(), console.warn(" Error! Start resurrector! ")
-        onPlaying: resurrector.stop, console.warn(" OK! Stop resurrector! ")
+        onPlaying: resurrector.stop, console.warn(" OK! Stop resurrector! "), playStream()
+        onStopped: stopStream() //Should update buttons on incoming call
+        onPaused: pauseStream()
+        onMutedChanged: pauseStream()
     }
     // Dunno what I did but seems to work
     Timer {
         id: resurrector
         interval: 1000
-        repeat: true
+        repeat: false
         onTriggered: console.warn(" Not OK! "), console.warn(playMusic.errorString), playStream()
     }
     Timer {
@@ -71,30 +78,34 @@ ApplicationWindow
     Item {
         id: lib
         property string radioStation: "Valitse asema"
-        property string musicSource: ""
-        property string website: "https://github.com/jollailija/nettiradio"
+        property string musicSource
+        property string website
+        property string query: "/rss/channel1/item"
         property int sleepTime: -1
         property bool playing: false
         property bool stopped: true
         property bool activeView: true
         property bool localSource: false // false for releases
         property int stationCount: 5
+        property real fontSize: 1
         property bool keepAliveMode: false
+        property int stationIndex: 0 // in case there is a station at startup there will be a valid index
+        property real volume: 1.0
     }
 
     ListModel{id:qmlListModel;property string filterProperty: 'title'}
     StationsModel{id:stationsModel}
 
-
     function fillList() {
         qmlListModel.clear() // This way the list will be up to date and not multiply
+        var i = 0
         for (var r = 0; r < lib.stationCount; r++) {
             qmlListModel.append({"title": stationsModel.get(i).title, "source": stationsModel.get(i).source, "site": stationsModel.get(i).site, "section": stationsModel.get(i).section})
             i ++
             //console.log(i)
         }
+        console.log("this many stations: " + i)
     }
-
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
 
@@ -108,4 +119,6 @@ ApplicationWindow
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
     cover: Qt.resolvedUrl("Pages/CoverPage.qml")
+
+    Component.onCompleted: TheFunctions.initializeLib()
 }

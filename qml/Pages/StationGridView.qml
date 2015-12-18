@@ -32,6 +32,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "StationLists"
+import "functions.js" as TheFunctions
 
 SilicaFlickable {   
 
@@ -56,21 +57,21 @@ SilicaFlickable {
 
     PulleyMenu {}
 
-
     AlphaMenu {
 
         id: alphaMenu
         dataSource: qmlListModel
         listDelegate:  BackgroundItem {
             width: parent.width
-            onClicked: {lib.musicSource = (Qt.resolvedUrl(source))
+            onClicked: {
+                lib.musicSource = (Qt.resolvedUrl(source))
                 lib.radioStation = title
                 //listPress.play()
                 playStream()
                 lib.website = (Qt.resolvedUrl(site))
             }
 
-            Row{
+            Row {
                 spacing: 20
 
                 Label {

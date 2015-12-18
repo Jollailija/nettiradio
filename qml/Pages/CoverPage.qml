@@ -29,6 +29,7 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
+import "functions.js" as TheFunctions // :)
 
 CoverBackground {
     property var textAlignment: TextInput.AlignHCenter
@@ -55,9 +56,9 @@ CoverBackground {
             iconSource: lib.sleepTime === -1 ? (lib.playing ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play") : "image://theme/icon-cover-cancel"
             onTriggered: lib.sleepTime === -1 ? (lib.playing ? pauseStream() : playStream()) : lib.sleepTime = -1
         }
-        /*CoverAction {
-            iconSource: "image://theme/icon-cover-cancel"
-            onTriggered: do more stuff
-        }*/
+        CoverAction {
+            iconSource: "image://theme/icon-cover-next"
+            onTriggered: TheFunctions.chooseStation(stationsModel,(lib.stationIndex))
+        }
     }
 }

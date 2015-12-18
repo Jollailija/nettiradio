@@ -52,7 +52,7 @@ PullDownMenu {
         onClicked: pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
     }
     MenuItem {
-        text: qsTr("Käyttöohje ja tietoa sovelluksesta") //Help
-        onClicked: pageStack.push(Qt.resolvedUrl("Help.qml"))
+        text: qsTr("Valikko")
+        onClicked: pageStack.push(Qt.resolvedUrl("Menu.qml"))
     }
 }

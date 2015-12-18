@@ -31,7 +31,6 @@ import QtQuick 2.1
 import Sailfish.Silica 1.0
 
 Page {
-
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: column.height + Theme.paddingLarge
@@ -46,8 +45,9 @@ Page {
             Label {
                 text: ((lib.sleepTime > 0) ? ("Jäljellä oleva aika: "  + lib.sleepTime + ". Vaihda aika") : "Valitse aika")
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: Theme.highlightColor
-                font.family: Theme.fontFamilyHeading
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeLarge * lib.fontSize
+                                : Theme.fontSizeMedium * lib.fontSize
             }
             Slider {
                 id: timerSlider
@@ -57,32 +57,20 @@ Page {
                 stepSize: 1
                 width: parent.width
                 handleVisible: true
-                valueText: value //(value >= 0) ? value : "0"
+                valueText: value
                 label: "minuuttia"
             }
-
             Row {
                 anchors.horizontalCenter: parent.horizontalCenter
                 spacing: Theme.paddingLarge
-
                 Button {
-                    //anchors.horizontalCenter: parent
                     text: "Aseta"
                     onPressed: lib.sleepTime = timerSlider.value
                 }
                 Button {
-                    //anchors.horizontalCenter: parent
                     text: "Pysäytä"
                     onPressed: lib.sleepTime = -1
                 }
-            }
-            TextSwitch {
-                id: palautumismoodi
-                text: "Palautumismoodi"
-                enabled: !lib.keepAliveMode
-                description: "Tuhlaa hieman virtaa, mutta selviytyy paremmin katkoista. Poista käytöstä käynnistämällä sovellus uudelleen."
-                checked: lib.keepAliveMode
-                onCheckedChanged: {lib.keepAliveMode = true, console.log("Kytkin " + lib.keepAliveMode)}
             }
         }
     }

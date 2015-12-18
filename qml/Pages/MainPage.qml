@@ -57,7 +57,6 @@ Page {
         sourceComponent: lib.activeView
                          ? listViewComponent
                          : gridViewComponent
-
         Component {
             id: listViewComponent
             StationListView {}
@@ -67,5 +66,6 @@ Page {
             id: gridViewComponent
             StationGridView {}
         }
+
     }
 }

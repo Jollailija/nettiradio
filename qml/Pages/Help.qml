@@ -65,16 +65,20 @@ Tällä hetkellä kuunneltavan radioaseman nimi näkyy näytön alaosassa. Paina
 
 Voit käynnistää tai keskeyttää toiston alaosan nappuloilla ja kannen nappulalla. Voit lopettaa toiston painamalla neliötä. Toiston lopettaminen lopettaa streamin lataamisen ja säästää näin akkua.
 
+Myös aseman vaihtaminen onnituu kannesta käsin.
+
 Voit lukita näytön kierron tai vaihtaa asemalistanäkymää vetovalikosta käsin.
 
 Uniajastin sammuttaa toiston asettamasi minuuttimäärän jälkeen. Sammutusaika valitaan Uniajastin-sivun liukuvalitsimella. Ajastin käynnistetään ja pysäytetään sivulta löytyvillä nappuloilla. Jäljellä oleva aika näkyy kannessa sekä vetovalikossa, ja ajastimen voi pysäyttää kannen pikavalinnalla.
 
-Jos sovellus ei selviydy yhteyskatkoista, voit kokeilla palautumismoodia. Se löytyy Uniajastin-sivulta."
+Jos sovellus ei selviydy yhteyskatkoista, voit kokeilla palautumismoodia. Se löytyy valikosta. Valikosta löytyy myös paljon mielenkiintoisia asetuksia, kokeile!
+
+Jos sinulla on kysymyksiä, asema- ja ominaisuustoiveita tai palautetta, voit kirjoittaa kommentin Kauppaan, OpenReposiin tai lähettää sähköpostia osoitteeseen jollailija@gmail.com"
             /*text: "Choose any radio station by clicking it's name on the list. Name of the currently playing radio station is displayed in the panel at the bottom.
 While inside the app, you can play & pause by using the icon buttons in the panel. You can also use the cover actions for pausing and resuming."*/
             font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeExtraLarge
-                            : Theme.fontSizeMedium
+                            ? Theme.fontSizeLarge * lib.fontSize
+                            : Theme.fontSizeMedium * lib.fontSize
             horizontalAlignment: textAlignment
         }
     }
