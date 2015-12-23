@@ -34,7 +34,7 @@
 //storage.js
 // First, let's create a short helper function to get the database connection
 function getDatabase() {
-     return LocalStorage.openDatabaseSync("Nettiradio", "1.0", "StorageDatabase", 100000);
+     return LocalStorage.openDatabaseSync("Nettiradio", "1.0", "Database", 100000);
 }
 
 // At the start of the application, we can initialize the tables we need if they haven't been created yet
@@ -45,6 +45,7 @@ function initialize() {
             // Create the settings table if it doesn't already exist
             // If the table exists, this is skipped
             tx.executeSql('CREATE TABLE IF NOT EXISTS settings(setting TEXT UNIQUE, value TEXT)');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS stations(title TEXT UNIQUE, source TEXT UNIQUE, site TEXT, section TEXT)');
       });
 }
 
@@ -79,6 +80,68 @@ function getSetting(setting) {
          res = "Unknown";
      }
   })
+  // The function returns “Unknown” if the setting was not found in the database
+  // For more advanced projects, this should probably be handled through error codes
+  return res
+}
+
+/*
+  Here's another table. Don't flip the table.
+*/
+
+// This function is used to write a station into the database
+function setStationInDB(title, source, site, section) {
+   // setting: string representing the setting name (eg: “username”)
+   // value: string representing the value of the setting (eg: “myUsername”)
+   console.log("Setting fav to db...")
+   var db = getDatabase();
+   var res = "";
+   db.transaction(function(tx) {
+        var rs = tx.executeSql('INSERT OR REPLACE INTO stations VALUES (?,?,?,?);', [title,source,site,section]);
+              //console.log(rs.rowsAffected)
+              if (rs.rowsAffected > 0) {
+                res = "OK";
+              } else {
+                res = "Error";
+              }
+        }
+  );
+  // The function returns “OK” if it was successful, or “Error” if it wasn't
+  console.log("Fav set to db:"+title, source, site, section)
+  return res;
+}
+function deleteStationFromDB(title) {
+   console.log("Deleting fav from db...")
+   var db = getDatabase();
+   var res = "";
+   db.transaction(function(tx) {
+        var rs = tx.executeSql('DELETE FROM stations WHERE title=?', [title]);
+              //console.log(rs.rowsAffected)
+              if (rs.rowsAffected > 0) {
+                res = "OK";
+              } else {
+                res = "Error";
+              }
+        }
+  );
+  // The function returns “OK” if it was successful, or “Error” if it wasn't
+  console.log("Deleted fav from db.")
+  return res;
+}
+// This function is used to retrieve stations from the database
+function getFavsFromDB(modelToInsertTo) {
+   console.log("Inserting favs into list...")
+   var db = getDatabase();
+   var res="";
+   db.transaction(function(tx) {
+     var rs = tx.executeSql('SELECT title,source,site FROM stations WHERE section="Suosikit";');
+     for (var i = 0; i < rs.rows.length; i++) {
+         //console.log("Inserting fav: " + rs.rows.item(i).title)
+         modelToInsertTo.insert(0,{"title": rs.rows.item(i).title, "source": rs.rows.item(i).source, "site": rs.rows.item(i).site, "section": "Suosikit"})
+         //console.log("Fav inserted: " + rs.rows.item(i).title)
+     }
+  })
+  console.log("Favs inserted into list.")
   // The function returns “Unknown” if the setting was not found in the database
   // For more advanced projects, this should probably be handled through error codes
   return res

@@ -43,6 +43,7 @@ Page {
             id: column
             width: parent.width
             anchors.margins: Theme.paddingLarge
+            spacing: Theme.paddingLarge
 
             PageHeader {
                 title: "Valikko"
@@ -54,20 +55,12 @@ Page {
                     pageStack.push(Qt.resolvedUrl("Help.qml"))
                 }
             }
-            Item {
-                width: parent.width
-                height: Theme.paddingLarge
-            }
             Button {
                 text: "Tietoa sovelluksesta"
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("About.qml"))
                 }
-            }
-            Item {
-                width: parent.width
-                height: Theme.paddingLarge
             }
             Button {
                 text: "Uniajastin"
@@ -76,11 +69,27 @@ Page {
                     pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
                 }
             }
+            Button {
+                text: "Muokkaa suosikkeja"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("FavManager.qml"))
+                }
+            }
             SectionHeader {
                 text: "Asetukset"
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * 2 * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
+            }           
+            Button {
+                text: "Päivitä lista"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    qmlListModel.clear()
+                    stationsModel.refresh()
+                    fillList()
+                }
             }
             TextSwitch {
                 id: palautumismoodi
@@ -104,10 +113,6 @@ Page {
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
-            }
-            Item {
-                width: parent.width
-                height: Theme.paddingLarge
             }
             Row {
                 anchors.horizontalCenter: parent.horizontalCenter

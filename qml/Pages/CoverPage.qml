@@ -58,7 +58,7 @@ CoverBackground {
         }
         CoverAction {
             iconSource: "image://theme/icon-cover-next"
-            onTriggered: TheFunctions.chooseStation(stationsModel,(lib.stationIndex))
+            onTriggered: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex))
         }
     }
 }

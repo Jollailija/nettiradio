@@ -45,9 +45,9 @@ ApplicationWindow
         volume: lib.volume
         autoPlay: true
         onError: resurrector.start(), console.warn(" Error! Start resurrector! ")
-        onPlaying: resurrector.stop, console.warn(" OK! Stop resurrector! "), playStream()
-        onStopped: stopStream() //Should update buttons on incoming call
-        onPaused: pauseStream()
+        onPlaying: {resurrector.stop, console.warn(" OK, playing! (Stop resurrector) "); lib.playing = true; lib.stopped = false}
+        onStopped: {lib.playing = false; lib.stopped = true} //Should update buttons on incoming call and stuff
+        onPaused: {lib.playing = false; lib.stopped = false}
         onMutedChanged: pauseStream()
     }
     // Dunno what I did but seems to work
@@ -75,6 +75,18 @@ ApplicationWindow
                      : lib.sleepTime = (lib.sleepTime - 1)
         running: lib.sleepTime >= 0
     }
+    Timer {
+        id: listFiller
+        running: qmlListModel.count < 1
+        repeat: true
+        interval: 100
+        onTriggered: {
+            //console.log("Filling list!")
+            if (stationsModel.count > 0)
+            {console.log("Items found, let's fill list!");fillList()}
+            //else {console.log("Still loading, "+ stationsModel.progress*100 + "%")}
+        }
+    }
     Item {
         id: lib
         property string radioStation: "Valitse asema"
@@ -97,6 +109,8 @@ ApplicationWindow
     StationsModel{id:stationsModel}
 
     function fillList() {
+        lib.stationCount = stationsModel.count
+        console.log("fillList() is doing stuff")
         qmlListModel.clear() // This way the list will be up to date and not multiply
         var i = 0
         for (var r = 0; r < lib.stationCount; r++) {
@@ -105,6 +119,8 @@ ApplicationWindow
             //console.log(i)
         }
         console.log("this many stations: " + i)
+        Storage.getFavsFromDB(qmlListModel)
+        console.log("Got favs from db")
     }
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
@@ -113,12 +129,16 @@ ApplicationWindow
 
     function openWebsite() {remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)}
 
-    function pauseStream() {playMusic.pause(); lib.playing = false; lib.stopped = false; resurrector.stop()}
-    function playStream() {playMusic.play(); lib.playing = true; lib.stopped = false}
-    function stopStream() {playMusic.stop(); lib.playing = false; lib.stopped = true; resurrector.stop()}
+    function pauseStream() {playMusic.pause(); resurrector.stop()}
+    function playStream() {playMusic.play()}
+    function stopStream() {playMusic.stop(); resurrector.stop()}
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
     cover: Qt.resolvedUrl("Pages/CoverPage.qml")
 
-    Component.onCompleted: TheFunctions.initializeLib()
+    Component.onCompleted: {
+        console.log("QML completed, initializing lib...")
+        TheFunctions.initializeLib()
+        console.log("QML completed, lib initialized.")
+    }
 }

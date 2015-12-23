@@ -31,8 +31,8 @@ function initializeLib() {
     console.log("Filling lib")
     var firstTime="Unknown" // If the setting returns "Unknown" this must be the first time
     Storage.initialize()
-    console.log("First time? " + Storage.getSetting("ft"))
-    if (Storage.getSetting("ft")===firstTime) {
+    console.log("First time? " + Storage.getSetting("first"))
+    if (Storage.getSetting("first")===firstTime) {
         console.log("This is the first time")
         setDefaultSettings()
     }
@@ -49,8 +49,8 @@ function setDefaultSettings() {
     Storage.setSetting("suStation","Valitse asema") // def. startup values
     Storage.setSetting("suWebsite","https://github.com/jollailija/nettiradio/")
     Storage.setSetting("suUrl","")
-    Storage.setSetting("xmlQuery","/rss/channel1/item")
-    Storage.setSetting("ft","no")
+    Storage.setSetting("xmlQuery","/stationlist/item")
+    Storage.setSetting("first","no")
     console.log("Settings set. Loading settings")
     loadSettings()
 }

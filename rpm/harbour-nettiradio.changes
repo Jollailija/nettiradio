@@ -5,6 +5,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Wed Dec 23 2015 jollailija <jollailija@gmail.com> 1.4.0-1
+-todo: update help
+
 * Fri Dec 18 2015 jollailija <jollailija@gmail.com> 1.3.0-1
 -lots of refactoring
 -a database!

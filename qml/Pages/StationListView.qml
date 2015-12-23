@@ -29,7 +29,6 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import "StationLists"
 import "functions.js" as TheFunctions // :)
 
 SilicaListView {
@@ -39,19 +38,19 @@ SilicaListView {
     anchors.fill: parent
     clip: true
 
-    model: stationsModel
+    model: qmlListModel//stationsModel
 
     PulleyMenu {}
 
     ViewPlaceholder {
-        enabled: listView.count === 0
-        text: "Ladataan asemalistaa..."
+        enabled: listView.count < 50
+        text: "Ladataan asemalistaa... (" + stationsModel.progress*100 + "%)"
         hintText: "Paina tästä, jos haluat käyttää paikallista kopioa."
     }
     MouseArea {
         anchors.fill: parent
         onClicked: {lib.localSource = true; console.warn("using local list"); stationsModel.reload()}
-        enabled: listView.count === 0
+        enabled: listView.count < 50
     }
 
     header: PageHeader {title: "Radioasemat" } //Radio stations
@@ -78,7 +77,7 @@ SilicaListView {
             x: Theme.paddingLarge
         }
         onClicked: {
-            TheFunctions.chooseStation(stationsModel, index)
+            TheFunctions.chooseStation(qmlListModel, index)
             //listPress.play()
             playStream()
         }

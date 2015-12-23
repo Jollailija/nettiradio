@@ -30,12 +30,16 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 
+import QtQuick.LocalStorage 2.0
+import "storage.js" as Storage
+
+
 PullDownMenu {
     MenuItem {
         text: qsTr("Vaihda näkymää") // Change list model
         onClicked: {lib.activeView
-                    ? (lib.stationCount=stationsModel.count, fillList(), lib.activeView = false)
-                    : (lib.stationCount=stationsModel.count, fillList(), lib.activeView = true)}
+                    ? (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = false)
+                    : (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = true)}
     }
     MenuItem {
         text: mainPage.allowedOrientations === Orientation.All

@@ -29,33 +29,56 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
+import QtQuick.LocalStorage 2.0
+import "storage.js" as Storage
+import "functions.js" as TheFunctions // :)
 
-Page {
-    id: mainPage
-    allowedOrientations: _defaultPageOrientations
+Dialog {
+    id: dialog
+    property string title
+    property string source
+    property string site
+    RemorsePopup {id: remorse; anchors.top: parent.top}
+    Column {
+        width: parent.width
+        spacing: Theme.paddingLarge
 
-    PlayerPanel {id: panel}
+        DialogHeader {title: "Muokkaa suosikkia"}
 
-    Loader {
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-            bottomMargin: panel.visibleSize
+        TextArea {
+            id: titleInput
+            width: parent.width
+            inputMethodHints: Qt.ImhNoPredictiveText
+            text: title
+            placeholderText: "Aseman nimi"
+            label: "Aseman nimi"
         }
-        sourceComponent: lib.activeView
-                         ? listViewComponent
-                         : gridViewComponent
-        Component {
-            id: listViewComponent
-            StationListView {}
+        TextArea {
+            id: sourceInput
+            width: parent.width
+            inputMethodHints: Qt.ImhNoPredictiveText
+            text: source
+            placeholderText: "Streamin osoite"
+            label: "Streamin osoite"
         }
-
-        Component {
-            id: gridViewComponent
-            StationGridView {}
+        TextArea {
+            id: siteInput
+            width: parent.width
+            inputMethodHints: Qt.ImhNoPredictiveText
+            text: site
+            placeholderText: "Aseman nettisivu"
+            label: "Aseman nettisivu"
         }
-
+        Button {
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "Poista asema"
+            onClicked: remorse.execute("Poistetaan " + title, function (){Storage.deleteStationFromDB(title); pageStack.pop()}, 3000)
+        }
+    }
+    onDone: {
+        if (result === DialogResult.Accepted) {
+            Storage.initialize()
+            Storage.setStationInDB(titleInput.text, sourceInput.text, siteInput.text, "Suosikit")
+        }
     }
 }

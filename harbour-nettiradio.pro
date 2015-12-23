@@ -48,4 +48,6 @@ DISTFILES += \
     qml/Pages/StationLists/StationsModel.qml \
     qml/Pages/StationLists/xml/asemat.xml \
     qml/Pages/Menu.qml \
-    qml/Pages/functions.js
+    qml/Pages/functions.js \
+    qml/Pages/FavDialog.qml \
+    qml/Pages/FavManager.qml
