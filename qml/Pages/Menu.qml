@@ -35,9 +35,10 @@ import "functions.js" as TheFunctions // :)
 
 Page {
     SilicaFlickable {
+        RemorsePopup {id: remorse; anchors.top: parent.top}
         id: menuPage
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: column.height + Theme.paddingLarge
         VerticalScrollDecorator {}
         Column {
             id: column
@@ -87,8 +88,8 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     qmlListModel.clear()
-                    stationsModel.refresh()
-                    fillList()
+                    stationsModel.reload()
+                    listFiller.start()
                 }
             }
             TextSwitch {
@@ -177,6 +178,17 @@ Page {
                 valueText: value
                 label: "Fonttikoko"
                 onReleased: lib.fontSize = value, TheFunctions.saveFontSize(value)
+            }
+            SectionHeader {
+                text: "Nollaa asetukset"
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeMedium * lib.fontSize
+                                : Theme.fontSizeSmall * lib.fontSize
+            }
+            Button {
+                text: "Nollaa"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: remorse.execute("Nollataan asetukset", TheFunctions.setDefaultSettings(), 5000)
             }
         }
     }

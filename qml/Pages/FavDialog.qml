@@ -69,10 +69,20 @@ Dialog {
             placeholderText: "Aseman nettisivu"
             label: "Aseman nettisivu"
         }
-        Button {
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: "Poista asema"
-            onClicked: remorse.execute("Poistetaan " + title, function (){Storage.deleteStationFromDB(title); pageStack.pop()}, 3000)
+        Row {
+            Button {
+                text: "Lisää nykyinen asema"
+                onClicked: {
+                    titleInput.text = lib.radioStation
+                    sourceInput.text = lib.musicSource
+                    siteInput.text = lib.website
+                    dialog.accept()
+                }
+            }
+            Button {
+                text: "Poista asema"
+                onClicked: remorse.execute("Poistetaan " + title, function (){Storage.deleteStationFromDB(title); pageStack.pop()}, 3000)
+            }
         }
     }
     onDone: {

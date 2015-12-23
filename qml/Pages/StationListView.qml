@@ -49,7 +49,12 @@ SilicaListView {
     }
     MouseArea {
         anchors.fill: parent
-        onClicked: {lib.localSource = true; console.warn("using local list"); stationsModel.reload()}
+        onClicked: {
+            lib.localSource = true
+            console.warn("using local list")
+            stationsModel.reload()
+            qmlListModel.clear()
+            listFiller.start()}
         enabled: listView.count < 50
     }
 

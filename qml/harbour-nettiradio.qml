@@ -77,14 +77,14 @@ ApplicationWindow
     }
     Timer {
         id: listFiller
-        running: qmlListModel.count < 1
+        running: qmlListModel.count < 50
         repeat: true
-        interval: 100
+        interval: 250
         onTriggered: {
-            //console.log("Filling list!")
+            console.log("Filling list!")
             if (stationsModel.count > 0)
             {console.log("Items found, let's fill list!");fillList()}
-            //else {console.log("Still loading, "+ stationsModel.progress*100 + "%")}
+            else {console.log("Still loading, "+ stationsModel.progress*100 + "%")}
         }
     }
     Item {
@@ -92,7 +92,7 @@ ApplicationWindow
         property string radioStation: "Valitse asema"
         property string musicSource
         property string website
-        property string query: "/rss/channel1/item"
+        //property string query: "/rss/channel1/item"
         property int sleepTime: -1
         property bool playing: false
         property bool stopped: true

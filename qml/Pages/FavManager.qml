@@ -42,17 +42,17 @@ Page {
         VerticalScrollDecorator {}
         PullDownMenu {
             MenuItem {
+                text: qsTr("Lisää asema")
+                onClicked: pageStack.push(Qt.resolvedUrl("FavDialog.qml"))
+            }
+            MenuItem {
                 text: qsTr("Päivitä lista")
                 onClicked: {
                     refreshList()
                     qmlListModel.clear()
-                    stationsModel.refresh()
-                    fillList()
+                    stationsModel.reload()
+                    listFiller.start()
                 }
-            }
-            MenuItem {
-                text: qsTr("Lisää asema")
-                onClicked: pageStack.push(Qt.resolvedUrl("FavDialog.qml"))
             }
         }
         ViewPlaceholder {

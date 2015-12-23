@@ -49,7 +49,7 @@ function setDefaultSettings() {
     Storage.setSetting("suStation","Valitse asema") // def. startup values
     Storage.setSetting("suWebsite","https://github.com/jollailija/nettiradio/")
     Storage.setSetting("suUrl","")
-    Storage.setSetting("xmlQuery","/stationlist/item")
+    //Storage.setSetting("xmlQuery","/stationlist/item")
     Storage.setSetting("first","no")
     console.log("Settings set. Loading settings")
     loadSettings()
@@ -63,7 +63,7 @@ function loadSettings() {
     lib.radioStation = (Storage.getSetting("suStation")) // def. startup values
     lib.website = (Storage.getSetting("suWebsite"))
     lib.musicSource = (Storage.getSetting("suUrl"))
-    lib.query = (Storage.getSetting("xmlQuery"))
+    //lib.query = (Storage.getSetting("xmlQuery"))
     console.log("Settings loaded")
 }
 
