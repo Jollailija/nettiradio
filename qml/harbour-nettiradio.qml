@@ -81,10 +81,10 @@ ApplicationWindow
         repeat: true
         interval: 250
         onTriggered: {
-            console.log("Filling list!")
+            //console.log("Filling list!")
             if (stationsModel.count > 0)
             {console.log("Items found, let's fill list!");fillList()}
-            else {console.log("Still loading, "+ stationsModel.progress*100 + "%")}
+            //else {console.log("Still loading, "+ stationsModel.progress*100 + "%")}
         }
     }
     Item {

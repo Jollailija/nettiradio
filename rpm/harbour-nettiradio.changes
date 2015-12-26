@@ -7,6 +7,8 @@
 
 * Wed Dec 23 2015 jollailija <jollailija@gmail.com> 1.4.0-1
 -todo: update help
+-you can now add stations to favourites!
+-buttons are updated on incoming calls and other stream stopping/muting situations
 
 * Fri Dec 18 2015 jollailija <jollailija@gmail.com> 1.3.0-1
 -lots of refactoring
