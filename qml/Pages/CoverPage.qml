@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -32,21 +32,24 @@ import Sailfish.Silica 1.0
 import "functions.js" as TheFunctions // :)
 
 CoverBackground {
-    property var textAlignment: TextInput.AlignHCenter
 
     Image {
         id: logo
         source: "harbour-nettiradio.png"
         anchors.horizontalCenter: parent.horizontalCenter
-        y: parent.height * 0.2
+        anchors.top: parent.top
+        anchors.topMargin: Theme.paddingLarge
+        opacity: 0.5
     }
-    TextArea {
-        y: parent.height * 0.5
-        text: (lib.sleepTime > 0) ? ("Sammuu " + lib.sleepTime + " minuutissa.") : lib.radioStation
-        width: parent.width
-        //x: 25
-        readOnly: true
-        horizontalAlignment: textAlignment
+    Label {
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        text: (lib.sleepTime > 0) ? (qsTr("Sammuu ") + lib.sleepTime + qsTr(" minuutissa.")) : lib.radioStation
+        width: parent.width - Theme.paddingLarge * 2
+        wrapMode: Text.Wrap
+        font.pixelSize: Theme.fontSizeMedium * lib.fontSize
+        //x: Theme.paddingLarge
+        horizontalAlignment: Text.AlignHCenter
     }
 
     CoverActionList {
@@ -57,7 +60,7 @@ CoverBackground {
             onTriggered: lib.sleepTime === -1 ? (lib.playing ? pauseStream() : playStream()) : lib.sleepTime = -1
         }
         CoverAction {
-            iconSource: "image://theme/icon-cover-next"
+            iconSource: "image://theme/icon-cover-next-song"
             onTriggered: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex))
         }
     }

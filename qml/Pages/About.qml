@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -42,13 +42,13 @@ Page {
 
         PageHeader {
             id: header
-            title: "Tietoa sovelluksesta" //About
+            title: qsTr("Tietoa sovelluksesta") //About
         }
         Button {
             id: version
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "Versio " + "1.4.0" + "-" + "1" //I don't know how to automate this just yet...
+            text: qsTr("Versio ") + "2.0.0" + "-" + "1" //I don't know how to automate this just yet...
             onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
         }
 
@@ -60,7 +60,7 @@ Page {
                 right: parent.right
             }
             readOnly: true
-            text: "Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä jollailija.
+            text: qsTr("Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä")+" jollailija.
 Nettiradioiden streamitiedot ovat peräisin lähteestä www.mediamonitori.fi/index.php/nettiradiot
 Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämässä formaatissa.
 
@@ -84,11 +84,11 @@ Thanks for all the support guys!"
 
 
             Button {
-                text: "GitHub"
+                text: qsTr("GitHub")
                 onClicked: Qt.openUrlExternally("https://github.com/jollailija/nettiradio/")
             }
             Button {
-                text: "OpenRepos"
+                text: qsTr("OpenRepos")
                 onClicked: Qt.openUrlExternally("https://openrepos.net/content/jollailija/finnish-net-radio-client-beta/")
             }
         }
@@ -97,7 +97,7 @@ Thanks for all the support guys!"
             anchors.topMargin: Theme.paddingLarge * 1.5
             anchors.horizontalCenter: parent.horizontalCenter
             id: flattr
-            text: "Lahjoita Flattrin kautta"
+            text: qsTr("Lahjoita Flattrin kautta")
             onClicked: Qt.openUrlExternally("https://flattr.com/thing/4382591/Jollailijanettiradio-on-github")
         }
     }

@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -49,7 +49,7 @@ function setDefaultSettings() {
     Storage.setSetting("suStation","Valitse asema") // def. startup values
     Storage.setSetting("suWebsite","https://github.com/jollailija/nettiradio/")
     Storage.setSetting("suUrl","")
-    //Storage.setSetting("xmlQuery","/stationlist/item")
+    Storage.setSetting("xmlLocation","http://jollailija.github.io/nettiradio/asemat.xml")
     Storage.setSetting("first","no")
     console.log("Settings set. Loading settings")
     loadSettings()
@@ -63,7 +63,7 @@ function loadSettings() {
     lib.radioStation = (Storage.getSetting("suStation")) // def. startup values
     lib.website = (Storage.getSetting("suWebsite"))
     lib.musicSource = (Storage.getSetting("suUrl"))
-    //lib.query = (Storage.getSetting("xmlQuery"))
+    lib.xmlLocation = (Storage.getSetting("xmlLocation"))
     console.log("Settings loaded")
 }
 
@@ -92,6 +92,7 @@ function chooseStation(listM, i) {
         lib.website = Qt.resolvedUrl(listM.get(i).site)
         lib.radioStation = listM.get(i).title
         lib.stationIndex = i+1 // for the cover action
+        lib.panelOpen = true
     }
     else{
         lib.musicSource = Qt.resolvedUrl(listM.get(0).source)
@@ -104,4 +105,9 @@ function chooseStation(listM, i) {
 function saveFontSize (size) {
     Storage.initialize()
     Storage.setSetting("fontSize",size)
+}
+function refreshList(whichList) {
+    whichList.clear()
+    Storage.initialize()
+    Storage.getFavsFromDB(whichList)
 }

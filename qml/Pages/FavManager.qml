@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -33,7 +33,6 @@ import "storage.js" as Storage
 import "functions.js" as TheFunctions // :)
 
 Page {
-    function refreshList() {favModel.clear(); Storage.initialize(); Storage.getFavsFromDB(favModel)}
     SilicaListView {
         anchors.fill: parent
         id: favListView
@@ -42,25 +41,25 @@ Page {
         VerticalScrollDecorator {}
         PullDownMenu {
             MenuItem {
-                text: qsTr("Lisää asema")
-                onClicked: pageStack.push(Qt.resolvedUrl("FavDialog.qml"))
-            }
-            MenuItem {
                 text: qsTr("Päivitä lista")
                 onClicked: {
-                    refreshList()
+                    TheFunctions.refreshList(favModel)
                     qmlListModel.clear()
                     stationsModel.reload()
                     listFiller.start()
                 }
             }
+            MenuItem {
+                text: qsTr("Lisää asema")
+                onClicked: pageStack.push(Qt.resolvedUrl("FavDialog.qml"))
+            }
         }
         ViewPlaceholder {
             enabled: favModel.count === 0
-            text: "Ei suosikkeja"
-            hintText: "Valitse vetovalikosta 'Päivitä lista' hakeaksesi suosikit tietokannasta"
+            text: qsTr("Ei suosikkeja")
+            hintText: qsTr("Valitse vetovalikosta 'Lisää asema' lisätäksesi suosikin")
         }
-        model: ListModel{id: favModel}
+        model: favModel
         section {
             property: 'section'
             delegate: SectionHeader {
@@ -84,10 +83,10 @@ Page {
                 x: Theme.paddingLarge
             }
             onClicked: {
-                var dialog = pageStack.push("FavDialog.qml", {"title": model.title,"source": model.source,"site":model.site})
+                var dialog = pageStack.push(Qt.resolvedUrl("FavDialog.qml"), {"title": model.title,"source": model.source,"site":model.site,"updateMode":true})
                 favModel.clear()
             }
         }
-        Component.onCompleted: refreshList()
+        Component.onCompleted: TheFunctions.refreshList(favModel)
     }
 }

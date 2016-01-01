@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -47,70 +47,97 @@ Page {
             spacing: Theme.paddingLarge
 
             PageHeader {
-                title: "Valikko"
+                title: qsTr("Valikko")
             }
             Button {
-                text: "Käyttöohje"
+                text: qsTr("Käyttöohje")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("Help.qml"))
                 }
             }
             Button {
-                text: "Tietoa sovelluksesta"
+                text: qsTr("Tietoa sovelluksesta")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("About.qml"))
                 }
             }
             Button {
-                text: "Uniajastin"
+                text: qsTr("Uniajastin")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
                 }
             }
             Button {
-                text: "Muokkaa suosikkeja"
+                text: qsTr("Muokkaa suosikkeja")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("FavManager.qml"))
                 }
             }
             SectionHeader {
-                text: "Asetukset"
+                id: settings
+                text: qsTr("Asetukset")
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * 2 * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
-            }           
+            }
+            SectionHeader {
+                text: qsTr("Työkalut")
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeMedium * lib.fontSize
+                                : Theme.fontSizeSmall * lib.fontSize
+            }
             Button {
-                text: "Päivitä lista"
+                text: qsTr("Päivitä lista")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     qmlListModel.clear()
                     stationsModel.reload()
                     listFiller.start()
+                    lib.panelOpen = true
+                }
+            }
+            Label {
+                x: Theme.paddingLarge
+                text: qsTr("Jos nappulat sekoavat, toiston lopettaminen auttaa.")
+                width: parent.width - (Theme.paddingLarge * 2)
+                wrapMode: Text.Wrap
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeLarge * lib.fontSize
+                                : Theme.fontSizeMedium * lib.fontSize
+            }
+            Button {
+                text: qsTr("Lopeta toisto")
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    resurrector.stop()
+                    lib.playing = false
+                    lib.stopped = true
+                    playMusic.stop()
                 }
             }
             TextSwitch {
                 id: palautumismoodi
-                text: "Palautumismoodi"
+                text: qsTr("Palautumismoodi")
                 enabled: !lib.keepAliveMode
-                description: "Tuhlaa hieman virtaa, mutta selviytyy paremmin katkoista. Poista käytöstä käynnistämällä sovellus uudelleen."
+                description: qsTr("Tuhlaa hieman virtaa, mutta selviytyy paremmin katkoista. Poista käytöstä käynnistämällä sovellus uudelleen.")
                 checked: lib.keepAliveMode
                 onCheckedChanged: {lib.keepAliveMode = true, console.log("Kytkin " + lib.keepAliveMode)}
             }
             SectionHeader {
-                text: "Oletuskanava"
+                text: qsTr("Oletuskanava")
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeMedium * lib.fontSize
                                 : Theme.fontSizeSmall * lib.fontSize
             }
             Label {
                 x: Theme.paddingLarge
-                text: "Aseta nykyinen kanava soimaan käynnistäessä tai poista oletuskanava käytöstä"
+                text: qsTr("Aseta nykyinen kanava soimaan käynnistäessä tai poista oletuskanava käytöstä")
                 width: parent.width - (Theme.paddingLarge * 2)
-                wrapMode: Text.WordWrap
+                wrapMode: Text.Wrap
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
@@ -119,25 +146,25 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 spacing: Theme.paddingLarge
                 Button {
-                    text: "Aseta"
+                    text: qsTr("Aseta")
                     onClicked: TheFunctions.setStartupStation()
                 }
                 Button {
-                    text: "Poista"
+                    text: qsTr("Poista")
                     onClicked: TheFunctions.resetStartupStation()
                 }
             }
             SectionHeader {
-                text: "Äänenvoimakkuus"
+                text: qsTr("Äänenvoimakkuus")
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeMedium * lib.fontSize
                                 : Theme.fontSizeSmall * lib.fontSize
             }
             Label {
                 x: Theme.paddingLarge
-                text: "Hiljennä äänenvoimakkuutta. Oletusarvo on 1.0. Nollautuu käynnistettäessä sovellus uudelleen."
+                text: qsTr("Hiljennä äänenvoimakkuutta. Oletusarvo on 1.0. Nollautuu käynnistettäessä sovellus uudelleen.")
                 width: parent.width - (Theme.paddingLarge * 2)
-                wrapMode: Text.WordWrap
+                wrapMode: Text.Wrap
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
@@ -150,20 +177,20 @@ Page {
                 width: parent.width
                 handleVisible: true
                 valueText: value
-                label: "Äänenvoimakkuus"
+                label: qsTr("Äänenvoimakkuus")
                 onReleased: lib.volume = value
             }
             SectionHeader {
-                text: "Tekstin koko"
+                text: qsTr("Tekstin koko")
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeMedium * lib.fontSize
                                 : Theme.fontSizeSmall * lib.fontSize
             }
             Label {
                 x: Theme.paddingLarge
-                text: "Säädä tekstin kokoa. Oletusarvo on 1.0"
+                text: qsTr("Säädä tekstin kokoa. Oletusarvo on 1.0")
                 width: parent.width - (Theme.paddingLarge * 2)
-                wrapMode: Text.WordWrap
+                wrapMode: Text.Wrap
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
@@ -176,17 +203,17 @@ Page {
                 width: parent.width
                 handleVisible: true
                 valueText: value
-                label: "Fonttikoko"
+                label: qsTr("Fonttikoko")
                 onReleased: lib.fontSize = value, TheFunctions.saveFontSize(value)
             }
             SectionHeader {
-                text: "Nollaa asetukset"
+                text: qsTr("Nollaa asetukset")
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeMedium * lib.fontSize
                                 : Theme.fontSizeSmall * lib.fontSize
             }
             Button {
-                text: "Nollaa"
+                text: qsTr("Nollaa")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: remorse.execute("Nollataan asetukset", TheFunctions.setDefaultSettings(), 5000)
             }

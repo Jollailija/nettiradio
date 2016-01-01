@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -38,24 +38,15 @@ SilicaFlickable {
 
     anchors.fill: parent
     clip: true
-
-    //StationsModel {id:stationsModel}
-
-    /*QmlListModel {
-        id: qmlListModel
-        property string filterProperty: 'title'
-    }*/
-
-    //Component.onCompleted: qmlListModel.append({"title": stationsModel.get(3).title})//{console.log(lib.stationCount);fillList()}
-
-
-
-    //width: parent ? parent.width : Screen.width
-    //height: parent ? parent.height : Screen.height
     VerticalScrollDecorator {}
     contentHeight: alphaMenu.height + Theme.paddingLarge *2
 
-    PulleyMenu {}
+    PulleyMenu {
+        MenuItem {
+            text: qsTr("Valikko")
+            onClicked: pageStack.push(Qt.resolvedUrl("Menu.qml"))
+        }
+    }
 
     AlphaMenu {
 
@@ -69,6 +60,7 @@ SilicaFlickable {
                 //listPress.play()
                 playStream()
                 lib.website = (Qt.resolvedUrl(site))
+                lib.panelOpen = true
             }
 
             Row {

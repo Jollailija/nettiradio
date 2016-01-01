@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -91,9 +91,6 @@ function getSetting(setting) {
 
 // This function is used to write a station into the database
 function setStationInDB(title, source, site, section) {
-   // setting: string representing the setting name (eg: “username”)
-   // value: string representing the value of the setting (eg: “myUsername”)
-   console.log("Setting fav to db...")
    var db = getDatabase();
    var res = "";
    db.transaction(function(tx) {
@@ -107,11 +104,27 @@ function setStationInDB(title, source, site, section) {
         }
   );
   // The function returns “OK” if it was successful, or “Error” if it wasn't
-  console.log("Fav set to db:"+title, source, site, section)
+  console.log("Fav set to db:"+" title:"+title+" source:"+source+" site:"+site+" section:"+section)
+  return res;
+}
+function updateStationInDB(title, source, site, section) {
+   var db = getDatabase();
+   var res = "";
+   db.transaction(function(tx) {
+        var rs = tx.executeSql('UPDATE stations SET source=?, site=?, section=? WHERE title=?;', [source,site,section,title]);
+              //console.log(rs.rowsAffected)
+              if (rs.rowsAffected > 0) {
+                res = "OK";
+              } else {
+                res = "Error";
+              }
+        }
+  );
+  // The function returns “OK” if it was successful, or “Error” if it wasn't
+  console.log("Fav updated:"+" title:"+title+" source:"+source+" site:"+site+" section:"+section)
   return res;
 }
 function deleteStationFromDB(title) {
-   console.log("Deleting fav from db...")
    var db = getDatabase();
    var res = "";
    db.transaction(function(tx) {
@@ -125,12 +138,12 @@ function deleteStationFromDB(title) {
         }
   );
   // The function returns “OK” if it was successful, or “Error” if it wasn't
-  console.log("Deleted fav from db.")
+  console.log("Deleted fav " + title + " from db.")
   return res;
 }
 // This function is used to retrieve stations from the database
 function getFavsFromDB(modelToInsertTo) {
-   console.log("Inserting favs into list...")
+   //console.log("Inserting favs into list...")
    var db = getDatabase();
    var res="";
    db.transaction(function(tx) {
@@ -141,7 +154,7 @@ function getFavsFromDB(modelToInsertTo) {
          //console.log("Fav inserted: " + rs.rows.item(i).title)
      }
   })
-  console.log("Favs inserted into list.")
+  console.log("Favs inserted into list " + modelToInsertTo)
   // The function returns “Unknown” if the setting was not found in the database
   // For more advanced projects, this should probably be handled through error codes
   return res

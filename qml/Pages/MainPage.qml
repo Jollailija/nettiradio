@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -33,10 +33,12 @@ import Sailfish.Silica 1.0
 Page {
     id: mainPage
     allowedOrientations: _defaultPageOrientations
+    property bool searchMode: false
 
     PlayerPanel {id: panel}
 
     Loader {
+        id: loader
         anchors {
             top: parent.top
             left: parent.left

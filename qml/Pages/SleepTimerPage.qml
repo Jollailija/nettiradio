@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -41,9 +41,9 @@ Page {
             spacing: Theme.paddingLarge
             width: parent.width
             anchors.horizontalCenter: parent.horizontalCenter
-            PageHeader { title: "Uniajastimen asetus" }
+            PageHeader { title: qsTr("Uniajastimen asetus") }
             Label {
-                text: ((lib.sleepTime > 0) ? ("Jäljellä oleva aika: "  + lib.sleepTime + ". Vaihda aika") : "Valitse aika")
+                text: ((lib.sleepTime > 0) ? (qsTr("Jäljellä oleva aika: ") + lib.sleepTime + qsTr(". Vaihda aika")) : qsTr("Valitse aika"))
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeLarge * lib.fontSize
@@ -58,17 +58,17 @@ Page {
                 width: parent.width
                 handleVisible: true
                 valueText: value
-                label: "minuuttia"
+                label: qsTr("minuuttia")
             }
             Row {
                 anchors.horizontalCenter: parent.horizontalCenter
                 spacing: Theme.paddingLarge
                 Button {
-                    text: "Aseta"
+                    text: qsTr("Aseta")
                     onPressed: lib.sleepTime = timerSlider.value
                 }
                 Button {
-                    text: "Pysäytä"
+                    text: qsTr("Pysäytä")
                     onPressed: lib.sleepTime = -1
                 }
             }

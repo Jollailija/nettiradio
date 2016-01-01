@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -35,7 +35,7 @@ DockedPanel {
     width: parent.width
     height: Theme.itemSizeExtraLarge + Theme.paddingLarge
     dock: Dock.Bottom
-    open: true
+    open: lib.panelOpen
     Row {
         anchors.centerIn: parent
         id: iconButtons
@@ -48,7 +48,7 @@ DockedPanel {
                     ? lib.radioStation.slice(0,23)
                     : lib.radioStation
             RemorsePopup {id: remorse}
-            onClicked: openWebsite()//{open(); buttonPress.play()}
+            onClicked: openWebsite()
         }
         IconButton {
             id: pause
@@ -64,7 +64,6 @@ DockedPanel {
             onClicked: lib.playing
                        ? pauseStream()
                        : playStream()
-            //enabled: !lib.playing
         }
     }
 }

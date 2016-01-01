@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -92,7 +92,7 @@ ApplicationWindow
         property string radioStation: "Valitse asema"
         property string musicSource
         property string website
-        //property string query: "/rss/channel1/item"
+        property string xmlLocation: "http://jollailija.github.io/nettiradio/asemat.xml"
         property int sleepTime: -1
         property bool playing: false
         property bool stopped: true
@@ -103,10 +103,13 @@ ApplicationWindow
         property bool keepAliveMode: false
         property int stationIndex: 0 // in case there is a station at startup there will be a valid index
         property real volume: 1.0
+        property bool panelOpen: true
     }
 
     ListModel{id:qmlListModel;property string filterProperty: 'title'}
     StationsModel{id:stationsModel}
+    ListModel {id:filteredModel}
+    ListModel{id:favModel}
 
     function fillList() {
         lib.stationCount = stationsModel.count

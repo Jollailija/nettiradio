@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -30,62 +30,115 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 import "functions.js" as TheFunctions // :)
-
-SilicaListView {
-    id: listView
-    VerticalScrollDecorator {}
-
-    anchors.fill: parent
+SilicaFlickable {
+    id: background
+    width: loader.width
+    contentHeight: loader.height
     clip: true
-
-    model: qmlListModel//stationsModel
-
-    PulleyMenu {}
-
-    ViewPlaceholder {
-        enabled: listView.count < 50
-        text: "Ladataan asemalistaa... (" + stationsModel.progress*100 + "%)"
-        hintText: "Paina tästä, jos haluat käyttää paikallista kopioa."
-    }
-    MouseArea {
-        anchors.fill: parent
-        onClicked: {
-            lib.localSource = true
-            console.warn("using local list")
-            stationsModel.reload()
-            qmlListModel.clear()
-            listFiller.start()}
-        enabled: listView.count < 50
-    }
-
-    header: PageHeader {title: "Radioasemat" } //Radio stations
-    section {
-        property: 'section'
-        delegate: SectionHeader {
-            text: section
-            font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeMedium * lib.fontSize
-                            : Theme.fontSizeSmall * lib.fontSize
+    property string searchString
+    PulleyMenu {
+        MenuItem {
+            text: lib.activeView
+                  ? mainPage.searchMode
+                    ? qsTr("Piilota haku")
+                    : qsTr("Näytä haku")
+            : qsTr("Näytä haku")
+            onClicked: {mainPage.searchMode
+                        ? (mainPage.searchMode = false, lib.panelOpen = true, searchString = "")
+                        : (mainPage.searchMode = true, lib.panelOpen = false, searchString = "", getSortedItems(""))}
+        }
+        MenuItem {
+            text: qsTr("Valikko")
+            onClicked: pageStack.push(Qt.resolvedUrl("Menu.qml"))
         }
     }
-    delegate: BackgroundItem {
-        width: listView.width
-        Label {
-            text: model.title
-            font.pixelSize: Screen.sizeCategory > Screen.Medium
-                            ? Theme.fontSizeExtraLarge * lib.fontSize
-                            : Theme.fontSizeMedium * lib.fontSize
-            color: highlighted
-                   ? Theme.highlightColor
-                   : Theme.primaryColor
-            anchors.verticalCenter: parent.verticalCenter
-            x: Theme.paddingLarge
+    SearchField {
+        id: searchField
+        visible: mainPage.searchMode
+        anchors.top: parent.top
+        width: parent.width
+        onTextChanged: {
+            searchString=searchField.text.toLowerCase()
+            getSortedItems(searchString)
+            listView.positionViewAtIndex(0,ListView.Beginning)
+            lib.panelOpen = false}
+        inputMethodHints: Qt.ImhNoPredictiveText
+        placeholderText: qsTr("Hae")
+        EnterKey.onClicked: {
+            focus = false
+            lib.panelOpen = true
         }
-        onClicked: {
-            TheFunctions.chooseStation(qmlListModel, index)
-            //listPress.play()
-            playStream()
+    }
+    function getSortedItems(searchTerm) {
+        filteredModel.clear()
+        for (var i = 0; i < qmlListModel.count; i++) {
+            if (searchTerm === "" || qmlListModel.get(i).title.toLowerCase().indexOf(searchTerm) !== -1) {
+                filteredModel.append(qmlListModel.get(i))
+            }
         }
     }
 
+    SilicaListView {
+        id: listView
+        VerticalScrollDecorator {}
+        anchors {
+            top: mainPage.searchMode ? searchField.bottom : parent.top
+            bottom: parent.bottom
+        }
+        width: parent.width
+        clip: true
+        model: searchMode ? filteredModel : qmlListModel
+        ViewPlaceholder {
+            y: mainPage.height * 0.2
+            enabled: qmlListModel.count < 50
+            text: qsTr("Ladataan asemalistaa") + "... (" + stationsModel.progress*100 + "%)"
+            hintText: qsTr("Paina tästä, jos haluat käyttää paikallista kopioa")
+        }
+        ViewPlaceholder {
+            y: mainPage.height * 0.2
+            enabled: mainPage.searchMode && (filteredModel.count === 0)
+            text: qsTr("Asemia ei löytynyt")
+            hintText: qsTr("Kokeile hakea jotakin muuta")
+        }
+        MouseArea {
+            anchors.fill: parent
+            anchors.margins: -Theme.paddingLarge
+            onClicked: {
+                lib.localSource = true
+                console.warn("using local list")
+                stationsModel.reload()
+                qmlListModel.clear()
+                listFiller.start()}
+            enabled: qmlListModel.count < 50
+        }
+        header: PageHeader {title: qsTr("Radioasemat")} //Radio stations
+        section {
+            property: 'section'
+            delegate: SectionHeader {
+                text: section
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeMedium * lib.fontSize
+                                : Theme.fontSizeSmall * lib.fontSize
+            }
+        }
+        delegate: BackgroundItem {
+            width: listView.width
+            highlighted: down || (source === lib.musicSource) // note to self: make sure this works
+            Label {
+                text: Theme.highlightText(model.title, searchString, Theme.highlightColor)
+                textFormat: Text.StyledText
+                color: highlighted ? Theme.highlightColor : "white"
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeExtraLarge * lib.fontSize
+                                : Theme.fontSizeMedium * lib.fontSize
+                anchors.verticalCenter: parent.verticalCenter
+                x: Theme.paddingLarge
+            }
+            onClicked: {
+                searchMode ? TheFunctions.chooseStation(filteredModel, index) : TheFunctions.chooseStation(qmlListModel, index)
+                playStream()
+            }
+        }
+
+    }
 }

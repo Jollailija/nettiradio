@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -38,8 +38,8 @@ PullDownMenu {
     MenuItem {
         text: qsTr("Vaihda näkymää") // Change list model
         onClicked: {lib.activeView
-                    ? (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = false)
-                    : (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = true)}
+                    ? (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = false, lib.panelOpen = true)
+                    : (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = true, lib.panelOpen = true)}
     }
     MenuItem {
         text: mainPage.allowedOrientations === Orientation.All
@@ -48,15 +48,5 @@ PullDownMenu {
         onClicked: mainPage.allowedOrientations === Orientation.All
                    ? allowedOrientations = mainPage.orientation
                    : allowedOrientations = Orientation.All
-    }
-    MenuItem {
-        text: lib.sleepTime >= 0
-              ? qsTr("Uniajastin, jäljellä ") + lib.sleepTime + "min" //Sleep timer
-              : qsTr("Uniajastin") //Sleep timer
-        onClicked: pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
-    }
-    MenuItem {
-        text: qsTr("Valikko")
-        onClicked: pageStack.push(Qt.resolvedUrl("Menu.qml"))
     }
 }

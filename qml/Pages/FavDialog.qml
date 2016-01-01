@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
 
@@ -36,60 +36,84 @@ import "functions.js" as TheFunctions // :)
 Dialog {
     id: dialog
     property string title
-    property string source
-    property string site
+    property string source: "http://"
+    property string site: "http://"
+    property bool updateMode: false
     RemorsePopup {id: remorse; anchors.top: parent.top}
-    Column {
+    SilicaFlickable {
         width: parent.width
-        spacing: Theme.paddingLarge
+        height: parent.height
+        contentHeight: column.height
+        Column {
+            id: column
+            width: parent.width
+            spacing: Theme.paddingLarge
 
-        DialogHeader {title: "Muokkaa suosikkia"}
+            DialogHeader {title: qsTr("Muokkaa suosikkia")}
 
-        TextArea {
-            id: titleInput
-            width: parent.width
-            inputMethodHints: Qt.ImhNoPredictiveText
-            text: title
-            placeholderText: "Aseman nimi"
-            label: "Aseman nimi"
-        }
-        TextArea {
-            id: sourceInput
-            width: parent.width
-            inputMethodHints: Qt.ImhNoPredictiveText
-            text: source
-            placeholderText: "Streamin osoite"
-            label: "Streamin osoite"
-        }
-        TextArea {
-            id: siteInput
-            width: parent.width
-            inputMethodHints: Qt.ImhNoPredictiveText
-            text: site
-            placeholderText: "Aseman nettisivu"
-            label: "Aseman nettisivu"
-        }
-        Button {
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: "Lisää nykyinen asema"
-            onClicked: {
-                titleInput.text = lib.radioStation
-                sourceInput.text = lib.musicSource
-                siteInput.text = lib.website
-                dialog.accept()
+            TextArea {
+                id: titleInput
+                width: parent.width
+                inputMethodHints: Qt.ImhNoPredictiveText
+                text: title
+                placeholderText: qsTr("Aseman nimi")
+                label: qsTr("Aseman nimi")
+                EnterKey.onClicked: focus = false
+                readOnly: updateMode
+
             }
-        }
-        Button {
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: "Poista asema"
-            onClicked: remorse.execute("Poistetaan " + title, function (){Storage.deleteStationFromDB(title); pageStack.pop()}, 3000)
-        }
+            TextArea {
+                id: sourceInput
+                width: parent.width
+                inputMethodHints: Qt.ImhNoPredictiveText
+                text: source
+                placeholderText: qsTr("Streamin osoite")
+                label: qsTr("Streamin osoite")
+                EnterKey.onClicked: focus = false
+            }
+            TextArea {
+                id: siteInput
+                width: parent.width
+                inputMethodHints: Qt.ImhNoPredictiveText
+                text: site
+                placeholderText: qsTr("Aseman nettisivu")
+                label: qsTr("Aseman nettisivu")
+                EnterKey.onClicked: focus = false
+            }
+            Button {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("Lisää nykyinen asema")
+                enabled: !updateMode
+                onClicked: {
+                    titleInput.text = lib.radioStation
+                    sourceInput.text = lib.musicSource
+                    siteInput.text = lib.website
+                    dialog.accept()
+                }
+            }
+            Button {
+                anchors.horizontalCenter: parent.horizontalCenter
+                enabled: updateMode
+                text: qsTr("Poista suosikki")
+                onClicked: remorse.execute("Poistetaan " + title, function (){Storage.deleteStationFromDB(title); pageStack.pop()}, 3000)
+            }
 
+        }
     }
     onDone: {
         if (result === DialogResult.Accepted) {
-            Storage.initialize()
-            Storage.setStationInDB(titleInput.text, sourceInput.text, siteInput.text, "Suosikit")
+            if (updateMode) {
+                Storage.initialize()
+                Storage.updateStationInDB(titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "Suosikit")
+            }
+            else {
+                Storage.initialize()
+                Storage.setStationInDB(titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "Suosikit")
+            }
         }
+        TheFunctions.refreshList(favModel)
+        qmlListModel.clear()
+        stationsModel.reload()
+        listFiller.start()
     }
 }
