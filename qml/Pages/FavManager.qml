@@ -36,17 +36,35 @@ Page {
     SilicaListView {
         anchors.fill: parent
         id: favListView
+        property bool isEdited
 
-        header: PageHeader {title: "Hallitse suosikkeja" }
+        Timer {
+            id: autoSaveTimer
+            interval: 3000
+            running: favListView.isEdited
+            onTriggered: {
+                console.log("Autosave")
+                TheFunctions.overwriteFavs(favModel)
+                qmlListModel.clear()
+                stationsModel.reload()
+                listFiller.start()
+                TheFunctions.refreshList(favModel)
+                favListView.isEdited = false
+            }
+        }
+
+        header: PageHeader {title: qsTr("Hallitse suosikkeja") }
         VerticalScrollDecorator {}
         PullDownMenu {
             MenuItem {
-                text: qsTr("Päivitä lista")
+                text: qsTr("Tallenna muutokset")
                 onClicked: {
-                    TheFunctions.refreshList(favModel)
+                    TheFunctions.overwriteFavs(favModel)
                     qmlListModel.clear()
                     stationsModel.reload()
                     listFiller.start()
+                    TheFunctions.refreshList(favModel)
+                    favListView.isEdited = false
                 }
             }
             MenuItem {
@@ -60,7 +78,7 @@ Page {
             hintText: qsTr("Valitse vetovalikosta 'Lisää asema' lisätäksesi suosikin")
         }
         model: favModel
-        section {
+        /*section {
             property: 'section'
             delegate: SectionHeader {
                 text: section
@@ -68,23 +86,54 @@ Page {
                                 ? Theme.fontSizeMedium * lib.fontSize
                                 : Theme.fontSizeSmall * lib.fontSize
             }
-        }
-        delegate: BackgroundItem {
-            width: favListView.width
+        }*/
+        delegate: ListItem {
+            id: delegate
+            width: parent.width
+            //height: remove.height
+
+            function showRemorseItem() {
+                var idx = index
+                remorse.execute(delegate, qsTr("Poistuu"), function() {favModel.remove(idx);favListView.isEdited = true}, 5000)
+            }
+            RemorseItem {id: remorse}
             Label {
                 text: model.title
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeExtraLarge * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
-                color: highlighted
-                       ? Theme.highlightColor
-                       : Theme.primaryColor
+                color: Theme.primaryColor
                 anchors.verticalCenter: parent.verticalCenter
                 x: Theme.paddingLarge
             }
-            onClicked: {
-                var dialog = pageStack.push(Qt.resolvedUrl("FavDialog.qml"), {"title": model.title,"source": model.source,"site":model.site,"updateMode":true})
-                favModel.clear()
+            menu: ContextMenu {
+                MenuItem {
+                    text: qsTr("Muokkaa")
+                    onClicked: {var dialog = pageStack.push(Qt.resolvedUrl("FavDialog.qml"), {"title": model.title,"source": model.source,"site":model.site,"updateMode":true})}
+                }
+                MenuItem {
+                    text: qsTr("Poista")
+                    onClicked: {favModel.remove(model.index)}
+                }
+            }
+            IconButton {
+                id: moveUp
+                anchors {
+                    right: moveDown.left
+                }
+                icon.source: "image://theme/icon-m-up"
+                onClicked: {TheFunctions.moveListItem(favModel, model.index, (model.index-1)); favListView.isEdited = true}
+                enabled: model.index > 0
+            }
+            IconButton {
+                id: moveDown
+                anchors {
+                    right: parent.right
+                    rightMargin: Theme.paddingLarge
+                }
+                icon.source: "image://theme/icon-m-down"
+                onClicked: {TheFunctions.moveListItem(favModel, model.index, (model.index+1)); favListView.isEdited = true}
+                enabled: model.index < favModel.count-1
             }
         }
         Component.onCompleted: TheFunctions.refreshList(favModel)

@@ -71,8 +71,10 @@ ApplicationWindow
         interval: 60000
         repeat: false
         onTriggered: (lib.sleepTime === 0)
-                     ? (stopStream(),  lib.sleepTime = -1, console.warn(" Sleeptimer at 0, shutting stream down "))
-                     : lib.sleepTime = (lib.sleepTime - 1)
+                     ? lib.closeAppAfterSleepTime
+                       ? (console.warn(" Sleeptimer at 0, shutting down "),Qt.quit())
+                       : (stopStream(),  lib.sleepTime = -1, console.warn(" Sleeptimer at 0, shutting stream down "))
+        : lib.sleepTime = (lib.sleepTime - 1)
         running: lib.sleepTime >= 0
     }
     Timer {
@@ -92,7 +94,7 @@ ApplicationWindow
         property string radioStation: "Valitse asema"
         property string musicSource
         property string website
-        property string xmlLocation: "http://jollailija.github.io/nettiradio/asemat.xml"
+        //property string xmlLocation: "https://jollailija.github.io/nettiradio/asemat.xml"
         property int sleepTime: -1
         property bool playing: false
         property bool stopped: true
@@ -104,6 +106,7 @@ ApplicationWindow
         property int stationIndex: 0 // in case there is a station at startup there will be a valid index
         property real volume: 1.0
         property bool panelOpen: true
+        property bool closeAppAfterSleepTime: false
     }
 
     ListModel{id:qmlListModel;property string filterProperty: 'title'}

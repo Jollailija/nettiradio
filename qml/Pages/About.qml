@@ -34,6 +34,7 @@ Page {
     id: page
     property var textAlignment: TextInput.AlignLeft
     SilicaFlickable {
+        RemorsePopup {id: remorse; anchors.top: parent.top}
         anchors.fill: parent
         clip: true
         contentHeight: header.height + version.height + text.height + links.height + flattr.height + Theme.paddingLarge * 4
@@ -48,34 +49,37 @@ Page {
             id: version
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: qsTr("Versio ") + "2.0.0" + "-" + "1" //I don't know how to automate this just yet...
+            text: qsTr("Versio ") + "1.9.0" + "-" + "1" //I don't know how to automate this just yet...
             onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
         }
-
-        TextArea {
+        Text {
             id: text
+            onLinkActivated: remorse.execute(qsTr("Avataan linkki"), function() {Qt.openUrlExternally(link)}, 3000)
             anchors {
                 top: version.bottom
                 left: parent.left
                 right: parent.right
+                margins: Theme.paddingLarge
             }
-            readOnly: true
-            text: qsTr("Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä")+" jollailija.
-Nettiradioiden streamitiedot ovat peräisin lähteestä www.mediamonitori.fi/index.php/nettiradiot
-Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämässä formaatissa.
+            width: parent.width
+            wrapMode: Text.Wrap
+            color: Theme.primaryColor
+            linkColor: Theme.highlightColor
+            textFormat: Text.StyledText
+            text: qsTr("Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä jollailija.<br><br>") +
 
-Lähdekoodi on saatavilla BSD-lisenssillä GitHubista ja sovelluksen uusimmat versiot löytyvät OpenRepos:ista (linkit alla).
-Jos sinulla on kysymyksiä, asema- ja ominaisuustoiveita tai palautetta, voit kirjoittaa kommentin Kauppaan, OpenReposiin tai lähettää sähköpostia osoitteeseen jollailija@gmail.com
+                  qsTr("Nettiradioiden streamitiedot ovat peräisin lähteestä ") + "<a href='http://www.mediamonitori.fi/index.php/nettiradiot'>mediamonitori.fi</a>" + "<br>" +
+                  qsTr("Muut lähteet on mainittu " +"<a href='https://jollailija.github.io/nettiradio/asemat.xml'>asemalistatiedostossa</a>.") + "<br>" +
+                  qsTr("Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämässä formaatissa.") + "<br><br>" +
 
-Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.
-
-Thanks for all the support guys!"
+                  "<b>" + qsTr("Lähdekoodi on saatavilla BSD-lisenssillä ") + "<a href='https://github.com/jollailija/nettiradio'>GitHub</a></b>"+ qsTr("ista ja sovelluksen uusimmat versiot löytyvät ") + "<b><a href='https://openrepos.net/content/jollailija/finnish-net-radio-client-beta/'>OpenRepos</a></b>"+ qsTr("ista.") + "<br>" +
+                  qsTr("Jos sinulla on kysymyksiä, asema- ja ominaisuustoiveita tai palautetta, voit kirjoittaa kommentin Kauppaan tai OpenReposiin tai lähettää sähköpostia osoitteeseen jollailija@gmail.com") + "<br><br>" +
+                  qsTr("Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.") + "<br><br>" +
+                  "Thanks for all the support guys!" + "<br>"
             font.pixelSize: Screen.sizeCategory > Screen.Medium
                             ? Theme.fontSizeLarge * lib.fontSize
                             : Theme.fontSizeMedium * lib.fontSize
-            horizontalAlignment: textAlignment
         }
-
         Row {
             id: links
             anchors.horizontalCenter: parent.horizontalCenter

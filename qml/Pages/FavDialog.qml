@@ -39,7 +39,6 @@ Dialog {
     property string source: "http://"
     property string site: "http://"
     property bool updateMode: false
-    RemorsePopup {id: remorse; anchors.top: parent.top}
     SilicaFlickable {
         width: parent.width
         height: parent.height
@@ -59,7 +58,6 @@ Dialog {
                 placeholderText: qsTr("Aseman nimi")
                 label: qsTr("Aseman nimi")
                 EnterKey.onClicked: focus = false
-                readOnly: updateMode
 
             }
             TextArea {
@@ -91,27 +89,13 @@ Dialog {
                     dialog.accept()
                 }
             }
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                enabled: updateMode
-                text: qsTr("Poista suosikki")
-                onClicked: remorse.execute("Poistetaan " + title, function (){Storage.deleteStationFromDB(title); pageStack.pop()}, 3000)
-            }
-
         }
     }
     onDone: {
         if (result === DialogResult.Accepted) {
-            if (updateMode) {
-                Storage.initialize()
-                Storage.updateStationInDB(titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "Suosikit")
-            }
-            else {
-                Storage.initialize()
-                Storage.setStationInDB(titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "Suosikit")
-            }
+            favModel.append({"title": titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "source": sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "site": siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "section": "Suosikit"})
         }
-        TheFunctions.refreshList(favModel)
+        TheFunctions.overwriteFavs(favModel)
         qmlListModel.clear()
         stationsModel.reload()
         listFiller.start()

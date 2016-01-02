@@ -150,7 +150,7 @@ function getFavsFromDB(modelToInsertTo) {
      var rs = tx.executeSql('SELECT title,source,site FROM stations WHERE section="Suosikit";');
      for (var i = 0; i < rs.rows.length; i++) {
          //console.log("Inserting fav: " + rs.rows.item(i).title)
-         modelToInsertTo.insert(0,{"title": rs.rows.item(i).title, "source": rs.rows.item(i).source, "site": rs.rows.item(i).site, "section": "Suosikit"})
+         modelToInsertTo.insert(i,{"title": rs.rows.item(i).title, "source": rs.rows.item(i).source, "site": rs.rows.item(i).site, "section": "Suosikit"})
          //console.log("Fav inserted: " + rs.rows.item(i).title)
      }
   })
@@ -158,4 +158,21 @@ function getFavsFromDB(modelToInsertTo) {
   // The function returns “Unknown” if the setting was not found in the database
   // For more advanced projects, this should probably be handled through error codes
   return res
+}
+function dropDB(table) {
+   var db = getDatabase();
+   var res = "";
+   db.transaction(function(tx) {
+        var rs = tx.executeSql('DROP TABLE stations;');
+              //console.log(rs.rowsAffected)
+              if (rs.rowsAffected > 0) {
+                res = "OK";
+              } else {
+                res = "Error";
+              }
+        }
+  );
+  // The function returns “OK” if it was successful, or “Error” if it wasn't
+  console.log("Dropped table " + table + ".")
+  return res;
 }

@@ -127,12 +127,20 @@ SilicaFlickable {
             Label {
                 text: Theme.highlightText(model.title, searchString, Theme.highlightColor)
                 textFormat: Text.StyledText
-                color: highlighted ? Theme.highlightColor : "white"
+                color: highlighted ? Theme.highlightColor : Theme.primaryColor
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
                                 ? Theme.fontSizeExtraLarge * lib.fontSize
                                 : Theme.fontSizeMedium * lib.fontSize
                 anchors.verticalCenter: parent.verticalCenter
-                x: Theme.paddingLarge
+                x: source === lib.musicSource ? Theme.paddingLarge*3 : Theme.paddingLarge
+            }
+            IconButton {
+                icon.source: "image://theme/icon-m-media"
+                anchors {
+                    left: parent.left
+                    verticalCenter: parent.verticalCenter
+                }
+                opacity: source === lib.musicSource ? 1.0 : 0.0
             }
             onClicked: {
                 searchMode ? TheFunctions.chooseStation(filteredModel, index) : TheFunctions.chooseStation(qmlListModel, index)

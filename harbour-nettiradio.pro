@@ -1,14 +1,3 @@
-# NOTICE:
-#
-# Application name defined in TARGET has a corresponding QML filename.
-# If name defined in TARGET is changed, the following needs to be done
-# to match new name:
-#   - corresponding QML filename must be changed
-#   - desktop icon filename must be changed
-#   - desktop filename must be changed
-#   - icon definition filename in desktop file must be changed
-#   - translation filenames have to be changed
-
 # The name of your application
 TARGET = harbour-nettiradio
 
@@ -32,11 +21,14 @@ OTHER_FILES += \
     qml/Pages/StationLists/Asemat.xml \
     harbour-nettiradio.desktop \
     rpm/harbour-nettiradio.spec \
+    #translations/*.ts \
     rpm/harbour-nettiradio.changes
 
 # to disable building translations every time, comment out the
 # following CONFIG line
-#CONFIG += sailfishapp_i18n
+# CONFIG += sailfishapp_i18n
+
+# TRANSLATIONS += translations/harbour-nettiradio-en.ts
 
 appicons.path = /usr/share/icons/hicolor/
 appicons.files = appicons/*
@@ -50,4 +42,5 @@ DISTFILES += \
     qml/Pages/Menu.qml \
     qml/Pages/functions.js \
     qml/Pages/FavDialog.qml \
-    qml/Pages/FavManager.qml
+    qml/Pages/FavManager.qml# \
+    #translations/harbour-nettiradio-en.ts

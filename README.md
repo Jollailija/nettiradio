@@ -1,5 +1,6 @@
 # Nettiradio
 A simple client for Finnish net radios. Yksinkertainen sovellus suomalaisten nettiradioiden kuunteluun.
+This "Nettiradio" is in no way related to "Nettiradio" or "Nettiradiot" on other platforms. Tämä "Nettiradio" ei ole millään tavalla yhteydessä muiden alustojen "Nettiradio" tai "Nettiradiot" -sovelluksiin.
 
 In English:
 Easy-to-use application for listening to over 70 Finnish net radio stations. Ready to use straight out-of-the-box. English translation is under construction. Coded in English with translations in comment lines. Icon by Moth. Welcome to contribute!
@@ -12,9 +13,8 @@ https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.chan
 
 Planned features:  
 -Better UI (kinda achieved in 1.1.0)    
--English translation  
--Search function  
--Editable station database
+-English and Swedish translations (Should be included in the next release)
+-Lockscreen controls
 
 Suomeksi:
 Helppokäyttöinen sovellus suomalaisten nettiradioiden kuunteluun. Valmis heti asennuksen jälkeen, sisältää yli 70 suomalaista nettiradioasemaa. Koodattu englanniksi, käännökset löytyvät koodista kommentoituina. Ikonin on tehnyt Moth. Tervetuloa mukaan tekemään sovellusta!
@@ -27,6 +27,5 @@ https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.chan
   
 Suunnitellut ominaisuudet:  
 -Parempi käyttöliittymä (aika lailla julkaisussa 1.1.0)  
--Englanninkielinen käännös  
--Hakutoiminto  
--Muokattavissa oleva asematietokanta
+-Englannin- ja ruotsinkielinen käännös (pitäisi olla seuraavassa julkaisussa)
+-Lukitusnäytön nappulat

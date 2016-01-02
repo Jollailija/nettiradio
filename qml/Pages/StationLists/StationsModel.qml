@@ -37,8 +37,8 @@ XmlListModel {
     id: stationsModel
     source: lib.localSource
             ? Qt.resolvedUrl("xml/asemat.xml")
-            : Qt.resolvedUrl(lib.xmlLocation) // default: "http://jollailija.github.io/nettiradio/asemat.xml"
-    query: "/stationlist/item"//lib.query
+            : "https://jollailija.github.io/nettiradio/asemat.xml"
+    query: "/stationlist/item" //lib.query
     XmlRole { name: "source"; query: "source/string()" }
     XmlRole { name: "title"; query: "title/string()" }
     XmlRole { name: "site"; query: "site/string()" }

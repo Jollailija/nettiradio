@@ -31,8 +31,8 @@ function initializeLib() {
     console.log("Filling lib")
     var firstTime="Unknown" // If the setting returns "Unknown" this must be the first time
     Storage.initialize()
-    console.log("First time? " + Storage.getSetting("first"))
-    if (Storage.getSetting("first")===firstTime) {
+    console.log("First time? " + Storage.getSetting("firstTime"))
+    if (Storage.getSetting("firstTime")===firstTime) {
         console.log("This is the first time")
         setDefaultSettings()
     }
@@ -49,8 +49,8 @@ function setDefaultSettings() {
     Storage.setSetting("suStation","Valitse asema") // def. startup values
     Storage.setSetting("suWebsite","https://github.com/jollailija/nettiradio/")
     Storage.setSetting("suUrl","")
-    Storage.setSetting("xmlLocation","http://jollailija.github.io/nettiradio/asemat.xml")
-    Storage.setSetting("first","no")
+    //Storage.setSetting("xmlLocation","http://jollailija.github.io/nettiradio/asemat.xml")
+    Storage.setSetting("firstTime","no")
     console.log("Settings set. Loading settings")
     loadSettings()
 }
@@ -63,7 +63,7 @@ function loadSettings() {
     lib.radioStation = (Storage.getSetting("suStation")) // def. startup values
     lib.website = (Storage.getSetting("suWebsite"))
     lib.musicSource = (Storage.getSetting("suUrl"))
-    lib.xmlLocation = (Storage.getSetting("xmlLocation"))
+    //lib.xmlLocation = (Storage.getSetting("xmlLocation"))
     console.log("Settings loaded")
 }
 
@@ -106,8 +106,26 @@ function saveFontSize (size) {
     Storage.initialize()
     Storage.setSetting("fontSize",size)
 }
+
 function refreshList(whichList) {
     whichList.clear()
     Storage.initialize()
     Storage.getFavsFromDB(whichList)
+}
+
+function overwriteFavs(sourceList) {
+    Storage.initialize()
+    Storage.dropDB("stations")
+    Storage.initialize() //  Re-create the table
+    var i = 0
+    console.log("Stuff:" + sourceList + sourceList.count)
+    for (var r = 0; r < sourceList.count; r++) {
+        Storage.setStationInDB(sourceList.get(i).title, sourceList.get(i).source, sourceList.get(i).site, sourceList.get(i).section)
+        i ++
+    }
+    console.log("This many favourites: " + i)
+}
+
+function moveListItem(model, oldIndex, newIndex) {
+    model.move(oldIndex, newIndex, 1)
 }

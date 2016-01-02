@@ -56,9 +56,7 @@ Page {
                 top: header.bottom
                 left: parent.left
                 right: parent.right
-                leftMargin: Theme.paddingLarge
-                rightMargin: Theme.paddingLarge
-                topMargin: Theme.paddingLarge
+                margins: Theme.paddingLarge
             }
             width: parent.width
             wrapMode: Text.Wrap
@@ -70,24 +68,20 @@ Page {
 
                   qsTr("Voit <b>käynnistää</b> tai <b>keskeyttää toiston</b> alaosan nappuloilla ja kannen nappulalla. Voit <b>lopettaa toiston</b> painamalla neliötä. Toiston lopettaminen lopettaa streamin lataamisen ja säästää näin akkua.") + "<br><br>" +
 
-                  qsTr("<b>Näytön kierron lukitseminen</b> ja <b>asemalistanäkymän vaihtaminen</b> löytyvät vetovalikosta. Listanäkymässä ollessasi voit avata <b>hakulaatikon</b> vetovalikosta.") +
+                  qsTr("<b>Näytön kierron lukitseminen</b> ja <b>asemalistanäkymän vaihtaminen</b> löytyvät vetovalikosta. Listanäkymässä ollessasi voit avata <b>hakulaatikon</b> vetovalikosta.") + "<br>" +
 
-                  qsTr("<h3>Valikko</h3>")+
+                  qsTr("<h3>Valikko</h3>")+ "<br>" +
 
-               //   qsTr("") + "<br><br>" +
+                  qsTr("<b>Uniajastin</b> sammuttaa toiston asettamasi minuuttimäärän jälkeen. Sammutusaika valitaan <i>Uniajastin</i>-sivun liukuvalitsimella. Ajastin käynnistetään ja pysäytetään sivulta löytyvillä nappuloilla. <b>Jäljellä oleva aika</b> näkyy kannessa, ja ajastimen voi pysäyttää kannen pikavalinnalla.") + "<br><br>" +
 
+                  qsTr("Voit lisätä tai poistaa <b>suosikkeja</b> <i>Muokkaa suosikkeja</i> -sivulla. Voit lisätä suosikiksi joko nykyisen aseman tai minkä tahansa sovelluksen tukemassa muodossa streamia lähettävän aseman. Suosikkiasemien nimien ja stream-osoitteiden täytyy olla uniikkeja.")+ "<br>" +
 
-"
+                  qsTr("Suosikkeihin tehdyt muutokset tallennetaan automaattisesti kolmen sekunnin välein. Voit myös tallentaa muutokset käsin valitsemalla vetovalikosta <i>Tallenna muutokset</i>.")+ "<br><br>" +
 
-<b>Uniajastin</b> sammuttaa toiston asettamasi minuuttimäärän jälkeen. Sammutusaika valitaan Uniajastin-sivun liukuvalitsimella. Ajastin käynnistetään ja pysäytetään sivulta löytyvillä nappuloilla. <b>Jäljellä oleva aika</b> näkyy kannessa, ja ajastimen voi pysäyttää kannen pikavalinnalla.
+                  qsTr("Jos sovellus ei selviydy <b>yhteyskatkoista</b>, voit kokeilla <i>palautumismoodia</i>. Valikosta löytyy myös paljon mielenkiintoisia <b>asetuksia</b>, kokeile!")+ "<br><br>" +
 
-Voit lisätä tai poistaa suosikkeja '<b>Muokkaa suosikkeja</b>' -sivulla. Voit lisätä suosikiksi joko nykyisen aseman tai minkä tahansa sovelluksen tukemassa muodossa streamia lähettävän aseman.
+                  qsTr("Jos sinulla on <b>kysymyksiä</b>, <b>asema-</b> ja <b>ominaisuustoiveita</b> tai <b>palautetta</b>, voit kirjoittaa kommentin Kauppaan tai OpenReposiin tai lähettää sähköpostia osoitteeseen") + "<b> jollailija@gmail.com</b>" + "<br><br>"
 
-Jos sovellus ei selviydy <b>yhteyskatkoista</b>, voit kokeilla <b>palautumismoodia</b>. Valikosta löytyy myös paljon mielenkiintoisia asetuksia, kokeile!
-
-Jos sinulla on <b>kysymyksiä</b>, <b>asema-</b> ja <b>ominaisuustoiveita</b> tai <b>palautetta</b>, voit kirjoittaa kommentin <b>Kauppaan</b>, <b>OpenRepos</b>iin tai lähettää <b>sähköpostia</b> osoitteeseen <u><b>jollailija@gmail.com</b></u>"
-            /*"Choose any radio station by clicking it's name on the list. Name of the currently playing radio station is displayed in the panel at the bottom.
-While inside the app, you can play & pause by using the icon buttons in the panel. You can also use the cover actions for pausing and resuming."*/
             font.pixelSize: Screen.sizeCategory > Screen.Medium
                             ? Theme.fontSizeLarge * lib.fontSize
                             : Theme.fontSizeMedium * lib.fontSize

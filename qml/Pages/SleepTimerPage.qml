@@ -72,6 +72,12 @@ Page {
                     onPressed: lib.sleepTime = -1
                 }
             }
+            /*TextSwitch {
+                text: qsTr("Sulje sovellus uniajastimen päätyttyä")
+                description: qsTr("Kun uniajastin on kulunut loppuun, sovellus sulkee itsensä.")
+                checked: lib.closeAppAfterSleepTime
+                onCheckedChanged: lib.closeAppAfterSleepTime ? lib.closeAppAfterSleepTime=false : lib.closeAppAfterSleepTime=true
+            }*/
         }
     }
 }
