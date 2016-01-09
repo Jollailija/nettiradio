@@ -29,6 +29,18 @@
 -->
     <channel1>
     <item>
+        <source></source>
+        <title>Nettiradio 1.9.0 nyt saatavilla!</title>
+        <site>https://openrepos.net/content/jollailija/finnish-net-radio-client-beta</site>
+        <section>Ilmoitus</section>
+    </item>
+    <item>
+        <source></source>
+        <title>Lataa Kaupasta tai OpenReposista</title>
+        <site>https://openrepos.net/content/jollailija/finnish-net-radio-client-beta</site>
+        <section>Ilmoitus</section>
+    </item>
+    <item>
         <source>http://188.117.44.132:8000/stream.m3u</source>
         <title>Bassoradio</title>
         <site>http://www.basso.fi/radio</site>
