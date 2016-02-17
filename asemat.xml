@@ -1,6 +1,6 @@
 <stationlist>
 <!--
-  Copyright (C) 2015 jollailija
+  Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
   You may use this file under the terms of BSD license as follows:
@@ -25,12 +25,15 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
+  
+  List updated 17.2. (Mediamonitori updated 14.2.)
+  Version tag for reference: 170216-1 (in case some of you fancy one :P)
 -->
     <item>
         <source></source>
-        <title>Listaa päivitetään parhaillaan</title>
+        <title>Puuttuuko kanavia? Ilmoita!</title>
         <site>https://github.com/Jollailija/nettiradio/</site>
-        <section>Ilmoitus</section>
+        <section>Lista päivitetty 17.2. (Lähde 14.2.)</section>
     </item>
     <item>
         <source>http://188.117.44.132:8000/stream.m3u</source>
@@ -57,15 +60,15 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/9168/80596_loop.mp3</source>
-        <title>Loop</title>
-        <site>http://www.loop.fi/</site>
+        <source>http://stream2.bauermedia.fi/kiss.mp3</source>
+        <title>KISS (The Voice)</title>
+        <site>http://www.kiss.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.41168-icelive0.cdn.qbrick.com/5050/41168_radionova1.mp3</source>
-        <title>Nova</title>
-        <site>http://www.radionova.fi/</site>
+        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/9168/80596_loop.mp3</source>
+        <title>Loop</title>
+        <site>http://www.loop.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
 	<item>
@@ -93,6 +96,12 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
+        <source>http://stream3.bauermedia.fi/nova.mp3</source>
+        <title>Radio Nova</title>
+        <site>http://www.radionova.fi/</site>
+        <section>Valtakunnalliset</section>
+    </item>
+    <item>
         <source>http://adwzg4.tdf-cdn.com/8945/nrj_179479.mp3</source>
         <title>Radio NRJ</title>
         <site>http://www.nrj.fi/</site>
@@ -114,12 +123,6 @@
         <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10555/80596_RadioSuomipop.mp3</source>
         <title>Radio Suomipop</title>
         <site>http://www.radiosuomipop.fi/</site>
-        <section>Valtakunnalliset</section>
-    </item>
-    <item>
-        <source>http://stream2.sbs.fi/voice.mp3</source>
-        <title>The Voice</title>
-        <site>http://www.voice.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
@@ -177,7 +180,7 @@
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>http://153.1.15.26:8080/moreeni.mp3</source>
+        <source>http://153.1.15.29:8080/moreeni.mp3</source>
         <title>Radio Moreeni</title>
         <site>http://moreeni.uta.fi/</site>
         <section>Paikalliset</section>
@@ -249,6 +252,18 @@
         <section>Paikalliset - Radio 'Kaupunki'</section>
     </item>
     <item>
+        <source>http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kuopio.m3u</source>
+        <title>Kuopio</title>
+        <site>http://www.radiokuopio.fi/</site>
+        <section>Paikalliset - Radio 'Kaupunki'</section>
+    </item>
+    <item>
+        <source>http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/mikkeli.m3u</source>
+        <title>Mikkeli</title>
+        <site>http://www.radiomikkeli.fi/</site>
+        <section>Paikalliset - Radio 'Kaupunki'</section>
+    </item>
+    <item>
         <source>http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u</source>
         <title>Pori</title>
         <site>http://www.radiopori.fi/</site>
@@ -274,7 +289,7 @@
     </item>
     <item>
         <source>http://stream2.sbs.fi/rc-jkl.mp3</source>
-        <title>Jyväskylä Radio City</title>
+        <title>Jyväskylä - Radio City</title>
         <site>http://www.radiocity.fi/</site>
         <section>Paikalliset - Radio City</section>
     </item>
@@ -374,9 +389,18 @@
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
-    <item>
+    <!--
+	Seems like this one doesn't exist anymore -> remove on next update
+	<item>
         <source>http://adwzg3.tdf-cdn.com/8559/nrj_175788.mp3</source>
         <title>NRJ Ibiza</title>
+        <site>http://www.nrj.fi/</site>
+        <section>NRJ-kanavat</section>
+    </item>
+	-->
+	<item>
+        <source>http://adwzg5.scdn.arkena.com/14580/nrjfinlande_093201.mp3</source>
+        <title>NRJ Hits</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
@@ -438,6 +462,12 @@
         <source>http://suomiradio.pro:8000/hr256</source>
         <title>Pispalan Radio 995</title>
         <site>http://www.pispalanradio.fi/</site>
+        <section>Tilapäiset ja sekalaiset</section>
+    </item>
+    <item>
+        <source>http://adwzg5.scdn.arkena.com/14528/nrjfinlande_140238.mp3</source>
+        <title>Radio Nostalgia - Kotimaiset aarteet</title>
+        <site>http://www.radionostalgia.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
     <item>
