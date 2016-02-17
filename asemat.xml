@@ -27,6 +27,12 @@
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
 -->
     <item>
+        <source></source>
+        <title>Listaa päivitetään parhaillaan</title>
+        <site>https://github.com/Jollailija/nettiradio/</site>
+        <section>Ilmoitus</section>
+    </item>
+    <item>
         <source>http://188.117.44.132:8000/stream.m3u</source>
         <title>Bassoradio</title>
         <site>http://www.basso.fi/radio</site>
