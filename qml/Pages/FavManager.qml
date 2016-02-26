@@ -26,7 +26,7 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-import QtQuick 2.1
+import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "storage.js" as Storage
@@ -113,7 +113,7 @@ Page {
                 }
                 MenuItem {
                     text: qsTr("Poista")
-                    onClicked: {favModel.remove(model.index)}
+                    onClicked: {favModel.remove(model.index)} // Note to self: shouldn't this link to the showRemorseItem? What's going on in my head?
                 }
             }
             IconButton {

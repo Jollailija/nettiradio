@@ -2,7 +2,5 @@
 Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-nettiradio
-Exec=sailfish-qml harbour-nettiradio
+Exec=harbour-nettiradio
 Name=Nettiradio
-Name[en]=Netradio
-Name[fi]=Nettiradio

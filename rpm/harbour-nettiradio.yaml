@@ -1,11 +1,11 @@
 Name: harbour-nettiradio
 Summary: Suomalaisten nettiradioiden kuuntelusovellus
-Version: 1.2.0
+Version: old
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
-URL: https://www.github.com/jollailija/nettiradio/
+URL: http://example.org/
 License: BSD
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.
@@ -40,9 +40,6 @@ Files:
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
-  - '%{_datadir}/icons/hicolor/108x108/apps/%{name}.png'
-  - '%{_datadir}/icons/hicolor/128x128/apps/%{name}.png'
-  - '%{_datadir}/icons/hicolor/256x256/apps/%{name}.png'
 
 # For more information about yaml and what's supported in Sailfish OS
 # build system, please see https://wiki.merproject.org/wiki/Spectacle

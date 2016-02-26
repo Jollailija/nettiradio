@@ -27,7 +27,7 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-import QtQuick 2.1
+import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Page {
@@ -49,8 +49,8 @@ Page {
             id: version
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: qsTr("Versio ") + "1.9.0" + "-" + "1" //I don't know how to automate this just yet...
-            onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
+            text: "Nettiradio for Sailfish 1.0"
+            onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/tree/sfone")
         }
         Text {
             id: text
@@ -89,7 +89,7 @@ Page {
 
             Button {
                 text: qsTr("GitHub")
-                onClicked: Qt.openUrlExternally("https://github.com/jollailija/nettiradio/")
+                onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/tree/sfone")
             }
             Button {
                 text: qsTr("OpenRepos")
