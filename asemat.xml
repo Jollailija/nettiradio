@@ -30,12 +30,6 @@
   Version tag for reference: 170216-1 (in case some of you fancy one :P)
 -->
     <item>
-        <source></source>
-        <title>Puuttuuko kanavia? Ilmoita!</title>
-        <site>https://github.com/Jollailija/nettiradio/</site>
-        <section>Lista päivitetty 17.2. (Lähde 14.2.)</section>
-    </item>
-    <item>
         <source>http://188.117.44.132:8000/stream.m3u</source>
         <title>Bassoradio</title>
         <site>http://www.basso.fi/radio</site>
