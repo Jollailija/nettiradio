@@ -13,8 +13,8 @@ https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.chan
 
 Planned features:  
 -Better UI (kinda achieved in 1.1.0)    
--English and Swedish translations (Should be included in the next release)
--Lockscreen controls
+-English and Swedish translations (Should be included in the next release)  
+-Lockscreen controls (available for testing in 1.9.1 beta)
 
 Suomeksi:
 Helppokäyttöinen sovellus suomalaisten nettiradioiden kuunteluun. Valmis heti asennuksen jälkeen, sisältää yli 70 suomalaista nettiradioasemaa. Koodattu englanniksi, käännökset löytyvät koodista kommentoituina. Ikonin on tehnyt Moth. Tervetuloa mukaan tekemään sovellusta!
