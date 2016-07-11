@@ -27,5 +27,5 @@ https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.chan
   
 Suunnitellut ominaisuudet:  
 -Parempi käyttöliittymä (aika lailla julkaisussa 1.1.0)  
--Englannin- ja ruotsinkielinen käännös (pitäisi olla seuraavassa julkaisussa)
--Lukitusnäytön nappulat
+-Englannin- ja ruotsinkielinen käännös (pitäisi olla seuraavassa julkaisussa)  
+-Lukitusnäytön nappulat (testattavissa versio 1.9.1 betasta lähtien)
