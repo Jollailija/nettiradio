@@ -49,7 +49,7 @@ Page {
             id: version
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: qsTr("Versio ") + "1.9.0" + "-" + "1" //I don't know how to automate this just yet...
+            text: qsTr("Versio ") + "1.9.1" + "-" + "1" //I don't know how to automate this just yet...
             onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
         }
         Text {

@@ -5,6 +5,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Jul 11 2016 jollailija <jollailija@gmail.com> 1.9.1-1
+-Added some controls to lockscreen (mpris)
+
 * Sat Jan 2 2016 jollailija <jollailija@gmail.com> 1.9.0-1
 -almost Nettiradio 2.0!
 -you can now add stations to favourites!

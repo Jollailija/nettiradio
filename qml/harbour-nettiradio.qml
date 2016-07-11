@@ -32,6 +32,7 @@ import QtMultimedia 5.0
 //import QtFeedback 5.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
+import org.nemomobile.mpris 1.0
 import "Pages"
 import "Pages/StationLists"
 import "Pages/storage.js" as Storage
@@ -50,6 +51,78 @@ ApplicationWindow
         onPaused: {lib.playing = false; lib.stopped = false}
         onMutedChanged: pauseStream()
     }
+
+    function refreshMpris() {
+        mprisPlayer.artist = lib.radioStation
+        mprisPlayer.song = "Nettiradio"
+        switch (lib.playing) {
+        case true:
+            mprisPlayer.playbackStatus = Mpris.Playing
+            break;
+        case false:
+            if (lib.stopped) {
+                mprisPlayer.playbackStatus = Mpris.Paused
+            }
+            else {
+                mprisPlayer.setCanPause(false)
+                mprisPlayer.playbackStatus = Mpris.Paused
+            }
+            break;
+        default:
+            mprisPlayer.playbackStatus = Mpris.Paused
+        }
+    }
+
+    MprisPlayer {
+        id: mprisPlayer
+        property string artist
+        property string song
+
+        serviceName: "harbour-nettiradio"
+        identity: "Nettiradio"
+
+        supportedUriSchemes: ["file"]
+        supportedMimeTypes: ["audio/x-wav", "audio/x-vorbis+ogg", "audio/mpeg", "audio/mp4a-latm", "audio/x-aiff"]
+
+        playbackStatus: Mpris.Stopped
+        loopStatus: Mpris.None
+        shuffle: false
+        volume: lib.volume
+
+        canControl: true
+        canPause: true
+        canPlay: true
+        canSeek: false
+        canGoNext: true
+        canGoPrevious: true
+        hasTrackList:false
+
+        onPlayRequested: playStream()
+        onPlayPauseRequested: pauseStream()
+        onStopRequested: stopStream()
+        onNextRequested: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex))
+        onPreviousRequested: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex - 2))
+
+        onArtistChanged: {
+            var metadata = mprisPlayer.metadata
+            metadata[Mpris.metadataToString(Mpris.Artist)] = artist
+            mprisPlayer.metadata = metadata
+        }
+
+        onSongChanged: {
+            var metadata = mprisPlayer.metadata
+            metadata[Mpris.metadataToString(Mpris.Title)] = song
+            mprisPlayer.metadata = metadata
+        }
+
+        // I'll list these just incase I figure out what to do with them :)
+        onSeekRequested: {}
+        onSetPositionRequested: {}
+        onOpenUriRequested: {}
+        onLoopStatusRequested: {}
+        onShuffleRequested: {}
+    }
+
     // Dunno what I did but seems to work
     Timer {
         id: resurrector
@@ -127,6 +200,7 @@ ApplicationWindow
         console.log("this many stations: " + i)
         Storage.getFavsFromDB(qmlListModel)
         console.log("Got favs from db")
+        refreshMpris()
     }
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
@@ -135,9 +209,9 @@ ApplicationWindow
 
     function openWebsite() {remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)}
 
-    function pauseStream() {playMusic.pause(); resurrector.stop()}
-    function playStream() {playMusic.play()}
-    function stopStream() {playMusic.stop(); resurrector.stop()}
+    function pauseStream() {playMusic.pause(); resurrector.stop(); refreshMpris()}
+    function playStream() {playMusic.play(); refreshMpris()}
+    function stopStream() {playMusic.stop(); resurrector.stop(); refreshMpris()}
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
     cover: Qt.resolvedUrl("Pages/CoverPage.qml")

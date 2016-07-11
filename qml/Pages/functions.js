@@ -64,6 +64,7 @@ function loadSettings() {
     lib.website = (Storage.getSetting("suWebsite"))
     lib.musicSource = (Storage.getSetting("suUrl"))
     //lib.xmlLocation = (Storage.getSetting("xmlLocation"))
+    refreshMpris()
     console.log("Settings loaded")
 }
 
@@ -100,6 +101,7 @@ function chooseStation(listM, i) {
         lib.radioStation = listM.get(0).title
         lib.stationIndex = 1 // for the cover action
     }
+    refreshMpris()
 }
 
 function saveFontSize (size) {
@@ -111,6 +113,7 @@ function refreshList(whichList) {
     whichList.clear()
     Storage.initialize()
     Storage.getFavsFromDB(whichList)
+    refreshMpris()
 }
 
 function overwriteFavs(sourceList) {
