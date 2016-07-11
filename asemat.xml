@@ -26,9 +26,15 @@
   
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
   
-  List updated 17.2. (Mediamonitori updated 14.2.)
-  Version tag for reference: 170216-1 (in case some of you fancy one :P)
+  List updated 11. july (Mediamonitori updated 4. june)
+  Version tag for reference: 160711-1 (in case some of you fancy one :P)
 -->
+    <item>
+        <source></source>
+        <title>Asemalista päivitetty 11.7.</title>
+        <site>https://github.com/jollailija/nettiradio</site>
+        <section>Ilmoitus</section>
+</item>
     <item>
         <source>http://188.117.44.132:8000/stream.m3u</source>
         <title>Bassoradio</title>
@@ -42,17 +48,26 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
+        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10556/80596_Helmiradio.mp3</source>
+        <title>Helmiradio</title>
+        <site>http://www.helmiradio.fi/</site>
+        <section>Valtakunnalliset</section>
+</item>
+    <item>
         <source>http://stream2.sbs.fi/isk-hki.mp3</source>
         <title>Iskelmä (Helsinki)</title>
         <site>http://www.iskelma.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
+<!--
+    Iskelmä Aikakoneelle ei ole toimivaa URL-osoitetta Mediamonitorin listalla
     <item>
         <source>http://stream2.sbs.fi/isk-aika.mp3</source>
         <title>Iskelmä Aikakone</title>
         <site>http://www.iskelma.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
+-->
     <item>
         <source>http://stream2.bauermedia.fi/kiss.mp3</source>
         <title>KISS (The Voice)</title>
@@ -263,12 +278,15 @@
         <site>http://www.radiopori.fi/</site>
         <section>Paikalliset - Radio 'Kaupunki'</section>
     </item>
+<!--
+    Radio Vaasalle ei ole toimivaa URL-osoitetta Mediamonitorin listalla
     <item>
         <source>http://stream.anviawebcasting.com:8000/radiovaasa.m3u</source>
         <title>Vaasa</title>
         <site>http://www.radiovaasa.fi/</site>
         <section>Paikalliset - Radio 'Kaupunki'</section>
     </item>
+-->
     <item>
         <source>http://stream2.sbs.fi/rc-hki.mp3</source>
         <title>Helsinki - Radio City</title>
@@ -365,12 +383,13 @@
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
+    <!--
     <item>
         <source>http://adwzg4.tdf-cdn.com/8773/nrj_178606.mp3</source>
         <title>NRJ UK Top 40</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
-    </item>
+    </item> -->
     <item>
         <source>http://adwzg3.tdf-cdn.com/8497/nrj_164590.mp3</source>
         <title>NRJ Dance</title>
@@ -398,48 +417,48 @@
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
-    <item>
+   <!-- <item>
         <source>http://adwzg3.tdf-cdn.com/8595/nrj_165941.mp3</source>
         <title>NRJ Latino</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
-    </item>
+    </item> -->
     <item>
         <source>http://adwzg3.tdf-cdn.com/8503/nrj_175068.mp3</source>
         <title>NRJ Lounge</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
-    <item>
+    <!-- <item>
         <source>http://adwzg3.tdf-cdn.com/8615/nrj_169454.mp3</source>
         <title>NRJ Love</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
-    </item>
+    </item> -->
     <item>
         <source>http://adwzg3.tdf-cdn.com/8542/nrj_169073.mp3</source>
         <title>NRJ Extravadance</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
-    <item>
+    <!-- <item>
         <source>http://adwzg3.tdf-cdn.com/8578/nrj_168019.mp3</source>
         <title>NRJ Rap US</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
-    </item>
-    <item>
+    </item> -->
+    <!-- <item>
         <source>http://adwzg3.tdf-cdn.com/8485/nrj_169683.mp3</source>
         <title>NRJ RnB</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
-    </item>
-    <item>
+    </item> -->
+    <!-- <item>
         <source>http://adwzg3.tdf-cdn.com/8527/nrj_177497.mp3</source>
         <title>NRJ Rock</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
-    </item>
+    </item> -->
     <item>
         <source>http://adwzg3.tdf-cdn.com/8530/nrj_165311.mp3</source>
         <title>NRJ Running</title>
@@ -458,12 +477,15 @@
         <site>http://www.pispalanradio.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
+<!--
+    Radio Nostalgia - Kotimaiset aarteet -kanavalle ei ollut toimivaa URL-osoitetta Mediamonitorin listalla
     <item>
         <source>http://adwzg5.scdn.arkena.com/14528/nrjfinlande_140238.mp3</source>
         <title>Radio Nostalgia - Kotimaiset aarteet</title>
         <site>http://www.radionostalgia.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
+-->
     <item>
         <source>http://46.163.245.15:8000/radio.m3u</source>
         <title>Radio Patmos</title>
