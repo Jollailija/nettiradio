@@ -30,33 +30,33 @@
     <channel1>
     <item>
         <source></source>
-        <title>Nettiradio 1.9.0 nyt saatavilla!</title>
+        <title>Sinulla on vanha versio Nettiradiosta</title>
         <site>https://openrepos.net/content/jollailija/finnish-net-radio-client-beta</site>
-        <section>Ilmoitus</section>
+        <section>Ilmoitus-päivitä nyt!</section>
     </item>
     <item>
         <source></source>
-        <title>Lataa Kaupasta tai OpenReposista</title>
+        <title>Tätä versiota ei enää tueta</title>
         <site>https://openrepos.net/content/jollailija/finnish-net-radio-client-beta</site>
+        <section>Ilmoitus-update Nettiradio!</section>
+    </item>
+    <item>
+        <source></source>
+        <title>Lataa uusin versio Kaupasta tai OpenReposista</title>
+        <site></site>
         <section>Ilmoitus</section>
     </item>
     <item>
-        <source>http://188.117.44.132:8000/stream.m3u</source>
-        <title>Bassoradio</title>
-        <site>http://www.basso.fi/radio</site>
-        <section>Valtakunnalliset</section>
-    </item>
-    <item>
         <source>http://stream.radioclassic.fi:8000/rh256</source>
-        <title>Classic</title>
-        <site>http://www.radioclassic.fi/</site>
-        <section>Valtakunnalliset</section>
+        <title>Uusi versio vanhaa Sailfishiä käyttäville</title>
+        <site></site>
+        <section>Vanhan Sailfishin käyttäjille</section>
     </item>
     <item>
         <source>http://stream2.sbs.fi/isk-hki.mp3</source>
-        <title>Iskelmä (Helsinki)</title>
-        <site>http://www.iskelma.fi/</site>
-        <section>Valtakunnalliset</section>
+        <title>on myös saatavilla OpenReposista.</title>
+        <site></site>
+        <section>Vanhan Sailfishin käyttäjille</section>
     </item>
     <item>
         <source>http://stream2.sbs.fi/isk-aika.mp3</source>
