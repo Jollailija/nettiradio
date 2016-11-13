@@ -123,11 +123,16 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10555/80596_RadioSuomipop.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10566/80692_RadioSuomipop.mp3</source>
         <title>Radio Suomipop</title>
         <site>http://www.radiosuomipop.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
+    <item>
+        <source>http://stream2.bauermedia.fi/suomirock.mp3</source>
+	    <title>Radio SuomiRock</title>
+	    <site>http://www.radiosuomirock.fi/</site>
+        <section>Valtakunnalliset</section>
     <item>
         <source>http://nettiradio.auranaallot.fi/stream</source>
         <title>Auran Aallot</title>
