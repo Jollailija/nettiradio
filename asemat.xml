@@ -550,6 +550,12 @@
         <section>NRJ-kanavat</section>
     </item>
     <item>
+        <source>http://lastenradio.ksfplayer.com:8000/</source>
+        <title>Lasten Oma Radio</title>
+        <site>http://www.lastenomaradio.fi/</site>
+        <section>Tilapäiset ja sekalaiset</section>
+    </item>
+    <item>
         <source>http://s3.radioboss.fm:8301/live.m3u</source>
         <title>Radio Lion (Leijonaradio)</title>
         <site>http://www.mystation.fi/</site>
