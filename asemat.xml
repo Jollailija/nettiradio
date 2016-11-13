@@ -133,6 +133,7 @@
 	    <title>Radio SuomiRock</title>
 	    <site>http://www.radiosuomirock.fi/</site>
         <section>Valtakunnalliset</section>
+	</item>
     <item>
         <source>http://nettiradio.auranaallot.fi/stream</source>
         <title>Auran Aallot</title>
