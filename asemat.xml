@@ -30,7 +30,7 @@
   Version tag for reference: 160711-2 (in case some of you fancy one :P)
 -->
     <item>
-        <source>http://188.117.44.132:8000/stream.m3u</source>
+        <source>http://stream.basso.fi:8000/stream</source>
         <title>Bassoradio</title>
         <site>http://www.basso.fi/radio</site>
         <section>Valtakunnalliset</section>
@@ -42,7 +42,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10556/80596_Helmiradio.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10567/80692_Helmiradio.mp3</source>
         <title>Helmiradio</title>
         <site>http://www.helmiradio.fi/</site>
         <section>Valtakunnalliset</section>
@@ -69,13 +69,13 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/9168/80596_loop.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10561/80692_Loop.mp3</source>
         <title>Loop</title>
         <site>http://www.loop.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
 	<item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10544/80596_RadioAalto.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10564/80692_RadioAalto.mp3</source>
         <title>Radio Aalto</title>
         <site>http://www.radioaalto.fi/</site>
         <section>Valtakunnalliset</section>
@@ -93,7 +93,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://adwzg4.tdf-cdn.com/9201/nrj_113217.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35059/mp3_128.mp3</source>
         <title>Radio Nostalgia</title>
         <site>http://www.radionostalgia.fi/</site>
         <section>Valtakunnalliset</section>
@@ -105,13 +105,13 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://adwzg4.tdf-cdn.com/8945/nrj_179479.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35001/mp3_128.mp3</source>
         <title>Radio NRJ</title>
         <site>http://www.nrj.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10545/80596_RadioRock.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10565/80692_RadioRock.mp3</source>
         <title>Radio Rock</title>
         <site>http://www.radiorock.fi/</site>
         <section>Valtakunnalliset</section>
