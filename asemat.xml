@@ -26,8 +26,8 @@
   
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
   
-  List updated 11. july (Mediamonitori updated 4. june)
-  Version tag for reference: 160711-2 (in case some of you fancy one :P)
+  List updated 13. November (Mediamonitori updated 2. November)
+  Version tag for reference: 161113-1 "Snowy Movember '16" (in case some of you fancy one :P)
 -->
     <item>
         <source>http://stream.basso.fi:8000/stream</source>
@@ -111,6 +111,12 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
+        <source>http://46.163.245.15:8000/radio.m3u</source>
+        <title>Radio Patmos</title>
+        <site>http://www.patmos.fi/</site>
+        <section>Valtakunnalliset</section>
+    </item>
+    <item>
         <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10565/80692_RadioRock.mp3</source>
         <title>Radio Rock</title>
         <site>http://www.radiorock.fi/</site>
@@ -134,10 +140,22 @@
 	    <site>http://www.radiosuomirock.fi/</site>
         <section>Valtakunnalliset</section>
 	</item>
+	<item>
+        <source>http://radio.6net.fi:8000/radiokajaus.m3u</source>
+        <title>Aito Kajaus</title>
+        <site>http://www.radiokajaus.fi/</site>
+        <section>Paikalliset</section>
+    </item>
     <item>
         <source>http://nettiradio.auranaallot.fi/stream</source>
         <title>Auran Aallot</title>
         <site>http://www.auranaallot.fi/</site>
+        <section>Paikalliset</section>
+    </item>
+	<item>
+        <source>http://st.downtime.fi/bfm.mp3</source>
+        <title>Business FM</title>
+        <site>http://www.businessfm.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -147,15 +165,9 @@
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10547/80596_GrooveFM.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10563/80692_GrooveFM.mp3</source>
         <title>Groove FM</title>
         <site>http://www.groovefm.fi/</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
-        <source>http://media.innoventum.fi:8000/radiorex.m3u</source>
-        <title>Iskelmä Rex</title>
-        <site>http://www.radiorex.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -165,7 +177,7 @@
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80596-icelive0.cdn.qbrick.com/10162/80596_MetroHelsinki.mp3</source>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10562/80692_MetroHelsinki.mp3</source>
         <title>Metro Helsinki</title>
         <site>http://www.metrohelsinki.fi/</site>
         <section>Paikalliset</section>
@@ -174,12 +186,6 @@
         <source>http://stream2.sbs.fi/play.mp3</source>
         <title>Play</title>
         <site>http://www.playradio.fi/</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
-        <source>http://radio.6net.fi:8000/radiokajaus.m3u</source>
-        <title>Radio Kajaus</title>
-        <site>http://www.radiokajaus.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -242,11 +248,89 @@
         <site>http://www.radiovoima.fi/</site>
         <section>Paikalliset</section>
     </item>
-    <item>
-        <source>http://st.downtime.fi/sunclassics.mp3.m3u</source>
-        <title>SUN Classics</title>
-        <site>http://www.sunclassics.fi/</site>
-        <section>Paikalliset</section>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-kem.mp3</source>
+        <title>Iskelmä Ankkuri</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-hml.mp3</source>
+        <title>Iskelmä Hämeenlinna</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-hyv.mp3</source>
+        <title>Iskelmä Hyvinkää</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-jkl.mp3</source>
+        <title>Iskelmä Jyväskylä</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-ktk.mp3</source>
+        <title>Iskelmä Kotka</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-kvl.mp3</source>
+        <title>Iskelmä Kouvola</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-lpr.mp3</source>
+        <title>Iskelmä Lappeenranta</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-oul.mp3</source>
+        <title>Iskelmä Oulu</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://media.innoventum.fi:8000/radiorex.m3u</source>
+        <title>Iskelmä Rex</title>
+        <site>http://www.radiorex.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-rov.mp3</source>
+        <title>Iskelmä Rovaniemi</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-sas.mp3</source>
+        <title>Iskelmä Sastamala</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-tku.mp3</source>
+        <title>Iskelmä Turku</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-tre.mp3</source>
+        <title>Iskelmä Tampere</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/isk-loh.mp3</source>
+        <title>Iskelmä Uusimaa</title>
+        <site>http://www.iskelma.fi/</site>
+        <section>Paikalliset - Iskelmä</section>
     </item>
     <item>
         <source>http://radio.radiohelsinki.fi/rh256</source>
@@ -378,7 +462,7 @@
         <section>Paikalliset - Radio Dei</section>
     </item>
     <item>
-        <source>http://adwzg4.tdf-cdn.com/9199/nrj_112804.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35061/mp3_128.mp3</source>
         <title>NRJ Suomihitit</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
@@ -391,14 +475,20 @@
         <section>NRJ-kanavat</section>
     </item> -->
     <item>
-        <source>http://adwzg3.tdf-cdn.com/8497/nrj_164590.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35037/mp3_128.mp3</source>
         <title>NRJ Dance</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
     <item>
-        <source>http://adwzg3.tdf-cdn.com/8622/nrj_164052.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35017/mp3_128.mp3</source>
         <title>NRJ Fitness</title>
+        <site>http://www.nrj.fi/</site>
+        <section>NRJ-kanavat</section>
+    </item>
+	<item>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35011/mp3_128.mp3</source>
+        <title>NRJ Lounge</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
@@ -410,25 +500,19 @@
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
-	-->
+	
 	<item>
         <source>http://adwzg5.scdn.arkena.com/14580/nrjfinlande_093201.mp3</source>
         <title>NRJ Hits</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
-   <!-- <item>
+    <item>
         <source>http://adwzg3.tdf-cdn.com/8595/nrj_165941.mp3</source>
         <title>NRJ Latino</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item> -->
-    <item>
-        <source>http://adwzg3.tdf-cdn.com/8503/nrj_175068.mp3</source>
-        <title>NRJ Lounge</title>
-        <site>http://www.nrj.fi/</site>
-        <section>NRJ-kanavat</section>
-    </item>
     <!-- <item>
         <source>http://adwzg3.tdf-cdn.com/8615/nrj_169454.mp3</source>
         <title>NRJ Love</title>
@@ -436,7 +520,7 @@
         <section>NRJ-kanavat</section>
     </item> -->
     <item>
-        <source>http://adwzg3.tdf-cdn.com/8542/nrj_169073.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35031/mp3_128.mp3</source>
         <title>NRJ Extravadance</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
@@ -460,14 +544,14 @@
         <section>NRJ-kanavat</section>
     </item> -->
     <item>
-        <source>http://adwzg3.tdf-cdn.com/8530/nrj_165311.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/35051/mp3_128.mp3</source>
         <title>NRJ Running</title>
         <site>http://www.nrj.fi/</site>
         <section>NRJ-kanavat</section>
     </item>
     <item>
         <source>http://s3.radioboss.fm:8301/live.m3u</source>
-        <title>Leijonaradio</title>
+        <title>Radio Lion (Leijonaradio)</title>
         <site>http://www.mystation.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
@@ -477,25 +561,22 @@
         <site>http://www.pispalanradio.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
-<!--
-    Radio Nostalgia - Kotimaiset aarteet -kanavalle ei ollut toimivaa URL-osoitetta Mediamonitorin listalla
     <item>
-        <source>http://adwzg5.scdn.arkena.com/14528/nrjfinlande_140238.mp3</source>
+        <source>http://cdn.nrjaudio.fm/adwz1/fi/55371/mp3_128.mp3</source>
         <title>Radio Nostalgia - Kotimaiset aarteet</title>
         <site>http://www.radionostalgia.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
--->
     <item>
-        <source>http://46.163.245.15:8000/radio.m3u</source>
-        <title>Radio Patmos</title>
-        <site>http://www.patmos.fi/</site>
-        <section>Tilapäiset ja sekalaiset</section>
-    </item>
-    <item>
-        <source>http://streaming.shoutcast.com/RadioRapu</source>
+        <source>http://listen.shoutcast.com/RadioRapu</source>
         <title>Radio Rapu</title>
         <site>http://www.radiorapu.com/</site>
+        <section>Tilapäiset ja sekalaiset</section>
+    </item>
+	<item>
+        <source>http://stream2.bauermedia.fi/sunclassics.mp3</source>
+        <title>SUN Classics</title>
+        <site>http://www.sunclassics.fi/</site>
         <section>Tilapäiset ja sekalaiset</section>
     </item>
     <item>
