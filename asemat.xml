@@ -29,6 +29,72 @@
   List updated 13. November (Mediamonitori updated 2. November)
   Version tag for reference: 161113-1 "Snowy Movember '16" (in case some of you fancy one :P)
 -->
+	<item>
+        <source>"http://relay1.toivon.zenon.media:8000/jouluradio</source>
+        <title>Jouluradio</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8002/kauneimmat</source>
+        <title>Kauneimmat joululaulut</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8009/indiejoulu</source>
+        <title>Indiejoulu</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8008/jazzjoulu</source>
+        <title>Jazzjoulu</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8004/xmas</source>
+        <title>Xmas</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8006/klassinen</source>
+        <title>Klassinen joulu</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8005/rouhea</source>
+        <title>Rouhea Joulu</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8003/lasten</source>
+        <title>Lasten jouluradio</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8001/julradion</source>
+        <title>Julradio</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>http://relay1.toivon.zenon.media:8007/jouluraadio</source>
+        <title>Jouluraadio</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
+	<item>
+        <source>srouce</source>
+        <title>Rouhea Joulu</title>
+        <site>https://jouluradio.fi/</site>
+        <section>Jouluradiot</section>
+    </item>
     <item>
         <source>http://stream.basso.fi:8000/stream</source>
         <title>Bassoradio</title>
