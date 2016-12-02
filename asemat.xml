@@ -30,7 +30,7 @@
   Version tag for reference: 161113-1 "Snowy Movember '16" (in case some of you fancy one :P)
 -->
 	<item>
-        <source>"http://relay1.toivon.zenon.media:8000/jouluradio</source>
+        <source>"http://relay2.toivon.zenon.media:8000/jouluradio</source>
         <title>Jouluradio</title>
         <site>https://jouluradio.fi/</site>
         <section>Jouluradiot</section>
@@ -86,12 +86,6 @@
 	<item>
         <source>http://relay1.toivon.zenon.media:8007/jouluraadio</source>
         <title>Jouluraadio</title>
-        <site>https://jouluradio.fi/</site>
-        <section>Jouluradiot</section>
-    </item>
-	<item>
-        <source>srouce</source>
-        <title>Rouhea Joulu</title>
         <site>https://jouluradio.fi/</site>
         <section>Jouluradiot</section>
     </item>
