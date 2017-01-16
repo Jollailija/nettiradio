@@ -27,7 +27,7 @@
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
   
   List updated 8. January (Mediamonitori updated 7. January)
-  Version tag for reference: 170108-2 "New Prime Year" (in case some of you fancy one :P)
+  Version tag for reference: 170108-3 "New Prime Year hotfix" (in case some of you fancy one :P)
 -->
     <item>
         <source>http://stream.basso.fi:8000/stream</source>
@@ -239,13 +239,13 @@
     <item>
         <source>http://cast.radiovoima.fi:8000/voima.mp3.m3u</source>
         <title>Radio Voima</title>
-        <site>http://www.spiritfm.fi/</site>
+        <site>http://www.radiovoima.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
         <source>http://audio.raa.fi:8000/hifi.m3u</source>
         <title>Spirit FM</title>
-        <site>http://www.radiovoima.fi/</site>
+        <site>http://www.spiritfm.fi/</site>
         <section>Paikalliset</section>
     </item>
 	<item>
