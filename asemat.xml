@@ -1,6 +1,6 @@
 <stationlist>
 <!--
-  Copyright (C) 2015-2017 jollailija
+  Copyright (C) 2015-2018 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
   You may use this file under the terms of BSD license as follows:
@@ -26,8 +26,8 @@
   
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
   
-  List updated 8. January (Mediamonitori updated 7. January)
-  Version tag for reference: 170108-3 "New Prime Year hotfix" (in case some of you fancy one :P)
+  List updated 13. January 2018 (Mediamonitori updated 7. January 2017 (I know))
+  Version tag for reference: 20180113-1 "HitMix UrlFix" (in case some of you fancy one :P)
 -->
     <item>
         <source>http://stream.basso.fi:8000/stream</source>
@@ -72,6 +72,12 @@
         <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10561/80692_Loop.mp3</source>
         <title>Loop</title>
         <site>http://www.loop.fi/</site>
+        <section>Valtakunnalliset</section>
+    </item>
+    <item>
+        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10562/80692_MetroHelsinki.mp3</source>
+        <title>Hitmix (Metro Helsinki)</title>
+        <site>https://www.hitmix.fi/index.html</site>
         <section>Valtakunnalliset</section>
     </item>
 	<item>
@@ -174,12 +180,6 @@
         <source>http://radio.6net.fi:8000/jarviradio.m3u</source>
         <title>Järviradio</title>
         <site>http://www.jarviradio.fi/</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10562/80692_MetroHelsinki.mp3</source>
-        <title>Metro Helsinki</title>
-        <site>http://www.metrohelsinki.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
