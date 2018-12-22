@@ -27,7 +27,7 @@
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
   
   List updated 22. December 2018 (Mediamonitori updated 7. January 2017 (I know))
-  Version tag for reference: 20181222-1 "Suplais!" (in case some of you fancy one :P)
+  Version tag for reference: 20181222-2 "EBBO/Equality Between the Big Ones" (in case some of you fancy one :P)
 -->
     <item>
         <source>http://stream.basso.fi:8000/stream</source>
@@ -35,8 +35,14 @@
         <site>http://www.basso.fi/radio</site>
         <section>Valtakunnalliset</section>
     </item>
+	<item>
+        <source>http://box.basso.fi:8000/stream</source>
+        <title>BOX</title>
+        <site>http://www.boxradio.fi/</site>
+        <section>Valtakunnalliset</section>
+    </item>
     <item>
-        <source>http://stream.radioclassic.fi:8000/rh256</source>
+        <source>https://stream.gbtimes.com/classic</source>
         <title>Classic</title>
         <site>http://www.radioclassic.fi/</site>
         <section>Valtakunnalliset</section>
@@ -46,25 +52,28 @@
         <title>Helmiradio</title>
         <site>http://www.helmiradio.fi/</site>
         <section>Valtakunnalliset</section>
-</item>
+	</item>
     <item>
-        <source>http://stream2.sbs.fi/isk-hki.mp3</source>
-        <title>Iskelmä (Helsinki)</title>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/hitmix/master-128000.m3u8</source>
+        <title>Hitmix</title>
+        <site>https://www.hitmix.fi/</site>
+        <section>Valtakunnalliset</section>
+    </item>
+    <item>
+        <source>http://iluv2k.basso.fi:8000/stream</source>
+        <title>I LUV 2K</title>
+        <site>http://www.iluv2k.fi/</site>
+        <section>Valtakunnalliset</section>
+    </item>
+    <item>
+        <source>http://stream.bauermedia.fi/iskelma/iskelma_64.aac</source>
+        <title>Iskelmä</title>
         <site>http://www.iskelma.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
-<!--
-    Iskelmä Aikakoneelle ei ole toimivaa URL-osoitetta Mediamonitorin listalla
     <item>
-        <source>http://stream2.sbs.fi/isk-aika.mp3</source>
-        <title>Iskelmä Aikakone</title>
-        <site>http://www.iskelma.fi/</site>
-        <section>Valtakunnalliset</section>
-    </item>
--->
-    <item>
-        <source>http://stream2.bauermedia.fi/kiss.mp3</source>
-        <title>KISS (The Voice)</title>
+        <source>http://stream.bauermedia.fi/kiss/kiss_64.aac</source>
+        <title>KISS</title>
         <site>http://www.kiss.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
@@ -74,12 +83,6 @@
         <site>http://www.loop.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
-    <item>
-        <source>https://digitacdn.akamaized.net/hls/live/629243/hitmix/master-128000.m3u8</source>
-        <title>Hitmix</title>
-        <site>https://www.hitmix.fi/</site>
-        <section>Valtakunnalliset</section>
-    </item>
 	<item>
         <source>https://digitacdn.akamaized.net/hls/live/629243/radioaalto/master-128000.m3u8</source>
         <title>Radio Aalto</title>
@@ -87,8 +90,8 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://stream2.sbs.fi/rc-hki.mp3</source>
-        <title>Radio City (Helsinki)</title>
+        <source>https://stream.bauermedia.fi/radiocity/radiocity_128.mp3</source>
+        <title>Radio City</title>
         <site>http://www.radiocity.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
@@ -105,7 +108,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://stream3.bauermedia.fi/nova.mp3</source>
+        <source>http://stream.bauermedia.fi/radionova/radionova_64.aac</source>
         <title>Radio Nova</title>
         <site>http://www.radionova.fi/</site>
         <section>Valtakunnalliset</section>
@@ -141,7 +144,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://stream2.bauermedia.fi/suomirock.mp3</source>
+        <source>http://stream.bauermedia.fi/suomirock/suomirock_64.aac</source>
 	    <title>Radio SuomiRock</title>
 	    <site>http://www.radiosuomirock.fi/</site>
         <section>Valtakunnalliset</section>
