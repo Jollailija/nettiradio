@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="fi-fi" dir="ltr"
-	  class='com_content view-article itemid-72 j36 mm-hover '>
+	  class='com_content view-article itemid-72 j39 mm-hover '>
 
 <head>
-		<base href="https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot" />
+	<base href="https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="nettiradio, nettiradiot, kotimaiset nettiradiot, radiot netissä" />
 	<meta name="author" content="Otto Metsähukala" />
@@ -20,11 +20,11 @@
 	<link href="/templates/purity_iii/local/css/themes/mm2016/megamenu.css" rel="stylesheet" type="text/css" />
 	<link href="/templates/purity_iii/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="/templates/purity_iii/local/css/themes/mm2016/layouts/blog.css" rel="stylesheet" type="text/css" />
-	<script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
-	<script src="/media/system/js/caption.js" type="text/javascript"></script>
-	<script src="/plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?3e4f724329625a0928d228e2b958ab13" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?3e4f724329625a0928d228e2b958ab13" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?3e4f724329625a0928d228e2b958ab13" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?3e4f724329625a0928d228e2b958ab13" type="text/javascript"></script>
+	<script src="/plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js?3e4f724329625a0928d228e2b958ab13" type="text/javascript"></script>
 	<script src="/plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
 	<script src="/plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
 	<script src="/plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
@@ -33,7 +33,7 @@
 	<script type="text/javascript">
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
 	</script>
 
 	
@@ -76,7 +76,6 @@ jQuery(window).on('load',  function() {
 <link rel="stylesheet" href="/templates/purity_iii/css/ie8.css" type="text/css" />
 <![endif]-->
 	</head>
-
 <body>
 
 <div class="t3-wrapper blog"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
@@ -121,30 +120,34 @@ jQuery(window).on('load',  function() {
 			<div  class="t3-megamenu"  data-responsive="true">
 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
 <li itemprop='name'  data-id="190" data-level="1">
-<a itemprop='url' class="" href="/index.php"   data-target="#">Etusivu </a>
+<a itemprop='url' class=""  href="/index.php"   data-target="#">Etusivu </a>
 
 </li>
 <li itemprop='name' class="dropdown mega" data-id="50" data-level="1">
-<a itemprop='url' class=" dropdown-toggle" href="/index.php/uutiset"   data-target="#" data-toggle="dropdown">Uutiset <em class="caret"></em></a>
+<a itemprop='url' class=" dropdown-toggle"  href="/index.php/uutiset"   data-target="#" data-toggle="dropdown">Uutiset <em class="caret"></em></a>
 
 <div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
 <div class="row">
 <div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
 <li itemprop='name'  data-id="53" data-level="2">
-<a itemprop='url' class="" href="/index.php/uutiset/radio"   data-target="#">Radio </a>
+<a itemprop='url' class=""  href="/index.php/uutiset/radio"   data-target="#">Radio </a>
 
 </li>
 <li itemprop='name'  data-id="54" data-level="2">
-<a itemprop='url' class="" href="/index.php/uutiset/televisio"   data-target="#">Televisio </a>
+<a itemprop='url' class=""  href="/index.php/uutiset/televisio"   data-target="#">Televisio </a>
 
 </li>
 <li itemprop='name'  data-id="58" data-level="2">
-<a itemprop='url' class="" href="/index.php/uutiset/viestintae"   data-target="#">Viestintä </a>
+<a itemprop='url' class=""  href="/index.php/uutiset/viestintae"   data-target="#">Viestintä </a>
 
 </li>
 <li itemprop='name'  data-id="70" data-level="2">
-<a itemprop='url' class="" href="/index.php/uutiset/saehkeet"   data-target="#">Sähkeet </a>
+<a itemprop='url' class=""  href="/index.php/uutiset/saehkeet"   data-target="#">Sähkeet </a>
+
+</li>
+<li itemprop='name'  data-id="222" data-level="2">
+<a itemprop='url' class=""  href="/index.php/uutiset/radiouutiset"   data-target="#">Radiouutiset </a>
 
 </li>
 </ul>
@@ -153,26 +156,26 @@ jQuery(window).on('load',  function() {
 </div></div>
 </li>
 <li itemprop='name' class="dropdown mega" data-id="61" data-level="1">
-<a itemprop='url' class=" dropdown-toggle" href="/index.php/artikkelit"   data-target="#" data-toggle="dropdown">Artikkelit <em class="caret"></em></a>
+<a itemprop='url' class=" dropdown-toggle"  href="/index.php/artikkelit"   data-target="#" data-toggle="dropdown">Artikkelit <em class="caret"></em></a>
 
 <div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
 <div class="row">
 <div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
 <li itemprop='name'  data-id="62" data-level="2">
-<a itemprop='url' class="" href="/index.php/artikkelit/yleiset"   data-target="#">Yleiset </a>
+<a itemprop='url' class=""  href="/index.php/artikkelit/yleiset"   data-target="#">Yleiset </a>
 
 </li>
 <li itemprop='name'  data-id="63" data-level="2">
-<a itemprop='url' class="" href="/index.php/artikkelit/kolumnit"   data-target="#">Kolumnit </a>
+<a itemprop='url' class=""  href="/index.php/artikkelit/kolumnit"   data-target="#">Kolumnit </a>
 
 </li>
 <li itemprop='name'  data-id="73" data-level="2">
-<a itemprop='url' class="" href="/index.php/artikkelit/kanavahistoriikit"   data-target="#">Kanavahistoriikit </a>
+<a itemprop='url' class=""  href="/index.php/artikkelit/kanavahistoriikit"   data-target="#">Kanavahistoriikit </a>
 
 </li>
 <li itemprop='name'  data-id="85" data-level="2">
-<a itemprop='url' class="" href="/index.php/artikkelit/vieraskynae"   data-target="#">Vieraskynä </a>
+<a itemprop='url' class=""  href="/index.php/artikkelit/vieraskynae"   data-target="#">Vieraskynä </a>
 
 </li>
 </ul>
@@ -181,34 +184,38 @@ jQuery(window).on('load',  function() {
 </div></div>
 </li>
 <li itemprop='name' class="active dropdown mega" data-id="71" data-level="1">
-<a itemprop='url' class=" dropdown-toggle" href="/index.php/tietosivut"   data-target="#" data-toggle="dropdown">Tietosivut <em class="caret"></em></a>
+<a itemprop='url' class=" dropdown-toggle"  href="/index.php/tietosivut"   data-target="#" data-toggle="dropdown">Tietosivut <em class="caret"></em></a>
 
 <div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
 <div class="row">
 <div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
 <li itemprop='name' class="current active" data-id="72" data-level="2">
-<a itemprop='url' class="" href="/index.php/tietosivut/nettiradiot"   data-target="#">Nettiradiot </a>
+<a itemprop='url' class=""  href="/index.php/tietosivut/nettiradiot"   data-target="#">Nettiradiot </a>
 
 </li>
 <li itemprop='name'  data-id="68" data-level="2">
-<a itemprop='url' class="" href="/index.php/tietosivut/taajuuslista"   data-target="#">Taajuuslista </a>
+<a itemprop='url' class=""  href="/index.php/tietosivut/taajuuslista"   data-target="#">Taajuuslista </a>
 
 </li>
 <li itemprop='name'  data-id="87" data-level="2">
-<a itemprop='url' class="" href="/index.php/tietosivut/lyhytaikaiset"   data-target="#">Lyhytaikaiset radiot </a>
+<a itemprop='url' class=""  href="/index.php/tietosivut/lyhytaikaiset"   data-target="#">Lyhytaikaiset radiot </a>
 
 </li>
 <li itemprop='name'  data-id="65" data-level="2">
-<a itemprop='url' class="" href="/index.php/tietosivut/rds-koodit"   data-target="#">RDS-koodit </a>
+<a itemprop='url' class=""  href="/index.php/tietosivut/rds-koodit"   data-target="#">RDS-koodit </a>
 
 </li>
 <li itemprop='name'  data-id="88" data-level="2">
-<a itemprop='url' class="" href="/index.php/tietosivut/radio-ykkoenen"   data-target="#">Radio Ykkönen </a>
+<a itemprop='url' class=""  href="/index.php/tietosivut/radio-ykkoenen"   data-target="#">Radio Ykkönen </a>
 
 </li>
 <li itemprop='name'  data-id="213" data-level="2">
-<a itemprop='url' class="" href="/index.php/tietosivut/tv-kanavapaikat"   data-target="#">TV:n kanavapaikat </a>
+<a itemprop='url' class=""  href="/index.php/tietosivut/tv-kanavapaikat"   data-target="#">TV:n kanavapaikat </a>
+
+</li>
+<li itemprop='name'  data-id="220" data-level="2">
+<a itemprop='url' class=""  href="/index.php/tietosivut/jaeaekiekkoradiot-2018-2019"   data-target="#">Jääkiekkoradiot 2018-2019 </a>
 
 </li>
 </ul>
@@ -217,18 +224,22 @@ jQuery(window).on('load',  function() {
 </div></div>
 </li>
 <li itemprop='name'  data-id="48" data-level="1">
-<a itemprop='url' class="" href="/index.php/linkit"   data-target="#">Linkit </a>
+<a itemprop='url' class=""  href="/index.php/linkit"   data-target="#">Linkit </a>
 
 </li>
 <li itemprop='name' class="dropdown mega" data-id="66" data-level="1">
-<a itemprop='url' class=" dropdown-toggle" href="/index.php/info"   data-target="#" data-toggle="dropdown">Info <em class="caret"></em></a>
+<a itemprop='url' class=" dropdown-toggle"  href="/index.php/info"   data-target="#" data-toggle="dropdown">Info <em class="caret"></em></a>
 
 <div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
 <div class="row">
 <div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
 <li itemprop='name'  data-id="60" data-level="2">
-<a itemprop='url' class="" href="/index.php/info/tiedotteet"   data-target="#">Tiedotteet </a>
+<a itemprop='url' class=""  href="/index.php/info/tiedotteet"   data-target="#">Tiedotteet </a>
+
+</li>
+<li itemprop='name'  data-id="235" data-level="2">
+<a itemprop='url' class=""  href="/index.php/info/taajuuslistan-ohje"   data-target="#">Taajuuslistan ohje </a>
 
 </li>
 </ul>
@@ -237,7 +248,7 @@ jQuery(window).on('load',  function() {
 </div></div>
 </li>
 <li itemprop='name'  data-id="56" data-level="1">
-<a itemprop='url' class="" href="/index.php/arkisto"   data-target="#">Arkisto </a>
+<a itemprop='url' class=""  href="/index.php/arkisto"   data-target="#">Arkisto </a>
 
 </li>
 </ul>
@@ -270,11 +281,12 @@ jQuery(window).on('load',  function() {
 
 
 <!-- Article -->
-<article itemscope itemtype="http://schema.org/Article">
+<article>
 	<meta itemprop="inLanguage" content="fi-FI" />
 	<meta itemprop="url" content="/index.php/tietosivut/nettiradiot" />
 
-  
+    
+    
   <!-- Aside -->
     <aside class="article-aside clearfix">
           	<dl class="article-info  muted">
@@ -300,8 +312,8 @@ jQuery(window).on('load',  function() {
 					
 										<dd class="modified">
 				<i class="fa fa-clock-o"></i>
-				<time datetime="2017-01-07T14:49:57+02:00" itemprop="dateModified">
-					Viimeksi päivitetty: 07.01.2017				</time>
+				<time datetime="2018-12-03T10:40:09+02:00" itemprop="dateModified">
+					Viimeksi päivitetty: 03.12.2018				</time>
 			</dd>			
 						</dl>
         
@@ -309,661 +321,731 @@ jQuery(window).on('load',  function() {
     <!-- //Aside -->
 
   
-        
   
   
 	
   
 	
-	<section class="article-content clearfix" itemprop="articleBody">
-		<h1>FM-taajuuksilta ja DVB-radiosta tutut</h1>
-<h2><strong>Yleisradio</strong></h2>
+	<section class="article-content clearfix">
+		<h1>Yleisradio</h1>
 <table class="taulukko" style="width: 100%;" border="0">
 <tbody>
-<tr valign="top">
-<td class="taulukko" bgcolor="#d4d4d4" width="20%"><strong>Radiokanava</strong></td>
-<td class="taulukko" bgcolor="#d4d4d4" width="40%"><strong>Kuuntelulinkki</strong></td>
-<td class="taulukko" bgcolor="#d4d4d4" width="35%"><strong>Formaatti ja laatu</strong></td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#d4d4d4"><strong>Radiokanava</strong></td>
+<td class="taulukko" style="height: 15px; width: 39%;" bgcolor="#d4d4d4"><strong>Kuuntelu (soitin)</strong></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;" bgcolor="#d4d4d4"><strong>Kuuntelu (selain)</strong></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;" bgcolor="#d4d4d4"><strong>Lisätiedot</strong></td>
 </tr>
-<tr valign="top">
-<td class="taulukko" bgcolor="#ededed"><strong>Valtakunnalliset</strong></td>
-<td class="taulukko" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
-<td class="taulukko" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#ededed"><strong>Valtakunnalliset</strong></td>
+<td class="taulukko" style="height: 15px; width: 39%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;" bgcolor="#ededed"> </td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.yle.fi/puhe" target="_blank">Yle Puhe</a></td>
-<td class="taulukko"><a href="http://www.yle.fi/livestream/puhe.asx" target="_blank">http://www.yle.fi/livestream/puhe.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.yle.fi/puhe" target="_blank" rel="noopener noreferrer">Yle Puhe</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://www.yle.fi/livestream/puhe.asx" target="_blank" rel="noopener noreferrer">http://www.yle.fi/livestream/puhe.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/yle-puhe" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.yleradio1.fi/" target="_blank">Yle Radio 1</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/yleradio1.asx" target="_blank">http://yle.fi/livestream/yleradio1.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.yleradio1.fi/" target="_blank" rel="noopener noreferrer">Yle Radio 1</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/yleradio1.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/yleradio1.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/yle-radio-1" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.yleradiosuomi.fi/" target="_blank">Yle Radio Suomi</a> (<a href="http://yle.fi/uutiset/helsinki/" target="_blank">Helsinki</a>)</td>
-<td class="taulukko"><a href="http://www.yle.fi/livestream/radiosuomi.asx" target="_blank">http://www.yle.fi/livestream/radiosuomi.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.yleradiosuomi.fi/" target="_blank" rel="noopener noreferrer">Yle Radio Suomi</a> (<a href="http://yle.fi/uutiset/helsinki/" target="_blank" rel="noopener noreferrer">Helsinki</a>)</td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://www.yle.fi/livestream/radiosuomi.asx" target="_blank" rel="noopener noreferrer">http://www.yle.fi/livestream/radiosuomi.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-helsinki" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.radiovega.fi/" target="_blank">Yle Radio Vega</a> (Huvudstadsregionen)</td>
-<td class="taulukko"><a href="http://yle.fi/livestream/vega.asx" target="_blank">http://yle.fi/livestream/vega.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 31px;" valign="top">
+<td class="taulukko" style="height: 31px; width: 19%;"><a href="http://www.radiovega.fi/" target="_blank" rel="noopener noreferrer">Yle Radio Vega</a> (Huvudstadsregionen)</td>
+<td class="taulukko" style="height: 31px; width: 39%;"><a href="http://yle.fi/livestream/vega.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/vega.asx</a></td>
+<td class="taulukko" style="height: 31px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-vega-huvudstadsregionen" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 31px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.x3m.fi/" target="_blank">Yle X3M</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/x3m.asx" target="_blank">http://yle.fi/livestream/x3m.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.x3m.fi/" target="_blank" rel="noopener noreferrer">Yle X3M</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/x3m.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/x3m.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/yle-x3m" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.ylenklassinen.fi/" target="_blank">Ylen Klassinen</a></td>
-<td class="taulukko"><a href="http://mediau.yle.fi/liveklassinen" target="_blank">http://mediau.yle.fi/liveklassinen</a></td>
-<td class="taulukko">wma, 192 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.ylenklassinen.fi/" target="_blank" rel="noopener noreferrer">Ylen Klassinen</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://mediau.yle.fi/liveklassinen" target="_blank" rel="noopener noreferrer">http://mediau.yle.fi/liveklassinen</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/yle-klassinen" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 192 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.ylex.fi/" target="_blank">YleX</a></td>
-<td class="taulukko"><a href="http://www.yle.fi/livestream/ylex.asx" target="_blank">http://www.yle.fi/livestream/ylex.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.ylex.fi/" target="_blank" rel="noopener noreferrer">YleX</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://www.yle.fi/livestream/ylex.asx" target="_blank" rel="noopener noreferrer">http://www.yle.fi/livestream/ylex.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/ylex" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko" bgcolor="#ededed"><strong>Yle Radio Suomi</strong></td>
-<td class="taulukko" bgcolor="#ededed"><strong>Alueet</strong></td>
-<td class="taulukko" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#ededed"><strong>Yle Radio Suomi</strong></td>
+<td class="taulukko" style="height: 15px; width: 39%;" bgcolor="#ededed"><strong>Alueet</strong></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;" bgcolor="#ededed"> </td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/hameenlinna/" target="_blank">Hämeenlinna</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/radiohame.asx" target="_blank">http://yle.fi/livestream/radiohame.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/hameenlinna/" target="_blank" rel="noopener noreferrer">Hämeenlinna</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/radiohame.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/radiohame.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-hameenlinna" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/joensuu/" target="_blank">Joensuu</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/pohjkarjala.asx" target="_blank">http://yle.fi/livestream/pohjkarjala.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/joensuu/" target="_blank" rel="noopener noreferrer">Joensuu</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/pohjkarjala.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/pohjkarjala.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-joensuu" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/jyvaskyla/" target="_blank">Jyväskylä</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/keskisuomi.asx" target="_blank">http://yle.fi/livestream/keskisuomi.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/jyvaskyla/" target="_blank" rel="noopener noreferrer">Jyväskylä</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/keskisuomi.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/keskisuomi.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-jyvaskyla" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/kajaani/" target="_blank">Kajaani</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/kainuu.asx" target="_blank">http://yle.fi/livestream/kainuu.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/kajaani/" target="_blank" rel="noopener noreferrer">Kajaani</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/kainuu.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/kainuu.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-kajaani" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/kemi/" target="_blank">Kemi</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/perameri.asx" target="_blank">http://yle.fi/livestream/perameri.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/kemi/" target="_blank" rel="noopener noreferrer">Kemi</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/perameri.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/perameri.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-kemi" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/kokkola/" target="_blank">Kokkola</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/keskipohjanmaa.asx" target="_blank">http://yle.fi/livestream/keskipohjanmaa.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/kokkola/" target="_blank" rel="noopener noreferrer">Kokkola</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/keskipohjanmaa.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/keskipohjanmaa.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-kokkola" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/kotka/" target="_blank">Kotka</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/kymenlaakso.asx" target="_blank">http://yle.fi/livestream/kymenlaakso.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/kotka/" target="_blank" rel="noopener noreferrer">Kotka</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/kymenlaakso.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/kymenlaakso.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-kotka" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/kuopio/" target="_blank">Kuopio</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/radiosavo.asx" target="_blank">http://yle.fi/livestream/radiosavo.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/kuopio/" target="_blank" rel="noopener noreferrer">Kuopio</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/radiosavo.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/radiosavo.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-kuopio" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/lahti/" target="_blank">Lahti</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/lahdenradio.asx" target="_blank">http://yle.fi/livestream/lahdenradio.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/lahti/" target="_blank" rel="noopener noreferrer">Lahti</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/lahdenradio.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/lahdenradio.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-lahti" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/lappeenranta/" target="_blank">Lappeenranta</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/etelakarjala.asx" target="_blank">http://yle.fi/livestream/etelakarjala.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/lappeenranta/" target="_blank" rel="noopener noreferrer">Lappeenranta</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/etelakarjala.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/etelakarjala.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-lappeenranta" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/mikkeli/" target="_blank">Mikkeli</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/etelasavo.asx" target="_blank">http://yle.fi/livestream/etelasavo.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/mikkeli/" target="_blank" rel="noopener noreferrer">Mikkeli</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/etelasavo.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/etelasavo.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-mikkeli" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/oulu/" target="_blank">Oulu</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/ouluradio.asx" target="_blank">http://yle.fi/livestream/ouluradio.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/oulu/" target="_blank" rel="noopener noreferrer">Oulu</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/ouluradio.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/ouluradio.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-oulu" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/pohjanmaa/" target="_blank">Pohjanmaa</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/pohjanmaa.asx" target="_blank">http://yle.fi/livestream/pohjanmaa.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/pohjanmaa/" target="_blank" rel="noopener noreferrer">Pohjanmaa</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/pohjanmaa.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/pohjanmaa.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-pohjanmaa" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/pori/" target="_blank">Pori</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/satakunta.asx" target="_blank">http://yle.fi/livestream/satakunta.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/pori/" target="_blank" rel="noopener noreferrer">Pori</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/satakunta.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/satakunta.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-pori" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/rovaniemi/" target="_blank">Rovaniemi</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/lapinradio.asx" target="_blank">http://yle.fi/livestream/lapinradio.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/rovaniemi/" target="_blank" rel="noopener noreferrer">Rovaniemi</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/lapinradio.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/lapinradio.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-rovaniemi" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/tampere/" target="_blank">Tampere</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/tampere.asx" target="_blank">http://yle.fi/livestream/tampere.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/tampere/" target="_blank" rel="noopener noreferrer">Tampere</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/tampere.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/tampere.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-tampere" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://yle.fi/uutiset/turku/" target="_blank">Turku</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/turunradio.asx" target="_blank">http://yle.fi/livestream/turunradio.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://yle.fi/uutiset/turku/" target="_blank" rel="noopener noreferrer">Turku</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/turunradio.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/turunradio.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomi-turku" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko" bgcolor="#ededed"><strong>Yle Vega</strong></td>
-<td class="taulukko" bgcolor="#ededed"><strong>Regionerna</strong></td>
-<td class="taulukko" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#ededed"><strong>Yle Vega</strong></td>
+<td class="taulukko" style="height: 15px; width: 39%;" bgcolor="#ededed"><strong>Regionerna</strong></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;" bgcolor="#ededed"> </td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.radiovega.fi/" target="_blank">Västnyland</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/vegavast.asx" target="_blank">http://yle.fi/livestream/vegavast.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15.9375px;" valign="top">
+<td class="taulukko" style="height: 15.9375px; width: 19%;"><a href="http://www.radiovega.fi/" target="_blank" rel="noopener noreferrer">Västnyland</a></td>
+<td class="taulukko" style="height: 15.9375px; width: 39%;"><a href="http://yle.fi/livestream/vegavast.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/vegavast.asx</a></td>
+<td class="taulukko" style="height: 15.9375px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-vega-vastnyland" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15.9375px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.radiovega.fi/" target="_blank">Åboland</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/vegaabo.asx" target="_blank">http://yle.fi/livestream/vegaabo.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiovega.fi/" target="_blank" rel="noopener noreferrer">Åboland</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/vegaabo.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/vegaabo.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-vega-aboland" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.radiovega.fi/" target="_blank">Österbotten</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/vegaoster.asx" target="_blank">http://yle.fi/livestream/vegaoster.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiovega.fi/" target="_blank" rel="noopener noreferrer">Österbotten</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/vegaoster.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/vegaoster.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-vega-osterbotten" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
-<tr valign="top">
-<td class="taulukko"><a href="http://www.radiovega.fi/" target="_blank">Östnyland</a></td>
-<td class="taulukko"><a href="http://yle.fi/livestream/vegaost.asx" target="_blank">http://yle.fi/livestream/vegaost.asx</a></td>
-<td class="taulukko">wma, 128 kbps, 48 kHz, stereo</td>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiovega.fi/" target="_blank" rel="noopener noreferrer">Östnyland</a></td>
+<td class="taulukko" style="height: 15px; width: 39%;"><a href="http://yle.fi/livestream/vegaost.asx" target="_blank" rel="noopener noreferrer">http://yle.fi/livestream/vegaost.asx</a></td>
+<td class="taulukko" style="height: 15px; width: 13.6535%;"><a href="http://www.radiot.fi/#!/kanava/radio-vega-ostnyland" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 13.3465%;">wma, 128 kbps</td>
 </tr>
 </tbody>
 </table>
 <p> </p>
-<h2><strong>Kaupalliset radiot</strong></h2>
+<h1>Kaupalliset radiot</h1>
 <table class="taulukko" style="width: 100%;" border="0">
 <tbody>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;" bgcolor="#d4d4d4" width="20%"><strong>Radiokanava</strong></td>
-<td class="taulukko" style="height: 15px;" bgcolor="#d4d4d4" width="40%"><strong>Kuuntelulinkki</strong></td>
-<td class="taulukko" style="height: 15px;" bgcolor="#d4d4d4" width="35%"><strong>Formaatti ja laatu</strong></td>
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#d4d4d4"><strong>Radiokanava</strong></td>
+<td class="taulukko" style="height: 15px; width: 40%;" bgcolor="#d4d4d4"><strong>Kuuntelu (soitin)</strong></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;" bgcolor="#d4d4d4"><strong>Kuuntelu (selain)</strong></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;" bgcolor="#d4d4d4"><b>Lisätiedot</b></td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;" bgcolor="#ededed"><strong>Valtakunnalliset</strong></td>
-<td class="taulukko" style="height: 15px;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
-<td class="taulukko" style="height: 15px;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#ededed"><strong>Valtakunnalliset ja osavaltakunnalliset<br /></strong></td>
+<td class="taulukko" style="height: 15px; width: 40%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;" bgcolor="#ededed"> </td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.basso.fi/radio" target="_blank">Bassoradio</a></td>
-<td style="height: 15px;"><a href="http://stream.basso.fi:8000/stream" target="_blank">http://stream.basso.fi:8000/stream</a></td>
-<td style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.basso.fi/radio" target="_blank" rel="noopener noreferrer">Bassoradio</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://stream.basso.fi:8000/stream" target="_blank" rel="noopener noreferrer">http://stream.basso.fi:8000/stream</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/bassoradio" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 192 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radioclassic.fi" target="_blank">Classic</a></td>
-<td style="height: 15px;"><a href="http://stream.radioclassic.fi:8000/listen.pls" target="_blank">http://stream.radioclassic.fi:8000/listen.pls</a></td>
-<td style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td style="height: 30px;"><a href="http://www.helmiradio.fi" target="_blank">Helmiradio</a></td>
-<td style="height: 30px;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10567/80692_Helmiradio.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10567/80692_Helmiradio.mp3</a></td>
-<td style="height: 30px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.boxradio.fi/" target="_blank" rel="noopener noreferrer">BOX</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://box.basso.fi:8000/stream" target="_blank" rel="noopener noreferrer">http://box.basso.fi:8000/stream</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/box" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">aac, 48 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä</a> (Helsinki)</td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-hki.mp3" target="_blank">http://stream2.bauermedia.fi/isk-hki.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radioclassic.fi" target="_blank" rel="noopener noreferrer">Classic</a></td>
+<td style="height: 15px; width: 40%;"><a title="https://stream.gbtimes.com/classic" href="https://stream.gbtimes.com/classic" target="_blank" rel="noopener noreferrer">https://stream.gbtimes.com/classic</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/classic" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 192 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.kiss.fi/" target="_blank">Kiss</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/kiss.mp3" target="_blank">http://stream2.bauermedia.fi/kiss.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td class="taulukko" style="height: 30px;"><a href="http://www.loop.fi/" target="_blank">Loop</a></td>
-<td class="taulukko" style="height: 30px;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10561/80692_Loop.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10561/80692_Loop.mp3</a></td>
-<td class="taulukko" style="height: 30px;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td style="height: 30px;"><a href="http://stream.radioaalto.fi/" target="_blank">Radio Aalto</a></td>
-<td style="height: 30px;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10564/80692_RadioAalto.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10564/80692_RadioAalto.mp3</a></td>
-<td style="height: 30px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.helmiradio.fi" target="_blank" rel="noopener noreferrer">Helmiradio</a></td>
+<td style="height: 15px; width: 40%;"><a href="https://www.supla.fi/live/helmiradio" target="_blank" rel="noopener noreferrer">https://www.supla.fi/live/helmiradio</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/helmiradio" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiocity.fi" target="_blank">Radio City</a> (Helsinki)</td>
-<td style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-hki.mp3" target="_blank">http://stream2.bauermedia.fi/rc-hki.mp3</a></td>
-<td style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="https://www.hitmix.fi/" target="_blank" rel="noopener noreferrer">HitMix</a></td>
+<td style="height: 15px; width: 40%;"><a href="https://www.supla.fi/live/hitmix" target="_blank" rel="noopener noreferrer">https://www.supla.fi/live/hitmix</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/hitmix" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/yleisohjelma.m3u" target="_blank">http://isojako.radiodei.fi:8000/yleisohjelma.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iluv2k.fi" target="_blank" rel="noopener noreferrer">I LUV 2K</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://iluv2k.basso.fi:8000/stream" target="_blank" rel="noopener noreferrer">http://iluv2k.basso.fi:8000/stream</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iluv2k" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 48 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radionostalgia.fi" target="_blank">Radio Nostalgia</a></td>
-<td style="height: 15px;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35059/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35059/mp3_128.mp3</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/iskelma_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/iskelma_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-valt" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radionova.fi/" target="_blank">Radio Nova</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream3.bauermedia.fi/nova.mp3" target="_blank">http://stream3.bauermedia.fi/nova.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.kiss.fi/" target="_blank" rel="noopener noreferrer">Kiss</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/kiss/kiss_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/kiss/kiss_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/kiss" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.nrj.fi/" target="_blank">Radio NRJ</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35001/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35001/mp3_128.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.loop.fi/" target="_blank" rel="noopener noreferrer">Loop</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="https://www.supla.fi/live/loop" target="_blank" rel="noopener noreferrer">https://www.supla.fi/live/loop</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/loop" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.patmos.fi/" target="_blank">Radio Patmos</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://46.163.245.15:8000/radio.m3u" target="_blank">http://46.163.245.15:8000/radio.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td class="taulukko" style="height: 30px;"><a href="http://www.radiorock.fi/" target="_blank">Radio Rock</a></td>
-<td class="taulukko" style="height: 30px;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10565/80692_RadioRock.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10565/80692_RadioRock.mp3</a></td>
-<td class="taulukko" style="height: 30px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radioaalto.fi/" target="_blank" rel="noopener noreferrer">Radio Aalto</a></td>
+<td style="height: 15px; width: 40%;"><a href="https://www.supla.fi/live/radioaalto" target="_blank" rel="noopener noreferrer">https://www.supla.fi/live/radioaalto</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/aalto" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiosputnik.fi/" target="_blank">Radio Sputnik</a></td>
-<td style="height: 15px;"><a href="http://audio.raa.fi:8000/radiosputnik.m3u" target="_blank">http://audio.raa.fi:8000/radiosputnik.m3u</a></td>
-<td style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td class="taulukko" style="height: 30px;"><a href="http://www.radiosuomipop.fi/" target="_blank">Radio Suomipop</a></td>
-<td class="taulukko" style="height: 30px;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10566/80692_RadioSuomipop.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10566/80692_RadioSuomipop.mp3</a></td>
-<td class="taulukko" style="height: 30px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi" target="_blank" rel="noopener noreferrer">Radio City</a></td>
+<td style="height: 15px; width: 40%;"><a href="https://stream.bauermedia.fi/radiocity/radiocity_128.mp3" target="_blank" rel="noopener noreferrer">https://stream.bauermedia.fi/radiocity/radiocity_128.mp3</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiosuomirock.fi/">Radio SuomiRock</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/suomirock.mp3">http://stream2.bauermedia.fi/suomirock.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/yleisohjelma.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/yleisohjelma.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-dei" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;" bgcolor="#ededed"><strong>Paikalliset</strong></td>
-<td class="taulukko" style="height: 15px;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
-<td class="taulukko" style="height: 15px;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radionostalgia.fi" target="_blank" rel="noopener noreferrer">Radio Nostalgia</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35059/mp3_128.mp3" target="_blank" rel="noopener noreferrer">http://cdn.nrjaudio.fm/adwz1/fi/35059/mp3_128.mp3</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-nostalgia" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiokajaus.fi/" target="_blank">Aito Kajaus</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://radio.6net.fi:8000/radiokajaus.m3u" target="_blank">http://radio.6net.fi:8000/radiokajaus.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radionova.fi/" target="_blank" rel="noopener noreferrer">Radio Nova</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radionova/radionova_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radionova/radionova_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-nova" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.auranaallot.fi" target="_blank">Auran Aallot</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://nettiradio.auranaallot.fi/stream" target="_blank">http://nettiradio.auranaallot.fi/stream</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.nrj.fi/" target="_blank" rel="noopener noreferrer">Radio NRJ</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35001/mp3_128.mp3" target="_blank" rel="noopener noreferrer">http://cdn.nrjaudio.fm/adwz1/fi/35001/mp3_128.mp3</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/nrj" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.businessfm.fi" target="_blank">Business FM</a></td>
-<td style="height: 15px;"><a href="http://st.downtime.fi/bfm.mp3" target="_blank">http://st.downtime.fi/bfm.mp3</a></td>
-<td style="height: 15px;">mp3, 112 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://patmos.studio24.fi/" target="_blank" rel="noopener noreferrer">Radio Patmos</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://46.28.53.118:7011/radio" target="_blank" rel="noopener noreferrer">http://46.28.53.118:7011/radio</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-patmos" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.finestfm.fi/" target="_blank">Finest FM</a></td>
-<td style="height: 15px;"><a href="http://212.47.220.188:8000/listen.pls" target="_blank">http://212.47.220.188:8000/listen.pls</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiorock.fi/" target="_blank" rel="noopener noreferrer">Radio Rock</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="https://www.supla.fi/live/radiorock" target="_blank" rel="noopener noreferrer">https://www.supla.fi/live/radiorock</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-rock" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.funtampere.fi" target="_blank">FUN Tampere</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://st.downtime.fi/fun.mp3.m3u" target="_blank">http://st.downtime.fi/fun.mp3.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 112 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiosuomipop.fi/" target="_blank" rel="noopener noreferrer">Radio Suomipop</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="https://www.supla.fi/live/radiosuomipop" target="_blank" rel="noopener noreferrer">https://www.supla.fi/live/radiosuomipop</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-suomipop" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Ankkuri</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-kem.mp3" target="_blank">http://stream2.bauermedia.fi/isk-kem.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiosuomirock.fi/">Radio SuomiRock</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/suomirock/suomirock_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/suomirock/suomirock_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/suomirock" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Hämeenlinna</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-hml.mp3" target="_blank">http://stream2.bauermedia.fi/isk-hml.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;" bgcolor="#ededed"><strong>Paikalliset ja alueelliset<br /></strong></td>
+<td class="taulukko" style="height: 15px; width: 40%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;" bgcolor="#ededed"> </td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;" bgcolor="#ededed"><span style="color: #ededed;">-</span></td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Hyvinkää</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-hyv.mp3" target="_blank">http://stream2.bauermedia.fi/isk-hyv.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.auranaallot.fi" target="_blank" rel="noopener noreferrer">Auran Aallot</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/aallot.m3u" target="_blank" rel="noopener noreferrer">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/aallot.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/auran-aallot" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Jyväskylä</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-jkl.mp3" target="_blank">http://stream2.bauermedia.fi/isk-jkl.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.businessfm.fi" target="_blank" rel="noopener noreferrer">Business FM</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://st.downtime.fi/bfm.mp3" target="_blank" rel="noopener noreferrer">http://st.downtime.fi/bfm.mp3</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/business-fm" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 112 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Kotka</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-ktk.mp3" target="_blank">http://stream2.bauermedia.fi/isk-ktk.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.finestfm.fi/" target="_blank" rel="noopener noreferrer">Finest FM</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://212.47.220.188:8000/listen.pls" target="_blank" rel="noopener noreferrer">http://212.47.220.188:8000/listen.pls</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/finest-fm/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 160 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Kouvola</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-kvl.mp3" target="_blank">http://stream2.bauermedia.fi/isk-kvl.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.funtampere.fi" target="_blank" rel="noopener noreferrer">FUN Tampere</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://st.downtime.fi/fun.mp3.m3u" target="_blank" rel="noopener noreferrer">http://st.downtime.fi/fun.mp3.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/fun-tampere" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 112 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Lappeenranta</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-lpr.mp3" target="_blank">http://stream2.bauermedia.fi/isk-lpr.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiokompassi.fi/" target="_blank" rel="noopener noreferrer">HitMix Jyväskylä</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kompassi.m3u" target="_blank" rel="noopener noreferrer">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kompassi.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/hitmix-jyvaskyla" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Oulu</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-oul.mp3" target="_blank">http://stream2.bauermedia.fi/isk-oul.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiokuopio.fi/" target="_blank" rel="noopener noreferrer">HitMix Kuopio</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kuopio.m3u" target="_blank" rel="noopener noreferrer">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kuopio.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/hitmix-kuopio" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiorex.fi/" target="_blank">Iskelmä Rex</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://media.innoventum.fi:8000/radiorex.m3u" target="_blank">http://media.innoventum.fi:8000/radiorex.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Ankkuri</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/kem_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/kem_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-kemi" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Rovaniemi</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-rov.mp3" target="_blank">http://stream2.bauermedia.fi/isk-rov.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15.6px;" valign="top">
-<td class="taulukko" style="height: 15.6px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Sastamala</a></td>
-<td class="taulukko" style="height: 15.6px;"><a href="http://stream2.bauermedia.fi/isk-sas.mp3" target="_blank">http://stream2.bauermedia.fi/isk-sas.mp3</a></td>
-<td class="taulukko" style="height: 15.6px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Helsinki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/hki_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/hki_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Turku</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-tku.mp3" target="_blank">http://stream2.bauermedia.fi/isk-tku.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Hyvinkää</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/hyv_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/hyv_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-hyvinkaa" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Tampere</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-tre.mp3" target="_blank">http://stream2.bauermedia.fi/isk-tre.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Janne</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/hml_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/hml_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-hameenlinna" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.iskelma.fi/" target="_blank">Iskelmä Uusimaa</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/isk-loh.mp3" target="_blank">http://stream2.bauermedia.fi/isk-loh.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Jyväskylä</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/jkl_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/jkl_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-jkl" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.jarviradio.fi/" target="_blank">Järviradio</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://radio.6net.fi:8000/jarviradio.m3u" target="_blank">http://radio.6net.fi:8000/jarviradio.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 64 kbps, 44 kHz, mono</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td class="taulukko" style="height: 30px;"><a href="http://www.metrohelsinki.fi" target="_blank">Metro Helsinki</a></td>
-<td class="taulukko" style="height: 30px;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10562/80692_MetroHelsinki.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10562/80692_MetroHelsinki.mp3</a></td>
-<td class="taulukko" style="height: 30px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Kotka</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/ktk_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/ktk_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-ktk" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.pispalanradio.fi/" target="_blank">Pispalan Radio</a></td>
-<td style="height: 15px;"><a href="http://suomiradio.pro:8000/listen.pls" target="_blank">http://suomiradio.pro:8000/listen.pls</a></td>
-<td style="height: 15px;">mp3, 96 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Kouvola</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/kvl_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/kvl_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-kvl" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.playradio.fi/" target="_blank">Play Radio</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/play.mp3" target="_blank">http://stream2.bauermedia.fi/play.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi" target="_blank" rel="noopener noreferrer">Iskelmä Kuopio</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/kuo_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/kuo_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiorex.fi/radio-city-joensuu/" target="_blank">Radio City Joensuu</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://media2.innoventum.fi:8000/radiocityjoensuu.m3u" target="_blank">http://media2.innoventum.fi:8000/radiocityjoensuu.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi">Iskelmä Lahti</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/lah_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/lah_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiocity.fi/" target="_blank">Radio City Jyväskylä</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-jkl.mp3" target="_blank">http://stream2.bauermedia.fi/rc-jkl.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 160 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Lappeenranta</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/lpr_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/lpr_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-lpr" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiocity.fi/" target="_blank">Radio City Kouvola</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-kvl.mp3" target="_blank">http://stream2.bauermedia.fi/rc-kvl.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi" target="_blank" rel="noopener noreferrer">Iskelmä Mikkeli</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/mli_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/mli_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiocity.fi/" target="_blank">Radio City Lappeenranta</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-lpr.mp3" target="_blank">http://stream2.bauermedia.fi/rc-lpr.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Oulu</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/oul_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/oul_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-oulu" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiocity.fi/" target="_blank">Radio City Oulu</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-oul.mp3" target="_blank">http://stream2.bauermedia.fi/rc-oul.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiorex.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Rex</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream2.bauermedia.fi/isk-rex.mp3" target="_blank" rel="noopener noreferrer">http://stream2.bauermedia.fi/isk-rex.mp3</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-rex" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 160 kbps</td>
+</tr>
+<tr style="height: 14px;" valign="top">
+<td class="taulukko" style="height: 14px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Rovaniemi</a></td>
+<td class="taulukko" style="height: 14px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/rov_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/rov_64.aac</a></td>
+<td class="taulukko" style="height: 14px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-rov" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 14px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiocity.fi/" target="_blank">Radio City Tampere</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-tre.mp3" target="_blank">http://stream2.bauermedia.fi/rc-tre.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Sastamala</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/sas_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/sas_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-sastamala" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiocity.fi/" target="_blank">Radio City Turku</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/rc-tku.mp3" target="_blank">http://stream2.bauermedia.fi/rc-tku.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="/iske" target="_blank" rel="noopener noreferrer">Iskelmä Satakunta</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/rma_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/rma_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-satakunta" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Helsinki</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/helsinki.m3u" target="_blank">http://isojako.radiodei.fi:8000/helsinki.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi" target="_blank" rel="noopener noreferrer">Iskelmä Savonlinna</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/svl_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/svl_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Kemi</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/tornio.m3u" target="_blank">http://isojako.radiodei.fi:8000/tornio.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi" target="_blank" rel="noopener noreferrer">Iskelmä Seinäjoki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/snj_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/snj_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Kokkola</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/kruunupyy.m3u" target="_blank">http://isojako.radiodei.fi:8000/kruunupyy.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Turku</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/tku_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/tku_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-tku" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Kristiinankaupunki</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/kristiinankaupunki.m3u" target="_blank">http://isojako.radiodei.fi:8000/kristiinankaupunki.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Tampere</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/tre_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/tre_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-tre" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Oulu</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/oulu.m3u" target="_blank">http://isojako.radiodei.fi:8000/oulu.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi/" target="_blank" rel="noopener noreferrer">Iskelmä Uusimaa</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/loh_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/loh_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/iskelma-loh" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Pohjanmaa</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/lapua.m3u" target="_blank">http://isojako.radiodei.fi:8000/lapua.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.iskelma.fi" target="_blank" rel="noopener noreferrer">Iskelmä Vaasa</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/iskelma/vaa_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/iskelma/vaa_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiodei.fi/" target="_blank">Radio Dei Turku</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://isojako.radiodei.fi:8000/turkueurajoki.m3u" target="_blank">http://isojako.radiodei.fi:8000/turkueurajoki.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.jarviradio.fi/" target="_blank" rel="noopener noreferrer">Järviradio</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://radio2.6net.fi:8000/jarviradio2.m3u" target="_blank" rel="noopener noreferrer">http://radio2.6net.fi:8000/jarviradio2.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/jarviradio" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 192 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiohelsinki.fi/" target="_blank">Radio Helsinki</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://radio.radiohelsinki.fi/listen.pls" target="_blank">http://radio.radiohelsinki.fi/listen.pls</a><em><br /></em></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://pispalanradio.fi/" target="_blank" rel="noopener noreferrer">Pispalan Radio</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://suomiradio.pro:8000/listen.pls" target="_blank" rel="noopener noreferrer">http://suomiradio.pro:8000/listen.pls</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/pispalan-radio/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 96 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiojyvaskyla.fi" target="_blank">Radio Jyväskylä</a></td>
-<td style="height: 15px;"><a href="http://stream2.bauermedia.fi/radiojkl.mp3" target="_blank">http://stream2.bauermedia.fi/radiojkl.mp3</a></td>
-<td style="height: 15px;">mp3, 160 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radio957.fi" target="_blank" rel="noopener noreferrer">Radio 957</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radio957/radio957_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radio957/radio957_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio957" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiokompassi.fi" target="_blank">Radio Kompassi</a></td>
-<td style="height: 15px;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kompassi.m3u" target="_blank">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kompassi.m3u</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Helsinki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/hki_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/hki_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-hki" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiokuopio.fi" target="_blank">Radio Kuopio</a></td>
-<td style="height: 15px;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kuopio.m3u">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/kuopio.m3u</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Hämeenlinna</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/hml_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/hml_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-hml" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiomikkeli.fi" target="_blank">Radio Mikkeli</a></td>
-<td style="height: 15px;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/mikkeli.m3u" target="_blank">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/mikkeli.m3u</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiorex.fi/radio-city-joensuu/" target="_blank" rel="noopener noreferrer">Radio City Joensuu</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/jns_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/jns_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-joensuu" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://moreeni.uta.fi/" target="_blank">Radio Moreeni</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://153.1.15.29:8080/moreeni.mp3" target="_blank">http://153.1.15.29:8080/moreeni.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Jyväskylä</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/jkl_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/jkl_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-jkl" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Kouvola</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/kvl_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/kvl_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-kvl" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Lappeenranta</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/lpr_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/lpr_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-lpr" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Oulu</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/oul_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/oul_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-oulu" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Tampere</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/tre_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/tre_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-tre" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiocity.fi/" target="_blank" rel="noopener noreferrer">Radio City Turku</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiocity/tku_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiocity/tku_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-city-tku" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Helsinki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/helsinki.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/helsinki.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-dei-helsinki/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Kemi</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/tornio.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/tornio.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-dei-kemi/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Kokkola</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/kruunupyy.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/kruunupyy.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-dei-kokkola/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Kristiinankaupunki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/kristiinankaupunki.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/kristiinankaupunki.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-dei-kristiinankaupunki/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Oulu</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/oulu.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/oulu.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-dei-oulu" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Pohjanmaa</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/lapua.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/lapua.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-dei-pohjanmaa" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Rovaniemi</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/rovaniemi.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/rovaniemi.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-dei-rovaniemi" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiodei.fi/" target="_blank" rel="noopener noreferrer">Radio Dei Turku</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://isojako.radiodei.fi:8000/turkueurajoki.m3u" target="_blank" rel="noopener noreferrer">http://isojako.radiodei.fi:8000/turkueurajoki.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-dei-turku/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiohelsinki.fi/" target="_blank" rel="noopener noreferrer">Radio Helsinki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="https://stream.radiohelsinki.fi" target="_blank" rel="noopener noreferrer">https://stream.radiohelsinki.fi</a><em><br /></em></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-helsinki" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 256 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.lanuti.fi/Suomeksi/Valitse-kunta!/Inari/Radio-inarI" target="_blank" rel="noopener noreferrer">Radio Inari</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://188.117.31.195:8000/radioinari.m3u" target="_blank" rel="noopener noreferrer">http://188.117.31.195:8000/radioinari.m3u</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-inari/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td style="height: 15px; width: 19%;"><a href="http://www.radiomikkeli.fi" target="_blank" rel="noopener noreferrer">Radio Mikkeli</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/mikkeli.m3u" target="_blank" rel="noopener noreferrer">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/mikkeli.m3u</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-mikkeli" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
+</tr>
+<tr style="height: 15px;" valign="top">
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://moreeni.uta.fi/" target="_blank" rel="noopener noreferrer">Radio Moreeni</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://153.1.15.29:8080/moreeni.mp3" target="_blank" rel="noopener noreferrer">http://153.1.15.29:8080/moreeni.mp3</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/moreeni/">LiveTaajuus.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;">
-<td style="height: 15px;"><a href="http://www.radiomusa.fi/" target="_blank">Radio Musa</a></td>
-<td style="height: 15px;"><a href="http://suomiradio.pro:8040/listen.pls" target="_blank">http://suomiradio.pro:8040/listen.pls</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radiomusa.fi/" target="_blank" rel="noopener noreferrer">Radio Musa</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://suomiradio.pro:8040/listen.pls" target="_blank" rel="noopener noreferrer">http://suomiradio.pro:8040/listen.pls</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-musa/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiopooki.fi/" target="_blank">Radio Pooki</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream2.bauermedia.fi/pooki.mp3" target="_blank">http://stream2.bauermedia.fi/pooki.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 192 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiopooki.fi/" target="_blank" rel="noopener noreferrer">Radio Pooki</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.bauermedia.fi/radiopooki/radiopooki_64.aac" target="_blank" rel="noopener noreferrer">http://stream.bauermedia.fi/radiopooki/radiopooki_64.aac</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-pooki" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiopori.fi" target="_blank">Radio Pori</a></td>
-<td style="height: 15px;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radiopori.fi" target="_blank" rel="noopener noreferrer">Radio Pori</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u" target="_blank" rel="noopener noreferrer">http://hel2-77-86-247-184.ext.nebulacloud.fi:8000/radiopori.m3u</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-pori" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiopro.fi/" target="_blank">Radio Pro</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://192.194.89.110:8000/play.mp3.m3u" target="_blank">http://192.194.89.110:8000/play.mp3.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiopro.fi/" target="_blank" rel="noopener noreferrer">Radio Pro</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="https://www.youtube.com/channel/UCsJTUzvd4sACFBBcRn5OdYg/live" target="_blank" rel="noopener noreferrer">https://www.youtube.com/channel/UCsJTUzvd4sACFBBcRn5OdYg/live</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;">-</td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;"> </td>
 </tr>
 <tr style="height: 15px;">
-<td style="height: 15px;"><a href="http://www.radioramona.fi" target="_blank">Radio Ramona</a></td>
-<td style="height: 15px;"><a href="http://213.141.104.154:8000/stream/1/" target="_blank">http://213.141.104.154:8000/stream/1/</a></td>
-<td style="height: 15px;">mp3, 96 kbps, 32 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radioramona.fi" target="_blank" rel="noopener noreferrer">Radio Ramona</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://185.123.117.122:8000/ramona.mp3" target="_blank" rel="noopener noreferrer">http://185.123.117.122:8000/ramona.mp3</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-ramona" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 96 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiosandels.fi" target="_blank">Radio Sandels</a></td>
-<td style="height: 15px;"><a href="http://suomiradio.pro:8080/listen.pls" target="_blank">http://suomiradio.pro:8080/listen.pls</a></td>
-<td style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radiosandels.fi" target="_blank" rel="noopener noreferrer">Radio Sandels</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://suomiradio.pro:8080/listen.pls" target="_blank" rel="noopener noreferrer">http://suomiradio.pro:8080/listen.pls</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/radio-sandels/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.radiosun.fi" target="_blank">Radio SUN</a></td>
-<td style="height: 15px;"><a href="http://st.downtime.fi/sun.mp3.m3u" target="_blank">http://st.downtime.fi/sun.mp3.m3u</a></td>
-<td style="height: 15px;">mp3, 112 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.radiosun.fi" target="_blank" rel="noopener noreferrer">Radio SUN</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://st.downtime.fi/sun.mp3.m3u" target="_blank" rel="noopener noreferrer">http://st.downtime.fi/sun.mp3.m3u</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-sun" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 112 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiovaasa.fi/" target="_blank">Radio Vaasa</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://stream.radiovaasa.fi:8000/radiovaasa.mp3" target="_blank">http://stream.radiovaasa.fi:8000/radiovaasa.mp3</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiovaasa.fi/" target="_blank" rel="noopener noreferrer">Radio Vaasa</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="http://stream.radiovaasa.fi:8000/radiovaasa.mp3" target="_blank" rel="noopener noreferrer">http://stream.radiovaasa.fi:8000/radiovaasa.mp3</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-vaasa" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px;"><a href="http://www.radiovoima.fi/" target="_blank">Radio Voima</a></td>
-<td class="taulukko" style="height: 15px;"><a href="http://cast.radiovoima.fi:8000/voima.mp3.m3u" target="_blank">http://cast.radiovoima.fi:8000/voima.mp3.m3u</a></td>
-<td class="taulukko" style="height: 15px;">mp3, 128 kbps, 44 kHz, stereo</td>
+<td class="taulukko" style="height: 15px; width: 19%;"><a href="http://www.radiovoima.fi/" target="_blank" rel="noopener noreferrer">Radio Voima</a></td>
+<td class="taulukko" style="height: 15px; width: 40%;"><a href="https://cast2.radiovoima.fi/voima.mp3" target="_blank" rel="noopener noreferrer">https://cast2.radiovoima.fi/voima.mp3</a></td>
+<td class="taulukko" style="height: 15px; width: 21.2086%;"><a href="http://www.radiot.fi/#!/kanava/radio-voima" target="_blank" rel="noopener noreferrer">Radiot.fi</a></td>
+<td class="taulukko" style="height: 15px; width: 52.7914%;">mp3, 128 kbps</td>
 </tr>
 <tr style="height: 15px;">
-<td style="height: 15px;"><a href="http://www.seafm.fi/" target="_blank">Sea FM</a></td>
-<td style="height: 15px;"><a href="http://s3.myradiostream.com:4976/listen.pls" target="_blank">http://s3.myradiostream.com:4976/listen.pls</a></td>
-<td style="height: 15px;">mp3, 160 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://www.seafm.fi/" target="_blank" rel="noopener noreferrer">Sea FM</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://s3.myradiostream.com:4976/listen.pls" target="_blank" rel="noopener noreferrer">http://s3.myradiostream.com:4976/listen.pls</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/sea-fm/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">mp3, 160 kbps</td>
 </tr>
 <tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.steelfm.net/" target="_blank">Steel FM</a></td>
-<td style="height: 15px;"><a href="http://radio.securenetsystems.net/v5/STEELFM" target="_blank">http://radio.securenetsystems.net/v5/STEELFM</a></td>
-<td style="height: 15px;">vain web-soittimella</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px;"><a href="http://www.spiritfm.fi/" target="_blank">Spirit FM</a></td>
-<td style="height: 15px;"><a href="http://audio.raa.fi:8000/hifi.m3u" target="_blank">http://audio.raa.fi:8000/hifi.m3u</a></td>
-<td style="height: 15px;">mp3, 256 kbps, 44 kHz, stereo</td>
+<td style="height: 15px; width: 19%;"><a href="http://steelfm.ax/" target="_blank" rel="noopener noreferrer">Steel FM</a></td>
+<td style="height: 15px; width: 40%;"><a href="http://ice6.securenetsystems.net/STEELFM.m3u" target="_blank" rel="noopener noreferrer">http://ice6.securenetsystems.net/STEELFM.m3u</a></td>
+<td style="height: 15px; width: 21.2086%;"><a href="http://livetaajuus.fi/radio/steel-fm/" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a></td>
+<td style="height: 15px; width: 52.7914%;">aac, 64 kbps</td>
 </tr>
 </tbody>
 </table>
 <p> </p>
-<h2><strong>Valikoituja nettiradioasemia</strong></h2>
-<p> </p>
-<table class="taulukko" style="width: 100%;" border="0">
-<tbody>
-<tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px; width: 20.295%;" bgcolor="#d4d4d4"><strong>Radiokanava</strong></td>
-<td class="taulukko" style="height: 15px; width: 41.2189%;" bgcolor="#d4d4d4"><strong>Kuuntelulinkki</strong></td>
-<td class="taulukko" style="height: 15px; width: 35.9275%;" bgcolor="#d4d4d4"><strong>Formaatti ja laatu</strong></td>
-</tr>
-<tr style="height: 15.4844px;" valign="top">
-<td style="height: 15.4844px; width: 20.295%;"><a href="http://www.groovefm.fi/" target="_blank">Groove FM</a></td>
-<td style="height: 15.4844px; width: 41.2189%;"><a href="http://icelive0.80692-icelive0.cdn.qbrick.com/10563/80692_GrooveFM.mp3" target="_blank">http://icelive0.80692-icelive0.cdn.qbrick.com/10563/80692_GrooveFM.mp3</a></td>
-<td style="height: 15.4844px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://hattumedia.munstadi.fi/" target="_blank">HattuRadio</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://radio01.nk.hel.fi:8128/listen.pls" target="_blank">http://radio01.nk.hel.fi:8128/listen.pls</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.lastenomaradio.fi/" target="_blank">Lasten Oma Radio</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://lastenradio.ksfplayer.com:8000/" target="_blank">http://lastenradio.ksfplayer.com:8000/</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.nrj.fi" target="_blank">NRJ Suomihitit</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35061/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35061/mp3_128.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.nrj.fi" target="_blank">NRJ Dance</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35037/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35037/mp3_128.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.nrj.fi" target="_blank">NRJ Fitness</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35017/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35017/mp3_128.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.nrj.fi" target="_blank">NRJ Lounge</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35011/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35011/mp3_128.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.nrj.fi" target="_blank">NRJ Extravadance</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35031/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35031/mp3_128.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.nrj.fi" target="_blank">NRJ Running</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/35051/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/35051/mp3_128.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td class="taulukko" style="height: 15px; width: 20.295%;"><a href="http://www.hear.fi/" target="_blank">Radio Hear</a></td>
-<td class="taulukko" style="height: 15px; width: 41.2189%;"><a href="http://hear.fi/mp3.pls" target="_blank">http://hear.fi/mp3.pls</a></td>
-<td class="taulukko" style="height: 15px; width: 35.9275%;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.radiolion.fm/fi/" target="_blank">Radio Lion</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://s3.radioboss.fm:8301/live.m3u" target="_blank">http://s3.radioboss.fm:8301/live.m3u</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 30px;" valign="top">
-<td style="height: 30px; width: 20.295%;"><a href="http://www.radionostalgia.fi" target="_blank">Radio Nostalgia - Kotimaiset aarteet</a></td>
-<td style="height: 30px; width: 41.2189%;"><a href="http://cdn.nrjaudio.fm/adwz1/fi/55371/mp3_128.mp3" target="_blank">http://cdn.nrjaudio.fm/adwz1/fi/55371/mp3_128.mp3</a></td>
-<td style="height: 30px; width: 35.9275%;">mp3, 128 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://radioqueenloviisa.blogspot.fi/" target="_blank">Radio Queen Love</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://dreamsiteradiocp3.com:2199/tunein/loviisa.pls" target="_blank">http://dreamsiteradiocp3.com:2199/tunein/loviisa.pls</a></td>
-<td style="height: 15px; width: 35.9275%;"> </td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.radiorapu.com/" target="_blank">Radio Rapu</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://listen.shoutcast.com/RadioRapu" target="_blank">http://listen.shoutcast.com/RadioRapu</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 64 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.sunclassics.fi/" target="_blank">Radio SUN Classics</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://stream2.bauermedia.fi/sunclassics.mp3" target="_blank">http://stream2.bauermedia.fi/sunclassics.mp3</a></td>
-<td style="height: 15px; width: 35.9275%;">mp3, 192 kbps, 44 kHz, stereo</td>
-</tr>
-<tr style="height: 15px;" valign="top">
-<td style="height: 15px; width: 20.295%;"><a href="http://www.spinfm.fi" target="_blank">Spin FM</a></td>
-<td style="height: 15px; width: 41.2189%;"><a href="http://www.spinfm.fi" target="_blank">http://www.spinfm.fi</a></td>
-<td style="height: 15px; width: 35.9275%;">vain web-soittimella</td>
-</tr>
-</tbody>
-</table>
-<p><br /><br /></p>
-<h1>Ohjeita kuunteluun</h1>
-<p>Suosittelemme kaikkien nettiradioiden kuunteluun <a href="http://www.foobar2000.org/" target="_blank">foobar2000</a>-soitinta, joka on kevyt, helppokäyttöinen, ilmainen ja useita formaatteja tukeva Windows-käyttöjärjestelmälle tehty soitin. Muita mahdollisia soittimia ovat wma-formaatissa lähettävien nettiradioiden osalta Windows Media Player sekä mp3- ja aac-formaatissa lähettävien osalta <a href="http://www.winamp.com/player" target="_blank">Winamp</a>.</p>
-<p><strong>HUOM!</strong> Helpoiten hyödynnät tätä nettiradiolistaa ottamalla kuuntelulinkistä hiirellä kiinni ja raahaamalla sen auki olevan foobar2000 tai Winamp -soittimen soittolistaan. Kun olet saanut linkin listaan, saat radion soimaan kaksoisklikkaamalla.</p>
-<p>mp3-formaatissa lähettävien nettiradioiden kuuntelu onnistuu tuoreimmilla Windows Media Playerin versioilla kuuntelulinkkiä muokkaamalla. Kopioi tällöin kuuntelulinkki Windows Media Playeriin (Tiedosto -&gt; Avaa URL... [Ctrl+U]) ja poista mahdollinen listen.pls -pääte ennen kuin painat OK.</p>
-<p>Mikäli kuuntelulinkki ei pääty .m3u, .pls tai .asx -päätteeseen, selaimesi ei välttämättä osaa avata tiedostoa soittimessa. Käytä tällöin aiemmin suositeltua raahaustaktiikkaa tai kopioi linkki soittimeesi.</p>
+<h1>Lyhytaikaiset radiot</h1>
+<p>Lyhytaikaisesti FM-taajuuksilla lähettävien radiokanavien nettiradiolinkit löytyvät <a href="/index.php/tietosivut/lyhytaikaiset">Lyhytaikaiset radiot</a> -sivulta.</p>
 <p> </p>
 <h1>Valmiit soittolistatiedostot</h1>
-<p>Mediamonitori tarjoaa nyt myös valmiiksi rakennetut soittolistatiedostot, jotka sisältävät nettiradioiden kuunteluosoitteet. Klikkaa lista oman soittimesi soittolistaksi ja voit helposti hyppiä nettiradiosta toiseen.</p>
+<p>Mediamonitori tarjoaa myös valmiiksi rakennetut soittolistatiedostot, jotka sisältävät nettiradioiden kuunteluosoitteet. Klikkaa lista oman soittimesi soittolistaksi ja voit helposti hyppiä nettiradiosta toiseen.</p>
 <table style="width: 100%;" border="0">
 <tbody>
 <tr style="background-color: #d4d4d4;">
@@ -972,15 +1054,20 @@ jQuery(window).on('load',  function() {
 </tr>
 <tr>
 <td>foobar2000, Winamp jne. (m3u)</td>
-<td><a href="/palvelut/nettiradiot/nettiradiolista.m3u" target="_blank">nettiradiolista.m3u</a></td>
+<td><a href="/palvelut/nettiradiot/nettiradiolista.m3u" target="_blank" rel="noopener noreferrer">nettiradiolista.m3u</a></td>
 </tr>
 <tr>
 <td>VLC media player (xspf)</td>
-<td><a href="/palvelut/nettiradiot/nettiradiolista.xspf" target="_blank">nettiradiolista.xspf</a></td>
+<td><a href="/palvelut/nettiradiot/nettiradiolista.xspf" target="_blank" rel="noopener noreferrer">nettiradiolista.xspf</a></td>
 </tr>
 </tbody>
 </table>
-<p>Soittolistatiedostot toimivat esimerkiksi foobar2000:ssa sekä Winampissa. Emme takaa soittolistatiedostojen toimivuutta ja suosittelemme käyttämään ennemmin sivun yläosasta löytyviä kanavakohtaisia linkkejä.</p> 	</section>
+<p>Soittolistatiedostot toimivat esimerkiksi foobar2000:ssa, VLC:ssä sekä Winampissa.</p>
+<p> </p>
+<h1>Ohjeita kuunteluun</h1>
+<p>Suosittelemme kaikkien nettiradioiden kuunteluun <a href="http://www.foobar2000.org/" target="_blank" rel="noopener noreferrer">foobar2000</a> ja <a href="http://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC</a> -soittimia, jotka ovat kevyitä, helppokäyttöisiä, ilmaisia ja tukevat useita formaatteja. Helpoiten soittimille tarkoitetut linkit saa avattua, kun soitin on auki toisessa ikkunassa ja kuuntelulinkki raahataan hiirellä selaimesta soittimen soittolistalle. Tältä sivulta löydät myös valmiita soittolistatiedostoja, jotka sisältävät kaikki nettiradiolistan kuuntelulinkit. Mikäli haluat kuunnella nettiradioita selaimella, voit käyttää tarjoamiamme <a href="http://www.radiot.fi" target="_blank" rel="noopener noreferrer">Radiot.fi</a> ja <a href="http://www.livetaajuus.fi" target="_blank" rel="noopener noreferrer">LiveTaajuus.fi</a> -kuuntelulinkkejä.</p>
+<p> </p>
+<p> </p> 	</section>
   
   <!-- footer -->
     <!-- //footer -->
@@ -999,7 +1086,7 @@ jQuery(window).on('load',  function() {
 
 		<!-- SIDEBAR RIGHT -->
 		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
-			<div class="t3-module module " id="Mod26"><div class="module-inner"><h3 class="module-title "><span>Asiaan liittyvää</span></h3><div class="module-ct"><ul class="relateditems">
+			<div class="t3-module module " id="Mod26"><div class="module-inner"><h3 class="module-title "><span>Asiaan liittyvää</span></h3><div class="module-ct"><ul class="relateditems mod-list">
 <li>
 	<a href="/index.php/artikkelit/kolumnit/1548-nettiin-vie-tvn-tie-kohta-kai-radionkin">
 		15.09.2014 - 		Nettiin vie tv:n tie - kohta kai radionkin</a>
@@ -1058,70 +1145,70 @@ jQuery(window).on('load',  function() {
 				<!-- SPOTLIGHT -->
 	<div class="t3-spotlight t3-footer-sl  row">
 					<div class=" col-lg-2 col-md-2 col-sm-4 col-xs-6">
-								<div class="t3-module module " id="Mod19"><div class="module-inner"><h3 class="module-title "><span>Tuoreimmat uutiset</span></h3><div class="module-ct"><ul class="latestnews">
+								<div class="t3-module module " id="Mod19"><div class="module-inner"><h3 class="module-title "><span>Tuoreimmat uutiset</span></h3><div class="module-ct"><ul class="latestnews mod-list">
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/uutiset/televisio/1872-television-ohjelmistoluvat-myonnettiin-kymmeneksi-vuodeksi" itemprop="url">
+		<a href="/index.php/uutiset/televisio/2038-alfatv-lle-lisaa-lahetysaikaa" itemprop="url">
 			<span itemprop="name">
-				TV-toimiluvat myönnettiin kymmeneksi vuodeksi			</span>
+				AlfaTV:lle lisää lähetysaikaa			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/uutiset/televisio/1871-avan-ja-subin-nakyvyysalue-pienenee-ensi-viikolla" itemprop="url">
+		<a href="/index.php/uutiset/radio/2036-valtioneuvosto-ja-viestintavirasto-paattivat-radion-ohjelmistoluvista" itemprop="url">
 			<span itemprop="name">
-				Avan ja Subin näkyvyysalue pienenee			</span>
+				Valtioneuvosto ja Viestintävirasto päättivät radion ohjelmistoluvista			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/uutiset/saehkeet/1869-radio-nostalgia-valitsi-iltalehden-uutiset" itemprop="url">
+		<a href="/index.php/uutiset/radio/2035-uusi-netissa-lahettava-paikallisradio-aloittaa-vaasassa" itemprop="url">
 			<span itemprop="name">
-				Radio Nostalgia valitsi Iltalehden uutiset			</span>
+				Uusi netissä lähettävä paikallisradio aloittaa Vaasassa			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/uutiset/radio/1868-radio-queen-loviisa-toistaiseksi-vain-netissa" itemprop="url">
+		<a href="/index.php/uutiset/radio/2033-lisaa-lyhytaikaisia-radiolupia-kayttoon-marraskuussa" itemprop="url">
 			<span itemprop="name">
-				Radio Queen Loviisa toistaiseksi vain netissä - nimi vaihtui			</span>
+				Lisää lyhytaikaisia radiolupia käyttöön marraskuussa			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/uutiset/radio/1867-radio-patmos-jatkaa-love-fm-n-taajuudella" itemprop="url">
+		<a href="/index.php/uutiset/radio/2032-radio-sateily-soiva-opiskelijaradio-ja-radio-scoop-aaneen" itemprop="url">
 			<span itemprop="name">
-				Radio Patmos jatkaa Love FM:n taajuudella			</span>
+				Radio Säteily, Soiva Opiskelijaradio ja Radio Scoop ääneen 			</span>
 		</a>
 	</li>
 </ul>
 </div></div></div>
 							</div>
 					<div class=" col-lg-2 col-md-2 col-sm-4 col-xs-6">
-								<div class="t3-module module " id="Mod50"><div class="module-inner"><h3 class="module-title "><span>Tuoreimmat artikkelit</span></h3><div class="module-ct"><ul class="latestnews">
+								<div class="t3-module module " id="Mod50"><div class="module-inner"><h3 class="module-title "><span>Tuoreimmat artikkelit</span></h3><div class="module-ct"><ul class="latestnews mod-list">
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/artikkelit/kolumnit/1857-kommentti-kahden-kanavan-taktiikalla" itemprop="url">
+		<a href="/index.php/artikkelit/yleiset/2037-radion-ohjelmistoluvat-2020-2029" itemprop="url">
 			<span itemprop="name">
-				Kommentti: Kahden kanavan taktiikalla			</span>
+				Radion ohjelmistoluvat 2020-2029			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/artikkelit/yleiset/1838-kaanteentekeva-vuosi-1994" itemprop="url">
+		<a href="/index.php/artikkelit/yleiset/2008-paikallisradio-palasi-lappeenrantaan" itemprop="url">
 			<span itemprop="name">
-				Käänteentekevä vuosi 1994			</span>
+				Paikallisradio palasi Lappeenrantaan			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/artikkelit/yleiset/1837-paikallisradiota-porvoon-mitalla" itemprop="url">
+		<a href="/index.php/artikkelit/vieraskynae/1976-oodi-radiolle-multimediahassakka-aikakaudella" itemprop="url">
 			<span itemprop="name">
-				Paikallisradiota Porvoon mitalla			</span>
+				”Oodi radiolle multimediahässäkkä-aikakaudella”			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/artikkelit/yleiset/1829-kevyt-kanavan-aito-radioasemat-aloittavat-lahetykset-2" itemprop="url">
+		<a href="/index.php/artikkelit/vieraskynae/1974-perinteikas-radion-jalkapallokierros-uudistuu-urheilukierrokseksi" itemprop="url">
 			<span itemprop="name">
-				Kevyt Kanavan Aito-radioasemat aloittavat lähetykset			</span>
+				Perinteikäs radion Jalkapallokierros uudistuu Urheilukierrokseksi			</span>
 		</a>
 	</li>
 	<li itemscope itemtype="https://schema.org/Article">
-		<a href="/index.php/artikkelit/yleiset/1719-pispalan-radiossa-jannitetaan-toimilupaa" itemprop="url">
+		<a href="/index.php/artikkelit/vieraskynae/1947-radio-tuo-kaivattua-suomenkielta-ulkosuomalaisen-arkeen" itemprop="url">
 			<span itemprop="name">
-				Pispalan Radiossa jännitetään toimilupaa			</span>
+				Radio tuo kaivattua suomen kieltä ulkosuomalaisen arkeen			</span>
 		</a>
 	</li>
 </ul>
@@ -1190,8 +1277,8 @@ jQuery(window).on('load',  function() {
 <p style="font-size: 12.16px; line-height: 15.808px;">Mediamonitori on tammikuussa 2009 toimintansa aloittanut mediaan liittyviä uutisia, artikkeleja ja tietosivuja tarjoava epäkaupallinen verkkosivusto. Sivustoa toimitetaan ja ylläpidetään harrastuspohjalta.</p>
 <p style="font-size: 12.16px; line-height: 15.808px;"> </p></div>
 <div class="module">
-	<small>Copyright &#169; 2017 Mediamonitori. Kaikki oikeudet pidätetään. Designed by <a href="http://www.joomlart.com/" title="Visit Joomlart.com!" rel="nofollow">JoomlArt.com</a>.</small>
-	<small><a href="https://www.joomla.org">Joomla!</a> on vapaa ohjelmisto ja julkaistu <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL-lisenssin alla.</a></small>
+	<small>Copyright &#169; 2018 Mediamonitori. Kaikki oikeudet pidätetään. Designed by <a href="http://www.joomlart.com/" title="Visit Joomlart.com!" rel="nofollow">JoomlArt.com</a>.</small>
+	<small><a href="https://www.joomla.org">Joomla!</a> on vapaa ohjelmisto ja julkaistu <a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL-lisenssin alla.</a></small>
 </div>
           <small>
             <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
@@ -1218,5 +1305,5 @@ jQuery(window).on('load',  function() {
   ga('send', 'pageview');
 
 </script>
-</body>
+<noscript><strong>JavaScript is currently disabled.</strong>Please enable it for a better experience of <a href="http://2glux.com/projects/jumi">Jumi</a>.</noscript></body>
 </html>
