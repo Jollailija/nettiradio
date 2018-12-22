@@ -26,8 +26,8 @@
   
   Nettiradioiden stream-osoitteet ovat lähteestä www.mediamonitori.fi/index.php/nettiradiot
   
-  List updated 13. January 2018 (Mediamonitori updated 7. January 2017 (I know))
-  Version tag for reference: 20180113-1 "HitMix UrlFix" (in case some of you fancy one :P)
+  List updated 22. December 2018 (Mediamonitori updated 7. January 2017 (I know))
+  Version tag for reference: 20181222-1 "Suplais!" (in case some of you fancy one :P)
 -->
     <item>
         <source>http://stream.basso.fi:8000/stream</source>
@@ -42,7 +42,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10567/80692_Helmiradio.mp3</source>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/radiohelmi/master.m3u8</source>
         <title>Helmiradio</title>
         <site>http://www.helmiradio.fi/</site>
         <section>Valtakunnalliset</section>
@@ -69,19 +69,19 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10561/80692_Loop.mp3</source>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/loop/master-128000.m3u8</source>
         <title>Loop</title>
         <site>http://www.loop.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10562/80692_MetroHelsinki.mp3</source>
-        <title>Hitmix (Metro Helsinki)</title>
-        <site>https://www.hitmix.fi/index.html</site>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/hitmix/master-128000.m3u8</source>
+        <title>Hitmix</title>
+        <site>https://www.hitmix.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
 	<item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10564/80692_RadioAalto.mp3</source>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/radioaalto/master-128000.m3u8</source>
         <title>Radio Aalto</title>
         <site>http://www.radioaalto.fi/</site>
         <section>Valtakunnalliset</section>
@@ -123,7 +123,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10565/80692_RadioRock.mp3</source>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/radiorock/master.m3u8</source>
         <title>Radio Rock</title>
         <site>http://www.radiorock.fi/</site>
         <section>Valtakunnalliset</section>
@@ -135,7 +135,7 @@
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://icelive0.80692-icelive0.cdn.qbrick.com/10566/80692_RadioSuomipop.mp3</source>
+        <source>https://digitacdn.akamaized.net/hls/live/629243/radiosuomipop/master.m3u8</source>
         <title>Radio Suomipop</title>
         <site>http://www.radiosuomipop.fi/</site>
         <section>Valtakunnalliset</section>
