@@ -19,62 +19,62 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="71"/>
+        <location filename="../qml/Pages/About.qml" line="69"/>
         <source>Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä jollailija.&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="73"/>
+        <location filename="../qml/Pages/About.qml" line="71"/>
         <source>Nettiradioiden streamitiedot ovat peräisin lähteestä </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="74"/>
+        <location filename="../qml/Pages/About.qml" line="72"/>
         <source>Muut lähteet on mainittu &lt;a href=&apos;https://jollailija.github.io/nettiradio/asemat.xml&apos;&gt;asemalistatiedostossa&lt;/a&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="75"/>
+        <location filename="../qml/Pages/About.qml" line="73"/>
         <source>Kaikki radioasemat eivät lähetä nettistreamia Qt audioelementin ymmärtämässä formaatissa.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="77"/>
+        <location filename="../qml/Pages/About.qml" line="75"/>
         <source>Lähdekoodi on saatavilla BSD-lisenssillä </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="77"/>
+        <location filename="../qml/Pages/About.qml" line="75"/>
         <source>ista ja sovelluksen uusimmat versiot löytyvät </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="77"/>
+        <location filename="../qml/Pages/About.qml" line="75"/>
         <source>ista.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="78"/>
+        <location filename="../qml/Pages/About.qml" line="76"/>
         <source>Jos sinulla on kysymyksiä, asema- ja ominaisuustoiveita tai palautetta, voit kirjoittaa kommentin Kauppaan tai OpenReposiin tai lähettää sähköpostia osoitteeseen jollailija@gmail.com</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="79"/>
+        <location filename="../qml/Pages/About.qml" line="77"/>
         <source>Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="93"/>
+        <location filename="../qml/Pages/About.qml" line="91"/>
         <source>GitHub</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="97"/>
+        <location filename="../qml/Pages/About.qml" line="95"/>
         <source>OpenRepos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/About.qml" line="106"/>
+        <location filename="../qml/Pages/About.qml" line="104"/>
         <source>Lahjoita Flattrin kautta</source>
         <translation type="unfinished"></translation>
     </message>
@@ -179,52 +179,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="67"/>
+        <location filename="../qml/Pages/Help.qml" line="65"/>
         <source>Valitse haluamasi radioasema listalta. Aseman vaihdossa on muuteman sekunnin mittainen verkkopuskuroinnin viive. Asemia voi kelata myös kannesta käsin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="69"/>
+        <location filename="../qml/Pages/Help.qml" line="67"/>
         <source>Tällä hetkellä kuunneltavan radioaseman nimi lukee näytön alaosassa. Painamalla sitä saat kyseisen &lt;b&gt;radioaseman nettisivun aukeamaan selaimessa&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="71"/>
+        <location filename="../qml/Pages/Help.qml" line="69"/>
         <source>Voit &lt;b&gt;käynnistää&lt;/b&gt; tai &lt;b&gt;keskeyttää toiston&lt;/b&gt; alaosan nappuloilla ja kannen nappulalla. Voit &lt;b&gt;lopettaa toiston&lt;/b&gt; painamalla neliötä. Toiston lopettaminen lopettaa streamin lataamisen ja säästää näin akkua.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="73"/>
+        <location filename="../qml/Pages/Help.qml" line="71"/>
         <source>&lt;b&gt;Näytön kierron lukitseminen&lt;/b&gt; ja &lt;b&gt;asemalistanäkymän vaihtaminen&lt;/b&gt; löytyvät vetovalikosta. Listanäkymässä ollessasi voit avata &lt;b&gt;hakulaatikon&lt;/b&gt; vetovalikosta.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="75"/>
+        <location filename="../qml/Pages/Help.qml" line="73"/>
         <source>&lt;h3&gt;Valikko&lt;/h3&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="77"/>
+        <location filename="../qml/Pages/Help.qml" line="75"/>
         <source>&lt;b&gt;Uniajastin&lt;/b&gt; sammuttaa toiston asettamasi minuuttimäärän jälkeen. Sammutusaika valitaan &lt;i&gt;Uniajastin&lt;/i&gt;-sivun liukuvalitsimella. Ajastin käynnistetään ja pysäytetään sivulta löytyvillä nappuloilla. &lt;b&gt;Jäljellä oleva aika&lt;/b&gt; näkyy kannessa, ja ajastimen voi pysäyttää kannen pikavalinnalla.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="79"/>
+        <location filename="../qml/Pages/Help.qml" line="77"/>
         <source>Voit lisätä tai poistaa &lt;b&gt;suosikkeja&lt;/b&gt; &lt;i&gt;Muokkaa suosikkeja&lt;/i&gt; -sivulla. Voit lisätä suosikiksi joko nykyisen aseman tai minkä tahansa sovelluksen tukemassa muodossa streamia lähettävän aseman. Suosikkiasemien nimien ja stream-osoitteiden täytyy olla uniikkeja.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="81"/>
+        <location filename="../qml/Pages/Help.qml" line="79"/>
         <source>Suosikkeihin tehdyt muutokset tallennetaan automaattisesti kolmen sekunnin välein. Voit myös tallentaa muutokset käsin valitsemalla vetovalikosta &lt;i&gt;Tallenna muutokset&lt;/i&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="83"/>
+        <location filename="../qml/Pages/Help.qml" line="81"/>
         <source>Jos sovellus ei selviydy &lt;b&gt;yhteyskatkoista&lt;/b&gt;, voit kokeilla &lt;i&gt;palautumismoodia&lt;/i&gt;. Valikosta löytyy myös paljon mielenkiintoisia &lt;b&gt;asetuksia&lt;/b&gt;, kokeile!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/Pages/Help.qml" line="85"/>
+        <location filename="../qml/Pages/Help.qml" line="83"/>
         <source>Jos sinulla on &lt;b&gt;kysymyksiä&lt;/b&gt;, &lt;b&gt;asema-&lt;/b&gt; ja &lt;b&gt;ominaisuustoiveita&lt;/b&gt; tai &lt;b&gt;palautetta&lt;/b&gt;, voit kirjoittaa kommentin Kauppaan tai OpenReposiin tai lähettää sähköpostia osoitteeseen</source>
         <translation type="unfinished"></translation>
     </message>
@@ -401,16 +401,6 @@
     <message>
         <location filename="../qml/Pages/SleepTimerPage.qml" line="71"/>
         <source>Pysäytä</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/Pages/SleepTimerPage.qml" line="76"/>
-        <source>Sulje sovellus uniajastimen päätyttyä</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/Pages/SleepTimerPage.qml" line="77"/>
-        <source>Kun uniajastin on kulunut loppuun, sovellus sulkee itsensä.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
