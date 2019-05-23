@@ -97,14 +97,6 @@ SilicaFlickable {
             lib.panelOpen = true
         }
     }
-    function getSortedItems(searchTerm) {
-        filteredModel.clear()
-        for (var i = 0; i < qmlListModel.count; i++) {
-            if (searchTerm === "" || qmlListModel.get(i).title.toLowerCase().indexOf(searchTerm) !== -1) {
-                filteredModel.append(qmlListModel.get(i))
-            }
-        }
-    }
 
     SilicaListView {
         id: listView
