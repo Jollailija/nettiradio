@@ -144,6 +144,11 @@ ApplicationWindow
         onTriggered: {
             console.warn(" Not OK! ")
             console.warn(playMusic.errorString)
+
+            if(playMusic.errorString !== "The QMediaPlayer object does not have a valid service")
+                playStream()
+            else
+                console.log("Giving up.")
         }
     }
     Timer {
