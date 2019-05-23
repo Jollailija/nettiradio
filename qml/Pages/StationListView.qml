@@ -35,7 +35,6 @@ SilicaFlickable {
     width: loader.width
     contentHeight: loader.height
     clip: true
-    property string searchString
     PulleyMenu {
         MenuItem {
             text: lib.activeView
@@ -47,12 +46,12 @@ SilicaFlickable {
                 if(mainPage.searchMode){
                     mainPage.searchMode = false
                     lib.panelOpen = true
-                    searchString = ""
+                    searchField.text = ""
                 }
                 else {
                     mainPage.searchMode = true
                     lib.panelOpen = false
-                    searchString = ""
+                    searchField.text = ""
                     getSortedItems("")
                 }
             }
@@ -62,16 +61,32 @@ SilicaFlickable {
             onClicked: pageStack.push(Qt.resolvedUrl("Menu.qml"))
         }
     }
+
+    function getSortedItems(searchTerm) {
+        filteredModel.clear()
+        for (var i = 0; i < qmlListModel.count; i++) {
+            if (searchTerm === "" || qmlListModel.get(i).title.toLowerCase().indexOf(searchTerm) !== -1) {
+                filteredModel.append(qmlListModel.get(i))
+            }
+        }
+    }
+
+    PageHeader {
+        id: pageHeader
+        title: qsTr("Radioasemat")
+    }
+
     SearchField {
         id: searchField
+        property string lowercaseText
         height: mainPage.searchMode ? implicitHeight : 0.0
         Behavior on height { NumberAnimation {} }
         clip: true
-        anchors.top: parent.top
+        anchors.top: pageHeader.bottom
         width: parent.width
         onTextChanged: {
-            searchString = searchField.text.toLowerCase()
-            getSortedItems(searchString)
+            lowercaseText = text.toLowerCase()
+            getSortedItems(lowercaseText)
             listView.positionViewAtIndex(0,ListView.Beginning)
             lib.panelOpen = false
         }
@@ -95,7 +110,7 @@ SilicaFlickable {
         id: listView
         VerticalScrollDecorator {}
         anchors {
-            top: mainPage.searchMode ? searchField.bottom : parent.top
+            top: searchField.bottom
             bottom: parent.bottom
         }
         width: parent.width
@@ -124,7 +139,7 @@ SilicaFlickable {
                 listFiller.start()}
             enabled: qmlListModel.count < 50
         }
-        header: PageHeader {title: qsTr("Radioasemat")} //Radio stations
+
         section {
             property: 'section'
             delegate: SectionHeader {
@@ -138,7 +153,7 @@ SilicaFlickable {
             width: listView.width
             highlighted: down || (source === lib.musicSource) // note to self: make sure this works
             Label {
-                text: Theme.highlightText(model.title, searchString, Theme.highlightColor)
+                text: Theme.highlightText(model.title, searchField.lowercaseText, Theme.highlightColor)
                 textFormat: Text.StyledText
                 color: highlighted ? Theme.highlightColor : Theme.primaryColor
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
