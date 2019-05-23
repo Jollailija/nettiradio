@@ -64,7 +64,9 @@ SilicaFlickable {
     }
     SearchField {
         id: searchField
-        visible: mainPage.searchMode
+        height: mainPage.searchMode ? implicitHeight : 0.0
+        Behavior on height { NumberAnimation {} }
+        clip: true
         anchors.top: parent.top
         width: parent.width
         onTextChanged: {
