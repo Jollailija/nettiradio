@@ -38,10 +38,9 @@ DockedPanel {
     open: lib.panelOpen
     Row {
         anchors.centerIn: parent
-        id: iconButtons
         spacing: Theme.paddingLarge
         Button {
-            id: listeningTo
+            anchors.verticalCenter: parent.verticalCenter
             text: Screen.sizeCategory > Screen.Medium
                   ? lib.radioStation
                   : mainPage.isPortrait
@@ -50,20 +49,17 @@ DockedPanel {
             RemorsePopup {id: remorse}
             onClicked: openWebsite()
         }
-        IconButton {
-            id: pause
-            icon.source: "icon-l-stop.png"
-            onClicked: stopStream()
-            enabled: !lib.stopped
+        MediaButton {
+            source: "icon-l-stop.png"
+            mouseArea.onClicked: stopStream()
         }
-        IconButton {
-            id: play
-            icon.source: lib.playing
-                         ? "image://theme/icon-l-pause"
-                         : "image://theme/icon-l-play"
-            onClicked: lib.playing
-                       ? pauseStream()
-                       : playStream()
+        MediaButton {
+            source: lib.playing
+                    ? "image://theme/icon-l-pause"
+                    : "image://theme/icon-l-play"
+            mouseArea.onClicked: lib.playing
+                                 ? pauseStream()
+                                 : playStream()
         }
     }
 }

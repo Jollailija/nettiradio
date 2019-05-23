@@ -19,6 +19,7 @@ DISTFILES += \
     qml/Pages/FavManager.qml \
     qml/Pages/Help.qml \
     qml/Pages/MainPage.qml \
+    qml/Pages/MediaButton.qml \
     qml/Pages/Menu.qml \
     qml/Pages/PlayerPanel.qml \
     qml/Pages/PulleyMenu.qml \
