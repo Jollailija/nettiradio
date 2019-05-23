@@ -43,9 +43,19 @@ SilicaFlickable {
                     ? qsTr("Piilota haku")
                     : qsTr("Näytä haku")
             : qsTr("Näytä haku")
-            onClicked: {mainPage.searchMode
-                        ? (mainPage.searchMode = false, lib.panelOpen = true, searchString = "")
-                        : (mainPage.searchMode = true, lib.panelOpen = false, searchString = "", getSortedItems(""))}
+            onClicked: {
+                if(mainPage.searchMode){
+                    mainPage.searchMode = false
+                    lib.panelOpen = true
+                    searchString = ""
+                }
+                else {
+                    mainPage.searchMode = true
+                    lib.panelOpen = false
+                    searchString = ""
+                    getSortedItems("")
+                }
+            }
         }
         MenuItem {
             text: qsTr("Valikko")
@@ -58,10 +68,11 @@ SilicaFlickable {
         anchors.top: parent.top
         width: parent.width
         onTextChanged: {
-            searchString=searchField.text.toLowerCase()
+            searchString = searchField.text.toLowerCase()
             getSortedItems(searchString)
             listView.positionViewAtIndex(0,ListView.Beginning)
-            lib.panelOpen = false}
+            lib.panelOpen = false
+        }
         inputMethodHints: Qt.ImhNoPredictiveText
         placeholderText: qsTr("Hae")
         EnterKey.onClicked: {
@@ -143,10 +154,9 @@ SilicaFlickable {
                 opacity: source === lib.musicSource ? 1.0 : 0.0
             }
             onClicked: {
-                searchMode ? TheFunctions.chooseStation(filteredModel, index) : TheFunctions.chooseStation(qmlListModel, index)
+                TheFunctions.chooseStation((searchMode ? filteredModel : qmlListModel), index)
                 playStream()
             }
         }
-
     }
 }

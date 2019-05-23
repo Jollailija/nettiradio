@@ -53,7 +53,7 @@ Page {
             }
         }
 
-        header: PageHeader {title: qsTr("Hallitse suosikkeja") }
+        header: PageHeader { title: qsTr("Hallitse suosikkeja") }
         VerticalScrollDecorator {}
         PullDownMenu {
             MenuItem {
@@ -109,11 +109,19 @@ Page {
             menu: ContextMenu {
                 MenuItem {
                     text: qsTr("Muokkaa")
-                    onClicked: {var dialog = pageStack.push(Qt.resolvedUrl("FavDialog.qml"), {"title": model.title,"source": model.source,"site":model.site,"updateMode":true})}
+                    onClicked: {
+                        var dialog = pageStack.push(Qt.resolvedUrl("FavDialog.qml"),
+                                                    {
+                                                        "title": model.title,
+                                                        "source": model.source,
+                                                        "site":model.site,
+                                                        "updateMode":true
+                                                    })
+                    }
                 }
                 MenuItem {
                     text: qsTr("Poista")
-                    onClicked: {favModel.remove(model.index)}
+                    onClicked: { favModel.remove(model.index) }
                 }
             }
             IconButton {
@@ -122,7 +130,10 @@ Page {
                     right: moveDown.left
                 }
                 icon.source: "image://theme/icon-m-up"
-                onClicked: {TheFunctions.moveListItem(favModel, model.index, (model.index-1)); favListView.isEdited = true}
+                onClicked: {
+                    TheFunctions.moveListItem(favModel, model.index, (model.index-1))
+                    favListView.isEdited = true
+                }
                 enabled: model.index > 0
             }
             IconButton {
@@ -132,7 +143,10 @@ Page {
                     rightMargin: Theme.paddingLarge
                 }
                 icon.source: "image://theme/icon-m-down"
-                onClicked: {TheFunctions.moveListItem(favModel, model.index, (model.index+1)); favListView.isEdited = true}
+                onClicked: {
+                    TheFunctions.moveListItem(favModel, model.index, (model.index+1))
+                    favListView.isEdited = true
+                }
                 enabled: model.index < favModel.count-1
             }
         }

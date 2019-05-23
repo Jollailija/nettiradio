@@ -37,9 +37,20 @@ import "storage.js" as Storage
 PullDownMenu {
     MenuItem {
         text: qsTr("Vaihda näkymää") // Change list model
-        onClicked: {lib.activeView
-                    ? (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = false, lib.panelOpen = true)
-                    : (lib.stationCount=stationsModel.count, /*fillList(),*/ lib.activeView = true, lib.panelOpen = true)}
+        onClicked: {
+            if(lib.activeView) {
+                lib.stationCount=stationsModel.count
+                /*fillList()*/
+                lib.activeView = false
+                lib.panelOpen = true
+            }
+            else {
+                lib.stationCount=stationsModel.count
+                /*fillList()*/
+                lib.activeView = true
+                lib.panelOpen = true
+            }
+        }
     }
     MenuItem {
         text: mainPage.allowedOrientations === Orientation.All

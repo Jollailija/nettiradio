@@ -34,10 +34,18 @@ Page {
     id: page
     property var textAlignment: TextInput.AlignLeft
     SilicaFlickable {
-        RemorsePopup {id: remorse; anchors.top: parent.top}
+        RemorsePopup {
+            id: remorse
+            anchors.top: parent.top
+        }
         anchors.fill: parent
         clip: true
-        contentHeight: header.height + version.height + text.height + links.height + flattr.height + Theme.paddingLarge * 4
+        contentHeight: header.height
+                       + version.height
+                       + text.height
+                       + links.height
+                       + flattr.height
+                       + Theme.paddingLarge * 4
         contentWidth: parent.width
         VerticalScrollDecorator {}
 

@@ -125,7 +125,10 @@ Page {
                 enabled: !lib.keepAliveMode
                 description: qsTr("Tuhlaa hieman virtaa, mutta selviytyy paremmin katkoista. Poista käytöstä käynnistämällä sovellus uudelleen.")
                 checked: lib.keepAliveMode
-                onCheckedChanged: {lib.keepAliveMode = true, console.log("Kytkin " + lib.keepAliveMode)}
+                onCheckedChanged: {
+                    lib.keepAliveMode = true
+                    console.log("Kytkin " + lib.keepAliveMode)
+                }
             }
             SectionHeader {
                 text: qsTr("Oletuskanava")
@@ -204,7 +207,10 @@ Page {
                 handleVisible: true
                 valueText: value
                 label: qsTr("Fonttikoko")
-                onReleased: lib.fontSize = value, TheFunctions.saveFontSize(value)
+                onReleased: {
+                    lib.fontSize = value
+                    TheFunctions.saveFontSize(value)
+                }
             }
             SectionHeader {
                 text: qsTr("Nollaa asetukset")
