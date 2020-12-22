@@ -1,6 +1,8 @@
 /*
-  Copyright (C) 2015-2016 jollailija
+  Copyright (C) 2015-2016, 2020 jollailija
   Contact: jollailija <jollailija@gmail.com>
+  Copyright (C) 2019 Matti Viljanen
+  Contact: Matti Viljanen <matti.viljanen@kapsi.fi>
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -44,7 +46,6 @@ Page {
                        + version.height
                        + text.height
                        + links.height
-                       + flattr.height
                        + Theme.paddingLarge * 4
         contentWidth: parent.width
         VerticalScrollDecorator {}
@@ -57,7 +58,7 @@ Page {
             id: version
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: qsTr("Versio ") + "1.9.1" + "-" + "1" //I don't know how to automate this just yet...
+            text: qsTr("Versio ") + "1.9.2" + "-" + "2" //I don't know how to automate this just yet...
             onClicked: Qt.openUrlExternally("https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.changes")
         }
         Text {
@@ -74,7 +75,7 @@ Page {
             color: Theme.primaryColor
             linkColor: Theme.highlightColor
             textFormat: Text.StyledText
-            text: qsTr("Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä jollailija.<br><br>") +
+            text: qsTr("Tämä on sovellus kaikille suomalaisten nettiradioiden kuuntelijoille, tekijänä jollailija ja direc85.<br><br>") +
 
                   qsTr("Nettiradioiden streamitiedot ovat peräisin lähteestä ") + "<a href='http://www.mediamonitori.fi/index.php/nettiradiot'>mediamonitori.fi</a>" + "<br>" +
                   qsTr("Muut lähteet on mainittu " +"<a href='https://jollailija.github.io/nettiradio/asemat.xml'>asemalistatiedostossa</a>.") + "<br>" +
@@ -82,7 +83,7 @@ Page {
 
                   "<b>" + qsTr("Lähdekoodi on saatavilla BSD-lisenssillä ") + "<a href='https://github.com/jollailija/nettiradio'>GitHub</a></b>"+ qsTr("ista ja sovelluksen uusimmat versiot löytyvät ") + "<b><a href='https://openrepos.net/content/jollailija/finnish-net-radio-client-beta/'>OpenRepos</a></b>"+ qsTr("ista.") + "<br>" +
                   qsTr("Jos sinulla on kysymyksiä, asema- ja ominaisuustoiveita tai palautetta, voit kirjoittaa kommentin Kauppaan tai OpenReposiin tai lähettää sähköpostia osoitteeseen jollailija@gmail.com") + "<br><br>" +
-                  qsTr("Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille.") + "<br><br>" +
+                  qsTr("Kiitos Daxille avusta koodin kanssa, r0kk3rz:ille AlphaMenun tekemisestä, Mothille hienosta ikonista sekä coderusille, kimmolille ja monille muille, jotka ovat jakaneet neuvojaan devel-postilitalla. Suuri kiitos myös kaikille Flattr-lahjoittajille, vaikken sieltä rahoja ulos saanutkaan :)") + "<br><br>" +
                   "Thanks for all the support guys!" + "<br>"
             font.pixelSize: Screen.sizeCategory > Screen.Medium
                             ? Theme.fontSizeLarge * lib.fontSize
@@ -103,14 +104,6 @@ Page {
                 text: qsTr("OpenRepos")
                 onClicked: Qt.openUrlExternally("https://openrepos.net/content/jollailija/finnish-net-radio-client-beta/")
             }
-        }
-        Button {
-            anchors.top: links.bottom
-            anchors.topMargin: Theme.paddingLarge * 1.5
-            anchors.horizontalCenter: parent.horizontalCenter
-            id: flattr
-            text: qsTr("Lahjoita Flattrin kautta")
-            onClicked: Qt.openUrlExternally("https://flattr.com/thing/4382591/Jollailijanettiradio-on-github")
         }
     }
 }
