@@ -5,6 +5,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Dec 22 2020 jollailija <jollailija@gmail.com> 1.9.2-3
+-built with mpris for openrepos
+
 * Tue Dec 22 2020 jollailija <jollailija@gmail.com> 1.9.2-2
 -smarter sorting in alphamenu
 -known issue: is spaghetti, includes SuomiRäp under R
