@@ -33,7 +33,7 @@ import QtQuick 2.1
 import QtMultimedia 5.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
-import org.nemomobile.mpris 1.0
+//import org.nemomobile.mpris 1.0
 import "Pages"
 import "Pages/StationLists"
 import "Pages/storage.js" as Storage
@@ -68,7 +68,8 @@ ApplicationWindow
     }
 
     function refreshMpris() {
-
+        console.log("mpris not enabled on harbour builds")
+        /*
         mprisPlayer.artist = lib.radioStation
         mprisPlayer.song = "Nettiradio"
         switch (lib.playing) {
@@ -86,9 +87,9 @@ ApplicationWindow
             break;
         default:
             mprisPlayer.playbackStatus = Mpris.Paused
-        }
+        }*/
     }
-
+    /*
     MprisPlayer {
         id: mprisPlayer
         property string artist
@@ -138,6 +139,7 @@ ApplicationWindow
         onLoopStatusRequested: {}
         onShuffleRequested: {}
     }
+    */
 
     // Dunno what I did but seems to work
     Timer {
