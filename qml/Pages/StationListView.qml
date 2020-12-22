@@ -35,7 +35,6 @@ SilicaFlickable {
     width: loader.width
     contentHeight: loader.height
     clip: true
-    property string searchString
     PulleyMenu {
         MenuItem {
             text: lib.activeView
@@ -43,32 +42,26 @@ SilicaFlickable {
                     ? qsTr("Piilota haku")
                     : qsTr("Näytä haku")
             : qsTr("Näytä haku")
-            onClicked: {mainPage.searchMode
-                        ? (mainPage.searchMode = false, lib.panelOpen = true, searchString = "")
-                        : (mainPage.searchMode = true, lib.panelOpen = false, searchString = "", getSortedItems(""))}
+            onClicked: {
+                if(mainPage.searchMode){
+                    mainPage.searchMode = false
+                    lib.panelOpen = true
+                    searchField.text = ""
+                }
+                else {
+                    mainPage.searchMode = true
+                    lib.panelOpen = false
+                    searchField.text = ""
+                    getSortedItems("")
+                }
+            }
         }
         MenuItem {
             text: qsTr("Valikko")
             onClicked: pageStack.push(Qt.resolvedUrl("Menu.qml"))
         }
     }
-    SearchField {
-        id: searchField
-        visible: mainPage.searchMode
-        anchors.top: parent.top
-        width: parent.width
-        onTextChanged: {
-            searchString=searchField.text.toLowerCase()
-            getSortedItems(searchString)
-            listView.positionViewAtIndex(0,ListView.Beginning)
-            lib.panelOpen = false}
-        inputMethodHints: Qt.ImhNoPredictiveText
-        placeholderText: qsTr("Hae")
-        EnterKey.onClicked: {
-            focus = false
-            lib.panelOpen = true
-        }
-    }
+
     function getSortedItems(searchTerm) {
         filteredModel.clear()
         for (var i = 0; i < qmlListModel.count; i++) {
@@ -78,11 +71,38 @@ SilicaFlickable {
         }
     }
 
+    PageHeader {
+        id: pageHeader
+        title: qsTr("Radioasemat")
+    }
+
+    SearchField {
+        id: searchField
+        property string lowercaseText
+        height: mainPage.searchMode ? implicitHeight : 0.0
+        Behavior on height { NumberAnimation {} }
+        clip: true
+        anchors.top: pageHeader.bottom
+        width: parent.width
+        onTextChanged: {
+            lowercaseText = text.toLowerCase()
+            getSortedItems(lowercaseText)
+            listView.positionViewAtIndex(0,ListView.Beginning)
+            lib.panelOpen = false
+        }
+        inputMethodHints: Qt.ImhNoPredictiveText
+        placeholderText: qsTr("Hae")
+        EnterKey.onClicked: {
+            focus = false
+            lib.panelOpen = true
+        }
+    }
+
     SilicaListView {
         id: listView
         VerticalScrollDecorator {}
         anchors {
-            top: mainPage.searchMode ? searchField.bottom : parent.top
+            top: searchField.bottom
             bottom: parent.bottom
         }
         width: parent.width
@@ -111,7 +131,7 @@ SilicaFlickable {
                 listFiller.start()}
             enabled: qmlListModel.count < 50
         }
-        header: PageHeader {title: qsTr("Radioasemat")} //Radio stations
+
         section {
             property: 'section'
             delegate: SectionHeader {
@@ -125,7 +145,7 @@ SilicaFlickable {
             width: listView.width
             highlighted: down || (source === lib.musicSource) // note to self: make sure this works
             Label {
-                text: Theme.highlightText(model.title, searchString, Theme.highlightColor)
+                text: Theme.highlightText(model.title, searchField.lowercaseText, Theme.highlightColor)
                 textFormat: Text.StyledText
                 color: highlighted ? Theme.highlightColor : Theme.primaryColor
                 font.pixelSize: Screen.sizeCategory > Screen.Medium
@@ -143,10 +163,9 @@ SilicaFlickable {
                 opacity: source === lib.musicSource ? 1.0 : 0.0
             }
             onClicked: {
-                searchMode ? TheFunctions.chooseStation(filteredModel, index) : TheFunctions.chooseStation(qmlListModel, index)
+                TheFunctions.chooseStation((searchMode ? filteredModel : qmlListModel), index)
                 playStream()
             }
         }
-
     }
 }

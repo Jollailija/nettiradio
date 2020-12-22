@@ -13,15 +13,16 @@ Name:       harbour-nettiradio
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Suomalaisten nettiradioiden kuuntelusovellus
-Version:    1.9.1
+Version:    1.9.2
 Release:    1
 Group:      Qt/Qt
 License:    BSD
+BuildArch:  noarch
 URL:        https://www.github.com/jollailija/nettiradio/
 Source0:    %{name}-%{version}.tar.bz2
-BuildArch: noarch
+Source100:  harbour-nettiradio.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires: libsailfishapp-launcher
+Requires:   libsailfishapp-launcher
 Requires:   qt5-qtdeclarative-import-xmllistmodel
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
@@ -64,12 +65,10 @@ desktop-file-install --delete-original       \
    %{buildroot}%{_datadir}/applications/*.desktop
 
 %files
-%defattr(644,root,root,755)
+%defattr(-,root,root,-)
+%defattr(0644,root,root,-)
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/86x86/apps/%{name}.png
-%{_datadir}/icons/hicolor/108x108/apps/%{name}.png
-%{_datadir}/icons/hicolor/128x128/apps/%{name}.png
-%{_datadir}/icons/hicolor/256x256/apps/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.png
 # >> files
 # << files

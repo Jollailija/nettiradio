@@ -5,6 +5,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Feb 10 2019 Matti Viljanen <matti.viljanen@kapsi.fi> 1.9.2-1
+-Properly turn into QML-only noarch application
+-Known issue: Lock screen playback controls partially broken
+
 * Mon Jul 11 2016 jollailija <jollailija@gmail.com> 1.9.1-1
 -Added some controls to lockscreen (mpris)
 

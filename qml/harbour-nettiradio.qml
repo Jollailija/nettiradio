@@ -29,7 +29,6 @@
 
 import QtQuick 2.1
 import QtMultimedia 5.0
-//import QtFeedback 5.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import org.nemomobile.mpris 1.0
@@ -45,10 +44,24 @@ ApplicationWindow
         source: lib.musicSource
         volume: lib.volume
         autoPlay: true
-        onError: resurrector.start(), console.warn(" Error! Start resurrector! ")
-        onPlaying: {resurrector.stop, console.warn(" OK, playing! (Stop resurrector) "); lib.playing = true; lib.stopped = false}
-        onStopped: {lib.playing = false; lib.stopped = true} //Should update buttons on incoming call and stuff
-        onPaused: {lib.playing = false; lib.stopped = false}
+        onError: {
+            resurrector.start()
+            console.warn(" Error! Start resurrector! ")
+        }
+        onPlaying: {
+            resurrector.stop
+            console.warn(" OK, playing! (Stop resurrector) ")
+            lib.playing = true
+            lib.stopped = false
+        }
+        onStopped: { // Should update buttons on incoming call and stuff
+            lib.playing = false
+            lib.stopped = true
+        }
+        onPaused: {
+            lib.playing = false
+            lib.stopped = false
+        }
         onMutedChanged: pauseStream()
     }
 
@@ -128,13 +141,24 @@ ApplicationWindow
         id: resurrector
         interval: 1000
         repeat: false
-        onTriggered: console.warn(" Not OK! "), console.warn(playMusic.errorString), playStream()
+        onTriggered: {
+            console.warn(" Not OK! ")
+            console.warn(playMusic.errorString)
+
+            if(playMusic.errorString !== "The QMediaPlayer object does not have a valid service")
+                playStream()
+            else
+                console.log("Giving up.")
+        }
     }
     Timer {
         id: keepAliveHelper
         interval: 5000
         repeat: true
-        onTriggered: {playStream(); console.log(lib.keepAliveMode)}
+        onTriggered: {
+            playStream()
+            console.log(lib.keepAliveMode)
+        }
         running: lib.keepAliveMode
                  ? lib.playing
                  : lib.sleepTime >= 0 && lib.playing // This should save some CPU while sleepTimer is off
@@ -143,11 +167,22 @@ ApplicationWindow
         id: sleepTimer
         interval: 60000
         repeat: false
-        onTriggered: (lib.sleepTime === 0)
-                     ? lib.closeAppAfterSleepTime
-                       ? (console.warn(" Sleeptimer at 0, shutting down "),Qt.quit())
-                       : (stopStream(),  lib.sleepTime = -1, console.warn(" Sleeptimer at 0, shutting stream down "))
-        : lib.sleepTime = (lib.sleepTime - 1)
+        onTriggered: {
+            if(lib.sleepTime === 0) {
+                if(lib.closeAppAfterSleepTime) {
+                    console.warn(" Sleeptimer at 0, shutting down ")
+                    Qt.quit()
+                }
+                else {
+                    stopStream()
+                    lib.sleepTime = -1
+                    console.warn(" Sleeptimer at 0, shutting stream down ")
+                }
+            }
+            else {
+                lib.sleepTime = (lib.sleepTime - 1)
+            }
+        }
         running: lib.sleepTime >= 0
     }
     Timer {
@@ -182,10 +217,16 @@ ApplicationWindow
         property bool closeAppAfterSleepTime: false
     }
 
-    ListModel{id:qmlListModel;property string filterProperty: 'title'}
-    StationsModel{id:stationsModel}
-    ListModel {id:filteredModel}
-    ListModel{id:favModel}
+    ListModel {
+        id:qmlListModel
+        property string filterProperty: 'title'
+    }
+
+    StationsModel { id:stationsModel }
+
+    ListModel { id:filteredModel }
+
+    ListModel { id:favModel }
 
     function fillList() {
         lib.stationCount = stationsModel.count
@@ -193,8 +234,13 @@ ApplicationWindow
         qmlListModel.clear() // This way the list will be up to date and not multiply
         var i = 0
         for (var r = 0; r < lib.stationCount; r++) {
-            qmlListModel.append({"title": stationsModel.get(i).title, "source": stationsModel.get(i).source, "site": stationsModel.get(i).site, "section": stationsModel.get(i).section})
-            i ++
+            qmlListModel.append({
+                                    "title": stationsModel.get(i).title,
+                                    "source": stationsModel.get(i).source,
+                                    "site": stationsModel.get(i).site,
+                                    "section": stationsModel.get(i).section
+                                })
+            i++
             //console.log(i)
         }
         console.log("this many stations: " + i)
@@ -207,13 +253,29 @@ ApplicationWindow
 
     RemorsePopup {id: remorse; anchors.top: parent.top}
 
-    function openWebsite() {remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)}
+    function openWebsite() {
+        remorse.execute("Avataan verkkosivu", function() {Qt.openUrlExternally(lib.website)}, 3000)
+    }
 
-    function pauseStream() {playMusic.pause(); resurrector.stop(); refreshMpris()}
-    function playStream() {playMusic.play(); refreshMpris()}
-    function stopStream() {playMusic.stop(); resurrector.stop(); refreshMpris()}
+    function pauseStream() {
+        playMusic.pause()
+        resurrector.stop()
+        refreshMpris()
+    }
+
+    function playStream() {
+        playMusic.play()
+        refreshMpris()
+    }
+
+    function stopStream() {
+        playMusic.stop()
+        resurrector.stop()
+        refreshMpris()
+    }
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")
+
     cover: Qt.resolvedUrl("Pages/CoverPage.qml")
 
     Component.onCompleted: {

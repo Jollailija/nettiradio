@@ -48,7 +48,8 @@ Dialog {
             width: parent.width
             spacing: Theme.paddingLarge
 
-            DialogHeader {title: qsTr("Muokkaa suosikkia")}
+            DialogHeader {
+                title: qsTr("Muokkaa suosikkia")}
 
             TextArea {
                 id: titleInput
@@ -93,7 +94,11 @@ Dialog {
     }
     onDone: {
         if (result === DialogResult.Accepted) {
-            favModel.append({"title": titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "source": sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "site": siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(), "section": "Suosikit"})
+            favModel.append({
+                                "title": titleInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(),
+                                "source": sourceInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(),
+                                "site": siteInput.text.replace(/(\r\n|\n|\r)/gm,"").trim(),
+                                "section": "Suosikit"})
         }
         TheFunctions.overwriteFavs(favModel)
         qmlListModel.clear()
