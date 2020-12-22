@@ -13,7 +13,7 @@ https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.chan
 
 Planned features:  
 - Better UI (kinda achieved in 1.1.0)    
-  - TODO: ignore "Radio " in AlphaMenuView  
+  - ignore "Radio " in AlphaMenuView (1.9.2)  
 - English and Swedish translations  
 - Lockscreen controls (available for testing in 1.9.1 beta)
 
@@ -28,6 +28,6 @@ https://github.com/Jollailija/nettiradio/blob/master/rpm/harbour-nettiradio.chan
   
 Suunnitellut ominaisuudet:  
 - Parempi käyttöliittymä (aika lailla julkaisussa 1.1.0)  
-  - TODO: älä huomioi "Radio "-alkua AlphaMenuViewin aakkosjärjestyksessä  
+  - älä huomioi "Radio "-alkua AlphaMenuViewin aakkosjärjestyksessä (1.9.2)  
 - Englannin- ja ruotsinkielinen käännös  
 - Lukitusnäytön nappulat (testattavissa versio 1.9.1 betasta lähtien)
