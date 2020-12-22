@@ -5,6 +5,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Dec 22 2020 jollailija <jollailija@gmail.com> 1.9.2-2
+-smarter sorting in alphamenu
+-known issue: is spaghetti, includes SuomiRäp under R
+-updated included station list
+-removed flattr
+-fix .pro
+
 * Sun Feb 10 2019 Matti Viljanen <matti.viljanen@kapsi.fi> 1.9.2-1
 -Properly turn into QML-only noarch application
 -Known issue: Lock screen playback controls partially broken

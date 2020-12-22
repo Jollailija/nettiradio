@@ -1,6 +1,8 @@
 /*
   Copyright (C) 2015-2016 jollailija
   Contact: jollailija <jollailija@gmail.com>
+  Copyright (C) 2019 Matti Viljanen
+  Contact: Matti Viljanen <matti.viljanen@kapsi.fi>
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
