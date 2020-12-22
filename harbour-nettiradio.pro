@@ -27,6 +27,7 @@ DISTFILES += \
     qml/Pages/StationGridView.qml \
     qml/Pages/StationListView.qml \
     qml/Pages/functions.js \
+    qml/harbour-nettiradio.qml \
     rpm/harbour-nettiradio.changes \
     rpm/harbour-nettiradio.spec \
     rpm/harbour-nettiradio.yaml \
