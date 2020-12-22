@@ -29,7 +29,7 @@ Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/netti
 List version: 2020-12-22a (Source updated 2020-12-06)
 -->
     <item>
-        <source>https://www.supla.fi/aitoiskelma</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/aitoiskelma/chunklist.m3u8</source>
         <title>Aito Iskelmä</title>
         <site>https://www.supla.fi/aitoiskelma</site>
         <section>Valtakunnalliset</section>
@@ -41,19 +41,19 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/groovefm</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/groove/chunklist.m3u8</source>
         <title>Groove FM</title>
         <site>https://www.supla.fi/groovefm</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/helmiradio</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/groove/chunklist.m3u8</source>
         <title>Helmiradio</title>
         <site>http://www.helmiradio.fi</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/hitmix</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/hitmix/chunklist.m3u8</source>
         <title>HitMix</title>
         <site>https://www.hitmix.fi/</site>
         <section>Valtakunnalliset</section>
@@ -77,13 +77,13 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/loop</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/loop/chunklist.m3u8</source>
         <title>Loop</title>
         <site>http://www.loop.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/radioaalto</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/radioaalto/chunklist.m3u8</source>
         <title>Radio Aalto</title>
         <site>http://www.radioaalto.fi/</site>
         <section>Valtakunnalliset</section>
@@ -131,13 +131,13 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/radiorock</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/radiorock/chunklist.m3u8</source>
         <title>Radio Rock</title>
         <site>http://www.radiorock.fi/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://www.supla.fi/radiosuomipop</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/radiosuomipop/chunklist.m3u8</source>
         <title>Radio Suomipop</title>
         <site>http://www.radiosuomipop.fi/</site>
         <section>Valtakunnalliset</section>
