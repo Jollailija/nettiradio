@@ -26,8 +26,100 @@
 
 Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot, jota ylläpitää Otto Metsähukala
 
-List version: 2020-12-22a (Source updated 2020-12-06)
+List version: 2020-12-22b (Source updated 2020-12-06)
 -->
+    <item>
+        <source>https://github.com/Jollailija/nettiradio/blob/gh-pages/wwyamx.mp3?raw=true</source>
+        <title>Hyvää joulua ja parempaa uutta vuotta!</title>
+        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
+        <section>Asemalistan tiedot</section>
+    </item>
+    <item>
+        <source>https://github.com/Jollailija/nettiradio/blob/gh-pages/wwyamx.mp3?raw=true</source>
+        <title>Asemalistan versio: 2020-12-22b</title>
+        <site>https://github.com/Jollailija/nettiradio/issues/6</site>
+        <section>Asemalistan tiedot</section>
+    </item>
+    <item>
+        <source>https://github.com/Jollailija/nettiradio/blob/gh-pages/wwyamx.mp3?raw=true</source>
+        <title>Auta ylläpidossa testaamalla seuraavia</title>
+        <site>https://github.com/Jollailija/nettiradio/issues/6</site>
+        <section>Asemalistan tiedot</section>
+    </item>
+    <item>
+        <source>https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen</source>
+        <title>Radio Keskisuomalainen</title>
+        <site>https://www.radiokeskisuomalainen.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://stream.radiorex.fi:8000/radiorex</source>
+        <title>Radio Rex</title>
+        <site>https://www.karjalainen.fi/radio</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://cast.savonaallot.fi/savonaallot</source>
+        <title>Savon Aallot</title>
+        <site>https://www.savonaallot.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://stream.alandsradio.ax/stream.ogg</source>
+        <title>Ålands Radio</title>
+        <site>https://alandsradio.ax/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://stream.radio.co/s435d71fd8/listen</source>
+        <title>IDA Radio</title>
+        <site>https://idaidaida.net/fi</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://c0.toivon.net/toivon/toivon_0?mp=/stream</source>
+        <title>Jouluradio</title>
+        <site>https://www.jouluradio.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>http://79.134.109.244:8000/Sport</source>
+        <title>Kaupunkiradio</title>
+        <site>https://kaupunkikanava.fi/kaupunkiradio</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://s4.radio.co/seb14ce41a/listen</source>
+        <title>Lasten Oma Radio</title>
+        <site>https://www.lastenomaradio.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://streamer.radio.co/se4f0e40ca/listen</source>
+        <title>Radio Pro</title>
+        <site>http://radiopro.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <!-- 404
+    <item>
+        <source>http://stream18.shoutcastsolutions.com:8813/;stream.mp3</source>
+        <title>Radio Scoop</title>
+        <site>http://radioscoop.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    -->
+    <item>
+        <source>https://streams.radiomast.io/ac7a4372-f9aa-4925-b579-e1cd96f0d0fd</source>
+        <title>Radio Soi</title>
+        <site>https://www.radiosoi.fi/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
+    <item>
+        <source>https://saysite.fi:8000/sayfm</source>
+        <title>SAYFM</title>
+        <site>https://saysite.fi/radio/</site>
+        <section>Ilmoita toimivuus Kaupassa</section>
+    </item>
     <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/aitoiskelma/chunklist.m3u8</source>
         <title>Aito Iskelmä</title>
@@ -42,12 +134,12 @@ List version: 2020-12-22a (Source updated 2020-12-06)
     </item>
     <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/groove/chunklist.m3u8</source>
-        <title>Groove FM</title>
+        <title>GrooveFM</title>
         <site>https://www.supla.fi/groovefm</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://supla.digitacdn.net/live/_definst_/supla/groove/chunklist.m3u8</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/radiohelmi/chunklist.m3u8</source>
         <title>Helmiradio</title>
         <site>http://www.helmiradio.fi</site>
         <section>Valtakunnalliset</section>
@@ -137,7 +229,7 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>https://supla.digitacdn.net/live/_definst_/supla/radiosuomipop/chunklist.m3u8</source>
+        <source>https://supla.digitacdn.net/live/_definst_/supla/suomipop/chunklist.m3u8</source>
         <title>Radio Suomipop</title>
         <site>http://www.radiosuomipop.fi/</site>
         <section>Valtakunnalliset</section>
@@ -197,12 +289,6 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen</source>
-        <title>Radio Keskisuomalainen</title>
-        <site>https://www.radiokeskisuomalainen.fi/</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
         <source>http://moreenistream1.uta.fi:8080/moreeni.mp3</source>
         <title>Radio Moreeni</title>
         <site>http://radio.uta.fi/</site>
@@ -233,12 +319,6 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>https://stream.radiorex.fi:8000/radiorex</source>
-        <title>Radio Rex</title>
-        <site>https://www.karjalainen.fi/radio</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
         <source>http://st.downtime.fi/sun.mp3</source>
         <title>Radio SUN</title>
         <site>http://www.radiosun.fi</site>
@@ -257,21 +337,9 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>https://cast.savonaallot.fi/savonaallot</source>
-        <title>Savon Aallot</title>
-        <site>https://www.savonaallot.fi/</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
         <source>http://ice6.securenetsystems.net/STEELFM</source>
         <title>Steel FM</title>
         <site>http://steelfm.ax/</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
-        <source>https://stream.alandsradio.ax/stream.ogg</source>
-        <title>Ålands Radio</title>
-        <site>https://alandsradio.ax/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -515,39 +583,9 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Paikalliset - Radio Dei</section>
     </item>
     <item>
-        <source>http://mediau.yle.fi/liveklassinen</source>
-        <title>Yle Klassinen</title>
-        <site>https://areena.yle.fi/radio/ohjelmat/yle-klassinen</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>https://stream.radio.co/s435d71fd8/listen</source>
-        <title>IDA Radio</title>
-        <site>https://idaidaida.net/fi</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>https://c0.toivon.net/toivon/toivon_0?mp=/stream</source>
-        <title>Jouluradio</title>
-        <site>https://www.jouluradio.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>http://79.134.109.244:8000/Sport</source>
-        <title>Kaupunkiradio</title>
-        <site>https://kaupunkikanava.fi/kaupunkiradio</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
         <source>https://stream.bauermedia.fi/kiss/kiss_64.aac</source>
         <title>KISS</title>
         <site>https://www.kiss.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>https://s4.radio.co/seb14ce41a/listen</source>
-        <title>Lasten Oma Radio</title>
-        <site>https://www.lastenomaradio.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -605,35 +643,19 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://streamer.radio.co/se4f0e40ca/listen</source>
-        <title>Radio Pro</title>
-        <site>http://radiopro.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>http://stream18.shoutcastsolutions.com:8813/;stream.mp3</source>
-        <title>Radio Scoop</title>
-        <site>http://radioscoop.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>https://streams.radiomast.io/ac7a4372-f9aa-4925-b579-e1cd96f0d0fd</source>
-        <title>Radio Soi</title>
-        <site>https://www.radiosoi.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
         <source>http://vcust586.louhi.net:8080/radiovapaahki</source>
         <title>Radio Vapaa Helsinki</title>
         <site>https://radiovapaahelsinki.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
+    <!-- 404
     <item>
         <source>http://rondo.iradio.fi:8000/klasu-hi.mp3</source>
         <title>Rondo Klasu</title>
         <site>https://rondolehti.fi/i-radiot/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
+    -->
     <item>
         <source>http://rondo.iradio.fi:8000/klasupro-hi.mp3</source>
         <title>Rondo KlasuPro</title>
@@ -657,29 +679,5 @@ List version: 2020-12-22a (Source updated 2020-12-06)
         <title>SaaristoRadio</title>
         <site>https://www.saaristoradio.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>https://saysite.fi:8000/sayfm</source>
-        <title>SAYFM</title>
-        <site>https://saysite.fi/radio/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>https://github.com/Jollailija/nettiradio/blob/gh-pages/wwyamx.mp3?raw=true</source>
-        <title>Hyvää joulua ja parempaa uutta vuotta!</title>
-        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
-        <section># Asemalistan tiedot</section>
-    </item>
-    <item>
-        <source></source>
-        <title>Asemalistan versio: 2020-12-22a</title>
-        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
-        <section># Asemalistan tiedot</section>
-    </item>
-    <item>
-        <source></source>
-        <title>Mediamonitori päivitetty 06.12.2020</title>
-        <site>https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot</site>
-        <section># Asemalistan tiedot</section>
     </item>
 </stationlist>
