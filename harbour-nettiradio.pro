@@ -1,10 +1,6 @@
 # The name of your application
 TARGET = harbour-nettiradio
-
-
 CONFIG += sailfishapp_qml
-
-#SOURCES += src/harbour-nettiradio.cpp
 
 DISTFILES += \
     qml/Pages/StationLists/Asemat.xml \
