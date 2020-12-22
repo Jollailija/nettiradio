@@ -204,7 +204,16 @@ Grid {
         {
             for(var i=0; (dataModel.count - 1) >= i; i++)
             {
-                var index = dataModel.get(i).title.charAt(0)
+                var title = dataModel.get(i).title
+                var index = title.charAt(0)
+
+                if (title.indexOf("Radio") === 0)
+                {
+                    if (title.charAt(5) === " ")
+                        index = title.charAt(6)
+                    else
+                        index = title.charAt(5)
+                }
 
                 for(var j=0; (groupModel.count - 1 ) >= j; j++)
                 {
@@ -298,9 +307,26 @@ Grid {
                     for(var i=0; (dataModel.count - 1) >= i; i++)
                     {
                         filterPattern.charAt(0)
-                        if(dataModel.get(i).title.charAt(0) === filterPattern.charAt(0) )
+                        // to avoid almost everything going under R (for radio), let's change this up
+                        var title = dataModel.get(i).title
+                        if (title.indexOf("Radio") !== 0 && dataModel.get(i).title.charAt(0) === filterPattern.charAt(0))
                         {
                             filterModel.append(dataModel.get(i))
+                        }else
+                        {
+                            // either "RadioExample" or "Radio Example"
+                            if (title.indexOf("Radio ") === -1)
+                            {
+                                // "RadioExample"
+                                if (title.charAt(5) === filterPattern.charAt(0))
+                                {
+                                    filterModel.append(dataModel.get(i))
+                                }
+
+                             }else if (title.charAt(6) === filterPattern.charAt(0))
+                            {
+                                filterModel.append(dataModel.get(i))
+                            }
                         }
                     }
                 }
