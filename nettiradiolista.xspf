@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist xmlns="http://xspf.org/ns/0/" xmlns:vlc="http://www.videolan.org/vlc/playlist/ns/0/" version="1">
+	<title>Soittolista</title>
+	<trackList>
+		<track>
+			<location>http://www.yle.fi/livestream/puhe.asx</location>
+			<title>Yle Puhe</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>0</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/liveyleradio1</location>
+			<title>Yle Radio 1</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>1</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/liveradiosuomi</location>
+			<title>Yle Radio Suomi (Helsinki)</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>2</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/livevega</location>
+			<title>Yle Radio Vega</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>3</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/livex3m</location>
+			<title>Yle X3M</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>4</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/liveklassinen</location>
+			<title>Ylen Klassinen</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>5</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/liveylex</location>
+			<title>YleX</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>6</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_radiohame</location>
+			<title>Yle Radio Suomi - Hämeenlinna</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>7</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_pohjkarjala</location>
+			<title>Yle Radio Suomi - Joensuu</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>8</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_keskisuomi</location>
+			<title>Yle Radio Suomi - Jyväskylä</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>9</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_kainuu</location>
+			<title>Yle Radio Suomi - Kajaani</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>10</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_perameri</location>
+			<title>Yle Radio Suomi - Kemi</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>11</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_keskipohjanmaa</location>
+			<title>Yle Radio Suomi - Kokkola</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>12</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_kymenlaakso</location>
+			<title>Yle Radio Suomi - Kotka</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>13</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_radiosavo</location>
+			<title>Yle Radio Suomi - Kuopio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>14</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_lahdenradio</location>
+			<title>Yle Radio Suomi - Lahti</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>15</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_etelakarjala</location>
+			<title>Yle Radio Suomi - Lappeenranta</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>16</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_etelasavo</location>
+			<title>Yle Radio Suomi - Mikkeli</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>17</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_ouluradio</location>
+			<title>Yle Radio Suomi - Oulu</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>18</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_pohjanmaa</location>
+			<title>Yle Radio Suomi - Pohjanmaa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>19</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_satakunta</location>
+			<title>Yle Radio Suomi - Pori</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>20</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_lapinradio</location>
+			<title>Yle Radio Suomi - Rovaniemi</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>21</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_tampere</location>
+			<title>Yle Radio Suomi - Tampere</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>22</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_turunradio</location>
+			<title>Yle Radio Suomi - Turku</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>23</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_vegavast</location>
+			<title>Yle Vega - Västnyland</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>24</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_vegaabo</location>
+			<title>Yle Vega - Åboland</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>25</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_vegaosterbotten</location>
+			<title>Yle Vega - Österbotten</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>26</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://mediau.yle.fi:80/a_vegaost</location>
+			<title>Yle Vega - Östnyland</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>27</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/basso/bassoradio_64.aac</location>
+			<title>Bassoradio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>28</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/iskelma_64.aac</location>
+			<title>Iskelmä</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>29</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://radio2.6net.fi:8000/jarviradio2</location>
+			<title>Järviradio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>30</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/kasari/kasari_64.aac</location>
+			<title>Kasari</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>31</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/radiocity_64.aac</location>
+			<title>Radio City</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>32</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/classic/classic_64.aac</location>
+			<title>Radio Classic</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>33</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/yleisohjelma</location>
+			<title>Radio Dei</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>34</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/nostalgia/nostalgia_64.aac</location>
+			<title>Radio Nostalgia</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>35</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radionova/radionova_64.aac</location>
+			<title>Radio Nova</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>36</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/nrj/nrj_64.aac</location>
+			<title>Radio NRJ</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>37</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://46.28.53.118:7011/radio</location>
+			<title>Radio Patmos</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>38</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/suomirock/suomirock_64.aac</location>
+			<title>Radio SuomiRock</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>39</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/suomirap/suomirap_64.aac</location>
+			<title>SuomiRäp</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>40</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/ysari/ysari_64.aac</location>
+			<title>Ysäri</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>41</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://stream.bauermedia.fi/auranaallot/auranaallot_64.aac</location>
+			<title>Auran Aallot</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>42</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://212.47.220.188:8000/</location>
+			<title>Finest+FM</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>43</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://st.downtime.fi:80/fun.mp3</location>
+			<title>FUN Tampere</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>44</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/kem_64.aac</location>
+			<title>Iskelmä Ankkuri</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>45</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/frs_64.aac</location>
+			<title>Iskelmä Forssa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>46</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/hki_64.aac</location>
+			<title>Iskelmä Helsinki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>47</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/hyv_64.aac</location>
+			<title>Iskelmä Hyvinkää</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>48</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/hml_64.aac</location>
+			<title>Iskelmä Janne</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>49</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/jkl_64.aac</location>
+			<title>Iskelmä Jyväskylä</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>50</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/ktk_64.aac</location>
+			<title>Iskelmä Kotka</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>51</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/kvl_64.aac</location>
+			<title>Iskelmä Kouvola</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>52</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/kuo_64.aac</location>
+			<title>Iskelmä Kuopio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>53</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/lpr_64.aac</location>
+			<title>Iskelmä Lappeenranta</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>54</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/mli_64.aac</location>
+			<title>Iskelmä Mikkeli</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>55</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/oul_64.aac</location>
+			<title>Iskelmä Oulu</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>56</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/prv_64.aac</location>
+			<title>Iskelmä Porvoo</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>57</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/rov_64.aac</location>
+			<title>Iskelmä Rovaniemi</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>58</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/sas_64.aac</location>
+			<title>Iskelmä Sastamala</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>59</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/rma_64.aac</location>
+			<title>Iskelmä Satakunta</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>60</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/svl_64.aac</location>
+			<title>Iskelmä Savonlinna</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>61</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/snj_64.aac</location>
+			<title>Iskelmä Seinäjoki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>62</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/tku_64.aac</location>
+			<title>Iskelmä Turku</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>63</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/tre_64.aac</location>
+			<title>Iskelmä Tampere</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>64</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/loh_64.aac</location>
+			<title>Iskelmä Uusimaa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>65</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/iskelma/vaa_64.aac</location>
+			<title>Iskelmä Vaasa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>66</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://digiradio.xyz:8000/pispalanradio</location>
+			<title>Pispalan Radio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>67</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radio957/radio957_64.aac</location>
+			<title>Radio 957</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>68</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/hki_64.aac</location>
+			<title>Radio City Helsinki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>69</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/hml_64.aac</location>
+			<title>Radio City Hämeenlinna</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>70</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/jkl_64.aac</location>
+			<title>Radio City Jyväskylä</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>71</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/kvl_64.aac</location>
+			<title>Radio City Kouvola</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>72</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/lpr_64.aac</location>
+			<title>Radio City Lappeenranta</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>73</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/oul_64.aac</location>
+			<title>Radio City Oulu</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>74</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/tre_64.aac</location>
+			<title>Radio City Tampere</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>75</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiocity/tku_64.aac</location>
+			<title>Radio City Turku</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>76</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/helsinki</location>
+			<title>Radio Dei Helsinki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>77</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/kajaani</location>
+			<title>Radio Dei Kajaani</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>78</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/tornio</location>
+			<title>Radio Dei Kemi</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>79</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/kruunupyy</location>
+			<title>Radio Dei Kokkola</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>80</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/kristiinankaupunki</location>
+			<title>Radio Dei Kristiinankaupunki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>81</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/lahti</location>
+			<title>Radio Dei Lahti</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>82</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/oulu</location>
+			<title>Radio Dei Oulu</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>83</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/lapua</location>
+			<title>Radio Dei Pohjanmaa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>84</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/rovaniemi</location>
+			<title>Radio Dei Rovaniemi</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>85</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://isojako.radiodei.fi:8000/turkueurajoki</location>
+			<title>Radio Dei Turku</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>86</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://77.86.233.1:8000/</location>
+			<title>Radio Helsinki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>87</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://wr2.downtime.fi/kaakko.aac</location>
+			<title>Radio Kaakko</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>88</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen</location>
+			<title>Radio Keskisuomalainen</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>89</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://moreenistream1.uta.fi:8080/moreeni.mp3</location>
+			<title>Radio Moreeni</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>90</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.radiojar.com/n6yg5q0z8vzuv</location>
+			<title>Radio Musa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>91</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/radiopooki/radiopooki_64.aac</location>
+			<title>Radio Pooki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>92</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://stream.bauermedia.fi/radiopori/radiopori_64.aac</location>
+			<title>Radio Pori</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>93</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://185.123.117.122:8000/ramona.mp3</location>
+			<title>Radio Ramona</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>94</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.radiorex.fi:8000/radiorex</location>
+			<title>Radio Rex</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>95</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://suomiradio.pro:8080/</location>
+			<title>Radio Sandels</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>96</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://st.downtime.fi:80/sun.mp3</location>
+			<title>Radio SUN</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>97</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://stream.radiovaasa.fi:8000/radiovaasa.mp3</location>
+			<title>Radio Vaasa</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>98</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://cast2.radiovoima.fi/voima.mp3</location>
+			<title>Radio Voima</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>99</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://s3.myradiostream.com:4976/</location>
+			<title>Sea FM</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>100</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://ice6.securenetsystems.net/STEELFM</location>
+			<title>Steel FM</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>101</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.alandsradio.ax/stream.ogg</location>
+			<title>Ålands Radio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>102</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.radio.co/s435d71fd8/listen</location>
+			<title>IDA Radio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>103</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://c0.toivon.net/toivon/toivon_0?mp=/stream</location>
+			<title>Jouluradio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>104</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://stream.bauermedia.fi/kiss/kiss_64.aac</location>
+			<title>Kiss</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>105</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://79.134.109.244:8000/Sport</location>
+			<title>Kaupunkiradio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>106</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://s4.radio.co/seb14ce41a/listen</location>
+			<title>Lasten Oma Radio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>107</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://193.166.72.7/limuradio.mp3</location>
+			<title>LiMuRadio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>108</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://releet.pasiradio.com:8002/</location>
+			<title>Pasiradio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>109</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://streaming.radio.co/sdef46f462/listen</location>
+			<title>Radio Gramofoni</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>110</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://radio.hear.fi:8000/hear.mp3</location>
+			<title>Radio Hear</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>111</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://185.123.117.122:8000/ihmejakumma</location>
+			<title>Radio Ihme ja Kumma</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>112</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://radioinari.radioman.fi:8000/radioinari</location>
+			<title>Radio Inari</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>113</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://s3.radio.co/sd2b911168/listen</location>
+			<title>Radio Majava</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>114</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://c11.radioboss.fm:8137/stream</location>
+			<title>Radio Paratiisi</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>115</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://streamer.radio.co/se4f0e40ca/listen</location>
+			<title>Radio Pro</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>116</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://stream18.shoutcastsolutions.com:8813/;stream.mp3</location>
+			<title>Radio Scoop</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>117</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://vcust586.louhi.net:8080/radiovapaahki</location>
+			<title>Radio Vapaa Helsinki</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>118</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://rondo.iradio.fi:8000/klasu-hi.mp3</location>
+			<title>Rondo Klasu</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>119</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://rondo.iradio.fi:8000/klasupro-hi.mp3</location>
+			<title>Rondo KlasuPro</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>120</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://rondo.iradio.fi:8000/viva-hi.mp3</location>
+			<title>Rondo Viva Classica!</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>121</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>http://149.202.196.92:8238/stream</location>
+			<title>RQL</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>122</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://streaming.radio.co/sc46fb8389/listen</location>
+			<title>SaaristoRadio</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>123</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>https://saysite.fi:8000/sayfm</location>
+			<title>SAYFM</title>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>124</vlc:id>
+			</extension>
+		</track>
+	</trackList>
+	<extension application="http://www.videolan.org/vlc/playlist/0">
+		<vlc:item tid="0"/>
+		<vlc:item tid="1"/>
+		<vlc:item tid="2"/>
+		<vlc:item tid="3"/>
+		<vlc:item tid="4"/>
+		<vlc:item tid="5"/>
+		<vlc:item tid="6"/>
+		<vlc:item tid="7"/>
+		<vlc:item tid="8"/>
+		<vlc:item tid="9"/>
+		<vlc:item tid="10"/>
+		<vlc:item tid="11"/>
+		<vlc:item tid="12"/>
+		<vlc:item tid="13"/>
+		<vlc:item tid="14"/>
+		<vlc:item tid="15"/>
+		<vlc:item tid="16"/>
+		<vlc:item tid="17"/>
+		<vlc:item tid="18"/>
+		<vlc:item tid="19"/>
+		<vlc:item tid="20"/>
+		<vlc:item tid="21"/>
+		<vlc:item tid="22"/>
+		<vlc:item tid="23"/>
+		<vlc:item tid="24"/>
+		<vlc:item tid="25"/>
+		<vlc:item tid="26"/>
+		<vlc:item tid="27"/>
+		<vlc:item tid="28"/>
+		<vlc:item tid="29"/>
+		<vlc:item tid="30"/>
+		<vlc:item tid="31"/>
+		<vlc:item tid="32"/>
+		<vlc:item tid="33"/>
+		<vlc:item tid="34"/>
+		<vlc:item tid="35"/>
+		<vlc:item tid="36"/>
+		<vlc:item tid="37"/>
+		<vlc:item tid="38"/>
+		<vlc:item tid="39"/>
+		<vlc:item tid="40"/>
+		<vlc:item tid="41"/>
+		<vlc:item tid="42"/>
+		<vlc:item tid="43"/>
+		<vlc:item tid="44"/>
+		<vlc:item tid="45"/>
+		<vlc:item tid="46"/>
+		<vlc:item tid="47"/>
+		<vlc:item tid="48"/>
+		<vlc:item tid="49"/>
+		<vlc:item tid="50"/>
+		<vlc:item tid="51"/>
+		<vlc:item tid="52"/>
+		<vlc:item tid="53"/>
+		<vlc:item tid="54"/>
+		<vlc:item tid="55"/>
+		<vlc:item tid="56"/>
+		<vlc:item tid="57"/>
+		<vlc:item tid="58"/>
+		<vlc:item tid="59"/>
+		<vlc:item tid="60"/>
+		<vlc:item tid="61"/>
+		<vlc:item tid="62"/>
+		<vlc:item tid="63"/>
+		<vlc:item tid="64"/>
+		<vlc:item tid="65"/>
+		<vlc:item tid="66"/>
+		<vlc:item tid="67"/>
+		<vlc:item tid="68"/>
+		<vlc:item tid="69"/>
+		<vlc:item tid="70"/>
+		<vlc:item tid="71"/>
+		<vlc:item tid="72"/>
+		<vlc:item tid="73"/>
+		<vlc:item tid="74"/>
+		<vlc:item tid="75"/>
+		<vlc:item tid="76"/>
+		<vlc:item tid="77"/>
+		<vlc:item tid="78"/>
+		<vlc:item tid="79"/>
+		<vlc:item tid="80"/>
+		<vlc:item tid="81"/>
+		<vlc:item tid="82"/>
+		<vlc:item tid="83"/>
+		<vlc:item tid="84"/>
+		<vlc:item tid="85"/>
+		<vlc:item tid="86"/>
+		<vlc:item tid="87"/>
+		<vlc:item tid="88"/>
+		<vlc:item tid="89"/>
+		<vlc:item tid="90"/>
+		<vlc:item tid="91"/>
+		<vlc:item tid="92"/>
+		<vlc:item tid="93"/>
+		<vlc:item tid="94"/>
+		<vlc:item tid="95"/>
+		<vlc:item tid="96"/>
+		<vlc:item tid="97"/>
+		<vlc:item tid="98"/>
+		<vlc:item tid="99"/>
+		<vlc:item tid="100"/>
+		<vlc:item tid="101"/>
+		<vlc:item tid="102"/>
+		<vlc:item tid="103"/>
+		<vlc:item tid="104"/>
+		<vlc:item tid="105"/>
+		<vlc:item tid="106"/>
+		<vlc:item tid="107"/>
+		<vlc:item tid="108"/>
+		<vlc:item tid="109"/>
+		<vlc:item tid="110"/>
+		<vlc:item tid="111"/>
+		<vlc:item tid="112"/>
+		<vlc:item tid="113"/>
+		<vlc:item tid="114"/>
+		<vlc:item tid="115"/>
+		<vlc:item tid="116"/>
+		<vlc:item tid="117"/>
+		<vlc:item tid="118"/>
+		<vlc:item tid="119"/>
+		<vlc:item tid="120"/>
+		<vlc:item tid="121"/>
+		<vlc:item tid="122"/>
+		<vlc:item tid="123"/>
+		<vlc:item tid="124"/>
+	</extension>
+</playlist>
