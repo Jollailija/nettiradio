@@ -26,32 +26,8 @@
 
 Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot, jota ylläpitää Otto Metsähukala
 
-List version: 2020-12-22d (Source updated 2020-12-06)
+List version: 2021-01-16a (Source updated 2021-01-04)
 -->
-    <item>
-        <source>https://github.com/Jollailija/nettiradio/blob/gh-pages/wwyamx.mp3?raw=true</source>
-        <title>Hyvää joulua ja parempaa uutta vuotta!</title>
-        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
-        <section>Asemalistan tiedot</section>
-    </item>
-    <item>
-        <source></source>
-        <title>Asemalistan versio: 2020-12-22d</title>
-        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
-        <section>Asemalistan tiedot</section>
-    </item>
-    <item>
-        <source></source>
-        <title>Mediamonitori päivitetty 06.12.2020</title>
-        <site>https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot</site>
-        <section>Asemalistan tiedot</section>
-    </item>
-    <item>
-        <source></source>
-        <title>Auta testaamalla seuraavia:</title>
-        <site>https://github.com/Jollailija/nettiradio/wiki/Stations</site>
-        <section>Asemalistan tiedot</section>
-    </item>
     <item>
         <source>https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen</source>
         <title>Radio Keskisuomalainen</title>
@@ -150,8 +126,8 @@ List version: 2020-12-22d (Source updated 2020-12-06)
     </item>
     <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/radioaalto/chunklist.m3u8</source>
-        <title>Radio Aalto</title>
-        <site>http://www.radioaalto.fi/</site>
+        <title>Me Naiset Radio</title>
+        <site>https://www.supla.fi/menaisetradio</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
@@ -193,7 +169,7 @@ List version: 2020-12-22d (Source updated 2020-12-06)
     <item>
         <source>http://46.28.53.118:7011/radio</source>
         <title>Radio Patmos</title>
-        <site>http://patmos.studio24.fi/</site>
+        <site>https://www.patmos.fi/radio-patmos/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
@@ -263,9 +239,15 @@ List version: 2020-12-22d (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
+        <source>https://lff.radiotaajuus.fi:9042/lff</source>
+        <title>Radio LFF</title>
+        <site>https://www.lff.fi/radio-lff-2/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
         <source>http://moreenistream1.uta.fi:8080/moreeni.mp3</source>
         <title>Radio Moreeni</title>
-        <site>http://radio.uta.fi/</site>
+        <site>https://www.tuni.fi/radiomoreeni/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -343,7 +325,7 @@ List version: 2020-12-22d (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/iskelma/hml_64.aac</source>
         <title>Iskelmä Janne</title>
-        <site>http://www.iskelma.fi/</site>
+        <site>https://iskelmajanne.fi/</site>
         <section>Paikalliset - Iskelmä</section>
     </item>
     <item>
@@ -409,7 +391,7 @@ List version: 2020-12-22d (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/iskelma/rma_64.aac</source>
         <title>Iskelmä Satakunta</title>
-        <site>/iske</site>
+        <site>https://iskelmasatakunta.fi/</site>
         <section>Paikalliset - Iskelmä</section>
     </item>
     <item>
@@ -451,13 +433,13 @@ List version: 2020-12-22d (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/radiocity/hki_64.aac</source>
         <title>Radio City Helsinki</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/helsinki</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/hml_64.aac</source>
         <title>Radio City Hämeenlinna</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/hameenlinna</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
@@ -475,25 +457,25 @@ List version: 2020-12-22d (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/radiocity/lpr_64.aac</source>
         <title>Radio City Lappeenranta</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/lappeenranta</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/oul_64.aac</source>
         <title>Radio City Oulu</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/oulu</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/tre_64.aac</source>
         <title>Radio City Tampere</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/tampere</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/tku_64.aac</source>
         <title>Radio City Turku</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/turku</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
@@ -560,6 +542,12 @@ List version: 2020-12-22d (Source updated 2020-12-06)
         <source>http://mediau.yle.fi/liveklassinen</source>
         <title>Yle Klassinen</title>
         <site>https://areena.yle.fi/radio/ohjelmat/yle-klassinen</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
+        <source>https://hakkeriradio.fi:8443/stream.ogg</source>
+        <title>Hakkeriradio</title>
+        <site>https://www.hakkeriradio.fi</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -675,5 +663,17 @@ List version: 2020-12-22d (Source updated 2020-12-06)
         <title>SaaristoRadio</title>
         <site>https://www.saaristoradio.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
+        <source></source>
+        <title>Asemalistan versio: 2021-01-16a</title>
+        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
+        <section>Asemalistan tiedot</section>
+    </item>
+    <item>
+        <source></source>
+        <title>Mediamonitori päivitetty 04.01.2021</title>
+        <site>https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot</site>
+        <section>Asemalistan tiedot</section>
     </item>
 </stationlist>
