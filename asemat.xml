@@ -26,7 +26,7 @@
 
 Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot, jota ylläpitää Otto Metsähukala
 
-List version: 2021-01-16a (Source updated 2021-01-04)
+List version: 2021-04-04a (Source updated 2021-03-18)
 -->
     <item>
         <source>https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen</source>
@@ -143,7 +143,7 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://isojako.radiodei.fi:8000/yleisohjelma.m3u</source>
+        <source>http://isojako.radiodei.fi:8000/yleisohjelma</source>
         <title>Radio Dei</title>
         <site>http://www.radiodei.fi/</site>
         <section>Valtakunnalliset</section>
@@ -206,6 +206,12 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <source>http://stream.bauermedia.fi/auranaallot/auranaallot_64.aac</source>
         <title>Auran Aallot</title>
         <site>http://www.auranaallot.fi</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>http://212.47.220.188:8000/</source>
+        <title>Finest+FM</title>
+        <site>http://www.finestfm.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -275,6 +281,12 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <section>Paikalliset</section>
     </item>
     <item>
+        <source>http://suomiradio.pro:8080</source>
+        <title>Radio Sandels</title>
+        <site>http://www.radiosandels.fi</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
         <source>http://st.downtime.fi/sun.mp3</source>
         <title>Radio SUN</title>
         <site>http://www.radiosun.fi</site>
@@ -290,6 +302,12 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <source>https://cast2.radiovoima.fi/voima.mp3</source>
         <title>Radio Voima</title>
         <site>http://www.radiovoima.fi/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>http://s3.myradiostream.com:4976</source>
+        <title>Sea FM Radio</title>
+        <site>http://www.seafm.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -539,9 +557,9 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <section>Paikalliset - Radio Dei</section>
     </item>
     <item>
-        <source>http://mediau.yle.fi/liveklassinen</source>
-        <title>Yle Klassinen</title>
-        <site>https://areena.yle.fi/radio/ohjelmat/yle-klassinen</site>
+        <source>https://s3.radio.co/scfd7273b2/listen</source>
+        <title>Doubleclap Radio </title>
+        <site>https://doubleclap.dance/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -605,6 +623,12 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
+        <source>http://www.radiohulabaloo.fi/?cat=32</source>
+        <title>Radio Hulabaloo</title>
+        <site>http://www.radiohulabaloo.fi/</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
         <source>http://185.123.117.122:8000/ihmejakumma</source>
         <title>Radio Ihme ja Kumma</title>
         <site>https://ihmejakumma.com/radio-ihme-ja-kumma-903-mhz/</site>
@@ -614,6 +638,18 @@ List version: 2021-01-16a (Source updated 2021-01-04)
         <source>http://radioinari.radioman.fi:8000/radioinari</source>
         <title>Radio Inari</title>
         <site>https://radioinari.fi/</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
+        <source>http://80.186.153.60:8080/stream</source>
+        <title>Radio Jauho</title>
+        <site>https://radiojauho.com</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
+        <source>https://streams.radiomast.io/9c959699-ea9d-4a4e-b28b-dc1b07150866</source>
+        <title>Radio Lievestuore</title>
+        <site>https://www.eventliepee.com/radiolievestuore.html</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -666,13 +702,13 @@ List version: 2021-01-16a (Source updated 2021-01-04)
     </item>
     <item>
         <source></source>
-        <title>Asemalistan versio: 2021-01-16a</title>
+        <title>Asemalistan versio: 2021-04-04a</title>
         <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
         <section>Asemalistan tiedot</section>
     </item>
     <item>
         <source></source>
-        <title>Mediamonitori päivitetty 04.01.2021</title>
+        <title>Mediamonitori päivitetty 18.03.2021</title>
         <site>https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot</site>
         <section>Asemalistan tiedot</section>
     </item>
