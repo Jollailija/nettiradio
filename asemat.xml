@@ -29,48 +29,6 @@ Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/netti
 List version: 2021-04-04a (Source updated 2021-03-18)
 -->
     <item>
-        <source>https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen</source>
-        <title>Radio Keskisuomalainen</title>
-        <site>https://www.radiokeskisuomalainen.fi/</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
-        <source>https://stream.radiorex.fi:8000/radiorex</source>
-        <title>Radio Rex</title>
-        <site>https://www.karjalainen.fi/radio</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
-        <source>https://cast.savonaallot.fi/savonaallot</source>
-        <title>Savon Aallot</title>
-        <site>https://www.savonaallot.fi/</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
-        <source>https://stream.alandsradio.ax/stream.ogg</source>
-        <title>Ålands Radio</title>
-        <site>https://alandsradio.ax/</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
-        <source>https://c0.toivon.net/toivon/toivon_0?mp=/stream</source>
-        <title>Jouluradio</title>
-        <site>https://www.jouluradio.fi/</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
-        <source>https://streamer.radio.co/se4f0e40ca/listen</source>
-        <title>Radio Pro</title>
-        <site>http://radiopro.fi/</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
-        <source>https://saysite.fi:8000/sayfm</source>
-        <title>SAYFM</title>
-        <site>https://saysite.fi/radio/</site>
-        <section>Ilmoita toimivuus Kaupassa</section>
-    </item>
-    <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/aitoiskelma/chunklist.m3u8</source>
         <title>Aito Iskelmä</title>
         <site>https://www.supla.fi/aitoiskelma</site>
@@ -278,6 +236,12 @@ List version: 2021-04-04a (Source updated 2021-03-18)
         <source>http://185.123.117.122:8000/ramona.mp3</source>
         <title>Radio Ramona</title>
         <site>http://www.radioramona.fi</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>https://stream.radiorex.fi:8000/radiorex</source>
+        <title>Radio Rex</title>
+        <site>https://www.karjalainen.fi/radio</site>
         <section>Paikalliset</section>
     </item>
     <item>
