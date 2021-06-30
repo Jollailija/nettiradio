@@ -14,7 +14,7 @@ Name:       harbour-nettiradio
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Suomalaisten nettiradioiden kuuntelusovellus
 Version:    1.9.2
-Release:    2
+Release:    4
 Group:      Qt/Qt
 License:    BSD
 BuildArch:  noarch

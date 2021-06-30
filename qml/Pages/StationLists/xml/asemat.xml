@@ -1,6 +1,6 @@
 ﻿<stationlist>
 <!--
-  Copyright (C) 2015-2020 jollailija
+  Copyright (C) 2015-2021 jollailija
   Contact: jollailija <jollailija@gmail.com>
   All rights reserved.
   You may use this file under the terms of BSD license as follows:
@@ -26,8 +26,182 @@
 
 Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot, jota ylläpitää Otto Metsähukala
 
-List version: 2020-12-22l (local) (Source updated 2020-12-06)
+List version: 2021-06-30l (local) (Source updated 2021-06-27)
 -->
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YlePuhe/icecast.audio</source>
+        <title>Yle Puhe</title>
+        <site>https://areena.yle.fi/audio/ohjelmat/yle-puhe</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleRadio1/icecast.audio</source>
+        <title>Yle Radio 1</title>
+        <site>https://areena.yle.fi/audio/ohjelmat/yle-radio-1</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleRS/icecast.audio</source>
+        <title>Yle Radio Suomi (Helsinki)</title>
+        <site>https://areena.yle.fi/audio/ohjelmat/yle-radio-suomi?_c=yle-radio-suomi-helsinki</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleVega/icecast.audio</source>
+        <title>Yle Vega (Huvudstadsregionen)</title>
+        <site>https://arenan.yle.fi/audio/program/yle-vega?_c=radio-vega-huvudstadsregionen</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleX3M/icecast.audio</source>
+        <title>Yle X3M</title>
+        <site>https://arenan.yle.fi/audio/program/x3m</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleKlassinen/icecast.audio</source>
+        <title>Yle Klassinen</title>
+        <site>https://areena.yle.fi/audio/ohjelmat/yle-klassinen</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleX/icecast.audio</source>
+        <title>YleX</title>
+        <site>https://areena.yle.fi/audio/ohjelmat/ylex</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleSami/icecast.audio</source>
+        <title>Yle Sámi Radio</title>
+        <site>https://areena.yle.fi/audio/ohjelmat/yle-sami-radio</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleHameenlinna/icecast.audio</source>
+        <title>Hämeenlinna</title>
+        <site>http://yle.fi/uutiset/hameenlinna/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleJoensuu/icecast.audio</source>
+        <title>Joensuu</title>
+        <site>http://yle.fi/uutiset/joensuu/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleJKL/icecast.audio</source>
+        <title>Jyväskylä</title>
+        <site>http://yle.fi/uutiset/jyvaskyla/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleKajaani/icecast.audio</source>
+        <title>Kajaani</title>
+        <site>http://yle.fi/uutiset/kajaani/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleKemi/icecast.audio</source>
+        <title>Kemi</title>
+        <site>http://yle.fi/uutiset/kemi/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleKokkola/icecast.audio</source>
+        <title>Kokkola</title>
+        <site>http://yle.fi/uutiset/kokkola/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleKotka/icecast.audio</source>
+        <title>Kotka</title>
+        <site>http://yle.fi/uutiset/kotka/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleKuopio/icecast.audio</source>
+        <title>Kuopio</title>
+        <site>http://yle.fi/uutiset/kuopio/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleLahti/icecast.audio</source>
+        <title>Lahti</title>
+        <site>http://yle.fi/uutiset/lahti/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleLPR/icecast.audio</source>
+        <title>Lappeenranta</title>
+        <site>http://yle.fi/uutiset/lappeenranta/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleMikkeli/icecast.audio</source>
+        <title>Mikkeli</title>
+        <site>http://yle.fi/uutiset/mikkeli/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleOulu/icecast.audio</source>
+        <title>Oulu</title>
+        <site>http://yle.fi/uutiset/oulu/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YlePohjanmaa/icecast.audio</source>
+        <title>Pohjanmaa</title>
+        <site>http://yle.fi/uutiset/pohjanmaa/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YlePori/icecast.audio</source>
+        <title>Pori</title>
+        <site>http://yle.fi/uutiset/pori/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleRovaniemi/icecast.audio</source>
+        <title>Rovaniemi</title>
+        <site>http://yle.fi/uutiset/rovaniemi/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleTampere/icecast.audio</source>
+        <title>Tampere</title>
+        <site>http://yle.fi/uutiset/tampere/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleTurku/icecast.audio</source>
+        <title>Turku</title>
+        <site>http://yle.fi/uutiset/turku/</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleVegaVastnyland/icecast.audio</source>
+        <title>Västnyland</title>
+        <site>https://svenska.yle.fi/vastnyland</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleVegaAboland/icecast.audio</source>
+        <title>Åboland</title>
+        <site>https://svenska.yle.fi/aboland</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleVegaOsterbotten/icecast.audio</source>
+        <title>Österbotten</title>
+        <site>https://svenska.yle.fi/osterbotten</site>
+        <section>Ylen kanavat</section>
+    </item>
+    <item>
+        <source>http://icecast.live.yle.fi/radio/YleVegaOstnyland/icecast.audio</source>
+        <title>Östnyland</title>
+        <site>https://svenska.yle.fi/ostnyland</site>
+        <section>Ylen kanavat</section>
+    </item>
     <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/aitoiskelma/chunklist.m3u8</source>
         <title>Aito Iskelmä</title>
@@ -84,8 +258,8 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
     </item>
     <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/radioaalto/chunklist.m3u8</source>
-        <title>Radio Aalto</title>
-        <site>http://www.radioaalto.fi/</site>
+        <title>Me Naiset Radio</title>
+        <site>https://www.supla.fi/menaisetradio</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
@@ -101,7 +275,7 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://isojako.radiodei.fi:8000/yleisohjelma.m3u</source>
+        <source>http://isojako.radiodei.fi:8000/yleisohjelma</source>
         <title>Radio Dei</title>
         <site>http://www.radiodei.fi/</site>
         <section>Valtakunnalliset</section>
@@ -125,9 +299,9 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Valtakunnalliset</section>
     </item>
     <item>
-        <source>http://46.28.53.118:7011/radio</source>
+        <source>http://212.78.94.168:7011/radio</source>
         <title>Radio Patmos</title>
-        <site>http://patmos.studio24.fi/</site>
+        <site>https://www.patmos.fi/radio-patmos/</site>
         <section>Valtakunnalliset</section>
     </item>
     <item>
@@ -167,6 +341,12 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
+        <source>http://212.47.220.188:8000/</source>
+        <title>Finest+FM</title>
+        <site>http://www.finestfm.fi/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
         <source>http://st.downtime.fi/fun.mp3</source>
         <title>FUN Tampere</title>
         <site>http://www.funtampere.fi</site>
@@ -197,9 +377,15 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
+        <source>https://lff.radiotaajuus.fi:9042/lff</source>
+        <title>Radio LFF</title>
+        <site>https://www.lff.fi/radio-lff-2/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
         <source>http://moreenistream1.uta.fi:8080/moreeni.mp3</source>
         <title>Radio Moreeni</title>
-        <site>http://radio.uta.fi/</site>
+        <site>https://www.tuni.fi/radiomoreeni/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -227,6 +413,18 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Paikalliset</section>
     </item>
     <item>
+        <source>https://stream.radiorex.fi:8000/radiorex</source>
+        <title>Radio Rex</title>
+        <site>https://www.karjalainen.fi/radio</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>http://suomiradio.pro:8080</source>
+        <title>Radio Sandels</title>
+        <site>http://www.radiosandels.fi</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
         <source>http://st.downtime.fi/sun.mp3</source>
         <title>Radio SUN</title>
         <site>http://www.radiosun.fi</site>
@@ -242,6 +440,12 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <source>https://cast2.radiovoima.fi/voima.mp3</source>
         <title>Radio Voima</title>
         <site>http://www.radiovoima.fi/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>http://s3.myradiostream.com:4976</source>
+        <title>Sea FM Radio</title>
+        <site>http://www.seafm.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -277,7 +481,7 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/iskelma/hml_64.aac</source>
         <title>Iskelmä Janne</title>
-        <site>http://www.iskelma.fi/</site>
+        <site>https://iskelmajanne.fi/</site>
         <section>Paikalliset - Iskelmä</section>
     </item>
     <item>
@@ -343,7 +547,7 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/iskelma/rma_64.aac</source>
         <title>Iskelmä Satakunta</title>
-        <site>/iske</site>
+        <site>https://iskelmasatakunta.fi/</site>
         <section>Paikalliset - Iskelmä</section>
     </item>
     <item>
@@ -385,13 +589,13 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/radiocity/hki_64.aac</source>
         <title>Radio City Helsinki</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/helsinki</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/hml_64.aac</source>
         <title>Radio City Hämeenlinna</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/hameenlinna</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
@@ -409,25 +613,25 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
     <item>
         <source>https://stream.bauermedia.fi/radiocity/lpr_64.aac</source>
         <title>Radio City Lappeenranta</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/lappeenranta</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/oul_64.aac</source>
         <title>Radio City Oulu</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/oulu</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/tre_64.aac</source>
         <title>Radio City Tampere</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/tampere</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
         <source>https://stream.bauermedia.fi/radiocity/tku_64.aac</source>
         <title>Radio City Turku</title>
-        <site>http://www.radiocity.fi/</site>
+        <site>https://www.radiocity.fi/jaakiekko/turku</site>
         <section>Paikalliset - Radio City</section>
     </item>
     <item>
@@ -491,9 +695,15 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Paikalliset - Radio Dei</section>
     </item>
     <item>
-        <source>http://mediau.yle.fi/liveklassinen</source>
-        <title>Yle Klassinen</title>
-        <site>https://areena.yle.fi/radio/ohjelmat/yle-klassinen</site>
+        <source>https://s3.radio.co/scfd7273b2/listen</source>
+        <title>Doubleclap Radio </title>
+        <site>https://doubleclap.dance/</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
+        <source>https://hakkeriradio.fi:8443/stream.ogg</source>
+        <title>Hakkeriradio</title>
+        <site>https://www.hakkeriradio.fi</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -551,6 +761,12 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
+        <source>http://www.radiohulabaloo.fi/?cat=32</source>
+        <title>Radio Hulabaloo</title>
+        <site>http://www.radiohulabaloo.fi/</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
         <source>http://185.123.117.122:8000/ihmejakumma</source>
         <title>Radio Ihme ja Kumma</title>
         <site>https://ihmejakumma.com/radio-ihme-ja-kumma-903-mhz/</site>
@@ -563,15 +779,15 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://s3.radio.co/sd2b911168/listen</source>
-        <title>Radio Majava</title>
-        <site>http://majavabaari.fi/</site>
+        <source>http://80.186.153.60:8080/stream</source>
+        <title>Radio Jauho</title>
+        <site>https://radiojauho.com</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>http://c11.radioboss.fm:8137/stream</source>
-        <title>Radio Paratiisi</title>
-        <site>https://www.radioparatiisi.fi/</site>
+        <source>https://s3.radio.co/sd2b911168/listen</source>
+        <title>Radio Majava</title>
+        <site>http://majavabaari.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -599,7 +815,7 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>http://149.202.196.92:8238/stream</source>
+        <source>http://104.167.4.67:8173/stream</source>
         <title>RQL Webradio</title>
         <site>https://rqlweb.blogspot.com/</site>
         <section>Nettiradiot ja sekalaiset</section>
@@ -612,8 +828,8 @@ List version: 2020-12-22l (local) (Source updated 2020-12-06)
     </item>
     <item>
         <source></source>
-        <title>2020-12-22l (06.12.2020)</title>
-        <site>https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot</site>
+        <title>2021-06-30l (27.06.2021)</title>
+        <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
         <section>Asemalistan tiedot</section>
     </item>
 </stationlist>
