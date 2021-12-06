@@ -275,13 +275,13 @@ List version: 2021-12-06a (Source updated 2021-12-04)
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>https://st.downtime.fi/kiakko-ilves.aac</source>
+        <source>http://st.downtime.fi/kiakko-ilves.aac</source>
         <title>Tampereen Kiakkoradio: Ilves</title>
         <site>https://kiakkoradio.fi/ilves/</site>
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>https://st.downtime.fi/kiakko-tappara.aac</source>
+        <source>http://st.downtime.fi/kiakko-tappara.aac</source>
         <title>Tampereen Kiakkoradio: Tappara</title>
         <site>https://kiakkoradio.fi/tappara/</site>
         <section>Paikalliset</section>
@@ -527,13 +527,13 @@ List version: 2021-12-06a (Source updated 2021-12-04)
         <section>Paikalliset - Radio Dei</section>
     </item>
     <item>
-        <source>https://s3.radio.co/scfd7273b2/listen</source>
+        <source>http://s3.radio.co/scfd7273b2/listen</source>
         <title>Doubleclap Radio </title>
         <site>https://doubleclap.dance/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://hakkeriradio.fi:8443/stream</source>
+        <source>http://hakkeriradio.fi:8443/stream</source>
         <title>Hakkeriradio</title>
         <site>https://hakkeriradio.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
@@ -563,7 +563,7 @@ List version: 2021-12-06a (Source updated 2021-12-04)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://solid9.streamupsolutions.com/proxy/kookmuod?mp=/live</source>
+        <source>http://solid9.streamupsolutions.com/proxy/kookmuod?mp=/live</source>
         <title>Radio Gramofoni</title>
         <site>https://radiogramofoni.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
@@ -599,7 +599,7 @@ List version: 2021-12-06a (Source updated 2021-12-04)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://sohostream.djonline.fi:8008/radio</source>
+        <source>http://sohostream.djonline.fi:8008/radio</source>
         <title>Radio Soho Tampere</title>
         <site>https://radio.gastropubsoho.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
