@@ -26,7 +26,7 @@
 
 Nettiradioiden lähde on https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot, jota ylläpitää Otto Metsähukala
 
-List version: 2021-06-30a (Source updated 2021-06-27)
+List version: 2021-12-06a (Source updated 2021-12-04)
 -->
     <item>
         <source>https://supla.digitacdn.net/live/_definst_/supla/aitoiskelma/chunklist.m3u8</source>
@@ -173,15 +173,9 @@ List version: 2021-06-30a (Source updated 2021-06-27)
         <section>Paikalliset</section>
     </item>
     <item>
-        <source>http://st.downtime.fi/fun.mp3</source>
-        <title>FUN Tampere</title>
-        <site>http://www.funtampere.fi</site>
-        <section>Paikalliset</section>
-    </item>
-    <item>
-        <source>http://digiradio.xyz:8000/pispalanradio</source>
-        <title>Pispalan Radio</title>
-        <site>http://pispalanradio.fi/</site>
+        <source>https://www.supla.fi/kantriradio</source>
+        <title>Kantriradio</title>
+        <site>http://www.kantriradio.fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -205,7 +199,7 @@ List version: 2021-06-30a (Source updated 2021-06-27)
     <item>
         <source>https://lff.radiotaajuus.fi:9042/lff</source>
         <title>Radio LFF</title>
-        <site>https://www.lff.fi/radio-lff-2/</site>
+        <site>https://www.lff.fi/fi/lff-media-fi/radio-lff-fi/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -278,6 +272,18 @@ List version: 2021-06-30a (Source updated 2021-06-27)
         <source>http://ice6.securenetsystems.net/STEELFM</source>
         <title>Steel FM</title>
         <site>http://steelfm.ax/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>https://st.downtime.fi/kiakko-ilves.aac</source>
+        <title>Tampereen Kiakkoradio: Ilves</title>
+        <site>https://kiakkoradio.fi/ilves/</site>
+        <section>Paikalliset</section>
+    </item>
+    <item>
+        <source>https://st.downtime.fi/kiakko-tappara.aac</source>
+        <title>Tampereen Kiakkoradio: Tappara</title>
+        <site>https://kiakkoradio.fi/tappara/</site>
         <section>Paikalliset</section>
     </item>
     <item>
@@ -527,9 +533,9 @@ List version: 2021-06-30a (Source updated 2021-06-27)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://hakkeriradio.fi:8443/stream.ogg</source>
+        <source>https://hakkeriradio.fi:8443/stream</source>
         <title>Hakkeriradio</title>
-        <site>https://www.hakkeriradio.fi</site>
+        <site>https://hakkeriradio.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -551,27 +557,9 @@ List version: 2021-06-30a (Source updated 2021-06-27)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>https://s4.radio.co/seb14ce41a/listen</source>
-        <title>Lasten Oma Radio</title>
-        <site>https://www.lastenomaradio.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>http://193.166.72.7:80/limuradio.mp3</source>
-        <title>LiMu Radio</title>
-        <site>https://www.limuradio.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
         <source>https://s4.radio.co/sfd6ec6c18/listen</source>
         <title>MatkaRadio 24</title>
         <site>https://matkaradio.fi/</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
-        <source>http://releet.pasiradio.com:8002/</source>
-        <title>Pasiradio</title>
-        <site>http://pasiradio.com/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -605,15 +593,15 @@ List version: 2021-06-30a (Source updated 2021-06-27)
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
-        <source>http://80.186.153.60:8080/stream</source>
-        <title>Radio Jauho</title>
-        <site>https://radiojauho.com</site>
-        <section>Nettiradiot ja sekalaiset</section>
-    </item>
-    <item>
         <source>https://s3.radio.co/sd2b911168/listen</source>
         <title>Radio Majava</title>
         <site>http://majavabaari.fi/</site>
+        <section>Nettiradiot ja sekalaiset</section>
+    </item>
+    <item>
+        <source>https://sohostream.djonline.fi:8008/radio</source>
+        <title>Radio Soho Tampere</title>
+        <site>https://radio.gastropubsoho.fi/</site>
         <section>Nettiradiot ja sekalaiset</section>
     </item>
     <item>
@@ -828,13 +816,13 @@ List version: 2021-06-30a (Source updated 2021-06-27)
     </item>
     <item>
         <source></source>
-        <title>Asemalistan versio: 2021-06-30a</title>
+        <title>Asemalistan versio: 2021-12-06a</title>
         <site>https://github.com/Jollailija/nettiradio/tree/gh-pages</site>
         <section>Asemalistan tiedot</section>
     </item>
     <item>
         <source></source>
-        <title>Mediamonitori päivitetty 27.06.2021</title>
+        <title>Mediamonitori päivitetty 04.12.2021</title>
         <site>https://www.mediamonitori.fi/index.php/tietosivut/nettiradiot</site>
         <section>Asemalistan tiedot</section>
     </item>
