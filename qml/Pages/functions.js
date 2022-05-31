@@ -62,7 +62,12 @@ function loadSettings() {
     lib.fontSize = (Storage.getSetting("fontSize"))
     lib.radioStation = (Storage.getSetting("suStation")) // def. startup values
     lib.website = (Storage.getSetting("suWebsite"))
-    lib.musicSource = (Storage.getSetting("suUrl"))
+
+    var musicSource = (Storage.getSetting("suUrl"))
+    if(musicSource !== null && musicSource.length > 0) {
+        lib.musicSource = musicSource
+    }
+
     //lib.xmlLocation = (Storage.getSetting("xmlLocation"))
     console.log("Settings loaded")
 }
