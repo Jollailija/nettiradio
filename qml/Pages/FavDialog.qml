@@ -38,6 +38,7 @@ import "functions.js" as TheFunctions // :)
 Dialog {
     id: dialog
     property string title
+    property alias dialogTitle: header.title
     property string source: "http://"
     property string site: "http://"
     property bool updateMode: false
@@ -51,6 +52,7 @@ Dialog {
             spacing: Theme.paddingLarge
 
             DialogHeader {
+                id: header
                 title: qsTr("Muokkaa suosikkia")}
 
             TextArea {
@@ -80,17 +82,6 @@ Dialog {
                 placeholderText: qsTr("Aseman nettisivu")
                 label: qsTr("Aseman nettisivu")
                 EnterKey.onClicked: focus = false
-            }
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Lisää nykyinen asema")
-                enabled: !updateMode
-                onClicked: {
-                    titleInput.text = lib.radioStation
-                    sourceInput.text = lib.musicSource
-                    siteInput.text = lib.website
-                    dialog.accept()
-                }
             }
         }
     }

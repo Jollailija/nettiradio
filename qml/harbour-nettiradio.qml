@@ -197,7 +197,9 @@ ApplicationWindow
 
     ListModel { id:filteredModel }
 
-    ListModel { id:favModel }
+    ListModel { id:favModel
+        Component.onCompleted: TheFunctions.refreshList(favModel)
+    }
 
     function fillList() {
         lib.stationCount = stationsModel.count
