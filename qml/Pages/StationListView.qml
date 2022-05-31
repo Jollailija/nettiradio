@@ -144,26 +144,41 @@ SilicaFlickable {
             }
         }
         delegate: ListItem {
+            property bool currentlyPlaying: source === lib.musicSource
+
             width: listView.width
-            highlighted: down || (source === lib.musicSource) // note to self: make sure this works
-            Label {
-                text: Theme.highlightText(model.title, searchField.lowercaseText, Theme.highlightColor)
-                textFormat: Text.StyledText
-                color: highlighted ? Theme.highlightColor : Theme.primaryColor
-                font.pixelSize: Screen.sizeCategory > Screen.Medium
-                                ? Theme.fontSizeExtraLarge * lib.fontSize
-                                : Theme.fontSizeMedium * lib.fontSize
-                anchors.verticalCenter: parent.verticalCenter
-                x: source === lib.musicSource ? Theme.paddingLarge*3 : Theme.paddingLarge
-            }
+            highlighted: down || currentlyPlaying // note to self: make sure this works
+
             IconButton {
+                id: playingIcon
                 icon.source: "image://theme/icon-m-media"
                 anchors {
                     left: parent.left
                     verticalCenter: parent.verticalCenter
                 }
-                opacity: source === lib.musicSource ? 1.0 : 0.0
+                opacity: currentlyPlaying ? 1.0 : 0.0
+                width: currentlyPlaying ? height : Theme.paddingLarge
+                Behavior on width { NumberAnimation {} }
+                Behavior on opacity { NumberAnimation {} }
+                visible: opacity > 0.0
             }
+
+            Label {
+                text: Theme.highlightText(model.title, searchField.lowercaseText, Theme.highlightColor)
+                textFormat: Text.StyledText
+                verticalAlignment: Text.AlignVCenter
+                truncationMode: TruncationMode.Fade
+                color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeExtraLarge * lib.fontSize
+                                : Theme.fontSizeMedium * lib.fontSize
+                anchors {
+                    left: playingIcon.right
+                    right: parent.right
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+
             onClicked: {
                 TheFunctions.chooseStation((searchMode ? filteredModel : qmlListModel), index)
                 playStream()
