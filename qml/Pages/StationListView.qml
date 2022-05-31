@@ -81,16 +81,19 @@ SilicaFlickable {
     SearchField {
         id: searchField
         property string lowercaseText
+        property bool searching: false
         height: mainPage.searchMode ? implicitHeight : 0.0
         Behavior on height { NumberAnimation {} }
         clip: true
         anchors.top: pageHeader.bottom
         width: parent.width
         onTextChanged: {
+            searching = true
             lowercaseText = text.toLowerCase()
             getSortedItems(lowercaseText)
             listView.positionViewAtIndex(0,ListView.Beginning)
             lib.panelOpen = false
+            searching = false
         }
         inputMethodHints: Qt.ImhNoPredictiveText
         placeholderText: qsTr("Hae")
@@ -144,6 +147,17 @@ SilicaFlickable {
             }
         }
         delegate: ListItem {
+            id: stationItem
+
+            ListView.onRemove: RemoveAnimation {
+                target: stationItem
+                duration: searchField.searching ? 0 : 150
+            }
+            ListView.onAdd: AddAnimation {
+                target: stationItem
+                duration: searchField.searching ? 0 : 150
+            }
+
             property bool currentlyPlaying: source === lib.musicSource
 
             width: listView.width
