@@ -43,13 +43,24 @@ DockedPanel {
         spacing: Theme.paddingLarge
         Button {
             anchors.verticalCenter: parent.verticalCenter
-            text: Screen.sizeCategory > Screen.Medium
-                  ? lib.radioStation
-                  : mainPage.isPortrait
-                    ? lib.radioStation.slice(0,23)
-                    : lib.radioStation
+            preferredWidth: isPortrait ? Theme.buttonWidthSmall : Theme.buttonWidthLarge
             RemorsePopup {id: remorse}
             onClicked: openWebsite()
+
+            Label {
+                anchors.centerIn: parent
+                width: parent.width - (Theme.paddingMedium * 2)
+                text: lib.radioStation
+                horizontalAlignment: metrics.width > width ? Text.AlignLeft : Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                truncationMode: TruncationMode.Fade
+            }
+
+            Label {
+                id: metrics
+                opacity: 0.0
+                text: lib.radioStation
+            }
         }
         MediaButton {
             source: "icon-l-stop.png"
