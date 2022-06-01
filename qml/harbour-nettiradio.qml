@@ -93,6 +93,7 @@ ApplicationWindow
         hasTrackList:false
 
         onPlayRequested: playStream()
+        onPauseRequested: pauseStream()
         onPlayPauseRequested: lib.playing ? pauseStream() : playStream()
         onStopRequested: stopStream()
         onNextRequested: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex))
