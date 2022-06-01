@@ -71,7 +71,7 @@ Page {
             }
             MenuItem {
                 text: qsTr("Lisää asema")
-                onClicked: pageStack.push(Qt.resolvedUrl("FavDialog.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("FavDialog.qml"), { dialogTitle: qsTr("Lisää asema") })
             }
         }
         ViewPlaceholder {

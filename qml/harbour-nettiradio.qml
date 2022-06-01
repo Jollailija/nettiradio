@@ -33,7 +33,7 @@ import QtQuick 2.1
 import QtMultimedia 5.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
-//import org.nemomobile.mpris 1.0
+import Amber.Mpris 1.0
 import "Pages"
 import "Pages/StationLists"
 import "Pages/storage.js" as Storage
@@ -66,34 +66,11 @@ ApplicationWindow
         }
         onMutedChanged: pauseStream()
     }
-
-    function refreshMpris() {
-        console.log("mpris not enabled on harbour builds")
-        /*
-        mprisPlayer.artist = lib.radioStation
-        mprisPlayer.song = "Nettiradio"
-        switch (lib.playing) {
-        case true:
-            mprisPlayer.playbackStatus = Mpris.Playing
-            break;
-        case false:
-            if (lib.stopped) {
-                mprisPlayer.playbackStatus = Mpris.Paused
-            }
-            else {
-                mprisPlayer.setCanPause(false)
-                mprisPlayer.playbackStatus = Mpris.Paused
-            }
-            break;
-        default:
-            mprisPlayer.playbackStatus = Mpris.Paused
-        }*/
-    }
-    /*
+    
     MprisPlayer {
         id: mprisPlayer
-        property string artist
-        property string song
+
+        metaData.title: lib.radioStation.length > 0 ? lib.radioStation : "Nettiradio"
 
         serviceName: "harbour-nettiradio"
         identity: "Nettiradio"
@@ -101,36 +78,26 @@ ApplicationWindow
         supportedUriSchemes: ["file"]
         supportedMimeTypes: ["audio/x-wav", "audio/x-vorbis+ogg", "audio/mpeg", "audio/mp4a-latm", "audio/x-aiff"]
 
-        playbackStatus: Mpris.Stopped
-        loopStatus: Mpris.None
+        playbackStatus: lib.playing ? Mpris.Playing : (lib.stopped ? Mpris.Stopped : Mpris.Paused)
+        onPlaybackStatusChanged: console.log("Playback status:", playbackStatus)
+        loopStatus: Mpris.LoopNone
         shuffle: false
         volume: lib.volume
 
         canControl: true
-        canPause: true
-        canPlay: true
+        canPause: playbackStatus !== Mpris.Stopped
+        canPlay: playbackStatus !== Mpris.Playing && lib.musicSource.length > 0
         canSeek: false
-        canGoNext: true
-        canGoPrevious: true
+        canGoNext: lib.stationCount > 0
+        canGoPrevious: canGoNext
         hasTrackList:false
 
         onPlayRequested: playStream()
-        onPlayPauseRequested: pauseStream()
+        onPauseRequested: pauseStream()
+        onPlayPauseRequested: lib.playing ? pauseStream() : playStream()
         onStopRequested: stopStream()
         onNextRequested: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex))
         onPreviousRequested: TheFunctions.chooseStation(qmlListModel,(lib.stationIndex - 2))
-
-        onArtistChanged: {
-            var metadata = mprisPlayer.metadata
-            metadata[Mpris.metadataToString(Mpris.Artist)] = artist
-            mprisPlayer.metadata = metadata
-        }
-
-        onSongChanged: {
-            var metadata = mprisPlayer.metadata
-            metadata[Mpris.metadataToString(Mpris.Title)] = song
-            mprisPlayer.metadata = metadata
-        }
 
         // I'll list these just incase I figure out what to do with them :)
         onSeekRequested: {}
@@ -139,7 +106,7 @@ ApplicationWindow
         onLoopStatusRequested: {}
         onShuffleRequested: {}
     }
-    */
+    
 
     // Dunno what I did but seems to work
     Timer {
@@ -231,7 +198,9 @@ ApplicationWindow
 
     ListModel { id:filteredModel }
 
-    ListModel { id:favModel }
+    ListModel { id:favModel
+        Component.onCompleted: TheFunctions.refreshList(favModel)
+    }
 
     function fillList() {
         lib.stationCount = stationsModel.count
@@ -251,7 +220,6 @@ ApplicationWindow
         console.log("this many stations: " + i)
         Storage.getFavsFromDB(qmlListModel)
         console.log("Got favs from db")
-        refreshMpris()
     }
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
@@ -265,18 +233,15 @@ ApplicationWindow
     function pauseStream() {
         playMusic.pause()
         resurrector.stop()
-        refreshMpris()
     }
 
     function playStream() {
         playMusic.play()
-        refreshMpris()
     }
 
     function stopStream() {
         playMusic.stop()
         resurrector.stop()
-        refreshMpris()
     }
 
     initialPage: Qt.resolvedUrl("Pages/MainPage.qml")

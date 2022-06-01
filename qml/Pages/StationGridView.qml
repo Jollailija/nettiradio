@@ -63,7 +63,6 @@ SilicaFlickable {
                 playStream()
                 lib.website = (Qt.resolvedUrl(site))
                 lib.panelOpen = true
-                refreshMpris()
             }
 
             Row {

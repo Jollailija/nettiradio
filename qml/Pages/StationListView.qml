@@ -29,6 +29,8 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
+import QtQuick.LocalStorage 2.0
+import "storage.js" as Storage
 import "functions.js" as TheFunctions // :)
 SilicaFlickable {
     id: background
@@ -79,16 +81,19 @@ SilicaFlickable {
     SearchField {
         id: searchField
         property string lowercaseText
+        property bool searching: false
         height: mainPage.searchMode ? implicitHeight : 0.0
         Behavior on height { NumberAnimation {} }
         clip: true
         anchors.top: pageHeader.bottom
         width: parent.width
         onTextChanged: {
+            searching = true
             lowercaseText = text.toLowerCase()
             getSortedItems(lowercaseText)
             listView.positionViewAtIndex(0,ListView.Beginning)
             lib.panelOpen = false
+            searching = false
         }
         inputMethodHints: Qt.ImhNoPredictiveText
         placeholderText: qsTr("Hae")
@@ -141,30 +146,131 @@ SilicaFlickable {
                                 : Theme.fontSizeSmall * lib.fontSize
             }
         }
-        delegate: BackgroundItem {
-            width: listView.width
-            highlighted: down || (source === lib.musicSource) // note to self: make sure this works
-            Label {
-                text: Theme.highlightText(model.title, searchField.lowercaseText, Theme.highlightColor)
-                textFormat: Text.StyledText
-                color: highlighted ? Theme.highlightColor : Theme.primaryColor
-                font.pixelSize: Screen.sizeCategory > Screen.Medium
-                                ? Theme.fontSizeExtraLarge * lib.fontSize
-                                : Theme.fontSizeMedium * lib.fontSize
-                anchors.verticalCenter: parent.verticalCenter
-                x: source === lib.musicSource ? Theme.paddingLarge*3 : Theme.paddingLarge
+        delegate: ListItem {
+            id: stationItem
+
+            ListView.onRemove: RemoveAnimation {
+                target: stationItem
+                duration: searchField.searching ? 0 : 150
             }
+            ListView.onAdd: AddAnimation {
+                target: stationItem
+                duration: searchField.searching ? 0 : 150
+            }
+
+            property bool currentlyPlaying: source === lib.musicSource
+
+            width: listView.width
+            highlighted: down || currentlyPlaying // note to self: make sure this works
+
             IconButton {
+                id: playingIcon
                 icon.source: "image://theme/icon-m-media"
                 anchors {
                     left: parent.left
                     verticalCenter: parent.verticalCenter
                 }
-                opacity: source === lib.musicSource ? 1.0 : 0.0
+                opacity: currentlyPlaying ? 1.0 : 0.0
+                width: currentlyPlaying ? height : Theme.paddingLarge
+                Behavior on width { NumberAnimation {} }
+                Behavior on opacity { NumberAnimation {} }
+                visible: opacity > 0.0
             }
+
+            Label {
+                text: Theme.highlightText(model.title, searchField.lowercaseText, Theme.highlightColor)
+                textFormat: Text.StyledText
+                verticalAlignment: Text.AlignVCenter
+                truncationMode: TruncationMode.Fade
+                color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                font.pixelSize: Screen.sizeCategory > Screen.Medium
+                                ? Theme.fontSizeExtraLarge * lib.fontSize
+                                : Theme.fontSizeMedium * lib.fontSize
+                anchors {
+                    left: playingIcon.right
+                    right: parent.right
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+
             onClicked: {
                 TheFunctions.chooseStation((searchMode ? filteredModel : qmlListModel), index)
                 playStream()
+            }
+            menu: ContextMenu {
+                MenuItem {
+                    enabled: model.section !== "Suosikit"
+                    visible: enabled
+                    text: "Lisää suosikkeihin"
+                    onClicked: {
+                        var notFound = true
+                        for(var i = 0; qmlListModel.get(i).section === "Suosikit"; i++) {
+                            if(qmlListModel.get(i).title === model.title) {
+                                notFound = false
+                                break
+                            }
+                        }
+
+                        if(notFound) {
+                            favModel.append({
+                                                "title": model.title,
+                                                "source": model.source,
+                                                "site": model.site,
+                                                "section": "Suosikit"})
+                            qmlListModel.insert(i, {
+                                                    "title": model.title,
+                                                    "source": model.source,
+                                                    "site": model.site,
+                                                    "section": "Suosikit"})
+                            TheFunctions.overwriteFavs(favModel)
+
+                            // Fix the playing index accordingly
+                            if(mprisPlayer.stationIndex > i)
+                                mprisPlayer.stationIndex = mprisPlayer.stationIndex + 1
+                        }
+                    }
+                }
+                MenuItem {
+                    id: deleteMenuItem
+                    enabled: model.section === "Suosikit"
+                    visible: enabled
+                    text: "Poista suosikeista"
+                    property bool actuallyRemove: false
+                    onClicked: actuallyRemove = true
+                }
+                onClosed: {
+                    console.log("context menu closed")
+
+                    if(!deleteMenuItem.actuallyRemove)
+                        return
+
+                    var i
+
+                    for(i = 0; i < favModel.count; i++) {
+                        if(favModel.get(i).title === model.title) {
+                            favModel.remove(i, 1)
+                            TheFunctions.overwriteFavs(favModel)
+                            break
+                        }
+                    }
+
+                    if(deleteMenuItem.actuallyRemove) {
+                        for(i = 0; i < qmlListModel.count; i++) {
+                            if(qmlListModel.get(i).section !== "Suosikit") {
+                                break
+                            }
+                            if(qmlListModel.get(i).title === model.title) {
+                                qmlListModel.remove(i, 1)
+
+                                // Fix the playing index accordingly
+                                if(mprisPlayer.stationIndex > i)
+                                    mprisPlayer.stationIndex = mprisPlayer.stationIndex - 1
+
+                                break
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -6,3 +6,8 @@ Exec=sailfish-qml harbour-nettiradio
 Name=Nettiradio
 Name[en]=Netradio
 Name[fi]=Nettiradio
+
+[X-Sailjail]
+Permissions=Audio;Internet
+OrganizationName=harbour-nettiradio
+ApplicationName=harbour-nettiradio
